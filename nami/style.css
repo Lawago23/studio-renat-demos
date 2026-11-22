@@ -3259,3 +3259,9 @@ button {
     transition: none !important;
   }
 }
+
+/* real photos instead of drawn illustrations */
+.craft-svg-stage svg{display:none!important}
+.craft-svg-stage{padding:0!important;background-size:cover!important;background-position:center!important;overflow:hidden}
+#craft-knife-card .craft-svg-stage{background-image:url(img/otoro-nigiri.jpg)!important}
+#craft-rice-card .craft-svg-stage{background-image:url(img/hotate-nigiri.jpg)!important}

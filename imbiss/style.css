@@ -2493,3 +2493,7 @@ input, select, textarea {
     word-wrap: break-word;
   }
 }
+
+/* real photo instead of drawn sausage */
+.wurst-svg{display:none!important}
+.wurst-stage{background:#FAF8F2 url(assets/img/photo-f147144543-960.jpg) center/cover no-repeat!important}

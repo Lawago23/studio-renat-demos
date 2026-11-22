@@ -2562,3 +2562,7 @@ button {
     display: none !important;
   }
 }
+
+/* real photo instead of drawn döner layers */
+.doner-layer-stack,#steam-canvas,.assembly-glow{display:none!important}
+.doner-assembly-viewport{background:url(../assets/img/doner_kebab-960.jpg) center/cover no-repeat;border-radius:18px;overflow:hidden}
