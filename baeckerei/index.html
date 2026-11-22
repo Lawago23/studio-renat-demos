@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bäckerei Eifel in Berlin Prenzlauer Berg. Handwerklicher Natursauerteig, 18 Stunden Teigruhe und Steinofenbacken seit 1987. Täglich frisch ab 06:30 Uhr in der Kastanienallee 48.">
+  <meta name="theme-color" content="#2B1D14">
+  <title>Bäckerei Eifel – Backstube &amp; Café · Berlin Prenzlauer Berg</title>
+
+  <!-- Google Fonts: Oswald (Headlines), Caveat (Signature/Script), Inter (Text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js r128 for 3D Pretzel Moment -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- Interaction Script -->
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar: Demo Disclaimer -->
+  <aside class="demo-banner" id="demo-banner" aria-label="Demo Hinweis">
+    <div class="demo-banner-inner">
+      <span class="demo-badge">Fiktives Demo</span>
+      <span>Demo-Projekt von Renat &middot; Alle Angaben auf dieser Seite sind fiktiv.</span>
+      <button type="button" class="demo-banner-close" id="demo-banner-close" aria-label="Hinweis schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- 1. Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Logo: Script "Eifel" + small "Backstube & Café" -->
+      <a href="#hero" class="brand-logo" aria-label="Bäckerei Eifel Startseite">
+        <span class="brand-script">Eifel</span>
+        <span class="brand-sub">Backstube &amp; Café <span class="brand-sub-city">&middot; Berlin</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="#nachtschicht" class="nav-link">Nachtschicht</a>
+        <a href="#november" class="nav-link">November-Spezial</a>
+        <a href="#theke" class="nav-link">Die Theke</a>
+        <a href="#handwerk" class="nav-link">18h Teigruhe</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#besuch" class="nav-link">Besuch</a>
+      </nav>
+
+      <!-- Header Actions: Vorbestellen Button & Drawer Menu Toggle -->
+      <div class="header-actions">
+        <a href="#vorbestellen" class="btn-primary">Vorbestellen</a>
+        <button type="button" class="btn-menu-toggle" id="btn-menu-open" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Screen Drawer Menu -->
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="brand-script">Eifel</span>
+        <span class="brand-sub">Backstube &amp; Café</span>
+      </div>
+      <button type="button" class="drawer-close" id="btn-menu-close" aria-label="Menü schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-content">
+      <ul class="drawer-links">
+        <li><a href="#hero" class="drawer-link"><span class="number">01</span> Start</a></li>
+        <li><a href="#nachtschicht" class="drawer-link"><span class="number">02</span> Nachtschicht</a></li>
+        <li><a href="#november" class="drawer-link"><span class="number">03</span> Neu im November</a></li>
+        <li><a href="#theke" class="drawer-link"><span class="number">04</span> Die Theke heute</a></li>
+        <li><a href="#handwerk" class="drawer-link"><span class="number">05</span> 18h Teigruhe (3D)</a></li>
+        <li><a href="#team" class="drawer-link"><span class="number">06</span> Das Team</a></li>
+        <li><a href="#vorbestellen" class="drawer-link"><span class="number">07</span> Vorbestellen</a></li>
+        <li><a href="#besuch" class="drawer-link"><span class="number">08</span> Öffnungszeiten &amp; Ort</a></li>
+      </ul>
+
+      <div class="drawer-sidebar">
+        <div class="drawer-info-block">
+          <h4>Backstube &amp; Café</h4>
+          <p>Kastanienallee 48<br>10119 Berlin (Prenzlauer Berg)</p>
+        </div>
+        <div class="drawer-info-block">
+          <h4>Öffnungszeiten</h4>
+          <p>Mo&ndash;Fr: 06:30 &ndash; 18:30 Uhr<br>Sa: 07:00 &ndash; 17:00 Uhr<br>So: 08:00 &ndash; 14:00 Uhr</p>
+        </div>
+        <div class="drawer-info-block">
+          <h4>Direktkontakt</h4>
+          <p>
+            <a href="tel:+498886661234">+49 888 6661234</a><br>
+            <a href="mailto:12234456789@gmail.com">12234456789@gmail.com</a><br>
+            <a href="https://t.me/rovatt" target="_blank" rel="noopener">Telegram: @rovatt</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- 2. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-wrapper">
+        <img
+          src="assets/img/photo-f78711387-960.jpg"
+          srcset="assets/img/photo-f78711387-500.jpg 500w, assets/img/photo-f78711387-960.jpg 960w"
+          sizes="100vw"
+          width="960"
+          height="640"
+          alt="Ofenfrische handwerkliche Backwaren und Brote in der Backstube"
+          class="hero-bg-img"
+        >
+      </div>
+      <div class="hero-overlay"></div>
+
+      <!-- Floating Flour Dust Canvas -->
+      <canvas id="flour-canvas"></canvas>
+
+      <div class="container hero-content">
+        <span class="hero-tag">seit 1987 in der Backstube</span>
+        <h1 class="hero-headline">BROT, DAS NACHTS ENTSTEHT.</h1>
+        <p class="hero-desc">
+          Keine Backmischungen. Keine Enzyme. 18 Stunden Teigruhe, reiner Natursauerteig und echtes Steinfeuer mitten im Prenzlauer Berg.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#vorbestellen" class="btn-primary">Frisch vorbestellen</a>
+          <a href="#theke" class="btn-secondary">Zur heutigen Theke</a>
+        </div>
+      </div>
+
+      <!-- Live Berlin Clock Widget -->
+      <aside class="hero-clock-widget" aria-label="Aktuelle Aktivität in der Backstube">
+        <div class="clock-top">
+          <div class="clock-time-wrap">
+            <span class="clock-pulse-dot" aria-hidden="true"></span>
+            <span class="clock-time" id="berlin-live-time">04:30 Uhr</span>
+          </div>
+          <span class="clock-city">Berlin Live</span>
+        </div>
+        <p class="clock-activity" id="berlin-live-activity">
+          03:45 &ndash; 18 Stunden Teigruhe: Die Gärkörbe reifen im Reiferaum.
+        </p>
+      </aside>
+    </section>
+
+    <!-- 3. Section: "Eine Nacht in der Backstube" (Horizontal Scroll Timeline) -->
+    <section class="timeline-section" id="nachtschicht">
+      <div class="timeline-outer">
+        <div class="timeline-sticky">
+          <div class="timeline-header">
+            <span class="section-label">Der Weg zum Meisterbrot</span>
+            <h2 class="section-title">EINE NACHT IN DER BACKSTUBE</h2>
+            <p class="section-subtitle">
+              Während die Stadt schläft, vollzieht sich in unserer Backstube das älteste Handwerk der Welt. Fünf Schritte zwischen Mehlstaub und Sonnenaufgang.
+            </p>
+          </div>
+
+          <div class="timeline-track-wrap">
+            <div class="timeline-track" id="timeline-track">
+
+              <!-- Step 1 -->
+              <article class="timeline-card">
+                <div class="timeline-img-box">
+                  <img
+                    src="assets/img/photo-f27866902-500.jpg"
+                    srcset="assets/img/photo-f27866902-500.jpg 500w, assets/img/photo-f27866902-960.jpg 960w"
+                    sizes="(max-width: 600px) 300px, 380px"
+                    width="500"
+                    height="333"
+                    loading="lazy"
+                    alt="Spiralkneter vermischt frisches Mehl und Wasser für den Vorteig"
+                  >
+                  <span class="timeline-time-badge">22:00 Uhr</span>
+                </div>
+                <div class="timeline-body">
+                  <h3 class="timeline-step-name">1. Der Sauerteig</h3>
+                  <p class="timeline-desc">
+                    Opa Heinz&rsquo; Roggensauerteig von 1987 wird mit Brandenburger Bio-Vollkornmehl und belebtem Wasser aufgefrischt, um über Nacht lebendige Triebkraft zu entfalten.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Step 2 -->
+              <article class="timeline-card">
+                <div class="timeline-img-box">
+                  <img
+                    src="assets/img/photo-f194319884-500.jpg"
+                    srcset="assets/img/photo-f194319884-500.jpg 500w, assets/img/photo-f194319884-960.jpg 960w"
+                    sizes="(max-width: 600px) 300px, 380px"
+                    width="500"
+                    height="333"
+                    loading="lazy"
+                    alt="Bäckerin knetet schweren Roggenteig mit den Händen auf Buchenholz"
+                  >
+                  <span class="timeline-time-badge">01:30 Uhr</span>
+                </div>
+                <div class="timeline-body">
+                  <h3 class="timeline-step-name">2. Handarbeit</h3>
+                  <p class="timeline-desc">
+                    Jeder Laib wird auf massivem Buchenholz von Hand gewirkt. Bei uns spürt der Bäcker die Teigspannung, nicht eine automatisierte Taktstraße.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Step 3 -->
+              <article class="timeline-card">
+                <div class="timeline-img-box">
+                  <img
+                    src="assets/img/photo-f65853499-500.jpg"
+                    srcset="assets/img/photo-f65853499-500.jpg 500w, assets/img/photo-f65853499-960.jpg 960w"
+                    sizes="(max-width: 600px) 300px, 380px"
+                    width="500"
+                    height="333"
+                    loading="lazy"
+                    alt="Bäcker prüft Gärkörbe im kühlen Reiferaum"
+                  >
+                  <span class="timeline-time-badge">03:45 Uhr</span>
+                </div>
+                <div class="timeline-body">
+                  <h3 class="timeline-step-name">3. Die 18h Teigruhe</h3>
+                  <p class="timeline-desc">
+                    In naturbelassenen Weidenkörben ruht der Teig bei kühlen 4 Grad. Die lange Reifezeit baut schwer verdauliche Glutenstrukturen auf natürliche Weise ab.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Step 4 -->
+              <article class="timeline-card">
+                <div class="timeline-img-box">
+                  <img
+                    src="assets/img/photo-f92853342-500.jpg"
+                    srcset="assets/img/photo-f92853342-500.jpg 500w, assets/img/photo-f92853342-960.jpg 960w"
+                    sizes="(max-width: 600px) 300px, 380px"
+                    width="500"
+                    height="333"
+                    loading="lazy"
+                    alt="Glühender Steinbackofen mit lodernder Holzglut"
+                  >
+                  <span class="timeline-time-badge">05:00 Uhr</span>
+                </div>
+                <div class="timeline-body">
+                  <h3 class="timeline-step-name">4. Das Steinofenfeuer</h3>
+                  <p class="timeline-desc">
+                    Der Schamotte-Stein glüht bei 280 Grad. Mit dem langen Holzschieber werden die Laibe eingeschossen &ndash; für die legendär kräftige, dunkle Kruste.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Step 5 -->
+              <article class="timeline-card">
+                <div class="timeline-img-box">
+                  <img
+                    src="assets/img/photo-f22827857-500.jpg"
+                    srcset="assets/img/photo-f22827857-500.jpg 500w, assets/img/photo-f22827857-960.jpg 960w"
+                    sizes="(max-width: 600px) 280px, 380px"
+                    width="500"
+                    height="333"
+                    loading="lazy"
+                    alt="Ofenfrische handwerkliche Sauerteigbrote kühlen auf der Theke ab"
+                  >
+                  <span class="timeline-time-badge">06:30 Uhr</span>
+                </div>
+                <div class="timeline-body">
+                  <h3 class="timeline-step-name">5. Der erste Duft</h3>
+                  <p class="timeline-desc">
+                    Die Kastanienallee erwacht. Die heißen Krusten knistern leise beim Abkühlen, während Leyla die Espressomaschine anwirft und die Ladentür aufsperrt.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="timeline-progress-bar" aria-hidden="true">
+            <div class="timeline-progress-fill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Section: "Neu im November" (4 Tilt Cards) -->
+    <section class="seasonal-section fade-in-section" id="november">
+      <div class="container">
+        <div class="seasonal-header">
+          <span class="section-label">Saisonale Backkunst</span>
+          <h2 class="section-title">NEU IM NOVEMBER</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Herbstliche Aromen, wärmende Gewürze und limitierte Rezepturen. Nur für kurze Zeit in unserer Auslage.
+          </p>
+        </div>
+
+        <div class="seasonal-grid">
+          <!-- Card 1: Winzerstollen -->
+          <article class="tilt-card">
+            <div class="tilt-card-img-wrap">
+              <span class="seasonal-badge">Spezialität</span>
+              <img
+                src="assets/img/photo-f132225972-500.jpg"
+                width="500"
+                height="333"
+                loading="lazy"
+                alt="Feiner Winzerstollen mit weißem Puderzucker bestäubt"
+              >
+            </div>
+            <div class="tilt-card-body">
+              <h3 class="tilt-card-title">Winzerstollen</h3>
+              <p class="tilt-card-desc">
+                Traditioneller Butterstollen, vier Wochen lang sorgsam gereift in Pfälzer Spätburgunder, mit gerösteten Mandeln und kandierten Bio-Zitronen.
+              </p>
+              <div class="tilt-card-footer">
+                <span class="tilt-card-price">18,50 &euro;</span>
+                <a href="#vorbestellen" class="tilt-card-action seasonal-preorder-btn" data-bread="Winzerstollen">
+                  Vorbestellen &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Dinkel-Honig-Brot -->
+          <article class="tilt-card">
+            <div class="tilt-card-img-wrap">
+              <span class="seasonal-badge">Beliebt</span>
+              <img
+                src="assets/img/photo-f22827857-500.jpg"
+                width="500"
+                height="333"
+                loading="lazy"
+                alt="Ur-Dinkelbrot mit gerösteten Saaten und goldener Kruste"
+              >
+            </div>
+            <div class="tilt-card-body">
+              <h3 class="tilt-card-title">Dinkel-Honig-Brot</h3>
+              <p class="tilt-card-desc">
+                100% Brandenburger Ur-Dinkelmehl, abgerundet mit kaltgeschleudertem Berliner Waldhonig und schonend in der Pfanne gerösteten Sonnenblumenkernen.
+              </p>
+              <div class="tilt-card-footer">
+                <span class="tilt-card-price">5,80 &euro;</span>
+                <a href="#vorbestellen" class="tilt-card-action seasonal-preorder-btn" data-bread="Dinkel-Honig-Brot">
+                  Vorbestellen &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Franzbrötchen Kürbis -->
+          <article class="tilt-card">
+            <div class="tilt-card-img-wrap">
+              <span class="seasonal-badge">Herbst-Hit</span>
+              <img
+                src="assets/img/photo-f125060579-500.jpg"
+                width="500"
+                height="333"
+                loading="lazy"
+                alt="Knusprig karamellisiertes Kürbis-Franzbrötchen mit Zimtglasur"
+              >
+            </div>
+            <div class="tilt-card-body">
+              <h3 class="tilt-card-title">Franzbrötchen Kürbis</h3>
+              <p class="tilt-card-desc">
+                Hauchdünner Plunderteig mit geröstetem Hokkaido-Kürbispüree, duftendem Ceylon-Zimt und karamellisierten knusprigen Kürbiskernen.
+              </p>
+              <div class="tilt-card-footer">
+                <span class="tilt-card-price">3,60 &euro;</span>
+                <a href="#vorbestellen" class="tilt-card-action seasonal-preorder-btn" data-bread="Franzbrötchen Kürbis">
+                  Vorbestellen &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Glühwein-Plätzchen -->
+          <article class="tilt-card">
+            <div class="tilt-card-img-wrap">
+              <span class="seasonal-badge">Hausgemacht</span>
+              <img
+                src="assets/img/photo-m61713103-500.jpg"
+                width="500"
+                height="333"
+                loading="lazy"
+                alt="Würzige Plätzchen mit Rotweingelee und Nelkenstaub"
+              >
+            </div>
+            <div class="tilt-card-body">
+              <h3 class="tilt-card-title">Glühwein-Plätzchen</h3>
+              <p class="tilt-card-desc">
+                Zartes Buttermürbegebäck gefüllt mit samtigem Glühweingelee, Kardamom und Nelkenstaub. Von Hand ausgestochen nach altem Familienrezept.
+              </p>
+              <div class="tilt-card-footer">
+                <span class="tilt-card-price">6,20 &euro;</span>
+                <a href="#vorbestellen" class="tilt-card-action seasonal-preorder-btn" data-bread="Glühwein-Plätzchen">
+                  Vorbestellen &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Section: "Die Theke heute" (Interactive Counter Tabs & Products) -->
+    <section class="theke-section fade-in-section" id="theke">
+      <div class="container">
+        <div class="theke-header">
+          <span class="section-label">Täglich ofenfrisch</span>
+          <h2 class="section-title">DIE THEKE HEUTE</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Alle Backwaren werden in handwerklichen Chargen ohne Zusatzstoffe gebacken. Was morgens aus dem Ofen kommt, wandert direkt in die Auslage.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="theke-tabs" role="tablist" aria-label="Sortiment Kategorien">
+          <button type="button" class="theke-tab-btn active" data-tab="all" role="tab" aria-selected="true">Alle Backwaren</button>
+          <button type="button" class="theke-tab-btn" data-tab="brot" role="tab" aria-selected="false">Brot</button>
+          <button type="button" class="theke-tab-btn" data-tab="broetchen" role="tab" aria-selected="false">Brötchen</button>
+          <button type="button" class="theke-tab-btn" data-tab="suesses" role="tab" aria-selected="false">Süßes</button>
+          <button type="button" class="theke-tab-btn" data-tab="herzhaft" role="tab" aria-selected="false">Herzhaft</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="theke-grid" id="theke-grid">
+          <!-- Brot 1 -->
+          <article class="theke-item" data-cat="brot">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Eifeler Landbrot</h3>
+              <span class="theke-item-price">5,20 &euro;</span>
+            </div>
+            <p class="theke-item-desc">80% Roggen, 20% Weizen, 24h gereifter Natursauerteig, dunkle Steinofenkruste.</p>
+          </article>
+
+          <!-- Brot 2 -->
+          <article class="theke-item" data-cat="brot">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Kastanien-Kruste</h3>
+              <span class="theke-item-price">6,40 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Dinkel-Vollkorn mit gerösteten Edelkastanien und einem Hauch Rosmarin.</p>
+          </article>
+
+          <!-- Brot 3 -->
+          <article class="theke-item" data-cat="brot">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Berliner Saatenbrot</h3>
+              <span class="theke-item-price">5,60 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Mit gerösteten Kürbiskernen, Leinsamen und Sonnenblume überbacken.</p>
+          </article>
+
+          <!-- Brot 4 -->
+          <article class="theke-item" data-cat="brot">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Baguette Tradition</h3>
+              <span class="theke-item-price">3,40 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Französisches T65 Mehl, 20h kalte Führung, grobporig und splitternde Kruste.</p>
+          </article>
+
+          <!-- Brötchen 1 -->
+          <article class="theke-item" data-cat="broetchen">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Kaisersemmel</h3>
+              <span class="theke-item-price">0,95 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Traditionell handgeschlagen, goldgelb gebacken mit zarter Krume.</p>
+          </article>
+
+          <!-- Brötchen 2 -->
+          <article class="theke-item" data-cat="broetchen">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Kürbiskern-Dinkel</h3>
+              <span class="theke-item-price">1,40 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Knusprig geröstete Steirische Kürbiskerne innen und außen.</p>
+          </article>
+
+          <!-- Brötchen 3 -->
+          <article class="theke-item" data-cat="broetchen">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Bio-Mohnweck</h3>
+              <span class="theke-item-price">1,10 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Dicht bestreut mit feinstem Bio-Blaumohn auf knusprigem Weizenteig.</p>
+          </article>
+
+          <!-- Brötchen 4 -->
+          <article class="theke-item" data-cat="broetchen">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Eifeler Laugenstange</h3>
+              <span class="theke-item-price">1,60 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Bayerische Natronlauge, bestreut mit echtem Alpensalz.</p>
+          </article>
+
+          <!-- Süßes 1 -->
+          <article class="theke-item" data-cat="suesses">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Butter-Croissant</h3>
+              <span class="theke-item-price">2,80 &euro;</span>
+            </div>
+            <p class="theke-item-desc">27 hauchfeine Schichten französische Süßrahmbutter, luftig gebacken.</p>
+          </article>
+
+          <!-- Süßes 2 -->
+          <article class="theke-item" data-cat="suesses">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Kardamom-Knoten</h3>
+              <span class="theke-item-price">3,40 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Schwedische Art mit frisch im Mörser zerstoßenem Kardamom und Hagelzucker.</p>
+          </article>
+
+          <!-- Süßes 3 -->
+          <article class="theke-item" data-cat="suesses">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Schoko-Zimtschnecke</h3>
+              <span class="theke-item-price">3,50 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Gefüllt mit Valrhona-Edelschokolade und handgerührtem Ceylon-Zimtzucker.</p>
+          </article>
+
+          <!-- Süßes 4 -->
+          <article class="theke-item" data-cat="suesses">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Zwetschgen-Streusel</h3>
+              <span class="theke-item-price">3,90 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Blechkuchen mit saftigen Brandenburger Zwetschgen und Butterstreuseln.</p>
+          </article>
+
+          <!-- Herzhaft 1 -->
+          <article class="theke-item" data-cat="herzhaft">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Käse-Laugenbrezel</h3>
+              <span class="theke-item-price">2,90 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Überbacken mit herzhaft gereiftem Allgäuer Bergkäse.</p>
+          </article>
+
+          <!-- Herzhaft 2 -->
+          <article class="theke-item" data-cat="herzhaft">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Lauch-Speck-Quiche</h3>
+              <span class="theke-item-price">4,80 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Mürbeteigboden mit frischem Winterlauch und geräuchertem Landschinken.</p>
+          </article>
+
+          <!-- Herzhaft 3 -->
+          <article class="theke-item" data-cat="herzhaft">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Rosmarin-Focaccia</h3>
+              <span class="theke-item-price">4,20 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Natives Olivenöl extra, frischer Gartenrosmarin und Kalamata-Oliven.</p>
+          </article>
+
+          <!-- Herzhaft 4 -->
+          <article class="theke-item" data-cat="herzhaft">
+            <div class="theke-item-header">
+              <h3 class="theke-item-title">Wurst im Blätterteig</h3>
+              <span class="theke-item-price">3,80 &euro;</span>
+            </div>
+            <p class="theke-item-desc">Feine Bio-Kräuterbratwurst im goldgelben Butterblätterteigmantel.</p>
+          </article>
+        </div>
+
+        <div class="theke-footnote">
+          <strong>Allergene &amp; Inhaltsstoffe:</strong> Detaillierte Allergenlisten liegen an unserer Verkaufstheke aus. Unser Team berät Sie gern zu glutenarmen Mehlsorten, laktosefreien Optionen und rein pflanzlichen Backwaren.
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Section: 3D Moment (Three.js Pretzel + Story) -->
+    <section class="three-section fade-in-section" id="handwerk">
+      <div class="container">
+        <div class="three-grid">
+          <!-- 3D Interactive Canvas -->
+          <div class="three-canvas-container" id="three-container">
+            <canvas id="three-canvas"></canvas>
+            <img
+              src="assets/img/photo-f78711387-500.jpg"
+              width="500"
+              height="333"
+              alt="Frisch gebackene Brezel mit glänzender Lauge"
+              class="three-canvas-fallback"
+              id="three-fallback"
+            >
+            <div class="three-hint">3D Modell &middot; Mit Maus / Berührung drehen</div>
+          </div>
+
+          <!-- Story Text -->
+          <div class="three-text-col">
+            <span class="section-label">Geduld ist die wichtigste Zutat</span>
+            <h2 class="section-title">UNSER BREZELTEIG RUHT 18 STUNDEN.</h2>
+            <p>
+              Gute Brezeln verzeihen keine Hektik. Unser Hefeteig wird am Vortag mit kalter Bio-Vollmilch und bester deutscher Süßrahmbutter geknetet. Anschließend ruht er volle 18 Stunden bei konstant 4 Grad im Reiferaum.
+            </p>
+            <p>
+              Erst diese lange, kalte Führung spaltet die Getreidestärke natürlich auf, sorgt für den charakteristisch nussigen Malzgeschmack und macht die Krume unvergleichlich saftig. Vor dem Backen kurz in reine Bäckerlauge getaucht und auf Schamotte geschossen &ndash; kross an den feinen Ärmchen, wattig-weich im dicken Bauch.
+            </p>
+
+            <div class="three-stats-row">
+              <div class="three-stat-item">
+                <span class="three-stat-val">18h</span>
+                <span class="three-stat-lbl">Kaltteig&shy;ruhe</span>
+              </div>
+              <div class="three-stat-item">
+                <span class="three-stat-val">100%</span>
+                <span class="three-stat-lbl">Marken&shy;butter</span>
+              </div>
+              <div class="three-stat-item">
+                <span class="three-stat-val">280&deg;C</span>
+                <span class="three-stat-lbl">Steinback&shy;ofen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Section: Team (3 Tilted Polaroid Photos & Handwritten Captions) -->
+    <section class="team-section fade-in-section" id="team">
+      <div class="container">
+        <div class="team-header">
+          <span class="section-label">Drei Generationen Handwerk</span>
+          <h2 class="section-title">MENSCHEN HINTER DEM MEHL</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Keine Fabrik, keine anonymen Backstraßen. Hinter jedem Brot stehen drei Menschen, die frühmorgens für Sie aufstehen.
+          </p>
+        </div>
+
+        <div class="polaroid-grid">
+          <!-- Polaroid 1: Meister Jonas -->
+          <article class="polaroid-card">
+            <div class="polaroid-img-wrap">
+              <img
+                src="assets/img/photo-f65853499-500.jpg"
+                srcset="assets/img/photo-f65853499-500.jpg 500w, assets/img/photo-f65853499-960.jpg 960w"
+                sizes="(max-width: 600px) 280px, 340px"
+                width="500"
+                height="333"
+                loading="lazy"
+                alt="Meister Jonas prüft den Sauerteig an der Knetmaschine"
+              >
+            </div>
+            <p class="polaroid-caption">
+              Meister Jonas &middot; B&auml;cker aus &Uuml;berzeugung seit 2004. H&ouml;rt am Klopfen der Kruste, ob das Brot fertig ist.
+            </p>
+          </article>
+
+          <!-- Polaroid 2: Leyla -->
+          <article class="polaroid-card">
+            <div class="polaroid-img-wrap">
+              <img
+                src="assets/img/photo-c141-500.jpg"
+                srcset="assets/img/photo-c141-500.jpg 500w, assets/img/photo-c141-960.jpg 960w"
+                sizes="(max-width: 600px) 280px, 340px"
+                width="500"
+                height="333"
+                loading="lazy"
+                alt="Leyla gießt kunstvolle Latte Art mit frischer Milch ein"
+              >
+            </div>
+            <p class="polaroid-caption">
+              Leyla &middot; Barista-Herz &amp; guter Geist im Caf&eacute;. Kennt von jedem Stammgast die Bestellung auswendig.
+            </p>
+          </article>
+
+          <!-- Polaroid 3: Opa Heinz -->
+          <article class="polaroid-card">
+            <div class="polaroid-img-wrap">
+              <img
+                src="assets/img/photo-m62054123-500.jpg"
+                srcset="assets/img/photo-m62054123-500.jpg 500w, assets/img/photo-m62054123-960.jpg 960w"
+                sizes="(max-width: 600px) 280px, 340px"
+                width="500"
+                height="333"
+                loading="lazy"
+                alt="Opa Heinz prüft Getreide und Rohstoffe in der Holzschale"
+              >
+            </div>
+            <p class="polaroid-caption">
+              Opa Heinz &middot; Schrieb 1987 das Rezept f&uuml;r den Natursauerteig auf. Kommt noch heute t&auml;glich um 6 Uhr vorbei.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Section: "Brot vorbestellen" (Interactive Preorder Form) -->
+    <section class="preorder-section fade-in-section" id="vorbestellen">
+      <div class="container">
+        <div class="preorder-wrapper">
+          <div class="preorder-header">
+            <span class="section-label">Garantierter Genuss</span>
+            <h2 class="section-title">BROT VORBESTELLEN</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">
+              Wir backen in ehrlichen, limitierten Mengen. Bestellen Sie Ihr Lieblingsbrot bis 17:00 Uhr am Vortag vor &ndash; wir legen es morgens frisch an der Abholtheke für Sie zurück.
+            </p>
+          </div>
+
+          <!-- Preorder Form -->
+          <form class="preorder-form" id="preorder-form">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Ihr Name *</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="z. B. Clara Schumann" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-phone" class="form-label">Telefonnummer *</label>
+                <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="z. B. +49 170 1234567" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="form-pickup-day" class="form-label">Abholtag *</label>
+                <select id="form-pickup-day" name="pickup_day" class="form-select" required>
+                  <option value="Morgen (ab 06:30 Uhr)">Morgen (ab 06:30 Uhr)</option>
+                  <option value="Übermorgen (ab 06:30 Uhr)">Übermorgen (ab 06:30 Uhr)</option>
+                  <option value="Kommender Samstag (ab 07:00 Uhr)">Kommender Samstag (ab 07:00 Uhr)</option>
+                  <option value="Kommender Sonntag (ab 08:00 Uhr)">Kommender Sonntag (ab 08:00 Uhr)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-bread" class="form-label">Brot-Sorte *</label>
+                <select id="form-bread" name="bread" class="form-select" required>
+                  <option value="Eifeler Landbrot (80% Roggen)">Eifeler Landbrot (80% Roggen) &ndash; 5,20 &euro;</option>
+                  <option value="Winzerstollen (Spezialität)">Winzerstollen (Spezialität) &ndash; 18,50 &euro;</option>
+                  <option value="Dinkel-Honig-Brot">Dinkel-Honig-Brot &ndash; 5,80 &euro;</option>
+                  <option value="Franzbrötchen Kürbis (4er Pack)">Franzbrötchen Kürbis (4er Pack) &ndash; 14,00 &euro;</option>
+                  <option value="Glühwein-Plätzchen (200g)">Glühwein-Plätzchen (200g) &ndash; 6,20 &euro;</option>
+                  <option value="Kastanien-Kruste">Kastanien-Kruste &ndash; 6,40 &euro;</option>
+                  <option value="Berliner Saatenbrot">Berliner Saatenbrot &ndash; 5,60 &euro;</option>
+                  <option value="Baguette Tradition">Baguette Tradition &ndash; 3,40 &euro;</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-quantity" class="form-label">Anzahl (Stück) *</label>
+              <input type="number" id="form-quantity" name="quantity" class="form-input" min="1" max="10" value="1" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-notes" class="form-label">Besondere Wünsche (optional)</label>
+              <textarea id="form-notes" name="notes" class="form-textarea" placeholder="z. B. bitte ungeschnitten einpacken"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit-btn">Verbindlich zur Abholung vorbestellen</button>
+          </form>
+
+          <!-- In-Page Confirmation Screen -->
+          <div class="preorder-confirmation" id="preorder-confirmation">
+            <div class="confirmation-badge-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="confirmation-title">Vielen Dank, <span id="conf-name"></span>!</h3>
+            <p class="section-subtitle" style="margin: 0 auto;">
+              Ihre Vorbestellung wurde erfolgreich registriert. Wir backen Ihren Laib in der Nacht frisch für Sie.
+            </p>
+            <div class="confirmation-details">
+              <p><strong>Bestellung:</strong> <span id="conf-bread"></span></p>
+              <p><strong>Abholung:</strong> <span id="conf-day"></span></p>
+              <p><strong>Rückfragen an:</strong> <span id="conf-phone"></span></p>
+              <p><strong>Abholort:</strong> Kastanienallee 48, 10119 Berlin</p>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--color-crust-muted);">
+                Bezahlung bequem vor Ort in bar oder kontaktlos mit Karte.
+              </p>
+            </div>
+            <button type="button" class="btn-secondary confirmation-reset-btn" id="confirmation-reset-btn">
+              Weiteres Brot vorbestellen
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Section: Visit (Opening Hours, Contact & Stylized Vector Map) -->
+    <section class="visit-section fade-in-section" id="besuch">
+      <div class="container">
+        <div class="visit-header">
+          <span class="section-label">Vorbeikommen &amp; Genießen</span>
+          <h2 class="section-title">BESUCHEN SIE UNS</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Mitten im Prenzlauer Berg, direkt an der Kastanienallee. Treten Sie ein, atmen Sie tief durch und nehmen Sie sich Zeit für guten Kaffee.
+          </p>
+        </div>
+
+        <div class="visit-grid">
+          <!-- Left: Address & Dynamic Hours Table -->
+          <div class="visit-info-col">
+            <div class="hours-card">
+              <h3 class="hours-card-title">
+                <span>Öffnungszeiten</span>
+                <span style="font-size: 0.8125rem; color: var(--color-crust-muted); font-family: var(--font-body); text-transform: none;">Frisch aus dem Ofen</span>
+              </h3>
+
+              <table class="hours-table" aria-label="Wöchentliche Öffnungszeiten">
+                <tbody>
+                  <tr class="hours-row" data-day="mo-fr">
+                    <td class="hours-day">Montag &ndash; Freitag</td>
+                    <td class="hours-time">06:30 &ndash; 18:30 Uhr</td>
+                  </tr>
+                  <tr class="hours-row" data-day="sa">
+                    <td class="hours-day">Samstag</td>
+                    <td class="hours-time">07:00 &ndash; 17:00 Uhr</td>
+                  </tr>
+                  <tr class="hours-row" data-day="so">
+                    <td class="hours-day">Sonntag</td>
+                    <td class="hours-time">08:00 &ndash; 14:00 Uhr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Contact CTA Buttons -->
+            <div class="contact-action-row">
+              <a href="tel:+498886661234" class="contact-btn contact-btn-phone" aria-label="Bäckerei Eifel anrufen">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.47a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.47a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.05l-2.2 2.06z"/>
+                </svg>
+                Anrufen
+              </a>
+
+              <a href="mailto:12234456789@gmail.com" class="contact-btn contact-btn-email" aria-label="E-Mail an Bäckerei Eifel senden">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                E-Mail
+              </a>
+
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="contact-btn contact-btn-telegram" aria-label="Telegram Kanal aufrufen">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                Telegram
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Stylized Prenzlauer Berg Vector Map -->
+          <div class="map-card">
+            <div class="map-svg-wrap">
+              <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Karte von Berlin Prenzlauer Berg rund um die Kastanienallee 48">
+                <!-- Background Map Surface -->
+                <rect width="600" height="450" fill="#241810"/>
+
+                <!-- Parks / Green Spaces -->
+                <!-- Zionskirchplatz Park -->
+                <path d="M 120 280 C 120 250, 160 240, 190 260 C 210 275, 205 320, 170 330 C 135 340, 120 310, 120 280 Z" fill="#2E2319" stroke="#3D2E22" stroke-width="2"/>
+                <text x="160" y="295" font-family="'Inter', sans-serif" font-size="10" fill="#6B5547" text-anchor="middle">Zionskirchplatz</text>
+
+                <!-- Mauerpark edge top left -->
+                <path d="M 0 0 L 160 0 L 120 70 L 0 50 Z" fill="#2A1F16"/>
+                <text x="50" y="35" font-family="'Inter', sans-serif" font-size="10" fill="#6B5547">Mauerpark</text>
+
+                <!-- City Grid Street Network -->
+                <!-- Schönhauser Allee (Diagonal Main Artery) -->
+                <line x1="420" y1="0" x2="560" y2="450" stroke="#3D2B1F" stroke-width="18"/>
+                <line x1="420" y1="0" x2="560" y2="450" stroke="#4F382A" stroke-width="12"/>
+                <text x="475" y="160" font-family="'Oswald', sans-serif" font-size="11" fill="#8C705D" transform="rotate(72 475 160)" letter-spacing="1">SCHÖNHAUSER ALLEE</text>
+
+                <!-- Oderberger Straße -->
+                <line x1="60" y1="70" x2="380" y2="130" stroke="#3D2B1F" stroke-width="14"/>
+                <line x1="60" y1="70" x2="380" y2="130" stroke="#4F382A" stroke-width="8"/>
+                <text x="180" y="95" font-family="'Oswald', sans-serif" font-size="10" fill="#8C705D" transform="rotate(10 180 95)" letter-spacing="1">ODERBERGER STRASSE</text>
+
+                <!-- Schwedter Straße -->
+                <line x1="150" y1="20" x2="220" y2="450" stroke="#3D2B1F" stroke-width="10"/>
+
+                <!-- Kastanienallee (Primary Avenue - Gold Highlighted) -->
+                <line x1="260" y1="0" x2="340" y2="450" stroke="#3D2B1F" stroke-width="22"/>
+                <line x1="260" y1="0" x2="340" y2="450" stroke="#D9A55B" stroke-width="6" opacity="0.85"/>
+                <text x="312" y="320" font-family="'Oswald', sans-serif" font-size="12" font-weight="bold" fill="#F6EFE4" transform="rotate(79 312 320)" letter-spacing="2">KASTANIENALLEE</text>
+
+                <!-- Choriner Straße -->
+                <line x1="190" y1="180" x2="390" y2="240" stroke="#3D2B1F" stroke-width="10"/>
+                <text x="240" y="215" font-family="'Inter', sans-serif" font-size="9" fill="#6B5547">Choriner Str.</text>
+
+                <!-- Fehrbelliner Straße -->
+                <line x1="160" y1="360" x2="480" y2="390" stroke="#3D2B1F" stroke-width="10"/>
+                <text x="230" y="380" font-family="'Inter', sans-serif" font-size="9" fill="#6B5547">Fehrbelliner Str.</text>
+
+                <!-- Tram Line Overlay (M1) -->
+                <line x1="260" y1="0" x2="340" y2="450" stroke="#C8452D" stroke-width="2" stroke-dasharray="6,4" opacity="0.9"/>
+
+                <!-- Bakery Location Marker Pin (Kastanienallee 48) -->
+                <!-- Pulse circle -->
+                <circle cx="298" cy="215" r="24" fill="#C8452D" opacity="0.25">
+                  <animate attributeName="r" values="16;28;16" dur="2.5s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+
+                <!-- Outer Pin Marker -->
+                <circle cx="298" cy="215" r="14" fill="#C8452D" stroke="#FFFFFF" stroke-width="2.5"/>
+                <!-- Center Dot -->
+                <circle cx="298" cy="215" r="4.5" fill="#FFFFFF"/>
+
+                <!-- Callout Badge -->
+                <g transform="translate(320, 195)">
+                  <rect x="0" y="0" width="168" height="42" rx="4" fill="#2B1D14" stroke="#D9A55B" stroke-width="1.5" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))"/>
+                  <text x="12" y="18" font-family="'Oswald', sans-serif" font-size="11" font-weight="bold" fill="#D9A55B" letter-spacing="1">BÄCKEREI EIFEL</text>
+                  <text x="12" y="32" font-family="'Inter', sans-serif" font-size="9.5" fill="#F6EFE4">Kastanienallee 48 (Nr. 48)</text>
+                </g>
+
+                <!-- Tram Stop Marker -->
+                <g transform="translate(240, 240)">
+                  <circle cx="0" cy="0" r="5" fill="#D9A55B"/>
+                  <text x="8" y="3" font-family="'Inter', sans-serif" font-size="8.5" fill="#EBD3AC">Tram M1 / 12</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="map-address-overlay">
+              <strong>Kastanienallee 48, 10119 Berlin</strong>
+              <p>Tram M1 &amp; 12: Haltestelle Zionskirchplatz &middot; U2 Eberswalder Straße (5 Min. Fußweg)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Footer with Impressum line -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-script">Eifel</span>
+          <p>
+            Traditionelles Bäckerhandwerk, 18 Stunden Teigruhe und reine Natursauerteige mitten im Prenzlauer Berg seit 1987.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#nachtschicht">Eine Nacht in der Backstube</a></li>
+            <li><a href="#november">Neu im November</a></li>
+            <li><a href="#theke">Die Theke heute</a></li>
+            <li><a href="#handwerk">18h Teigruhe (3D)</a></li>
+            <li><a href="#team">Unser Team</a></li>
+            <li><a href="#vorbestellen">Brot vorbestellen</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt &amp; Adresse</h4>
+          <ul>
+            <li>Kastanienallee 48, 10119 Berlin</li>
+            <li><a href="tel:+498886661234">+49 888 6661234</a></li>
+            <li><a href="mailto:12234456789@gmail.com">12234456789@gmail.com</a></li>
+            <li><a href="https://t.me/rovatt" target="_blank" rel="noopener">Telegram: @rovatt</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal-note">
+          Fiktives Demo-Projekt. Gestaltung: Renat.
+        </div>
+        <div class="footer-copy">
+          Alle Angaben, Angebote und Personen auf dieser Seite sind rein fiktiv &middot; Keine Haftung für Vollständigkeit.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

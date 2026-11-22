@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pizzeria Pugliese – Traditionelle neapolitanische Holzofenpizza mit apulischer Seele in Berlin-Neukölln. 48 Stunden Teigführung, 485 Grad Buchenholzofen in der Weserstraße 58.">
+  <title>Pizzeria Pugliese – Forno a Legna | Berlin-Neukölln</title>
+
+  <!-- Google Fonts: Playfair Display & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP ANNOUNCEMENT BAR (DEMO NOTICE)
+       ======================================================================== -->
+  <aside class="top-demo-bar" id="topDemoBar" role="note" aria-label="Demo-Hinweis">
+    <div class="container">
+      <div class="top-demo-bar-inner">
+        <span class="top-demo-bar-dot" aria-hidden="true"></span>
+        <span>Demo-Projekt von Renat · Alle Angaben auf dieser Seite sind fiktiv.</span>
+        <button type="button" class="top-demo-bar-close" id="closeTopBarBtn" aria-label="Hinweis schließen">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="1" y1="1" x2="13" y2="13"></line>
+            <line x1="13" y1="1" x2="1" y2="13"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN SITE HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="site-header-inner">
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand" aria-label="Pizzeria Pugliese Startseite">
+          <span class="brand-title"><span class="brand-prefix">Pizzeria </span>Pugliese <span class="accent">d'Oro</span></span>
+          <span class="brand-subtitle">Forno a Legna · Berlin-Neukölln</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" aria-label="Hauptnavigation">
+          <a href="#teig" class="nav-link">48h Teig</a>
+          <a href="#karte" class="nav-link">Italien-Karte</a>
+          <a href="#menu" class="nav-link">Speisekarte</a>
+          <a href="#ofen" class="nav-link">Der Ofen</a>
+          <a href="#reservierung" class="nav-link">Reservierung</a>
+          <a href="#kontakt" class="nav-link">Kontakt</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <a href="tel:+498886661234" class="header-phone-link" title="Telefonisch anrufen">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+49 888 6661234</span>
+          </a>
+          <a href="#reservierung" class="header-cta-btn">
+            <span class="btn-text-desktop">Tisch reservieren</span>
+            <span class="btn-text-mobile">Reservieren</span>
+          </a>
+          <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menü öffnen" aria-expanded="false">
+            <span class="hamburger-icon" aria-hidden="true">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#teig" class="mobile-nav-link">48 Stunden Teig</a></li>
+      <li><a href="#karte" class="mobile-nav-link">Italien auf dem Teller</a></li>
+      <li><a href="#menu" class="mobile-nav-link">Speisekarte · La Carta</a></li>
+      <li><a href="#ofen" class="mobile-nav-link">Der 485°C Holzofen</a></li>
+      <li><a href="#reservierung" class="mobile-nav-link">Tischreservierung</a></li>
+      <li><a href="#kontakt" class="mobile-nav-link">Besuch &amp; Öffnungszeiten</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <a href="tel:+498886661234" class="mobile-contact-pill">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span>+49 888 6661234</span>
+      </a>
+      <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="mobile-contact-pill">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+        <span>Telegram @rovatt</span>
+      </a>
+      <a href="#reservierung" class="btn btn-primary mobile-drawer-btn" style="width: 100%;">Tisch anfragen</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         SECTION 1: HERO (FULLSCREEN + FIRE GLOW REACTING TO CURSOR)
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Real Wood Oven Photo Full-Bleed Background -->
+      <div class="hero-bg-media" aria-hidden="true">
+        <img 
+          src="assets/img/photo-f92853342.jpg" 
+          srcset="assets/img/photo-f92853342-500.jpg 500w, assets/img/photo-f92853342-960.jpg 960w, assets/img/photo-f92853342.jpg 1280w" 
+          sizes="100vw" 
+          alt="" 
+          class="hero-bg-img"
+          fetchpriority="high">
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- WebGL / Canvas Fire Glow -->
+      <canvas id="heroFireCanvas" class="hero-canvas-fire" aria-hidden="true"></canvas>
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-flame" aria-hidden="true"></span>
+            <span>Tradizione Napoletana &amp; Cuore Pugliese</span>
+          </div>
+
+          <h1 class="hero-headline">
+            485 Grad. <br><em>90 Sekunden.</em>
+          </h1>
+
+          <p class="hero-lead">
+            Echtes Holzofen-Handwerk in Berlin-Neukölln. Fermentierter Teig nach 48 Stunden Reifezeit, gebacken auf glühendem Biscotto-Vulkangestein. Cremige Burrata direkt aus Andria und reine Buchenholzglut in der Weserstraße.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#reservierung" class="btn btn-primary">Tisch reservieren</a>
+            <a href="#menu" class="btn btn-outline-cream">Speisekarte entdecken</a>
+          </div>
+
+          <div class="hero-quick-call">
+            <span>Spontane Plätze an der Bar frei ·</span>
+            <a href="tel:+498886661234">+49 888 6661234</a>
+          </div>
+
+          <!-- Hero Signature Badges -->
+          <div class="hero-badges-bar">
+            <div class="hero-badge-card">
+              <div class="hero-badge-value">48 Std.</div>
+              <div class="hero-badge-label">Kaltfermentierter Teig</div>
+            </div>
+            <div class="hero-badge-card">
+              <div class="hero-badge-value">485 °C</div>
+              <div class="hero-badge-label">Biscotto di Sorrento</div>
+            </div>
+            <div class="hero-badge-card">
+              <div class="hero-badge-value">90 Sek.</div>
+              <div class="hero-badge-label">Backzeit im Holzfeuer</div>
+            </div>
+            <div class="hero-badge-card">
+              <div class="hero-badge-value">100%</div>
+              <div class="hero-badge-label">Weserstraße Neukölln</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: 48 STUNDEN TEIG (VERTICAL STEP STORY WITH PROGRESS LINE)
+         ====================================================================== -->
+    <section class="section-teig" id="teig">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Geduld als wichtigste Zutat</span>
+          <h2 class="section-title">48 Stunden Teig. Das Geheimnis des Cornicione.</h2>
+          <p class="section-desc">
+            Eine echte Pizza duldet keine Eile. Wir schenken unserem Teig das Wertvollste im traditionellen Bäckerhandwerk: volle zwei Tage kontrollierte Reife.
+          </p>
+        </div>
+
+        <div class="teig-layout">
+          <!-- Left: Vertical Timeline Track with Animated Fill Line -->
+          <div class="timeline-track-wrap">
+            <div class="timeline-vertical-line" aria-hidden="true">
+              <div class="timeline-progress-fill" id="teigProgressFill"></div>
+            </div>
+
+            <!-- Step 1: Mehl -->
+            <article class="timeline-step active">
+              <div class="timeline-dot" aria-hidden="true">1</div>
+              <div class="timeline-step-meta">
+                <span class="step-num-badge">Schritt 1</span>
+                <span class="step-duration">Farina di Grano</span>
+              </div>
+              <h3 class="timeline-step-title">Mehl: Neapel trifft Apulien</h3>
+              <p class="timeline-step-desc">
+                Wir vermählen original neapolitanisches Caputo Tipo 00 (W 310) mit 15% apulischem Hartweizengrieß (<em>Semola Rimacinata di Grano Duro</em>). Diese Kombination schenkt dem Teig elastische Stabilität, goldene Röstung und kernigen Biss.
+              </p>
+              <div class="timeline-step-fact">100% italienisches Korn · Hohe Proteinstruktur</div>
+            </article>
+
+            <!-- Step 2: Wasser -->
+            <article class="timeline-step">
+              <div class="timeline-dot" aria-hidden="true">2</div>
+              <div class="timeline-step-meta">
+                <span class="step-num-badge">Schritt 2</span>
+                <span class="step-duration">Idratazione 72%</span>
+              </div>
+              <h3 class="timeline-step-title">Wasser: Hohe Hydratation &amp; Hauch von Hefe</h3>
+              <p class="timeline-step-desc">
+                Mit satten 72% gefiltertem Wasser auf 18°C binden wir maximale Feuchtigkeit. Wir nutzen lediglich 0,8 Gramm frische Bierhefe pro Kilogramm Mehl. Keine künstlichen Triebmittel &ndash; reine natürliche Gärung.
+              </p>
+              <div class="timeline-step-fact">72% Wasseranteil · Minimale Hefe für höchste Bekömmlichkeit</div>
+            </article>
+
+            <!-- Step 3: Ruhe -->
+            <article class="timeline-step">
+              <div class="timeline-dot" aria-hidden="true">3</div>
+              <div class="timeline-step-meta">
+                <span class="step-num-badge">Schritt 3</span>
+                <span class="step-duration">48 Stunden bei 4°C</span>
+              </div>
+              <h3 class="timeline-step-title">Ruhe: Kaltfermentierung in der Klimakammer</h3>
+              <p class="timeline-step-desc">
+                Zwei volle Tage reifen die Teiglinge bei konstanten vier Grad Celsius. In dieser Zeit spalten die Enzyme schwere Weizenstärken in leicht verdauliche Zucker auf. Millionen mikrofeiner Gasbläschen entstehen. Der Teig liegt nach dem Essen federleicht im Magen.
+              </p>
+              <div class="timeline-step-fact">Aromenentwicklung · Kein Völlegefühl</div>
+            </article>
+
+            <!-- Step 4: Formen -->
+            <article class="timeline-step">
+              <div class="timeline-dot" aria-hidden="true">4</div>
+              <div class="timeline-step-meta">
+                <span class="step-num-badge">Schritt 4</span>
+                <span class="step-duration">&laquo;Lo Schiaffo&raquo;</span>
+              </div>
+              <h3 class="timeline-step-title">Formen: Handarbeit auf Carrara-Marmor</h3>
+              <p class="timeline-step-desc">
+                Kein Nudelholz, keine Walzen. Unsere Pizzaioli öffnen jeden Teigballen mit gezielten Handbewegungen auf kühlem Marmor. Die Luftgase werden sanft von innen nach außen in den Rand getrieben &ndash; die Geburtsstunde des aufgepusteten <em>Cornicione</em>.
+              </p>
+              <div class="timeline-step-fact">Traditionelle Handtechnik · Rand bleibt unberührt</div>
+            </article>
+
+            <!-- Step 5: Ofen -->
+            <article class="timeline-step">
+              <div class="timeline-dot" aria-hidden="true">5</div>
+              <div class="timeline-step-meta">
+                <span class="step-num-badge">Schritt 5</span>
+                <span class="step-duration">485°C Schockhitze</span>
+              </div>
+              <h3 class="timeline-step-title">Ofen: 90 Sekunden vulkanische Hitze</h3>
+              <p class="timeline-step-desc">
+                Auf dem glühenden Biscotto-Stein dehnen sich die Teiggase in Sekunden explosionsartig aus. Nach genau 90 Sekunden verfügt die Pizza über das typische Leopardenmuster (<em>Maculatura</em>): außen knusprig geröstet, innen feucht und wolkenweich.
+              </p>
+              <div class="timeline-step-fact">485 Grad Buchenfeuer · Authentisches Leopardenmuster</div>
+            </article>
+          </div>
+
+          <!-- Right: Visual Side Card with Real Photography & Formula HUD -->
+          <div class="teig-visual-card">
+            <div class="teig-img-wrap">
+              <img 
+                src="assets/img/photo-f194319884-960.jpg" 
+                alt="Bäckerhände kneten den 48 Stunden gereiften Pizzateig traditionell von Hand" 
+                width="960" 
+                height="640" 
+                loading="lazy">
+              <div class="teig-img-caption">
+                Handarbeit in der Backstube Weserstraße · Reifeprozess
+              </div>
+            </div>
+
+            <div class="teig-visual-body">
+              <div class="badge-tag badge-basil">Handwerkliche Formel</div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 12px 0 8px; color: var(--color-text-dark);">
+                Die perfekte Teig-Balance
+              </h4>
+              <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.55;">
+                Jeder Parameter wird täglich an Luftfeuchtigkeit und Raumtemperatur in Neukölln angepasst. Das schmeckt man bei jedem Bissen.
+              </p>
+
+              <div class="teig-formula-grid" id="teigFormulaGrid">
+                <div class="formula-item">
+                  <div class="formula-val" id="formulaHydra">72%</div>
+                  <div class="formula-lbl">Wassergehalt</div>
+                </div>
+                <div class="formula-item">
+                  <div class="formula-val" id="formulaTemp">4 °C</div>
+                  <div class="formula-lbl">Reifetemperatur</div>
+                </div>
+                <div class="formula-item">
+                  <div class="formula-val" id="formulaTime">48 Std.</div>
+                  <div class="formula-lbl">Kaltgärung</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: MAP OF ITALY (INTERACTIVE SVG + REGIONAL PIZZA CARD)
+         ====================================================================== -->
+    <section class="section-karte" id="karte">
+      <div class="container">
+        <div class="section-header" style="color: var(--color-cream);">
+          <span class="section-eyebrow" style="color: var(--color-ember);">Regionale Herkunft</span>
+          <h2 class="section-title" style="color: var(--color-cream-light);">Italien auf dem Teller.</h2>
+          <p class="section-desc" style="color: var(--color-cream-tint);">
+            Tippe auf eine Region Italiens, um die von ihr inspirierte Pizza unseres Menüs und ihre traditionellen Herkunftszutaten zu entdecken.
+          </p>
+        </div>
+
+        <!-- Quick Region Selector Bar (Mobile & Accessibility Friendly) -->
+        <div class="region-pills-bar" role="tablist" aria-label="Regionen Italiens auswählen">
+          <button type="button" class="region-pill active" data-region="puglia">Puglia (Apulien)</button>
+          <button type="button" class="region-pill" data-region="campania">Campania (Kampanien)</button>
+          <button type="button" class="region-pill" data-region="calabria">Calabria (Kalabrien)</button>
+          <button type="button" class="region-pill" data-region="lazio">Lazio (Latium)</button>
+          <button type="button" class="region-pill" data-region="sicilia">Sicilia (Sizilien)</button>
+          <button type="button" class="region-pill" data-region="emilia">Emilia-Romagna</button>
+          <button type="button" class="region-pill" data-region="liguria">Liguria (Ligurien)</button>
+        </div>
+
+        <div class="map-layout">
+          <!-- Left: SVG Vector Map of Italy -->
+          <div class="svg-map-wrapper">
+            <svg class="italy-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktive Landkarte von Italien mit kulinarischen Regionen">
+              <!-- Sea labels -->
+              <text x="65" y="340" class="map-sea-label">Mare Tirreno</text>
+              <text x="325" y="240" class="map-sea-label">Mare Adriatico</text>
+              <text x="250" y="565" class="map-sea-label">Mare Ionio</text>
+              <text x="60" y="165" class="map-sea-label">Mar Ligure</text>
+              <!-- Regional Paths -->
+              <path class="region-path-bg" fill="#25221C" stroke="#1E1B16" stroke-width="1.5" d="M 63.6,200.3 C 60.4,199.1 52.2,188.9 48.5,181.0 C 44.8,173.1 43.2,161.4 41.5,152.8 C 39.8,144.2 37.4,137.5 38.0,129.3 C 38.6,121.1 39.8,109.0 45.0,103.5 C 50.2,98.0 61.9,100.7 69.5,96.4 C 77.1,92.1 85.3,79.9 90.6,77.6 C 95.9,75.2 97.0,83.1 101.1,82.3 C 105.2,81.5 108.1,74.5 115.1,72.9 C 122.1,71.3 134.3,75.2 143.1,72.9 C 151.8,70.6 157.7,63.1 167.6,58.8 C 177.5,54.5 193.3,49.0 202.7,47.1 C 212.0,45.2 218.1,44.4 223.7,47.1 C 229.2,49.8 230.7,60.4 236.0,63.5 C 241.3,66.6 248.0,64.3 255.3,65.9 C 262.6,67.5 276.0,67.8 279.8,72.9 C 283.6,78.0 277.4,89.7 278.0,96.4 C 278.6,103.1 283.9,110.9 283.3,112.9 C 282.7,114.9 278.6,108.6 274.5,108.2 C 270.4,107.8 264.4,108.5 258.8,110.5 C 253.2,112.5 245.6,117.6 241.2,119.9 C 236.8,122.2 234.2,120.3 232.5,124.6 C 230.8,128.9 233.3,142.3 230.7,145.8 C 228.1,149.3 221.9,146.2 216.7,145.8 C 211.4,145.4 205.6,144.2 199.2,143.4 C 192.8,142.6 185.8,141.1 178.2,141.1 C 170.6,141.1 160.6,143.4 153.6,143.4 C 146.6,143.4 140.8,140.3 136.1,141.1 C 131.4,141.9 127.0,145.0 125.6,148.1 C 124.1,151.2 129.7,157.6 127.4,159.9 C 125.1,162.2 116.6,161.0 111.6,162.2 C 106.6,163.4 102.9,164.2 97.6,166.9 C 92.3,169.7 85.0,175.2 80.0,178.7 C 75.0,182.2 70.5,184.5 67.8,188.1 C 65.1,191.7 66.8,201.5 63.6,200.3 Z" />
+              <path class="region-path-bg" fill="#25221C" stroke="#1E1B16" stroke-width="1.5" d="M 149.4,183.4 C 153.0,182.2 160.2,178.3 165.9,178.7 C 171.6,179.1 177.0,184.1 183.4,185.7 C 189.8,187.3 198.0,186.1 204.4,188.1 C 210.8,190.1 217.2,196.3 222.0,197.5 C 226.8,198.7 229.4,195.9 233.5,195.1 C 237.6,194.3 242.9,192.4 246.5,192.8 C 250.1,193.2 250.8,194.8 255.3,197.5 C 259.8,200.2 268.6,203.7 273.5,209.2 C 278.4,214.7 280.7,221.4 285.0,230.4 C 289.3,239.4 294.1,255.1 299.1,263.3 C 304.1,271.5 310.4,275.8 314.8,279.7 C 319.2,283.6 324.7,282.9 325.3,286.8 C 325.9,290.7 323.0,299.7 318.3,303.2 C 313.6,306.7 303.1,308.3 297.3,307.9 C 291.5,307.5 287.4,303.2 283.3,300.9 C 279.2,298.5 277.5,298.1 272.8,293.8 C 268.1,289.5 260.0,281.3 255.3,275.0 C 250.6,268.7 251.1,258.6 244.7,256.2 C 238.3,253.8 223.7,258.9 216.7,260.9 C 209.7,262.9 207.4,267.6 202.7,268.0 C 198.0,268.4 192.2,266.8 188.7,263.3 C 185.2,259.8 184.9,250.7 181.7,246.8 C 178.5,242.9 172.9,245.7 169.4,239.8 C 165.9,233.9 162.9,219.4 160.6,211.6 C 158.3,203.8 158.1,197.1 155.4,192.8 C 152.7,188.5 145.2,187.3 144.2,185.7 C 143.2,184.1 145.8,184.6 149.4,183.4 Z" />
+              <path class="region-path-bg" fill="#25221C" stroke="#1E1B16" stroke-width="1.5" d="M 348.1,378.5 C 348.4,374.6 354.3,365.9 353.4,359.6 C 352.5,353.3 345.2,346.7 342.9,340.8 C 340.6,334.9 335.9,326.8 339.4,324.4 C 342.9,322.0 358.1,323.6 363.9,326.7 C 369.7,329.8 370.0,337.7 374.4,343.2 C 378.8,348.7 388.7,355.7 390.2,359.6 C 391.7,363.5 385.2,364.3 383.2,366.7 C 381.1,369.1 381.1,371.4 377.9,373.8 C 374.7,376.2 368.0,379.6 363.9,380.8 C 359.8,382.0 355.4,380.4 353.4,380.8 C 351.3,381.2 352.5,383.6 351.6,383.2 C 350.7,382.8 347.8,382.4 348.1,378.5 Z" />
+              <path class="region-path-bg" fill="#25221C" stroke="#1E1B16" stroke-width="1.5" d="M 122.1,320.2 C 128.8,319.4 131.5,324.0 134.4,326.7 C 137.3,329.4 138.7,330.2 139.6,336.1 C 140.5,342.0 139.6,353.8 139.6,362.0 C 139.6,370.2 140.5,376.1 139.6,385.5 C 138.7,394.9 137.3,412.9 134.4,418.4 C 131.5,423.9 127.4,416.4 122.1,418.4 C 116.8,420.4 107.2,435.3 102.8,430.2 C 98.4,425.1 97.5,400.8 95.8,387.9 C 94.0,375.0 93.8,361.6 92.3,352.6 C 90.8,343.6 86.8,337.3 87.1,333.8 C 87.4,330.3 88.3,333.7 94.1,331.4 C 99.9,329.1 115.4,321.0 122.1,320.2 Z" />
+              <path class="region-path" data-region="liguria" d="M 63.6,200.3 C 64.5,201.3 69.2,196.3 73.0,194.2 C 76.8,192.1 82.4,190.6 86.4,187.6 C 90.4,184.6 92.5,179.0 96.9,176.3 C 101.3,173.6 108.3,171.3 112.6,171.2 C 116.9,171.0 119.2,173.6 122.8,175.4 C 126.4,177.2 130.8,180.3 134.4,182.0 C 138.0,183.7 141.7,185.5 144.2,185.7 C 146.7,185.9 149.9,185.6 149.4,183.4 C 148.9,181.2 144.8,175.5 141.4,172.6 C 138.0,169.7 134.1,167.7 129.1,166.0 C 124.1,164.3 116.8,162.0 111.6,162.2 C 106.3,162.3 102.9,164.2 97.6,166.9 C 92.3,169.7 85.0,175.2 80.0,178.7 C 75.0,182.2 70.5,184.5 67.8,188.1 C 65.1,191.7 62.7,199.3 63.6,200.3 Z" />
+              <path class="region-path" data-region="emilia" d="M 129.1,166.0 C 131.4,168.1 137.9,169.7 141.4,172.6 C 144.9,175.5 146.0,182.4 150.1,183.4 C 154.2,184.4 160.3,178.3 165.9,178.7 C 171.5,179.1 177.0,184.1 183.4,185.7 C 189.8,187.3 198.0,186.1 204.4,188.1 C 210.8,190.1 217.2,196.3 222.0,197.5 C 226.8,198.7 229.4,195.9 233.5,195.1 C 237.6,194.3 245.3,194.8 246.5,192.8 C 247.7,190.9 242.8,187.1 240.5,183.4 C 238.2,179.7 234.4,175.4 232.5,170.7 C 230.6,166.0 229.3,159.3 229.0,155.2 C 228.7,151.0 232.8,147.4 230.7,145.8 C 228.6,144.2 221.9,146.2 216.7,145.8 C 211.4,145.4 205.6,144.2 199.2,143.4 C 192.8,142.6 185.8,141.1 178.2,141.1 C 170.6,141.1 160.6,143.4 153.6,143.4 C 146.6,143.4 140.8,140.3 136.1,141.1 C 131.4,141.9 127.0,145.0 125.6,148.1 C 124.1,151.2 126.8,156.9 127.4,159.9 C 128.0,162.9 126.8,163.9 129.1,166.0 Z" />
+              <path class="region-path" data-region="lazio" d="M 202.7,268.0 C 201.8,270.8 208.3,273.9 211.5,277.4 C 214.7,280.9 218.9,285.6 222.0,289.1 C 225.1,292.6 226.2,295.0 230.0,298.5 C 233.8,302.0 240.2,306.8 244.7,310.3 C 249.2,313.8 252.0,317.8 257.0,319.7 C 262.0,321.6 270.7,323.2 274.5,322.0 C 278.3,320.8 278.3,316.1 279.8,312.6 C 281.3,309.1 284.5,304.0 283.3,300.9 C 282.1,297.8 277.5,298.1 272.8,293.8 C 268.1,289.5 260.0,281.3 255.3,275.0 C 250.6,268.7 251.1,258.6 244.7,256.2 C 238.3,253.8 223.7,258.9 216.7,260.9 C 209.7,262.9 203.6,265.2 202.7,268.0 Z" />
+              <path class="region-path" data-region="campania" d="M 274.5,322.0 C 275.7,324.8 283.6,326.4 286.8,329.1 C 290.0,331.9 291.5,336.6 293.8,338.5 C 296.1,340.4 299.1,338.9 300.8,340.8 C 302.6,342.8 302.0,349.0 304.3,350.2 C 306.6,351.4 311.6,345.9 314.8,347.9 C 318.0,349.9 320.1,357.3 323.6,362.0 C 327.1,366.7 331.8,373.4 335.9,376.1 C 340.0,378.9 345.2,381.2 348.1,378.5 C 351.0,375.8 354.3,365.9 353.4,359.6 C 352.5,353.3 345.2,346.7 342.9,340.8 C 340.6,334.9 343.5,330.7 339.4,324.4 C 335.3,318.1 325.3,305.9 318.3,303.2 C 311.3,300.4 303.1,308.3 297.3,307.9 C 291.5,307.5 286.2,300.1 283.3,300.9 C 280.4,301.7 281.3,309.1 279.8,312.6 C 278.3,316.1 273.3,319.2 274.5,322.0 Z" />
+              <path class="region-path active" data-region="puglia" d="M 325.3,286.8 C 326.8,283.5 333.5,288.1 337.6,288.2 C 341.7,288.3 345.2,287.5 349.9,287.7 C 354.6,287.9 363.3,287.3 365.6,289.1 C 367.9,290.9 365.3,296.1 363.9,298.5 C 362.4,300.9 359.2,302.0 356.9,303.2 C 354.6,304.4 348.4,303.6 349.9,305.6 C 351.3,307.6 358.9,311.6 365.6,315.0 C 372.3,318.4 383.5,322.3 390.2,325.8 C 396.9,329.3 399.5,332.4 405.9,336.1 C 412.3,339.8 422.0,342.0 428.7,347.9 C 435.4,353.8 443.9,364.7 446.2,371.4 C 448.5,378.1 445.0,386.3 442.7,387.9 C 440.4,389.5 436.0,384.7 432.2,380.8 C 428.4,376.9 425.0,368.2 420.0,364.3 C 415.0,360.4 407.4,358.1 402.4,357.3 C 397.4,356.5 394.9,362.0 390.2,359.6 C 385.5,357.2 378.8,348.7 374.4,343.2 C 370.0,337.7 369.7,329.8 363.9,326.7 C 358.1,323.6 345.2,327.5 339.4,324.4 C 333.5,321.3 331.1,314.2 328.8,307.9 C 326.5,301.6 323.8,290.1 325.3,286.8 Z" />
+              <path class="region-path" data-region="calabria" d="M 351.6,383.2 C 353.1,386.7 359.8,394.2 362.1,402.0 C 364.4,409.8 366.8,423.6 365.6,430.2 C 364.4,436.8 356.9,437.2 355.1,441.9 C 353.4,446.6 356.3,454.5 355.1,458.4 C 353.9,462.3 348.7,462.7 348.1,465.4 C 347.5,468.1 349.3,472.8 351.6,474.8 C 353.9,476.8 358.3,480.3 362.1,477.2 C 365.9,474.1 371.2,462.7 374.4,456.0 C 377.6,449.3 377.0,442.7 381.4,437.2 C 385.8,431.7 397.8,428.2 400.7,423.1 C 403.6,418.0 402.7,412.6 398.9,406.7 C 395.1,400.8 383.7,392.2 377.9,387.9 C 372.1,383.6 368.0,382.0 363.9,380.8 C 359.8,379.6 355.4,380.4 353.4,380.8 C 351.3,381.2 350.2,379.7 351.6,383.2 Z" />
+              <path class="region-path" data-region="sicilia" d="M 346.4,460.7 C 344.9,459.5 338.8,461.5 332.4,463.1 C 326.0,464.7 317.1,469.3 307.8,470.1 C 298.5,470.9 283.0,469.0 276.3,467.8 C 269.6,466.6 272.5,463.5 267.5,463.1 C 262.5,462.7 251.8,463.4 246.5,465.4 C 241.2,467.3 237.5,471.7 236.0,474.8 C 234.5,477.9 234.2,480.7 237.7,484.2 C 241.2,487.7 250.6,492.1 257.0,496.0 C 263.4,499.9 269.3,504.2 276.3,507.7 C 283.3,511.2 292.1,513.2 299.1,517.1 C 306.1,521.0 313.4,528.1 318.3,531.2 C 323.2,534.3 325.9,538.2 328.8,535.9 C 331.7,533.5 335.9,523.8 335.9,517.1 C 335.9,510.5 329.1,502.3 328.8,496.0 C 328.5,489.7 332.1,483.8 334.1,479.5 C 336.2,475.2 339.1,473.2 341.1,470.1 C 343.2,467.0 347.8,461.9 346.4,460.7 Z" />
+              <!-- Interactive Pins -->
+              <g class="region-pin active" data-region="puglia" transform="translate(390, 345)">
+                <circle cx="0" cy="0" r="10" class="pin-circle" />
+                <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+              </g>
+              <g class="region-pin" data-region="campania" transform="translate(295, 350)">
+                <circle cx="0" cy="0" r="8" class="pin-circle" />
+                <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+              </g>
+              <g class="region-pin" data-region="calabria" transform="translate(345, 440)">
+                <circle cx="0" cy="0" r="8" class="pin-circle" />
+                <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+              </g>
+              <g class="region-pin" data-region="lazio" transform="translate(240, 292)">
+                <circle cx="0" cy="0" r="8" class="pin-circle" />
+                <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+              </g>
+              <g class="region-pin" data-region="sicilia" transform="translate(275, 495)">
+                <circle cx="0" cy="0" r="8" class="pin-circle" />
+                <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+              </g>
+              <g class="region-pin" data-region="emilia" transform="translate(200, 172)">
+                <circle cx="0" cy="0" r="8" class="pin-circle" />
+                <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+              </g>
+              <g class="region-pin" data-region="liguria" transform="translate(122, 175)">
+                <circle cx="0" cy="0" r="8" class="pin-circle" />
+                <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- Right: Regional Pizza Detail Card -->
+          <div class="regional-pizza-card" id="regionalPizzaCard">
+            <div class="card-region-header">
+              <div class="region-name-tag">
+                <span class="region-origin" id="regionOriginTag">Heimat &amp; Herz unseres Hauses</span>
+                <h3 class="region-title" id="regionTitle">Puglia (Apulien)</h3>
+              </div>
+              <div class="card-pizza-price" id="regionPizzaPrice">17,50 €</div>
+            </div>
+
+            <div class="badge-tag badge-tomato" id="regionBadge" style="margin-bottom: 16px;">Haus-Spezialität</div>
+            <div class="pizza-name-highlight" id="regionPizzaName">La Pugliese d’Oro</div>
+
+            <p class="pizza-ingredients-list" id="regionIngredients">
+              Stracciatella di Burrata aus Andria, geschmorte Cime di Rapa mit Knoblauch &amp; Chili, Capocollo di Martina Franca, geröstete Mandelsplitter, apulisches Coratina-Olivenöl extra vergine.
+            </p>
+
+            <div class="pizza-tasting-box">
+              <div class="tasting-label">Geschmacksprofil &amp; Charakter</div>
+              <div class="tasting-desc" id="regionTasting">
+                Unglaublich cremig durch die frische Stracciatella, fein-herbe Würze des Stängelkohls und knusprige Röstaromen der Mandeln.
+              </div>
+            </div>
+
+            <div style="font-size: 0.875rem; color: var(--color-cream-tint); margin-bottom: 24px;">
+              <strong style="color: var(--color-cream);">Teig-Besonderheit:</strong> <span id="regionDough">Mit 15% apulischem Hartweizengrieß (Semola Rimacinata) für goldenen Glanz und kernigen Biss.</span>
+            </div>
+
+            <div class="card-pizza-actions">
+              <a href="#menu" class="btn btn-outline-cream" style="font-size: 0.875rem; padding: 8px 20px; min-height: 44px;">Auf Speisekarte zeigen</a>
+              <a href="#reservierung" class="btn btn-primary" style="font-size: 0.875rem; padding: 8px 20px; min-height: 44px;">Tisch sichern</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: MENU AS ELEGANT ITALIAN TRATTORIA CARD
+         ====================================================================== -->
+    <section class="section-menu" id="menu">
+      <div class="container">
+        <!-- Trattoria Menu Card Frame -->
+        <div class="trattoria-card">
+          <div class="trattoria-card-inner-frame">
+            <!-- Trattoria Card Header -->
+            <div class="trattoria-card-header">
+              <div class="trattoria-crest">Pizzeria Pugliese · Forno a Legna</div>
+              <h2 class="trattoria-card-title">La Carta del Ristorante</h2>
+              <div class="trattoria-card-subtitle">Weserstraße 58 · Berlin-Neukölln · Handgemacht mit Liebe</div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="menu-tabs-nav" role="tablist" aria-label="Speisekarte Kategorien">
+              <button type="button" class="menu-tab-btn active" data-tab="pizze">Pizze Tradizionali</button>
+              <button type="button" class="menu-tab-btn" data-tab="antipasti">Antipasti &amp; Pane</button>
+              <button type="button" class="menu-tab-btn" data-tab="dolci">Dolci Artigianali</button>
+              <button type="button" class="menu-tab-btn" data-tab="vino">Vino &amp; Birra</button>
+            </div>
+
+            <!-- Panel 1: Pizze -->
+            <div class="menu-tab-panel active" id="tab-pizze">
+              <div class="menu-columns-grid">
+                <!-- Column 1: Pizze Rosse -->
+                <div class="menu-col">
+                  <div class="menu-subheading">Pizze Rosse (Mit San Marzano D.O.P.)</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Margherita Verace D.O.P. <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">13,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">San Marzano Tomaten D.O.P., Mozzarella di Bufala Campana, frisches Basilikum, Olivenöl extra vergine.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Marinara Infernale <span class="menu-diet-tag tag-vegan">[VEGAN]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">11,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">San Marzano Tomaten, Knoblauch aus Nubia, sizilianischer Wildoregano, frischer Chili, bestes Olivenöl (ohne Käse).</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Diavola Calabra</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">15,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">San Marzano, Fior di Latte aus Agerola, Spianata Calabrese, scharfe Nduja di Spilinga, getrocknete Chilis.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Parma 24 Mesi &amp; Rucola</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">16,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">San Marzano, Fior di Latte, 24 Monate gereifter Prosciutto di Parma, wilder Rucola, 30 Monate Parmesanflocken.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Ortolana alla Brace <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">15,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">San Marzano, Fior di Latte, im Holzofen gegrillte Auberginen, Zucchini, geröstete Paprika, Basilikum.</div>
+                  </div>
+                </div>
+
+                <!-- Column 2: Pizze Bianche & Haus-Spezialitäten -->
+                <div class="menu-col">
+                  <div class="menu-subheading">Pizze Bianche &amp; Spezialitäten</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">La Pugliese d'Oro <span class="menu-diet-tag tag-dop">[SPEZIAL]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">17,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Stracciatella di Burrata aus Andria, gedünstete Cime di Rapa mit Peperoncino, Capocollo di Martina Franca, Mandeln.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Pistacchio &amp; Mortadella</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">17,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Fior di Latte, Mortadella di Bologna I.G.P. hauchdünn nach dem Backen, ganze Mini-Burrata, Pistazienpesto aus Bronte.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Carbonara Neukölln</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">16,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Fior di Latte, knuspriger Guanciale di Amatrice, Eigelb-Pecorino-Romano-Creme, Tellicherry-Pfeffer frisch gemahlen.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Tartufo &amp; Funghi di Bosco <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">17,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Fior di Latte, sautierte Waldpilze, umbrische schwarze Trüffelcreme, Ricotta salata, frischer Schnittlauch.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Quattro Formaggi &amp; Miele <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">16,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Fior di Latte, Gorgonzola Dolce D.O.P., Taleggio, Caciocavallo Silano, verfeinert mit kaltgeschleudertem Akazienhonig.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Antipasti & Pane -->
+            <div class="menu-tab-panel" id="tab-antipasti">
+              <div class="menu-columns-grid">
+                <div class="menu-col">
+                  <div class="menu-subheading">Vorspeisen aus Süditalien</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Burrata Pugliese intera (200g) <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">12,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Ganze cremige Burrata aus Andria mit geschmorten Datterini-Tomaten, Basilikumöl und warmem Holzofenbrot.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Carpaccio di Manzo al Tartufo</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">14,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Hauchdünn geschnittenes Rinderfilet, Trüffel-Vinaigrette, wilder Rucola, 30 Monate gehobelter Parmigiano.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Parmigiana di Melanzane <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">11,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Im Holzofen gratiniertes Auberginen-Türmchen mit San Marzano Tomatenrag&ugrave;, Mozzarella und frischem Basilikum.</div>
+                  </div>
+                </div>
+
+                <div class="menu-col">
+                  <div class="menu-subheading">Pane &amp; Platten zum Teilen</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Focaccia Pugliese calda <span class="menu-diet-tag tag-vegan">[VEGAN]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">7,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Ofenfrisches Fladenbrot mit Rosmarin, Meersalzflocken, eingedrückten Kirschtomaten und apulischem Olivenöl.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Tagliere di Salumi &amp; Formaggi</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">16,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Capocollo di Martina Franca, Prosciutto di Parma, Caciocavallo, eingelegte Artischockenherzen, Taggiasca-Oliven.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Insalata Caprese di Bufala <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">11,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Büffelmozzarella Campana, sonnengereifte bunte Tomaten, Basilikumpesto, alter Balsamico di Modena.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Dolci -->
+            <div class="menu-tab-panel" id="tab-dolci">
+              <div class="menu-columns-grid">
+                <div class="menu-col">
+                  <div class="menu-subheading">Hausgemachte Desserts</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Tiramis&ugrave; Tradizionale di Casa <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">7,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">In neapolitanischem Espresso getränkte Savoiardi-Biskuits, cremige Mascarpone, herber Valrhona-Kakao.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Cannolo Siciliano espresso <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">6,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Knusprige frittierte Waffelrolle, gefüllt mit Schafsmilch-Ricotta, kandierter Orangenschale und gehackten Pistazien.</div>
+                  </div>
+                </div>
+
+                <div class="menu-col">
+                  <div class="menu-subheading">Kaffee &amp; Süßes</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Panna Cotta al Caramello Salato</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">6,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Samtige piemontesische Vanille-Sahnecreme mit flüssigem Meersalzkaramell und Piemonteser Haselnusskrokant.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Affogato al Caff&egrave; Napoletano <span class="menu-diet-tag tag-v">[V]</span></span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">5,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Eine Kugel Bourbon-Vanilleeis, ertränkt in frisch aufgebrühtem, heißem Passalacqua-Espresso.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Vino & Birra -->
+            <div class="menu-tab-panel" id="tab-vino">
+              <div class="menu-columns-grid">
+                <div class="menu-col">
+                  <div class="menu-subheading">Vini d'Italia (Offen &amp; Flasche)</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Primitivo di Manduria D.O.C. (0,2l / Fl.)</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">7,00 / 28,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Apulien · Vollmundig, Aromen dunkler Pflaumen und Waldbeeren, samtige Tannine.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Negroamaro del Salento I.G.T. (0,2l / Fl.)</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">6,50 / 26,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Apulien · Würzig, reife Kirsche, kräftiger Körper, ideal zur Holzofenpizza.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Greco di Tufo D.O.C.G. Weißwein (0,2l / Fl.)</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">7,50 / 30,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Kampanien · Mineralisch, Noten von Pfirsich und zarter Mandel, feine Frische.</div>
+                  </div>
+                </div>
+
+                <div class="menu-col">
+                  <div class="menu-subheading">Birra, Caff&egrave; &amp; Digestivi</div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Birra Moretti vom Fass (0,4l)</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">4,80 €</span>
+                    </div>
+                    <div class="menu-item-desc">Frisch gezapftes italienisches Lagerbier, süffig und feinherb.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Peroni Nastro Azzurro (0,33l)</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">4,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Der prickelnde Klassiker aus Rom.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">San Pellegrino / Acqua Panna (0,75l)</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">6,00 €</span>
+                    </div>
+                    <div class="menu-item-desc">Sprudelnd feinperlig oder stilles Quellwasser aus der Toskana.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Espresso Napoletano Passalacqua</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">2,80 €</span>
+                    </div>
+                    <div class="menu-item-desc">Klassisch dunkel geröstet mit dichter haselnussbrauner Crema.</div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-row">
+                      <span class="menu-item-name">Amaro del Capo / Limoncello (4cl)</span>
+                      <span class="menu-item-leader" aria-hidden="true"></span>
+                      <span class="menu-item-price">4,50 €</span>
+                    </div>
+                    <div class="menu-item-desc">Eiskalt servierter Kräuterlikör aus Kalabrien oder kühler Zitronenlikör.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trattoria Footer Note -->
+            <div class="trattoria-footer-note">
+              Alle Pizzen werden auf Bestellung von Hand geschlagen und bei 485 Grad im Buchenholzofen gebacken. Glutenfreier Teig nach vorheriger Anmeldung möglich (+3,00 €). Alle Preise inklusive Mehrwertsteuer und Bedienung.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: DER OFEN (3D THREE.JS DOME OVEN & FLICKER LIGHT)
+         ====================================================================== -->
+    <section class="section-ofen" id="ofen">
+      <div class="container">
+        <div class="section-header" style="color: var(--color-cream);">
+          <span class="section-eyebrow" style="color: var(--color-ember);">Il Cuore del Forno</span>
+          <h2 class="section-title" style="color: var(--color-cream-light);">Der Ofen. 3 Tonnen Vulkangestein.</h2>
+          <p class="section-desc" style="color: var(--color-cream-tint);">
+            Unser neapolitanischer Kuppelofen wurde Stein für Stein vor Ort gemauert. Die Geometrie leitet die Buchenholzflammen mit höchster Präzision über die Teigböden.
+          </p>
+        </div>
+
+        <div class="ofen-layout">
+          <!-- Left: Interactive 3D Three.js Viewport -->
+          <div class="threejs-oven-box" id="threejsOvenContainer" role="region" aria-label="Interaktive 3D-Ansicht des Holzofens">
+            <!-- HUD Overlays -->
+            <div class="oven-hud-overlay">
+              <div class="oven-hud-chip">
+                <span class="temp-live-indicator" aria-hidden="true"></span>
+                <span>Kerntemperatur: <strong class="temp-degrees" id="ovenTempDegrees">485 °C</strong></span>
+              </div>
+              <div class="oven-hud-chip" style="font-size: 0.75rem;">
+                <span>Holz: Märkische Buche</span>
+              </div>
+            </div>
+
+            <div class="oven-hint-drag" aria-hidden="true">
+              3D-Kuppel drehen &amp; inspizieren
+            </div>
+
+            <!-- Fallback Image if WebGL is unavailable -->
+            <img 
+              src="assets/img/photo-f23064597-960.jpg" 
+              srcset="assets/img/photo-f23064597-500.jpg 500w, assets/img/photo-f23064597-960.jpg 960w, assets/img/photo-f23064597.jpg 1280w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Blick in den lodernden Buchenholzofen bei 485 Grad Hitze" 
+              class="oven-fallback-img" 
+              width="960" 
+              height="640"
+              loading="lazy">
+          </div>
+
+          <!-- Right: Technical Oven Secrets -->
+          <div class="ofen-story-card">
+            <div class="ofen-feature-item">
+              <div class="ofen-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div class="ofen-feature-content">
+                <h3>Biscotto di Sorrento Stein</h3>
+                <p>
+                  Der Boden besteht aus porösem vulkanischem Ton der Halbinsel Sorrent. Seine niedrige Wärmeleitfähigkeit verhindert, dass der Teigboden bei 485°C verbrennt, bevor der Belag gar ist.
+                </p>
+              </div>
+            </div>
+
+            <div class="ofen-feature-item">
+              <div class="ofen-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 12a4 4 0 0 1 8 0"></path>
+                </svg>
+              </div>
+              <div class="ofen-feature-content">
+                <h3>Parabolische Kuppelform</h3>
+                <p>
+                  Die exakte Kuppelhöhe reflektiert die Infrarotstrahlung der Deckenflamme direkt nach unten. Die Pizza wird von oben und unten gleichzeitig versiegelt &ndash; in genau 90 Sekunden.
+                </p>
+              </div>
+            </div>
+
+            <div class="ofen-feature-item">
+              <div class="ofen-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                </svg>
+              </div>
+              <div class="ofen-feature-content">
+                <h3>Märkisches Buchenholz</h3>
+                <p>
+                  Zwei Jahre trocken gelagertes Buchenholz aus nachhaltigen Brandenburger Wäldern. Es brennt mit glasklarer, raucharmer Flamme und hinterlässt eine diskrete süßliche Holznote im Teig.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: TABLE RESERVATION FORM (INTERACTIVE CONFIRMATION)
+         ====================================================================== -->
+    <section class="section-reservierung" id="reservierung">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Zu Gast in Neukölln</span>
+          <h2 class="section-title">Tisch reservieren.</h2>
+          <p class="section-desc">
+            Sichern Sie sich Ihren Platz am Holzofen oder am großen Fenster zur Weserstraße. Für Gruppen ab 8 Personen rufen Sie uns bitte direkt an.
+          </p>
+        </div>
+
+        <div class="res-card-wrapper">
+          <!-- Active Form -->
+          <form id="reservationForm" novalidate>
+            <div class="res-form-grid">
+              <!-- Datum -->
+              <div class="form-group">
+                <label for="resDate" class="form-label">
+                  <span>Datum</span>
+                </label>
+                <input type="date" id="resDate" name="resDate" class="form-control" required>
+              </div>
+
+              <!-- Uhrzeit -->
+              <div class="form-group">
+                <label for="resTime" class="form-label">
+                  <span>Uhrzeit</span>
+                </label>
+                <select id="resTime" name="resTime" class="form-control" required>
+                  <option value="17:30 Uhr">17:30 Uhr</option>
+                  <option value="18:00 Uhr">18:00 Uhr</option>
+                  <option value="18:30 Uhr">18:30 Uhr</option>
+                  <option value="19:00 Uhr" selected>19:00 Uhr</option>
+                  <option value="19:30 Uhr">19:30 Uhr</option>
+                  <option value="20:00 Uhr">20:00 Uhr</option>
+                  <option value="20:30 Uhr">20:30 Uhr</option>
+                  <option value="21:00 Uhr">21:00 Uhr</option>
+                  <option value="21:30 Uhr">21:30 Uhr</option>
+                </select>
+              </div>
+
+              <!-- Personen -->
+              <div class="form-group">
+                <label for="resPersons" class="form-label">
+                  <span>Anzahl der Personen</span>
+                </label>
+                <select id="resPersons" name="resPersons" class="form-control" required>
+                  <option value="1 Person">1 Person</option>
+                  <option value="2 Personen" selected>2 Personen</option>
+                  <option value="3 Personen">3 Personen</option>
+                  <option value="4 Personen">4 Personen</option>
+                  <option value="5 Personen">5 Personen</option>
+                  <option value="6 Personen">6 Personen</option>
+                  <option value="7 Personen">7 Personen</option>
+                  <option value="8+ Personen">8+ Personen (Große Tafel)</option>
+                </select>
+              </div>
+
+              <!-- Wunschbereich -->
+              <div class="form-group full-width">
+                <label class="form-label">Bevorzugter Sitzbereich</label>
+                <div class="seating-options">
+                  <label class="seating-radio-label">
+                    <input type="radio" name="resArea" value="Am Holzofen" checked>
+                    <span>Am Holzofen (Feuerblick)</span>
+                  </label>
+                  <label class="seating-radio-label">
+                    <input type="radio" name="resArea" value="Fensterplatz Weserstraße">
+                    <span>Fensterplatz Weserstraße</span>
+                  </label>
+                  <label class="seating-radio-label">
+                    <input type="radio" name="resArea" value="Ruhiger Innenbereich">
+                    <span>Ruhiger Innenbereich</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Kontaktdaten -->
+              <div class="form-group">
+                <label for="resName" class="form-label">Vor- &amp; Nachname</label>
+                <input type="text" id="resName" name="resName" class="form-control" placeholder="z. B. Renat Meyer" required>
+              </div>
+
+              <div class="form-group">
+                <label for="resPhone" class="form-label">Telefonnummer</label>
+                <input type="tel" id="resPhone" name="resPhone" class="form-control" placeholder="+49 170 1234567" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="resEmail" class="form-label">E-Mail-Adresse</label>
+                <input type="email" id="resEmail" name="resEmail" class="form-control" placeholder="ihre@email-adresse.de" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="resNotes" class="form-label">Anmerkungen oder Allergien (optional)</label>
+                <textarea id="resNotes" name="resNotes" class="form-control" placeholder="z. B. Kinderstuhl erwünscht, Geburtstag, Glutenunverträglichkeit"></textarea>
+              </div>
+
+              <!-- Submit Action Row -->
+              <div class="res-submit-row">
+                <div class="res-form-privacy-note">
+                  Ihre Daten werden vertraulich behandelt und ausschließlich zur Tischreservierung verwendet.
+                </div>
+                <button type="submit" class="btn btn-primary" style="min-width: 240px;">
+                  Tisch verbindlich anfragen
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- In-Page Confirmation Receipt (Replaces form on submit) -->
+          <div class="res-confirmation-card" id="reservationReceipt" role="status" aria-live="polite">
+            <div class="receipt-icon-wrap" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+
+            <h3 class="receipt-title">Grazie a tutti!</h3>
+            <p style="color: var(--color-text-muted); margin-bottom: 16px;">
+              Ihre Reservierungsanfrage für die Pizzeria Pugliese ist eingegangen.
+            </p>
+
+            <div class="receipt-code-badge" id="receiptCode">PUGLIESE-485-8421</div>
+
+            <div class="receipt-details-list">
+              <div class="receipt-row">
+                <span class="receipt-row-lbl">Datum:</span>
+                <span class="receipt-row-val" id="receiptDate">22.11.2026</span>
+              </div>
+              <div class="receipt-row">
+                <span class="receipt-row-lbl">Uhrzeit:</span>
+                <span class="receipt-row-val" id="receiptTime">19:00 Uhr</span>
+              </div>
+              <div class="receipt-row">
+                <span class="receipt-row-lbl">Gäste:</span>
+                <span class="receipt-row-val" id="receiptPersons">2 Personen</span>
+              </div>
+              <div class="receipt-row">
+                <span class="receipt-row-lbl">Bereich:</span>
+                <span class="receipt-row-val" id="receiptArea">Am Holzofen</span>
+              </div>
+              <div class="receipt-row">
+                <span class="receipt-row-lbl">Name:</span>
+                <span class="receipt-row-val" id="receiptName">Gast</span>
+              </div>
+              <div class="receipt-row">
+                <span class="receipt-row-lbl">Bestätigung an:</span>
+                <span class="receipt-row-val" id="receiptEmail">E-Mail</span>
+              </div>
+            </div>
+
+            <p class="receipt-phone-help">
+              Bei Verspätungen über 15 Minuten rufen Sie uns bitte kurz an: <a href="tel:+498886661234">+49 888 6661234</a>.
+            </p>
+
+            <button type="button" class="btn btn-outline-cream" id="reservationResetBtn" style="color: var(--color-text-dark); border-color: rgba(30,27,22,0.3);">
+              Neue Anfrage stellen
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: VISIT + HOURS + CONTACT
+         ====================================================================== -->
+    <section class="section-kontakt" id="kontakt">
+      <div class="container">
+        <div class="section-header" style="color: var(--color-cream);">
+          <span class="section-eyebrow" style="color: var(--color-ember);">Besuch in der Weserstraße</span>
+          <h2 class="section-title" style="color: var(--color-cream-light);">Kommen Sie vorbei.</h2>
+          <p class="section-desc" style="color: var(--color-cream-tint);">
+            Mitten im Neuköllner Kiez &ndash; wo Buchenholzrauch auf italienische Gastfreundschaft trifft.
+          </p>
+        </div>
+
+        <div class="kontakt-grid">
+          <!-- Card 1: Address & Transit -->
+          <div class="kontakt-card">
+            <h3 class="kontakt-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Standort</span>
+            </h3>
+            <div class="address-content">
+              <strong>Pizzeria Pugliese &ndash; Forno a Legna</strong>
+              <span>Weserstraße 58</span>
+              <span>12045 Berlin-Neukölln</span>
+              <div class="address-transit">
+                <strong>Anreise mit den Öffentlichen:</strong><br>
+                U7 Rathaus Neukölln · 5 Min. Fußweg<br>
+                U8 Hermannplatz · 7 Min. Fußweg<br>
+                Bus M41 Fuldastraße · 3 Min.
+              </div>
+            </div>
+            <a href="https://maps.google.com/?q=Weserstraße+58,+12045+Berlin" target="_blank" rel="noopener" class="btn btn-outline-cream" style="font-size: 0.85rem; padding: 10px 18px; margin-top: auto;">
+              In Karten-App öffnen
+            </a>
+          </div>
+
+          <!-- Card 2: Hours -->
+          <div class="kontakt-card">
+            <h3 class="kontakt-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Öffnungszeiten</span>
+            </h3>
+            <div class="hours-table">
+              <div class="hours-row">
+                <span class="hours-day">Dienstag &ndash; Donnerstag</span>
+                <span class="hours-time">17:30 &ndash; 22:30 Uhr</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Freitag &ndash; Samstag</span>
+                <span class="hours-time">17:00 &ndash; 23:30 Uhr</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sonntag</span>
+                <span class="hours-time">16:30 &ndash; 22:00 Uhr</span>
+              </div>
+              <div class="hours-row ruhetag">
+                <span class="hours-day">Montag</span>
+                <span class="hours-time">Ruhetag (Teigruhe)</span>
+              </div>
+            </div>
+            <div style="font-size: 0.8125rem; color: var(--color-text-light-muted); margin-top: auto; padding-top: 12px; border-top: 1px solid rgba(244,237,225,0.08);">
+              Küche schließt 45 Minuten vor Lokalschluss.
+            </div>
+          </div>
+
+          <!-- Card 3: Direct Contacts Everywhere -->
+          <div class="kontakt-card">
+            <h3 class="kontakt-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Direkter Kontakt</span>
+            </h3>
+
+            <!-- Phone Link -->
+            <a href="tel:+498886661234" class="direct-contact-item">
+              <div class="contact-icon-pill" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="direct-contact-label">
+                <span class="contact-type">Telefonische Reservierung</span>
+                <span class="contact-value">+49 888 6661234</span>
+              </div>
+            </a>
+
+            <!-- Email Link -->
+            <a href="mailto:12234456789@gmail.com" class="direct-contact-item">
+              <div class="contact-icon-pill" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="direct-contact-label">
+                <span class="contact-type">E-Mail für Anfragen</span>
+                <span class="contact-value">12234456789@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- Telegram Link -->
+            <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="direct-contact-item">
+              <div class="contact-icon-pill" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div class="direct-contact-label">
+                <span class="contact-type">Telegram Direkter Chat</span>
+                <span class="contact-value">@rovatt</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <div class="footer-brand">Pizzeria Pugliese &ndash; Forno a Legna</div>
+          <div style="font-size: 0.8125rem; color: var(--color-text-light-muted); margin-top: 4px;">
+            Weserstraße 58 · 12045 Berlin-Neukölln
+          </div>
+        </div>
+
+        <div class="footer-links-row">
+          <a href="tel:+498886661234" class="footer-link">+49 888 6661234</a>
+          <span style="opacity: 0.3;">·</span>
+          <a href="mailto:12234456789@gmail.com" class="footer-link">12234456789@gmail.com</a>
+          <span style="opacity: 0.3;">·</span>
+          <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="footer-link">Telegram @rovatt</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div class="footer-credits">
+          Fiktives Demo-Projekt. Gestaltung: Renat.
+        </div>
+        <div style="font-size: 0.8125rem;">
+          &copy; 2026 Pizzeria Pugliese. Alle Rechte vorbehalten.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SCRIPTS: THREE.JS + CUSTOM ENGINES
+       ======================================================================== -->
+  <!-- Three.js (r128 CDN with local fallback) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    if (!window.THREE) {
+      document.write('<script src="assets/js/three.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- Interactive Modules -->
+  <script src="assets/js/fireGlow.js"></script>
+  <script src="assets/js/italyMap.js"></script>
+  <script src="assets/js/oven3d.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NAMI – Sushi & Izakaya · Berlin-Schöneberg</title>
+  <meta name="description" content="NAMI – Authentisches Omakase am 8-Plätze-Tresen, traditionelle Nigiri mit gereiftem Akasu-Shari und Robata-Spezialitäten in Berlin-Schöneberg. Digitale QR-Speisekarte.">
+  <meta name="theme-color" content="#10141A">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NAMI – Sushi & Izakaya · Berlin-Schöneberg">
+  <meta property="og:description" content="Omakase am Tresen, handgeformte Nigiri und Izakaya-Kultur in Berlin-Schöneberg.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Google Fonts: Shippori Mincho + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-nami">
+
+  <!-- Slim Elegant Demo Bar -->
+  <aside id="demo-bar" class="demo-bar" role="complementary" aria-label="Demo-Hinweis">
+    <div class="demo-bar-inner">
+      <span class="demo-dot"></span>
+      <p class="demo-text">Demo-Projekt von Renat · Alle Angaben auf dieser Seite sind fiktiv.</p>
+      <button type="button" id="close-demo-bar" class="demo-close" aria-label="Demo-Leiste schließen">×</button>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header id="site-header" class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand" aria-label="NAMI Startseite">
+        <span class="brand-kanji" aria-hidden="true">波</span>
+        <div class="brand-text">
+          <span class="brand-name">NAMI</span>
+          <span class="brand-sub">SUSHI &amp; IZAKAYA</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="#speisekarte" class="nav-link">Speisekarte</a>
+        <a href="#omakase-tresen" class="nav-link">Omakase-Tresen</a>
+        <a href="#handwerk" class="nav-link">Handwerk</a>
+        <a href="#kontakt-zeiten" class="nav-link">Besuch &amp; Zeiten</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switch" role="group" aria-label="Sprachauswahl">
+          <button type="button" class="lang-btn active" data-lang="de" aria-pressed="true">DE</button>
+          <span class="lang-divider">/</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a href="#omakase-tresen" class="btn btn-vermilion btn-sm header-cta">Tresen reservieren</a>
+
+        <button type="button" id="mobile-menu-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menü öffnen">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <a href="#speisekarte" class="mobile-nav-link">Speisekarte &amp; QR</a>
+        <a href="#omakase-tresen" class="mobile-nav-link">Omakase am Tresen (8 Plätze)</a>
+        <a href="#handwerk" class="mobile-nav-link">Handwerk &amp; Herkunft</a>
+        <a href="#kontakt-zeiten" class="mobile-nav-link">Kontakt &amp; Öffnungszeiten</a>
+        <div class="mobile-nav-contacts">
+          <a href="tel:+498886661234" class="mobile-contact-item">+49 888 6661234</a>
+          <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="mobile-contact-item">Telegram: @rovatt</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION: Animated Ink-Wash Wave & Vertical Japanese Typography -->
+    <section id="hero" class="hero-section" aria-label="Willkommen bei NAMI">
+      <!-- WebGL / Canvas Ink-Wash Wave -->
+      <div class="canvas-wrapper" aria-hidden="true">
+        <canvas id="ink-wave-canvas"></canvas>
+        <div id="webgl-fallback" class="webgl-fallback"></div>
+      </div>
+
+      <div class="hero-content-wrap">
+        <div class="hero-grid">
+          
+          <!-- Vertical Japanese Column -->
+          <div class="hero-vertical-col" aria-hidden="true">
+            <span class="vertical-kanji-huge">波</span>
+            <div class="vertical-text-strip">
+              <span class="vertical-item">寿司</span>
+              <span class="vertical-bullet">·</span>
+              <span class="vertical-item">居酒屋</span>
+              <span class="vertical-bullet">·</span>
+              <span class="vertical-item">赤酢舎利</span>
+            </div>
+            <div class="hanko-seal" title="NAMI Siegel">
+              <span>波浪</span>
+            </div>
+          </div>
+
+          <!-- Main Hero Text Column -->
+          <div class="hero-main-col">
+            <div class="hero-badge-pill">
+              <span class="pulse-indicator"></span>
+              <span class="badge-text" data-i18n="hero_badge">Berlin-Schöneberg · Akazienstraße</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="title-primary">NAMI</span>
+              <span class="title-secondary">Sushi &amp; Izakaya</span>
+            </h1>
+
+            <p class="hero-lead" data-i18n="hero_lead">
+              Die Welle des Geschmacks. Traditionelles Edomae-Sushi mit warmem Akasu-Shari, Robata-Spieße über weißer Binchotan-Kohle und ein intimer 8-Plätze-Tresen für das Omakase des Abends.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#speisekarte" class="btn btn-primary">
+                <span data-i18n="cta_menu">Digitale Speisekarte</span>
+                <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#omakase-tresen" class="btn btn-outline">
+                <span data-i18n="cta_omakase">Omakase-Tresen (8 Plätze)</span>
+              </a>
+            </div>
+
+            <!-- Quick Table Info / QR Notice -->
+            <div class="qr-table-note">
+              <div class="qr-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h4v4h-4zM14 21h3M21 14v3"/></svg>
+              </div>
+              <div class="qr-note-text">
+                <strong data-i18n="qr_title">QR-Tischkarte &amp; Omakase</strong>
+                <p data-i18n="qr_desc">Wähle deine Favoriten direkt im Browser. Deine Auswahl wird gespeichert und kann jederzeit dem Service gezeigt werden.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Striking Sushi Photo Column: Right side on Desktop, Below text on Mobile -->
+          <div class="hero-media-col">
+            <div class="hero-photo-card">
+              <div class="hero-photo-wrapper">
+                <img src="img/otoro-nigiri.jpg" alt="Ōtoro Nigiri vom Balfegó-Thunfisch auf warmem Akasu-Shari" class="hero-sushi-img" width="560" height="420" loading="eager">
+                <div class="hero-photo-badge">
+                  <span class="badge-kanji">極上</span>
+                  <span class="badge-label">Ōtoro · Balfegó</span>
+                </div>
+                <div class="hero-photo-hanko" aria-hidden="true">職人</div>
+              </div>
+              <div class="hero-photo-caption">
+                <div class="caption-header">
+                  <span class="caption-tag">Meisterwerk des Abends</span>
+                  <span class="caption-price">14,50 € / 2 Stk.</span>
+                </div>
+                <strong class="caption-title">Ōtoro Nigiri · Jukusei-Reifung</strong>
+                <p class="caption-desc">Balfegó-Blauflossenthunfisch, 7 Tage trocken gereift, handwarmer Shari mit 3 Jahre gereiftem Akasu-Essig &amp; Nikiri-Sojaglanz.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#speisekarte" class="scroll-cue" aria-label="Zur Speisekarte scrollen">
+        <span class="scroll-label" data-i18n="scroll_down">Speisekarte entdecken</span>
+        <div class="scroll-line"></div>
+      </a>
+    </section>
+
+    <!-- 2. STICKY CATEGORY CHIPS + SEARCH (QR-Menu Navigation) -->
+    <section id="speisekarte" class="menu-section" aria-label="Speisekarte">
+      
+      <div class="sticky-menu-bar" id="sticky-bar">
+        <div class="sticky-bar-container">
+          
+          <!-- Search Input -->
+          <div class="search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" id="menu-search" class="search-input" placeholder="Gericht, Zutat, Allergene suchen..." aria-label="Speisekarte durchsuchen">
+            <button type="button" id="clear-search" class="clear-search hidden" aria-label="Suche löschen">×</button>
+          </div>
+
+          <!-- Category Chips -->
+          <div class="category-chips-scroll" role="tablist" aria-label="Speisenkategorien">
+            <button type="button" class="chip-btn active" role="tab" aria-selected="true" data-category="all">
+              <span class="chip-kanji">全</span>
+              <span class="chip-text" data-i18n="cat_all">Alle</span>
+            </button>
+            <button type="button" class="chip-btn" role="tab" aria-selected="false" data-category="nigiri">
+              <span class="chip-kanji">握</span>
+              <span class="chip-text" data-i18n="cat_nigiri">Nigiri</span>
+            </button>
+            <button type="button" class="chip-btn" role="tab" aria-selected="false" data-category="sashimi">
+              <span class="chip-kanji">刺</span>
+              <span class="chip-text" data-i18n="cat_sashimi">Sashimi</span>
+            </button>
+            <button type="button" class="chip-btn" role="tab" aria-selected="false" data-category="robata">
+              <span class="chip-kanji">炉</span>
+              <span class="chip-text" data-i18n="cat_robata">Robata Grill</span>
+            </button>
+            <button type="button" class="chip-btn" role="tab" aria-selected="false" data-category="izakaya">
+              <span class="chip-kanji">居</span>
+              <span class="chip-text" data-i18n="cat_izakaya">Izakaya &amp; Bowls</span>
+            </button>
+            <button type="button" class="chip-btn" role="tab" aria-selected="false" data-category="drinks">
+              <span class="chip-kanji">酒</span>
+              <span class="chip-text" data-i18n="cat_drinks">Sake &amp; Bar</span>
+            </button>
+          </div>
+
+          <!-- Quick Dietary Filter Toggles -->
+          <div class="dietary-filters" aria-label="Filter">
+            <button type="button" class="diet-btn" data-filter="glutenfree" aria-pressed="false" title="Nur glutenfreie Gerichte">
+              <span>Glutenfrei</span>
+            </button>
+            <button type="button" class="diet-btn" data-filter="vegetarian" aria-pressed="false" title="Nur vegetarische Gerichte">
+              <span>Vegetarisch</span>
+            </button>
+            <button type="button" id="open-allergen-modal" class="diet-btn allergen-legend-trigger" title="Allergen-Legende öffnen">
+              <span>Allergene-Info [A–N]</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3. MENU DISH GRID -->
+      <div class="section-container">
+        
+        <header class="section-header-row">
+          <div>
+            <div class="kicker-tag" data-i18n="menu_kicker">Edomae &amp; Binchotan</div>
+            <h2 class="section-title" data-i18n="menu_title">Handwerk &amp; Speisen</h2>
+          </div>
+          <div class="menu-status-badge">
+            <span id="dishes-count">11 Gerichte</span>
+            <span class="badge-sub">Frisch zubereitet</span>
+          </div>
+        </header>
+
+        <div id="dishes-grid" class="dishes-grid" role="region" aria-live="polite">
+          <!-- Dish Cards injected & rendered statically + dynamic JS fallback -->
+          
+          <!-- 1. Otoro Nigiri -->
+          <article class="dish-card" data-id="otoro-nigiri" data-category="nigiri" data-diet="glutenfree" tabindex="0">
+            <div class="dish-media">
+              <img src="img/otoro-nigiri.jpg" alt="Zart marmoriertes Otoro Nigiri mit Nikiri-Sojaglasur" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">大トロ</span>
+              <span class="dish-pieces">2 Stück</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Ōtoro Nigiri</h3>
+                <span class="dish-price">14,50 €</span>
+              </div>
+              <p class="dish-desc">Zartes Bauchstück vom Balfegó-Blauflossenthunfisch, trocken gereift, bestrichen mit gereifter Nikiri-Sojasauce auf handwarmem Akasu-Shari.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: D (Fisch), F (Soja)">
+                  <span class="allergen-tag">D</span>
+                  <span class="allergen-tag">F</span>
+                  <span class="diet-tag">GF</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Ōtoro Nigiri öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Hamachi Sashimi -->
+          <article class="dish-card" data-id="hamachi-sashimi" data-category="sashimi" data-diet="glutenfree" tabindex="0">
+            <div class="dish-media">
+              <img src="img/hamachi-sashimi.jpg" alt="Dünn tranchiertes Hamachi Sashimi mit weißem Trüffel-Ponzu" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">ハマチ</span>
+              <span class="dish-pieces">6 Tranchen</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Hamachi Trüffel-Ponzu</h3>
+                <span class="dish-price">18,50 €</span>
+              </div>
+              <p class="dish-desc">Gelbschwanzmakrele hauchdünn mit der Yanagiba-Klinge tranchiert, verfeinert mit weißem Trüffel-Ponzu, Daikon und Micro-Shiso.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: D (Fisch), F (Soja)">
+                  <span class="allergen-tag">D</span>
+                  <span class="allergen-tag">F</span>
+                  <span class="diet-tag">GF</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Hamachi Sashimi öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Wagyu Robata -->
+          <article class="dish-card" data-id="wagyu-robata" data-category="robata" data-diet="glutenfree" tabindex="0">
+            <div class="dish-media">
+              <img src="img/wagyu-robata.jpg" alt="Gegrillte A5 Miyazaki Wagyu Skewers über Binchotan" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">和牛串</span>
+              <span class="dish-pieces">2 Spieße</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Miyazaki A5 Wagyu Kushiyaki</h3>
+                <span class="dish-price">22,00 €</span>
+              </div>
+              <p class="dish-desc">Japanisches A5 Black Wagyu aus Miyazaki, über Kishu-Binchotan scharf karamellisiert, Tare-Glaze, Maldon-Salz und Sansho-Pfeffer.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: F (Soja)">
+                  <span class="allergen-tag">F</span>
+                  <span class="diet-tag">GF</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Miyazaki A5 Wagyu öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Unagi Don -->
+          <article class="dish-card" data-id="unagi-don" data-category="izakaya" data-diet="" tabindex="0">
+            <div class="dish-media">
+              <img src="img/unagi-don.jpg" alt="Gegrillter Süßwasseraal über dampfendem Koshihikari-Reis in Lackschale" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">鰻丼</span>
+              <span class="dish-pieces">1 Schale</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Unagi Donburi</h3>
+                <span class="dish-price">21,50 €</span>
+              </div>
+              <p class="dish-desc">Gegrillter Süßwasseraal in traditioneller Kabayaki-Reduktion mit geröstetem Sesam und Nori über dampfendem Koshihikari-Reis.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: A (Gluten), D (Fisch), F (Soja), K (Sesam)">
+                  <span class="allergen-tag">A</span>
+                  <span class="allergen-tag">D</span>
+                  <span class="allergen-tag">F</span>
+                  <span class="allergen-tag">K</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Unagi Donburi öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Hotate Nigiri -->
+          <article class="dish-card" data-id="hotate-nigiri" data-category="nigiri" data-diet="glutenfree" tabindex="0">
+            <div class="dish-media">
+              <img src="img/hotate-nigiri.jpg" alt="Geflämmtes Hotate Jakobsmuschel Nigiri mit Yuzu-Zeste" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">帆立炙り</span>
+              <span class="dish-pieces">2 Stück</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Hotate Aburi Nigiri</h3>
+                <span class="dish-price">11,50 €</span>
+              </div>
+              <p class="dish-desc">Hokkaido-Jakobsmuschel mit Kreuzschnitt, mit offener Flamme zart berührt, veredelt mit frischem Yuzu-Abrieb und Meersalzflocken.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: N (Weichtiere), F (Soja)">
+                  <span class="allergen-tag">N</span>
+                  <span class="allergen-tag">F</span>
+                  <span class="diet-tag">GF</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Hotate Aburi Nigiri öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Sake Toro Nigiri -->
+          <article class="dish-card" data-id="sake-toro" data-category="nigiri" data-diet="glutenfree" tabindex="0">
+            <div class="dish-media">
+              <img src="img/sake-toro.jpg" alt="Sake Toro Lachs Nigiri mit Mirin-Glasur" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">サーモントロ</span>
+              <span class="dish-pieces">2 Stück</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Sake Toro Nigiri</h3>
+                <span class="dish-price">9,50 €</span>
+              </div>
+              <p class="dish-desc">Norwegischer Fjordlachs-Bauch von außergewöhnlicher Frische, leicht geflämmt, bestrichen mit zartem Mirin-Lack auf Shari.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: D (Fisch), F (Soja)">
+                  <span class="allergen-tag">D</span>
+                  <span class="allergen-tag">F</span>
+                  <span class="diet-tag">GF</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Sake Toro Nigiri öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Izakaya Karaage -->
+          <article class="dish-card" data-id="izakaya-karaage" data-category="izakaya" data-diet="" tabindex="0">
+            <div class="dish-media">
+              <img src="img/izakaya-karaage.jpg" alt="Knuspriges Tori Karaage Hähnchen mit Limette und Yuzu-Kewpie-Dip" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">唐揚げ</span>
+              <span class="dish-pieces">Portion 180g</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Tori Karaage</h3>
+                <span class="dish-price">10,50 €</span>
+              </div>
+              <p class="dish-desc">Zweifach kross ausgebackene Bio-Hähnchenkeule in Ingwer-Knoblauch-Sake Marinade, serviert mit Yuzu-Kosho-Kewpie-Dip und Zitrone.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: A (Gluten), C (Eier), F (Soja), J (Senf)">
+                  <span class="allergen-tag">A</span>
+                  <span class="allergen-tag">C</span>
+                  <span class="allergen-tag">F</span>
+                  <span class="allergen-tag">J</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Tori Karaage öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Eryngii Miso Butter -->
+          <article class="dish-card" data-id="eryngii-robata" data-category="robata" data-diet="vegetarian glutenfree" tabindex="0">
+            <div class="dish-media">
+              <img src="img/eryngii-robata.jpg" alt="Über Holzkohle gegrillte Kräuterseitlinge mit Saikyo Miso-Butter" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">エリンギ</span>
+              <span class="dish-pieces">2 Spieße</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Eryngii Miso Butter</h3>
+                <span class="dish-price">8,50 €</span>
+              </div>
+              <p class="dish-desc">Dicke Kräuterseitlinge über Binchotan geschmort, glasiert mit karamellisierter Saikyo-Süßmiso, nussiger Butter und Schnittlauch.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: F (Soja), G (Milch)">
+                  <span class="allergen-tag">F</span>
+                  <span class="allergen-tag">G</span>
+                  <span class="diet-tag">V</span>
+                  <span class="diet-tag">GF</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Eryngii Robata öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Gyoza Kurobuta -->
+          <article class="dish-card" data-id="gyoza-kurobuta" data-category="izakaya" data-diet="" tabindex="0">
+            <div class="dish-media">
+              <img src="img/gyoza-kurobuta.jpg" alt="Handgefaltete Kurobuta Schweinefleisch Gyoza mit knusprigem Spitzenrand" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">黒豚餃子</span>
+              <span class="dish-pieces">5 Stück</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Gyoza Kurobuta</h3>
+                <span class="dish-price">9,50 €</span>
+              </div>
+              <p class="dish-desc">Handgefaltete Teigtaschen gefüllt mit saftigem Kurobuta-Schweinefleisch, Frühlingslauch, Ingwer und knusprigem Spitzenrand (Hanetsuki).</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: A (Gluten), F (Soja), K (Sesam)">
+                  <span class="allergen-tag">A</span>
+                  <span class="allergen-tag">F</span>
+                  <span class="allergen-tag">K</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Gyoza Kurobuta öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Sake Flight -->
+          <article class="dish-card" data-id="sake-flight" data-category="drinks" data-diet="glutenfree" tabindex="0">
+            <div class="dish-media">
+              <img src="img/sake-flight.jpg" alt="NAMI Sake Degustation mit Tokkuri und Ochoko Schalen" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">利き酒</span>
+              <span class="dish-pieces">3 x 50ml</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">NAMI Sake Flight</h3>
+                <span class="dish-price">17,00 €</span>
+              </div>
+              <p class="dish-desc">Drei charakterstarke Meister-Sake: 1x Mineralisch-trocken (Karakuchi), 1x Fruchtige Birnennoten (Ginjo), 1x Erdig-tief (Yamahai Moromi).</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: L (Sulfite)">
+                  <span class="allergen-tag">L</span>
+                  <span class="diet-tag">GF</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zum Sake Flight öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Matcha Dessert -->
+          <article class="dish-card" data-id="matcha-dessert" data-category="izakaya" data-diet="vegetarian" tabindex="0">
+            <div class="dish-media">
+              <img src="img/matcha-dessert.jpg" alt="Uji Matcha Ganache Tart mit geröstetem schwarzem Sesam" class="dish-img" width="480" height="360" loading="lazy">
+              <span class="dish-kanji-tag">抹茶甘味</span>
+              <span class="dish-pieces">1 Portion</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-head">
+                <h3 class="dish-name">Uji Matcha Tartelette</h3>
+                <span class="dish-price">8,50 €</span>
+              </div>
+              <p class="dish-desc">Seidige Ganache aus zeremoniellem Uji-Matcha, feiner Kakaoboden, schwarzer Sesam-Krokant und leicht gesalzener Yuzu-Schaum.</p>
+              <div class="dish-foot">
+                <div class="allergen-pill-group" title="Allergene: A (Gluten), C (Eier), G (Milch), K (Sesam)">
+                  <span class="allergen-tag">A</span>
+                  <span class="allergen-tag">C</span>
+                  <span class="allergen-tag">G</span>
+                  <span class="diet-tag">V</span>
+                </div>
+                <button type="button" class="btn-card-action" aria-label="Details zu Matcha Tartelette öffnen">
+                  <span>Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SIGNATURE SECTION: OMAKASE AM TRESEN & 8-SEAT COUNTER PICKER -->
+    <section id="omakase-tresen" class="omakase-section" aria-label="Omakase am Tresen">
+      <div class="section-container">
+        
+        <div class="omakase-header">
+          <div class="kicker-tag kicker-vermilion">Intimes Handwerk · 8 Plätze</div>
+          <h2 class="section-title">Omakase am Hinoki-Tresen</h2>
+          <p class="omakase-lead">
+            »Omakase« bedeutet: »Ich vertraue dir, Meister«. Jeden Abend bereitet Meister Kenji vor den Augen von nur acht Gästen ein synchrones Menü zu. Wähle deinen bevorzugten Sitzplatz direkt am Tresen.
+          </p>
+        </div>
+
+        <div class="omakase-layout-grid">
+          
+          <!-- Interactive Counter Visualizer (8 Seats) -->
+          <div class="counter-visualizer-card">
+            
+            <div class="counter-card-head">
+              <div class="head-status-info">
+                <span class="badge-wood">200 Jahre Hinoki-Zypresse</span>
+                <span class="head-slot-label" id="current-slot-display">Slot: 18:00 Uhr · 12 Gänge</span>
+              </div>
+              <div class="seat-legend">
+                <span class="legend-item"><span class="legend-dot dot-free"></span> Frei</span>
+                <span class="legend-item"><span class="legend-dot dot-selected"></span> Gewählt</span>
+                <span class="legend-item"><span class="legend-dot dot-taken"></span> Belegt</span>
+              </div>
+            </div>
+
+            <!-- The Architectural Counter Map -->
+            <div class="counter-stage">
+              
+              <!-- Chef's Workstation in Center -->
+              <div class="chef-island">
+                <div class="chef-avatar">
+                  <span class="chef-icon" aria-hidden="true">師</span>
+                </div>
+                <div class="chef-details">
+                  <strong class="chef-name">Meister Kenji Tanaka</strong>
+                  <span class="chef-station">Binchotan &amp; Yanagiba-Schneideblock</span>
+                </div>
+                <div class="binchotan-glow" aria-hidden="true" title="Binchotan Glut"></div>
+              </div>
+
+              <!-- 8 Seats Arc -->
+              <div class="seats-counter-arc" id="seats-container" role="group" aria-label="Sitzplatz-Auswahl am Tresen">
+                
+                <!-- Seat 1 -->
+                <button type="button" class="seat-node" data-seat="1" data-pos="Außenplatz links · Nahe Sake-Schrein" aria-label="Platz 1 wählen (Frei)">
+                  <span class="seat-number">1</span>
+                  <span class="seat-label">Platz 1</span>
+                  <span class="seat-status-tag">Frei</span>
+                </button>
+
+                <!-- Seat 2 -->
+                <button type="button" class="seat-node" data-seat="2" data-pos="Optimaler Blick auf Schneidekunst" aria-label="Platz 2 wählen (Frei)">
+                  <span class="seat-number">2</span>
+                  <span class="seat-label">Platz 2</span>
+                  <span class="seat-status-tag">Frei</span>
+                </button>
+
+                <!-- Seat 3 -->
+                <button type="button" class="seat-node seat-selected" data-seat="3" data-pos="Zentral vor dem Arbeitsblock" aria-label="Platz 3 gewählt">
+                  <span class="seat-number">3</span>
+                  <span class="seat-label">Platz 3</span>
+                  <span class="seat-status-tag">Gewählt</span>
+                </button>
+
+                <!-- Seat 4 -->
+                <button type="button" class="seat-node seat-selected" data-seat="4" data-pos="Chef-Position · Direkter Kontakt" aria-label="Platz 4 gewählt">
+                  <span class="seat-number">4</span>
+                  <span class="seat-label">Platz 4</span>
+                  <span class="seat-status-tag">Gewählt</span>
+                </button>
+
+                <!-- Seat 5 -->
+                <button type="button" class="seat-node seat-taken" data-seat="5" data-pos="Direkt vor der Binchotan-Glut" disabled aria-label="Platz 5 (Bereits reserviert)">
+                  <span class="seat-number">5</span>
+                  <span class="seat-label">Platz 5</span>
+                  <span class="seat-status-tag">Belegt</span>
+                </button>
+
+                <!-- Seat 6 -->
+                <button type="button" class="seat-node seat-taken" data-seat="6" data-pos="Zentral rechts" disabled aria-label="Platz 6 (Bereits reserviert)">
+                  <span class="seat-number">6</span>
+                  <span class="seat-label">Platz 6</span>
+                  <span class="seat-status-tag">Belegt</span>
+                </button>
+
+                <!-- Seat 7 -->
+                <button type="button" class="seat-node" data-seat="7" data-pos="Ruhiger Zweierbereich rechts" aria-label="Platz 7 wählen (Frei)">
+                  <span class="seat-number">7</span>
+                  <span class="seat-label">Platz 7</span>
+                  <span class="seat-status-tag">Frei</span>
+                </button>
+
+                <!-- Seat 8 -->
+                <button type="button" class="seat-node" data-seat="8" data-pos="Fensterseite Schöneberg" aria-label="Platz 8 wählen (Frei)">
+                  <span class="seat-number">8</span>
+                  <span class="seat-label">Platz 8</span>
+                  <span class="seat-status-tag">Frei</span>
+                </button>
+
+              </div>
+
+              <!-- Counter Desk Wood Arc Base -->
+              <div class="counter-wood-base" aria-hidden="true">
+                <span class="wood-grain-label">檜 HINOKI TRESEN · SCHÖNEBERG</span>
+              </div>
+
+            </div>
+
+            <!-- Seat Inspection Live Detail -->
+            <div class="seat-detail-inspector" id="seat-inspector">
+              <div class="inspector-badge">Aktueller Platzfokus</div>
+              <h4 class="inspector-seat-name" id="inspector-seat-title">Plätze 3 &amp; 4 ausgewählt</h4>
+              <p class="inspector-seat-desc" id="inspector-seat-desc">Beste Sicht: Unmittelbar vor Meister Kenjis Schneideblock und dem warmen Shari-Holzbottich.</p>
+            </div>
+
+          </div>
+
+          <!-- Booking Controller & In-Page Confirmation -->
+          <div class="counter-booking-card">
+            
+            <div id="booking-form-wrapper">
+              <h3 class="booking-card-title">Tresen-Reservierung</h3>
+              <p class="booking-card-intro">Alle acht Plätze beginnen zeitgleich. Einlass 10 Minuten vor Menübeginn.</p>
+
+              <form id="omakase-booking-form" class="omakase-form">
+                
+                <!-- Time Slot Choice -->
+                <div class="form-group">
+                  <label class="form-label" for="slot-select">Durchgang wählen</label>
+                  <div class="slot-cards-group" role="radiogroup" aria-label="Durchgang wählen">
+                    <label class="slot-radio-card active">
+                      <input type="radio" name="omakase-slot" value="slot-1" checked>
+                      <div class="slot-time">18:00 – 20:15 Uhr</div>
+                      <div class="slot-meta">12 Gänge · 135 € p.P.</div>
+                      <span class="slot-name-sub">Abenddämmerung</span>
+                    </label>
+                    <label class="slot-radio-card">
+                      <input type="radio" name="omakase-slot" value="slot-2">
+                      <div class="slot-time">20:30 – 22:45 Uhr</div>
+                      <div class="slot-meta">16 Gänge · 175 € p.P.</div>
+                      <span class="slot-name-sub">Nacht-Omakase</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Date Picker -->
+                <div class="form-group">
+                  <label class="form-label" for="booking-date">Datum</label>
+                  <select id="booking-date" class="form-select" required>
+                    <option value="heute">Heute (Restplätze)</option>
+                    <option value="morgen" selected>Morgen, 18:00 Uhr</option>
+                    <option value="freitag">Kommender Freitag</option>
+                    <option value="samstag">Kommender Samstag</option>
+                    <option value="sonntag">Kommender Sonntag</option>
+                  </select>
+                </div>
+
+                <!-- Live Summary Pill -->
+                <div class="booking-calc-summary">
+                  <div class="summary-line">
+                    <span>Gewählte Plätze:</span>
+                    <strong id="summary-seats">Platz 3, Platz 4 (2 Gäste)</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span>Menü-Gesamtpreis:</span>
+                    <strong id="summary-total" class="summary-price">270,00 €</strong>
+                  </div>
+                  <span class="summary-note">Inkl. Begrüßungs-Umeshu &amp; Dashi. Keine Vorabzahlung online nötig.</span>
+                </div>
+
+                <!-- Guest Data -->
+                <div class="form-group">
+                  <label class="form-label" for="guest-name">Vollständiger Name</label>
+                  <input type="text" id="guest-name" class="form-input" placeholder="z. B. Dr. Johannes Weber" required>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="guest-phone">Telefon</label>
+                    <input type="tel" id="guest-phone" class="form-input" placeholder="+49 170 1234567" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="guest-email">E-Mail</label>
+                    <input type="email" id="guest-email" class="form-input" placeholder="name@beispiel.de" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="guest-diet">Allergien &amp; Hinweise (optional)</label>
+                  <input type="text" id="guest-diet" class="form-input" placeholder="z. B. Keine Krustentiere, glutenfreies Soja">
+                </div>
+
+                <button type="submit" id="submit-booking-btn" class="btn btn-vermilion btn-block">
+                  <span>Plätze verbindlich anfragen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+
+                <p class="form-disclaimer">Stornierungen sind bis 24 Stunden vor Beginn kostenfrei möglich.</p>
+
+              </form>
+            </div>
+
+            <!-- In-Page Confirmation Screen -->
+            <div id="booking-confirmation-view" class="booking-confirmation hidden" role="alert" aria-live="polite">
+              <div class="conf-hanko-seal" aria-hidden="true">予約済</div>
+              <h3 class="conf-title">Tresenplätze bestätigt</h3>
+              <p class="conf-lead">Vielen Dank. Deine Anfrage für das Omakase am Tresen wurde erfolgreich eingetragen.</p>
+
+              <div class="conf-ticket">
+                <div class="conf-ticket-header">
+                  <span class="conf-code" id="conf-code">#NAMI-8824</span>
+                  <span class="conf-tag">Berlin-Schöneberg</span>
+                </div>
+                <div class="conf-ticket-body">
+                  <div class="ticket-row">
+                    <span class="t-label">Plätze:</span>
+                    <strong class="t-val" id="conf-seats-display">Platz 3 &amp; Platz 4</strong>
+                  </div>
+                  <div class="ticket-row">
+                    <span class="t-label">Durchgang:</span>
+                    <strong class="t-val" id="conf-slot-display">18:00 – 20:15 Uhr (12 Gänge)</strong>
+                  </div>
+                  <div class="ticket-row">
+                    <span class="t-label">Name:</span>
+                    <strong class="t-val" id="conf-name-display">Gast</strong>
+                  </div>
+                  <div class="ticket-row">
+                    <span class="t-label">Ort:</span>
+                    <strong class="t-val">Akazienstraße 22, 10823 Berlin</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="conf-actions">
+                <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <span>Rückfrage via Telegram @rovatt</span>
+                </a>
+                <button type="button" id="reset-booking-btn" class="btn btn-secondary btn-sm">
+                  <span>Weitere Buchung anlegen</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. CRAFT SECTION: Knife & Rice Story with Stroke-Drawn SVGs -->
+    <section id="handwerk" class="craft-section" aria-label="Handwerk und Philosophie">
+      <div class="section-container">
+        
+        <div class="craft-intro">
+          <div class="kicker-tag kicker-indigo">Philosophie &amp; Tradition</div>
+          <h2 class="section-title">Messer &amp; Reis</h2>
+          <p class="craft-lead">
+            Ein vollendetes Stück Nigiri besteht zu achtzig Prozent aus Disziplin und zu zwanzig Prozent aus Geduld. Zwei Elemente stehen im Zentrum unserer Küche: Der Schnitt der Klinge und die Seele des Reises.
+          </p>
+        </div>
+
+        <div class="craft-cards-grid">
+          
+          <!-- Story 1: The Yanagiba Knife -->
+          <article class="craft-card" id="craft-knife-card">
+            <div class="craft-svg-stage">
+              <!-- Large Prominent Animated Stroke-Drawn Yanagiba SVG -->
+              <svg class="stroke-svg knife-svg" viewBox="0 0 560 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Zeichnung des Sakai Yanagiba Messers mit Kataba-Schliff">
+                <!-- Wa-Handle (Octagonal Japanese Magnolia Wood) -->
+                <path class="svg-stroke-path handle-base" d="M 18 132 L 125 126 L 125 174 L 18 168 Z" stroke="#10141A" stroke-width="3" stroke-linejoin="round" fill="rgba(241,236,226,0.7)"/>
+                <line class="svg-stroke-path handle-facet" x1="18" y1="150" x2="125" y2="150" stroke="#10141A" stroke-width="2" stroke-dasharray="4 2"/>
+                <!-- Water Buffalo Horn Ferrule (Kakumaki) -->
+                <path class="svg-stroke-path handle-ferrule" d="M 125 126 L 168 123 L 168 177 L 125 174 Z" stroke="#10141A" stroke-width="3" stroke-linejoin="round" fill="rgba(16,20,26,0.85)"/>
+                <line class="svg-stroke-path handle-spacer" x1="130" y1="126" x2="130" y2="174" stroke="#D2462B" stroke-width="2.5"/>
+                <!-- Mekugi Bamboo Pin -->
+                <circle class="svg-stroke-path mekugi-pin" cx="72" cy="150" r="5" stroke="#10141A" stroke-width="2.5" fill="#D2462B"/>
+                
+                <!-- Machi / Tang Neck -->
+                <path class="svg-stroke-path blade-tang" d="M 168 138 L 188 138 L 188 162 L 168 162 Z" stroke="#10141A" stroke-width="2.5" fill="#2B3A67"/>
+
+                <!-- Blade Spine (Mune) & Razor Edge (Ha) Contour -->
+                <path class="svg-stroke-path blade-contour" d="M 188 138 L 470 102 Q 515 98 542 118 Q 546 124 532 136 L 188 168 Z" stroke="#10141A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <!-- Shinogi Ridge Line (Kataba Single Bevel Plane) -->
+                <path class="svg-stroke-path shinogi-line" d="M 188 152 L 478 112 L 532 136" stroke="#2B3A67" stroke-width="2.5" stroke-linecap="round"/>
+                
+                <!-- Hamon Differential Hardening Wave Pattern -->
+                <path class="svg-stroke-path hamon-line" d="M 194 165 Q 225 156 250 162 Q 280 152 310 160 Q 345 148 380 157 Q 420 142 460 151 Q 495 132 532 136" stroke="#D2462B" stroke-width="3" stroke-linecap="round"/>
+                
+                <!-- Blade Kanji Inscription (Hand-Chiseled) -->
+                <text x="260" y="138" class="knife-kanji" fill="#10141A" font-size="14" font-weight="700" letter-spacing="6">浪水本焼</text>
+
+                <!-- 45° Kataba Cutting Guide Arc -->
+                <path class="svg-stroke-path angle-arc" d="M 495 65 A 40 40 0 0 1 535 110" stroke="#D2462B" stroke-width="2" stroke-dasharray="4 3"/>
+                <line class="svg-stroke-path angle-arrow" x1="535" y1="110" x2="528" y2="100" stroke="#D2462B" stroke-width="2"/>
+                <line class="svg-stroke-path angle-arrow" x1="535" y1="110" x2="538" y2="98" stroke="#D2462B" stroke-width="2"/>
+                <text x="440" y="58" class="angle-label" fill="#D2462B" font-size="12" font-weight="600">45° Kataba-Zugschnitt</text>
+
+                <!-- Perfectly Sliced Balfegó Sashimi Tranche falling below -->
+                <path class="svg-stroke-path sashimi-slice" d="M 440 185 C 455 170, 500 172, 520 195 C 495 224, 450 220, 425 200 Z" stroke="#D2462B" stroke-width="2.5" fill="rgba(210,70,43,0.12)"/>
+                <path class="svg-stroke-path sashimi-grain" d="M 448 188 Q 475 186 500 204" stroke="#2B3A67" stroke-width="1.8"/>
+                <path class="svg-stroke-path sashimi-grain" d="M 436 198 Q 465 198 485 214" stroke="#2B3A67" stroke-width="1.8"/>
+                <text x="442" y="240" class="angle-label" fill="#2B3A67" font-size="11" font-weight="600">Zellwand intakt</text>
+              </svg>
+            </div>
+
+            <div class="craft-card-content">
+              <span class="craft-step-num">01 / KLINGE</span>
+              <h3 class="craft-h3">Das Yanagiba (柳刃)</h3>
+              <p class="craft-p">
+                Geschmiedet aus weißem Papierstahl (Shirogami No. 2) in Sakai. Der einseitige Schliff (Kataba) gleitet im 45-Grad-Winkel ohne jeglichen Druck durch den Fisch. Die Zellwände des Thunfischs werden nicht gequetscht, sondern glatt getrennt. Nur so bleibt das köstliche Eigenfett an der Schnittfläche gebunden.
+              </p>
+              <div class="craft-stats-row">
+                <div class="craft-stat">
+                  <strong>62 HRC</strong>
+                  <span>Klingenhärte</span>
+                </div>
+                <div class="craft-stat">
+                  <strong>8.000er</strong>
+                  <span>Wasserstein-Politur</span>
+                </div>
+                <div class="craft-stat">
+                  <strong>1 Zug</strong>
+                  <span>Zugschnitt-Technik</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story 2: The Akasu Shari Rice -->
+          <article class="craft-card" id="craft-rice-card">
+            <div class="craft-svg-stage">
+              <!-- Large Prominent Animated Stroke-Drawn Rice Cauldron & Hangiri Tub SVG -->
+              <svg class="stroke-svg rice-svg" viewBox="0 0 560 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Zeichnung des Shari-Hangiri Bottichs, Koshihikari Reis und Akasu Tropfen">
+                <!-- Heavy Hangiri Wood Tub Base -->
+                <path class="svg-stroke-path hangiri-pot" d="M 90 156 C 90 236, 470 236, 470 156 C 470 134, 90 134, 90 156 Z" stroke="#10141A" stroke-width="3.5" stroke-linecap="round" fill="rgba(241,236,226,0.6)"/>
+                
+                <!-- Copper Hoops (Kawa) binding the cedar staves -->
+                <path class="svg-stroke-path copper-hoop-1" d="M 98 172 C 160 216, 400 216, 462 172" stroke="#D2462B" stroke-width="3" stroke-linecap="round"/>
+                <path class="svg-stroke-path copper-hoop-2" d="M 112 196 C 175 230, 385 230, 448 196" stroke="#D2462B" stroke-width="2.5" stroke-linecap="round"/>
+                
+                <!-- Polished Rim of Hangiri -->
+                <ellipse class="svg-stroke-path pot-lip" cx="280" cy="144" rx="190" ry="24" stroke="#10141A" stroke-width="3" fill="rgba(235,229,216,0.8)"/>
+
+                <!-- Steaming Mound of Koshihikari Shari -->
+                <path class="svg-stroke-path rice-mound" d="M 125 142 C 150 82, 410 82, 435 142 Z" stroke="#2B3A67" stroke-width="3" stroke-linecap="round" fill="rgba(255,255,255,0.7)"/>
+
+                <!-- Sculpted Rice Grains with Umami Amber Luster -->
+                <ellipse class="svg-stroke-path grain g-1" cx="220" cy="120" rx="14" ry="7" transform="rotate(-20 220 120)" stroke="#10141A" stroke-width="2" fill="#FFFFFF"/>
+                <ellipse class="svg-stroke-path grain g-2" cx="250" cy="108" rx="15" ry="7" transform="rotate(15 250 108)" stroke="#10141A" stroke-width="2" fill="#FFFFFF"/>
+                <ellipse class="svg-stroke-path grain g-3" cx="280" cy="115" rx="14" ry="7" transform="rotate(-10 280 115)" stroke="#10141A" stroke-width="2" fill="#FFFFFF"/>
+                <ellipse class="svg-stroke-path grain g-4" cx="310" cy="104" rx="15" ry="7" transform="rotate(25 310 104)" stroke="#10141A" stroke-width="2" fill="#FFFFFF"/>
+                <ellipse class="svg-stroke-path grain g-5" cx="340" cy="122" rx="14" ry="7" transform="rotate(-15 340 122)" stroke="#10141A" stroke-width="2" fill="#FFFFFF"/>
+                <ellipse class="svg-stroke-path grain g-6" cx="200" cy="132" rx="13" ry="6" transform="rotate(30 200 132)" stroke="#10141A" stroke-width="2" fill="#FFFFFF"/>
+                <ellipse class="svg-stroke-path grain g-7" cx="360" cy="134" rx="13" ry="6" transform="rotate(-25 360 134)" stroke="#10141A" stroke-width="2" fill="#FFFFFF"/>
+
+                <!-- Hinoki Rice Paddle (Shamoji) -->
+                <path class="svg-stroke-path shamoji-handle" d="M 390 118 L 485 52 Q 498 44 506 58 L 428 135 Z" stroke="#10141A" stroke-width="3" stroke-linejoin="round" fill="rgba(241,236,226,0.9)"/>
+                <line class="svg-stroke-path shamoji-grain" x1="410" y1="110" x2="480" y2="60" stroke="#10141A" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+                <!-- Amber 3-Year Aged Akasu Droplet Infusion -->
+                <path class="svg-stroke-path drop-line" d="M 280 34 C 280 34, 302 68, 302 85 C 302 99, 292 110, 280 110 C 268 110, 258 99, 258 85 C 258 68, 280 34, 280 34 Z" stroke="#D2462B" stroke-width="2.8" fill="rgba(210,70,43,0.3)"/>
+                
+                <!-- Vinegar Umami Diffusion Ripples -->
+                <ellipse class="svg-stroke-path ripple r-1" cx="280" cy="128" rx="42" ry="12" stroke="#D2462B" stroke-width="2" stroke-dasharray="6 3"/>
+                <ellipse class="svg-stroke-path ripple r-2" cx="280" cy="128" rx="75" ry="20" stroke="#D2462B" stroke-width="1.8" stroke-dasharray="8 4"/>
+
+                <!-- Swirling Steam Clouds Rising -->
+                <path class="svg-stroke-path steam-line s-1" d="M 175 95 Q 145 60 178 30 Q 205 2 188 -20" stroke="#2B3A67" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="svg-stroke-path steam-line s-2" d="M 280 28 Q 260 -2 284 -28 Q 305 -50 290 -70" stroke="#D2462B" stroke-width="2.8" stroke-linecap="round"/>
+                <path class="svg-stroke-path steam-line s-3" d="M 370 90 Q 400 55 375 22 Q 355 -10 380 -30" stroke="#2B3A67" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Typography & Callouts -->
+                <text x="316" y="80" class="angle-label" fill="#D2462B" font-size="12" font-weight="700">3 Jahre Moromi-Akasu</text>
+                <text x="70" y="105" class="angle-label" fill="#2B3A67" font-size="12" font-weight="700">36,5 °C Handwarm</text>
+              </svg>
+            </div>
+
+            <div class="craft-card-content">
+              <span class="craft-step-num">02 / FUNDAMENT</span>
+              <h3 class="craft-h3">Der Shari &amp; Akasu (舎利と赤酢)</h3>
+              <p class="craft-p">
+                Koshihikari-Reis aus den schneereichen Bergen von Niigata. Gekocht im schweren Eisenkessel mit mineralarmem Quellwasser. Gewürzt wird noch im heißen Hangiri-Zuber mit Akasu – einem rötlichen Essig, der drei Jahre lang auf Sake-Maische (Moromi) heranreift. Er verleiht dem Shari sein unverwechselbares Umami und die warme Bernsteinfarbe.
+              </p>
+              <div class="craft-stats-row">
+                <div class="craft-stat">
+                  <strong>36,5 °C</strong>
+                  <span>Serviertemperatur</span>
+                </div>
+                <div class="craft-stat">
+                  <strong>3 Jahre</strong>
+                  <span>Sake-Essig-Reife</span>
+                </div>
+                <div class="craft-stat">
+                  <strong>100%</strong>
+                  <span>Niigata Koshihikari</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. CONTACT + HOURS SECTION -->
+    <section id="kontakt-zeiten" class="contact-section" aria-label="Kontakt und Öffnungszeiten">
+      <div class="section-container">
+        
+        <div class="contact-grid">
+          
+          <!-- Hours & Live Status Card -->
+          <div class="contact-card hours-card">
+            <div class="live-status-pill" id="live-status-pill">
+              <span class="live-status-dot" id="live-dot"></span>
+              <span class="live-status-text" id="live-text">Prüfe Öffnungszeit...</span>
+            </div>
+
+            <h2 class="contact-card-title">Öffnungszeiten</h2>
+            <p class="contact-intro">Für den Omakase-Tresen bitten wir um Vorabreservierung. Im vorderen Izakaya-Bereich halten wir täglich Plätze für spontane Gäste frei.</p>
+
+            <ul class="hours-list">
+              <li class="hours-item">
+                <span class="day">Dienstag – Donnerstag</span>
+                <span class="time">17:30 – 23:00 Uhr</span>
+              </li>
+              <li class="hours-item highlight-day">
+                <span class="day">Freitag &amp; Samstag</span>
+                <span class="time">17:30 – 00:00 Uhr</span>
+              </li>
+              <li class="hours-item">
+                <span class="day">Sonntag</span>
+                <span class="time">17:00 – 22:30 Uhr</span>
+              </li>
+              <li class="hours-item closed-day">
+                <span class="day">Montag</span>
+                <span class="time">Ruhetag (Vorbereitung Shari &amp; Reifung)</span>
+              </li>
+            </ul>
+
+            <div class="omakase-slots-note">
+              <strong>Tresen-Sitzungen:</strong>
+              <div class="slots-badges">
+                <span class="slot-badge">1. Durchgang: 18:00 Uhr</span>
+                <span class="slot-badge">2. Durchgang: 20:30 Uhr</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address, Contact & Map Snippet Card -->
+          <div class="contact-card info-card">
+            <h2 class="contact-card-title">Standort &amp; Kontakt</h2>
+            
+            <div class="address-box">
+              <div class="address-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="address-lines">
+                <strong>NAMI – Sushi &amp; Izakaya</strong>
+                <p>Akazienstraße 22<br>10823 Berlin-Schöneberg</p>
+                <span class="transit-info">U7 Eisenacher Straße (4 Min.) · S1 Julius-Leber-Brücke (7 Min.)</span>
+              </div>
+            </div>
+
+            <div class="direct-contact-list">
+              <!-- Phone -->
+              <a href="tel:+498886661234" class="contact-action-item">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-type">Telefonische Reservierung</span>
+                  <strong class="contact-val">+49 888 6661234</strong>
+                </div>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:12234456789@gmail.com" class="contact-action-item">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-type">E-Mail für Anfragen</span>
+                  <strong class="contact-val">12234456789@gmail.com</strong>
+                </div>
+              </a>
+
+              <!-- Telegram -->
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="contact-action-item">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-type">Direktkontakt via Telegram</span>
+                  <strong class="contact-val">@rovatt</strong>
+                </div>
+              </a>
+            </div>
+
+            <!-- Berlin-Schöneberg Neighborhood Compass -->
+            <div class="neighborhood-map-card" aria-hidden="true">
+              <div class="map-grid-pattern">
+                <div class="map-street street-akazien"><span>Akazienstraße</span></div>
+                <div class="map-street street-haupt"><span>Hauptstraße</span></div>
+                <div class="map-poi nami-pin">
+                  <span class="pin-beacon"></span>
+                  <strong class="pin-text">NAMI</strong>
+                </div>
+                <div class="map-poi u-bahn-pin">
+                  <span>U7 Eisenacher Str.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. TASTING LIST QUICK-NOTEPAD DRAWER (QR-Menu Feature) -->
+  <aside id="tasting-bar" class="tasting-bar" aria-label="Meine Tischauswahl">
+    <div class="tasting-bar-inner">
+      <div class="tasting-info">
+        <span class="tasting-count" id="tasting-count-badge">0 Positionen</span>
+        <span class="tasting-sum" id="tasting-sum-price">0,00 €</span>
+      </div>
+      <button type="button" id="open-tasting-drawer" class="btn btn-vermilion btn-sm" aria-expanded="false" aria-controls="tasting-drawer">
+        <span>Auswahl ansehen</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Tasting Drawer Popup -->
+  <div id="tasting-drawer" class="tasting-drawer" aria-hidden="true" role="dialog" aria-labelledby="tasting-drawer-title">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <span class="drawer-kanji">注文控え</span>
+        <h3 id="tasting-drawer-title">Deine Tischauswahl</h3>
+      </div>
+      <button type="button" id="close-tasting-drawer" class="btn-close-modal" aria-label="Auswahl schließen">×</button>
+    </div>
+    <div class="drawer-content">
+      <p class="drawer-intro">Zeige diese Liste einfach unserem Service-Team am Tisch oder sende sie direkt per Telegram.</p>
+      <div id="tasting-items-list" class="tasting-items-list">
+        <p class="empty-list-notice">Noch keine Gerichte ausgewählt. Tippe bei einem Gericht auf »Details &amp; Auswahl«.</p>
+      </div>
+      <div class="drawer-footer-summary">
+        <div class="sum-row">
+          <span>Gesamtbetrag (inkl. MwSt.):</span>
+          <strong id="drawer-total-sum">0,00 €</strong>
+        </div>
+        <div class="drawer-btns">
+          <a id="telegram-order-link" href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block">
+            <span>Als Notiz via Telegram senden (@rovatt)</span>
+          </a>
+          <button type="button" id="clear-tasting-btn" class="btn-text-muted">Auswahl leeren</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. BOTTOM SHEET / DISH MODAL (Opens on Card Tap) -->
+  <div id="dish-modal-backdrop" class="modal-backdrop" aria-hidden="true"></div>
+  <div id="dish-bottom-sheet" class="bottom-sheet" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-dish-title">
+    <div class="sheet-handle-bar" aria-hidden="true">
+      <div class="sheet-handle"></div>
+    </div>
+    
+    <button type="button" id="close-dish-sheet" class="btn-close-sheet" aria-label="Schließen">×</button>
+
+    <div class="sheet-scroll-container">
+      <div class="sheet-hero-media">
+        <img id="modal-dish-img" src="img/otoro-nigiri.jpg" alt="" class="modal-img" width="600" height="450">
+        <span id="modal-dish-kanji" class="modal-kanji-stamp">大トロ</span>
+      </div>
+
+      <div class="sheet-body-content">
+        
+        <div class="sheet-header-group">
+          <div>
+            <span id="modal-dish-pieces" class="sheet-pieces-tag">2 Stück</span>
+            <h3 id="modal-dish-title" class="sheet-title">Ōtoro Nigiri</h3>
+          </div>
+          <span id="modal-dish-price" class="sheet-price">14,50 €</span>
+        </div>
+
+        <div class="sheet-divider"></div>
+
+        <!-- Culinary Story & Provenance -->
+        <div class="sheet-section">
+          <h4 class="sheet-section-title">Herkunft &amp; Zubereitung</h4>
+          <p id="modal-dish-desc" class="sheet-prose">
+            Ausgewähltes Balfegó-Bauchstück mit tiefem Schmelz. Trocken nachgereift nach Jukusei-Art für 7 Tage zur Anreicherung von natürlichem Inosinat. Mit handgebrühtem Nikiri-Glaze bestrichen und auf körperwarmem Shari mit 3 Jahre gereiftem Akasu-Essig serviert.
+          </p>
+        </div>
+
+        <!-- Sommelier Pairing -->
+        <div class="sheet-pairing-box">
+          <div class="pairing-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2h8l-2 9a4 4 0 0 1-8 0L8 2zM12 15v7M8 22h8"/></svg>
+          </div>
+          <div class="pairing-content">
+            <span class="pairing-label">Sake-Empfehlung von Meister Kenji:</span>
+            <strong id="modal-dish-pairing" class="pairing-title">Aramasa No. 6 S-Type Junmai</strong>
+            <p id="modal-dish-pairing-note" class="pairing-desc">Mineralische Eleganz und lebendige Säure balancieren den reichen Schmelz des Thunfischfettes ideal aus.</p>
+          </div>
+        </div>
+
+        <!-- Allergen Details -->
+        <div class="sheet-section">
+          <h4 class="sheet-section-title">Allergene &amp; Inhaltsstoffe</h4>
+          <div id="modal-dish-allergens" class="modal-allergens-list">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- Action / Add to Table List -->
+        <div class="sheet-actions">
+          <div class="stepper-group" role="group" aria-label="Menge wählen">
+            <button type="button" id="stepper-minus" class="stepper-btn" aria-label="Menge verringern">-</button>
+            <span id="stepper-val" class="stepper-val" aria-live="polite">1</span>
+            <button type="button" id="stepper-plus" class="stepper-btn" aria-label="Menge erhöhen">+</button>
+          </div>
+          <button type="button" id="add-to-tasting-btn" class="btn btn-vermilion flex-grow">
+            <span>Auf Tischauswahl setzen</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. ALLERGEN LEGEND MODAL (A-N EU Standards) -->
+  <div id="allergen-modal-backdrop" class="modal-backdrop" aria-hidden="true"></div>
+  <div id="allergen-modal" class="allergen-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="allergen-modal-title">
+    <div class="modal-header">
+      <h3 id="allergen-modal-title">Allergen-Kennzeichnung (EU-Standard)</h3>
+      <button type="button" id="close-allergen-modal" class="btn-close-modal" aria-label="Allergen-Info schließen">×</button>
+    </div>
+    <div class="modal-body-scroll">
+      <p class="allergen-intro">Gemäß EU-Lebensmittelinformationsverordnung kennzeichnen wir alle verwendeten Hauptallergene transparent:</p>
+      <dl class="allergen-glossary">
+        <div class="glossary-item"><dt>A</dt><dd>Glutenhaltiges Getreide (z. B. Weizen in traditioneller Sojasauce oder Gyoza-Teig)</dd></div>
+        <div class="glossary-item"><dt>B</dt><dd>Krebstiere und daraus hergestellte Erzeugnisse</dd></div>
+        <div class="glossary-item"><dt>C</dt><dd>Eier (in hausgemachter Kewpie-Mayo)</dd></div>
+        <div class="glossary-item"><dt>D</dt><dd>Fische aller Edomae-Zubereitungen</dd></div>
+        <div class="glossary-item"><dt>E</dt><dd>Erdnüsse</dd></div>
+        <div class="glossary-item"><dt>F</dt><dd>Sojabohnen (Grundlage unserer Shoyu und Moromi-Tare)</dd></div>
+        <div class="glossary-item"><dt>G</dt><dd>Milch und Laktose (in Miso-Butter Glaze)</dd></div>
+        <div class="glossary-item"><dt>H</dt><dd>Schalenfrüchte / Nüsse</dd></div>
+        <div class="glossary-item"><dt>I</dt><dd>Sellerie</dd></div>
+        <div class="glossary-item"><dt>J</dt><dd>Senf (auch Bestandteil japanischer Senfsaaten)</dd></div>
+        <div class="glossary-item"><dt>K</dt><dd>Sesamsamen (Goma-Öl und gerösteter weißer/schwarzer Sesam)</dd></div>
+        <div class="glossary-item"><dt>L</dt><dd>Schwefeldioxid und Sulfite (in ausgewählten Sake-Spezialitäten)</dd></div>
+        <div class="glossary-item"><dt>M</dt><dd>Lupinen</dd></div>
+        <div class="glossary-item"><dt>N</dt><dd>Weichtiere (Jakobsmuscheln, Oktopus, Tintenfisch)</dd></div>
+      </dl>
+      <div class="modal-footer-note">
+        <strong>Hinweis für Allergiker:</strong> Auf Wunsch servieren wir glutenfreie Tamari-Sojasauce sowie koscher/halal-konforme Zubereitungen. Bitte informiere unser Service-Team am Tresen.
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. FOOTER -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand-col">
+          <div class="footer-brand">
+            <span class="footer-kanji" aria-hidden="true">波</span>
+            <span class="footer-name">NAMI · SUSHI &amp; IZAKAYA</span>
+          </div>
+          <p class="footer-tagline">
+            Edomae-Sushi, traditionelles Akasu-Shari und Binchotan-Robata in Berlin-Schöneberg.
+          </p>
+          <div class="footer-hanko">
+            <span>東京 · 伯林</span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="#speisekarte">Speisekarte &amp; QR-Auswahl</a></li>
+            <li><a href="#omakase-tresen">Omakase am Tresen (8 Plätze)</a></li>
+            <li><a href="#handwerk">Philosophie Messer &amp; Reis</a></li>
+            <li><a href="#kontakt-zeiten">Öffnungszeiten &amp; Anfahrt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">Kontakt Schöneberg</h4>
+          <p class="footer-addr">Akazienstraße 22<br>10823 Berlin</p>
+          <p class="footer-links-row">
+            <a href="tel:+498886661234">+49 888 6661234</a><br>
+            <a href="mailto:12234456789@gmail.com">12234456789@gmail.com</a><br>
+            <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer">Telegram: @rovatt</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">Fiktives Demo-Projekt. Gestaltung: Renat.</p>
+        <p class="footer-meta">Alle Angaben frei erfunden · Gebaut mit Liebe zum japanischen Handwerk.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

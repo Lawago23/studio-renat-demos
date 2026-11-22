@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>einfach starck – der Imbiss | Berlin-Wedding (Müllerstraße)</title>
+  <meta name="description" content="Klassischer Berliner Imbiss an der Müllerstraße in Berlin-Wedding. Currywurst mit & ohne Darm, knuspriges Schnitzel, hausgemachte Buletten und täglicher Mittagstisch.">
+
+  <!-- Google Fonts: Anton (Masthead), Libre Baskerville (Editorial), Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- DEMO NOTICE BAR -->
+  <div class="demo-bar" id="demoBar" role="region" aria-label="Demo-Hinweis">
+    <div class="demo-bar-content">
+      Demo-Projekt von Renat · Alle Angaben auf dieser Seite sind fiktiv.
+    </div>
+    <button class="demo-bar-close" id="closeDemoBar" aria-label="Hinweis schließen">✕</button>
+  </div>
+
+  <!-- EDITORIAL MASTHEAD DATELINE & HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="dateline-strip">
+      <div class="dateline-left">
+        <span>Ausgabe N° 42</span>
+        <span class="dateline-dot"></span>
+        <span>Wedding Edition</span>
+        <span class="dateline-dot"></span>
+        <span>Müllerstraße 142 · 13353 Berlin</span>
+        <span class="dateline-dot"></span>
+        <span class="live-badge is-open" id="liveStatusBadge">
+          <span class="live-badge-dot"></span>
+          <span id="liveStatusText">Jetzt geöffnet</span>
+        </span>
+      </div>
+      <div class="dateline-contacts">
+        <a href="tel:+498886661234" class="dateline-link">Tel: +49 888 6661234</a>
+        <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="dateline-link">Telegram: @rovatt</a>
+      </div>
+    </div>
+
+    <div class="nav-container">
+      <a href="#hero" class="brand-block">
+        <span class="brand-logo">starck</span>
+        <span class="brand-tag">der Imbiss</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+        <a href="#hero" class="nav-link">Titel</a>
+        <a href="#mittagstisch" class="nav-link">Mittagstisch</a>
+        <a href="#speisekarte" class="nav-link">Speisekarte</a>
+        <a href="#diewurst" class="nav-link">Wurst</a>
+        <a href="#catering" class="nav-link">Catering</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="tel:+498886661234" class="btn btn-primary" title="Jetzt anrufen">+49 888 6661234</a>
+        <a href="#catering" class="btn btn-secondary">Catering</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- =====================================================================
+         SECTION 1: HERO - MAGAZINE COVER
+         ===================================================================== -->
+    <section class="magazine-hero" id="hero" aria-label="Magazin-Titelblatt">
+      <div class="cover-wrapper">
+
+        <!-- Cover Header -->
+        <div class="cover-header">
+          <div class="cover-meta-top">
+            <span>DER WEDDINGER IMBISS-KURIER</span>
+            <span>UNABHÄNGIG · EHRLICH · SEIT 1994</span>
+            <span>BERLIN-WEDDING N° 42</span>
+          </div>
+
+          <!-- Huge Masthead -->
+          <h1 class="masthead-title">starck</h1>
+
+          <div class="cover-strapline">
+            <span>MÜLLERSTRASSE 142 · LEOPOLDPLATZ</span>
+            <span>KLASSISCHER BERLINER IMBISS MIT CHARAKTER</span>
+            <span>PREIS: 1 CURRYWURST MIT POMMES</span>
+          </div>
+        </div>
+
+        <!-- Cover Grid: 3 Columns (Left Coverlines, Center Visual, Right Coverlines) -->
+        <div class="cover-grid">
+
+          <!-- Left Column Coverlines -->
+          <div class="cover-column">
+            <article class="cover-article">
+              <span class="cover-tag red">REPORTAGE</span>
+              <h2 class="cover-headline">Das Geheimnis der Drei-Pfeffer-Sauce</h2>
+              <p class="cover-desc">Warum halb Wedding und Moabit jeden Mittag ansteht: Fruchtige Tomaten, geröstetes Currypulver und eine feine Schärfe ohne Geschmacksverstärker.</p>
+            </article>
+
+            <article class="cover-article">
+              <span class="cover-tag">BERLINER STREITFRAGE</span>
+              <h2 class="cover-headline">Mit Darm oder ohne?</h2>
+              <p class="cover-desc">Ost oder West, Tradition oder Gewohnheit: An unserem Grill braten wir beides in Perfektion. Knackiger Naturdarm oder die feine Nackte aus Berlin.</p>
+            </article>
+
+            <article class="cover-article">
+              <span class="cover-tag mustard">VOM GRILLMEISTER</span>
+              <h2 class="cover-headline">Frittiert in frischem Pflanzenöl</h2>
+              <p class="cover-desc">Doppelt gebacken für das unverwechselbare Knuspern. Außen kross, innen saftig-mehlig – genau so muss die Berliner Pommes sein.</p>
+            </article>
+          </div>
+
+          <!-- Central Visual in Magazine Frame -->
+          <div class="cover-visual-wrap">
+            <div class="cover-image-box">
+              <img src="assets/img/photo-f150783298-960.jpg"
+                   srcset="assets/img/photo-f150783298-500.jpg 500w, assets/img/photo-f150783298-960.jpg 960w"
+                   sizes="(max-width: 768px) 100vw, 520px"
+                   width="960" height="680"
+                   alt="Original Berliner Currywurst frisch geschnitten mit pikanter Currysauce und Currypulver auf Teller"
+                   loading="eager" fetchpriority="high">
+
+              <!-- Stamp Badge -->
+              <div class="stamp-badge">
+                <span>ECHTE HANDARBEIT</span>
+                <span>WEDDING ORIGINAL</span>
+              </div>
+
+              <!-- Price Tag -->
+              <div class="cover-price-tag">
+                MITTAGSTISCH AB 8,90 €
+              </div>
+            </div>
+
+            <div class="barcode-block">
+              <!-- SVG Barcode for Authentic Print Look -->
+              <svg class="barcode-svg" viewBox="0 0 140 38" fill="currentColor" aria-hidden="true">
+                <rect x="0" y="0" width="3" height="34"/>
+                <rect x="5" y="0" width="2" height="34"/>
+                <rect x="9" y="0" width="4" height="34"/>
+                <rect x="15" y="0" width="1" height="34"/>
+                <rect x="18" y="0" width="3" height="34"/>
+                <rect x="23" y="0" width="2" height="34"/>
+                <rect x="28" y="0" width="5" height="34"/>
+                <rect x="35" y="0" width="2" height="34"/>
+                <rect x="39" y="0" width="3" height="34"/>
+                <rect x="44" y="0" width="1" height="34"/>
+                <rect x="47" y="0" width="4" height="34"/>
+                <rect x="53" y="0" width="2" height="34"/>
+                <rect x="57" y="0" width="3" height="34"/>
+                <rect x="62" y="0" width="5" height="34"/>
+                <rect x="69" y="0" width="2" height="34"/>
+                <rect x="73" y="0" width="4" height="34"/>
+                <rect x="79" y="0" width="1" height="34"/>
+                <rect x="82" y="0" width="3" height="34"/>
+                <rect x="87" y="0" width="2" height="34"/>
+                <rect x="91" y="0" width="5" height="34"/>
+                <rect x="98" y="0" width="1" height="34"/>
+                <rect x="101" y="0" width="4" height="34"/>
+                <rect x="107" y="0" width="2" height="34"/>
+                <rect x="111" y="0" width="3" height="34"/>
+                <rect x="116" y="0" width="5" height="34"/>
+                <rect x="123" y="0" width="2" height="34"/>
+                <rect x="127" y="0" width="4" height="34"/>
+                <rect x="133" y="0" width="2" height="34"/>
+                <rect x="137" y="0" width="3" height="34"/>
+              </svg>
+              <span class="barcode-number">4 019940 133534</span>
+            </div>
+          </div>
+
+          <!-- Right Column Coverlines -->
+          <div class="cover-column">
+            <article class="cover-article">
+              <span class="cover-tag red">DAS SCHNITZEL</span>
+              <h2 class="cover-headline">Knusprig statt labberig</h2>
+              <p class="cover-desc">Frisch geklopftes Schnitzel Wiener Art, doppelt paniert und in Butterschmalz schwimmend ausgebacken. Dazu eine dicke Zitronenspalte.</p>
+            </article>
+
+            <article class="cover-article">
+              <span class="cover-tag">OMA INGES GEHEIMNIS</span>
+              <h2 class="cover-headline">180g pure Berliner Bulette</h2>
+              <p class="cover-desc">Reines Schwein- und Rinderhackfleisch vom Berliner Fleischer, frische Zwiebeln, Eier und Semmelbrösel. Von Hand geformt und kräftig angebraten.</p>
+            </article>
+
+            <article class="cover-article">
+              <span class="cover-tag mustard">FÜRS BÜRO</span>
+              <h2 class="cover-headline">Catering für Teams</h2>
+              <p class="cover-desc">Mittagspause ohne Stress: Wir liefern heiße Currywurst-Töpfe, Schnitzelplatten und Salate direkt in Ihr Büro in Wedding, Mitte & Moabit.</p>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- Cover Action Strip -->
+        <div class="cover-action-strip">
+          <div class="cover-action-lead">
+            <svg class="action-star" viewBox="0 0 24 24" aria-hidden="true">
+              <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/>
+            </svg>
+            <span>Täglich ab 11:00 Uhr heiß am Rost · Müllerstraße 142</span>
+          </div>
+          <div class="cover-action-buttons">
+            <a href="#mittagstisch" class="btn btn-primary">Tageskarte ansehen</a>
+            <a href="#catering" class="btn btn-secondary">Büro-Catering</a>
+            <a href="tel:+498886661234" class="btn btn-outline">Anrufen: +49 888 6661234</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: MITTAGSTISCH DER WOCHE (MO–FR TABS)
+         ===================================================================== -->
+    <section class="section-mittagstisch" id="mittagstisch" aria-labelledby="mittagTitle">
+      <div class="section-editorial-header">
+        <div class="editorial-kicker">Wochenkarte · Mo bis Fr 11:30–14:30 Uhr</div>
+        <h2 class="section-title" id="mittagTitle">Mittagstisch der Woche</h2>
+        <p class="editorial-lead">Jeden Tag ein anderes ehrliches Gericht aus Pfanne und Rost – zubereitet nach alter Schule. Immer inklusive kleiner Beilage und Erfrischung.</p>
+      </div>
+
+      <!-- Weekend notification badge if visited on Sa/So -->
+      <div class="weekend-notice" id="weekendNotice">
+        Hinweis: Am Wochenende ist Grillpause. Unten siehst du die Vorschau auf den kommenden Montag!
+      </div>
+
+      <!-- Day Tabs Nav (Mo–Fr) -->
+      <div class="mittag-tabs-nav" role="tablist" aria-label="Wochentage Mittagstisch">
+        <button class="mittag-tab-btn" id="tab-mo" role="tab" aria-selected="false" aria-controls="panel-mo" data-day="1">
+          <span class="mittag-tab-day">Mo</span>
+          <span class="mittag-tab-sub">Currywurst</span>
+        </button>
+        <button class="mittag-tab-btn" id="tab-di" role="tab" aria-selected="false" aria-controls="panel-di" data-day="2">
+          <span class="mittag-tab-day">Di</span>
+          <span class="mittag-tab-sub">Schnitzel</span>
+        </button>
+        <button class="mittag-tab-btn" id="tab-mi" role="tab" aria-selected="false" aria-controls="panel-mi" data-day="3">
+          <span class="mittag-tab-day">Mi</span>
+          <span class="mittag-tab-sub">Bulette</span>
+        </button>
+        <button class="mittag-tab-btn" id="tab-do" role="tab" aria-selected="false" aria-controls="panel-do" data-day="4">
+          <span class="mittag-tab-day">Do</span>
+          <span class="mittag-tab-sub">Rindswurst</span>
+        </button>
+        <button class="mittag-tab-btn" id="tab-fr" role="tab" aria-selected="false" aria-controls="panel-fr" data-day="5">
+          <span class="mittag-tab-day">Fr</span>
+          <span class="mittag-tab-sub">Jägerschnitzel</span>
+        </button>
+      </div>
+
+      <!-- Panels Wrapper -->
+      <div class="mittag-panels-wrapper">
+
+        <!-- MONTAG -->
+        <div class="mittag-panel" id="panel-mo" role="tabpanel" aria-labelledby="tab-mo">
+          <div class="dish-content">
+            <div class="dish-meta-line">
+              <span class="dish-tag">MONTAGS-KLASSIKER</span>
+              <span class="dish-time">11:30 – 14:30 Uhr frisch am Tresen</span>
+            </div>
+            <h3 class="dish-title">Berliner Currywurst mit knusprigen Pommes Frites</h3>
+            <p class="dish-description">Echtes Berliner Handwerk: Wähle zwischen zartem Naturdarm oder der klassischen nackten Wurst. Serviert mit unserer legendären warmen Drei-Pfeffer-Currysauce und einer großzügigen Prise edelsüßem Currypulver.</p>
+            <div class="dish-included-box">
+              Inklusive: Große Portion krosse Steakhouse-Pommes oder hausgemachter Kartoffelsalat plus 0,33l Softdrink nach Wahl.
+            </div>
+            <div class="dish-pricing-row">
+              <span class="dish-price">8,90 €</span>
+              <span class="dish-price-note">Komplettmenü<br>inkl. Beilage & Getränk</span>
+            </div>
+            <div class="dish-actions">
+              <a href="tel:+498886661234" class="btn btn-primary">Jetzt telefonisch vorbestellen</a>
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="btn btn-outline">Per Telegram reservieren</a>
+            </div>
+          </div>
+          <div class="dish-image-box">
+            <img src="assets/img/photo-f147144543-960.jpg"
+                 srcset="assets/img/photo-f147144543-500.jpg 500w, assets/img/photo-f147144543-960.jpg 960w"
+                 sizes="(max-width: 768px) 100vw, 480px"
+                 width="960" height="720"
+                 alt="Currywurst Teller mit Brot und Kartoffelsalat am Imbisstisch"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- DIENSTAG -->
+        <div class="mittag-panel" id="panel-di" role="tabpanel" aria-labelledby="tab-di">
+          <div class="dish-content">
+            <div class="dish-meta-line">
+              <span class="dish-tag">SCHNITZEL-DIENSTAG</span>
+              <span class="dish-time">11:30 – 14:30 Uhr frisch aus der Pfanne</span>
+            </div>
+            <h3 class="dish-title">Schnitzel Wiener Art in Butterschmalz ausgebacken</h3>
+            <p class="dish-description">Saftiges Landschweinefilet, frisch von Hand geklopft und zweifach in frischen Semmelbröseln paniert. In der Gusspfanne schwimmend souffliert, bis die Panade goldgelb wellt. Mit frischer Zitrone und Wildpreiselbeeren.</p>
+            <div class="dish-included-box">
+              Inklusive: Warmer Berliner Kartoffelsalat mit Speck & Schnittlauch oder goldene Pommes Frites plus 0,33l Erfrischung.
+            </div>
+            <div class="dish-pricing-row">
+              <span class="dish-price">10,50 €</span>
+              <span class="dish-price-note">Komplettmenü<br>inkl. Beilage & Getränk</span>
+            </div>
+            <div class="dish-actions">
+              <a href="tel:+498886661234" class="btn btn-primary">Jetzt telefonisch vorbestellen</a>
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="btn btn-outline">Per Telegram reservieren</a>
+            </div>
+          </div>
+          <div class="dish-image-box">
+            <img src="assets/img/schnitzel.jpg"
+                 srcset="assets/img/schnitzel-500.jpg 500w, assets/img/schnitzel.jpg 1000w"
+                 sizes="(max-width: 768px) 100vw, 480px"
+                 width="1000" height="750"
+                 alt="Knuspriges Schnitzel Wiener Art mit Zitrone und Pommes Frites"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- MITTWOCH -->
+        <div class="mittag-panel" id="panel-mi" role="tabpanel" aria-labelledby="tab-mi">
+          <div class="dish-content">
+            <div class="dish-meta-line">
+              <span class="dish-tag">BULETTEN-MITTWOCH</span>
+              <span class="dish-time">11:30 – 14:30 Uhr nach Oma Inges Rezept</span>
+            </div>
+            <h3 class="dish-title">Hausgemachte Weddinger Bulette (180 Gramm)</h3>
+            <p class="dish-description">Ein echtes Berliner Original: Grob gewolftes Fleisch, goldbraun geschmorte Zwiebeln, Majoran und eingeweichte Schrippen. Außen kross angebraten, innen saftig und würzig. Serviert mit kräftigem Bautz’ner Senf und Gewürzgurke.</p>
+            <div class="dish-included-box">
+              Inklusive: Cremiger Kartoffelstampf mit Zwiebelschmelz oder knusprige Pommes Frites plus 0,33l Softdrink.
+            </div>
+            <div class="dish-pricing-row">
+              <span class="dish-price">9,20 €</span>
+              <span class="dish-price-note">Komplettmenü<br>inkl. Beilage & Getränk</span>
+            </div>
+            <div class="dish-actions">
+              <a href="tel:+498886661234" class="btn btn-primary">Jetzt telefonisch vorbestellen</a>
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="btn btn-outline">Per Telegram reservieren</a>
+            </div>
+          </div>
+          <div class="dish-image-box">
+            <img src="assets/img/frikadelle.jpg"
+                 srcset="assets/img/frikadelle-500.jpg 500w, assets/img/frikadelle.jpg 1000w"
+                 sizes="(max-width: 768px) 100vw, 480px"
+                 width="1000" height="750"
+                 alt="Hausgemachte Berliner Bulette mit Senf und Schrippe auf Holzbrett"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- DONNERSTAG -->
+        <div class="mittag-panel" id="panel-do" role="tabpanel" aria-labelledby="tab-do">
+          <div class="dish-content">
+            <div class="dish-meta-line">
+              <span class="dish-tag">DONNERSTAGS-SPEZIAL</span>
+              <span class="dish-time">11:30 – 14:30 Uhr rauchfrisch vom Grill</span>
+            </div>
+            <h3 class="dish-title">Herzhafte Rindswurst mit feinem Krautsalat</h3>
+            <p class="dish-description">Kräftig über Buchenholz geräucherte Rindswurst aus 100 Prozent bestem Rindfleisch. Knackig im Biss mit feiner Pfeffernote. Dazu reichen wir unseren hausgemachten Weddinger Krautsalat mit Kümmel und kaltgepresstem Rapsöl.</p>
+            <div class="dish-included-box">
+              Inklusive: Frische Bäcker-Schrippe oder krosse Pommes Frites plus 0,33l Kaltgetränk nach Wahl.
+            </div>
+            <div class="dish-pricing-row">
+              <span class="dish-price">9,80 €</span>
+              <span class="dish-price-note">Komplettmenü<br>inkl. Beilage & Getränk</span>
+            </div>
+            <div class="dish-actions">
+              <a href="tel:+498886661234" class="btn btn-primary">Jetzt telefonisch vorbestellen</a>
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="btn btn-outline">Per Telegram reservieren</a>
+            </div>
+          </div>
+          <div class="dish-image-box">
+            <img src="assets/img/photo-f81781745-960.jpg"
+                 srcset="assets/img/photo-f81781745-500.jpg 500w, assets/img/photo-f81781745-960.jpg 960w"
+                 sizes="(max-width: 768px) 100vw, 480px"
+                 width="960" height="720"
+                 alt="Imbissteller mit herzhaften Spezialitäten und Beilagen"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- FREITAG -->
+        <div class="mittag-panel" id="panel-fr" role="tabpanel" aria-labelledby="tab-fr">
+          <div class="dish-content">
+            <div class="dish-meta-line">
+              <span class="dish-tag">FREITAGS-FESTMAHL</span>
+              <span class="dish-time">11:30 – 14:30 Uhr vor dem Wochenende</span>
+            </div>
+            <h3 class="dish-title">Krosses Jägerschnitzel mit Waldpilz-Rahmsauce</h3>
+            <p class="dish-description">Der krönende Abschluss der Arbeitswoche: Großes, goldbraun paniertes Schnitzel unter einer reichhaltigen Rahmsauce aus gebratenen Champignons, Steinpilzen, Schalotten und frischer Petersilie. Herzhaft, sämig und ehrlich.</p>
+            <div class="dish-included-box">
+              Inklusive: Große Portion heiße Pommes Frites und Beilagensalat plus 0,33l Fassbrause oder Bier nach Wahl.
+            </div>
+            <div class="dish-pricing-row">
+              <span class="dish-price">10,90 €</span>
+              <span class="dish-price-note">Komplettmenü<br>inkl. Beilage & Getränk</span>
+            </div>
+            <div class="dish-actions">
+              <a href="tel:+498886661234" class="btn btn-primary">Jetzt telefonisch vorbestellen</a>
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="btn btn-outline">Per Telegram reservieren</a>
+            </div>
+          </div>
+          <div class="dish-image-box">
+            <img src="assets/img/schnitzel.jpg"
+                 srcset="assets/img/schnitzel-500.jpg 500w, assets/img/schnitzel.jpg 1000w"
+                 sizes="(max-width: 768px) 100vw, 480px"
+                 width="1000" height="750"
+                 alt="Deftiges Jägerschnitzel mit knusprigen Beilagen"
+                 loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: KINETIC TYPOGRAPHY SECTION
+         Words "Currywurst. Schnitzel. Frikadelle." sliding at different speeds on scroll
+         ===================================================================== -->
+    <section class="section-kinetic" id="kinetic" aria-label="Kinetische Typografie">
+      <div class="kinetic-label-strip">
+        <span class="kinetic-subhead">Die heilige Dreifaltigkeit des Berliner Imbisses</span>
+      </div>
+
+      <div class="kinetic-track-wrapper">
+        <!-- Track 1: CURRYWURST (translates left on scroll) -->
+        <div class="kinetic-strip" id="kineticStrip1" data-speed="-0.4" data-dir="-1">
+          <div class="kinetic-text red">CURRYWURST <span class="bullet-star"></span></div>
+          <div class="kinetic-text">MIT DARM <span class="bullet-star"></span></div>
+          <div class="kinetic-text outline">OHNE DARM <span class="bullet-star"></span></div>
+          <div class="kinetic-text">SCHARF <span class="bullet-star"></span></div>
+          <div class="kinetic-text mustard">CURRYWURST <span class="bullet-star"></span></div>
+          <div class="kinetic-text">WEDDINGER ART <span class="bullet-star"></span></div>
+          <div class="kinetic-text outline">CURRYWURST <span class="bullet-star"></span></div>
+          <div class="kinetic-text red">MIT DARM <span class="bullet-star"></span></div>
+        </div>
+
+        <!-- Track 2: SCHNITZEL (translates right on scroll) -->
+        <div class="kinetic-strip" id="kineticStrip2" data-speed="0.65" data-dir="1">
+          <div class="kinetic-text">SCHNITZEL <span class="bullet-star"></span></div>
+          <div class="kinetic-text mustard">WIENER ART <span class="bullet-star"></span></div>
+          <div class="kinetic-text outline">BUTTERSCHMALZ <span class="bullet-star"></span></div>
+          <div class="kinetic-text red">JÄGER-RAHM <span class="bullet-star"></span></div>
+          <div class="kinetic-text">SCHNITZEL <span class="bullet-star"></span></div>
+          <div class="kinetic-text outline">FRISCH GEKLOPFT <span class="bullet-star"></span></div>
+          <div class="kinetic-text mustard">SCHNITZEL <span class="bullet-star"></span></div>
+          <div class="kinetic-text">GOLDBRAUN <span class="bullet-star"></span></div>
+        </div>
+
+        <!-- Track 3: FRIKADELLE (translates left on scroll at medium speed) -->
+        <div class="kinetic-strip" id="kineticStrip3" data-speed="-0.25" data-dir="-1">
+          <div class="kinetic-text mustard">FRIKADELLE <span class="bullet-star"></span></div>
+          <div class="kinetic-text outline">BULETTE <span class="bullet-star"></span></div>
+          <div class="kinetic-text">180 GRAMM <span class="bullet-star"></span></div>
+          <div class="kinetic-text red">SENF EXTRA <span class="bullet-star"></span></div>
+          <div class="kinetic-text">FRIKADELLE <span class="bullet-star"></span></div>
+          <div class="kinetic-text outline">OMA INGE <span class="bullet-star"></span></div>
+          <div class="kinetic-text mustard">BULETTE <span class="bullet-star"></span></div>
+          <div class="kinetic-text">WEDDINGER REZEPT <span class="bullet-star"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: MENU AS A PRINTED NEWSPAPER PAGE WITH COLUMNS
+         ===================================================================== -->
+    <section class="section-menu-newspaper" id="speisekarte" aria-labelledby="menuNewspaperTitle">
+      <div class="newspaper-paper">
+
+        <!-- Top Newspaper Bar -->
+        <div class="newspaper-top-bar">
+          <span>Ausgabe Wedding-Nord</span>
+          <span>Der Weddinger Anzeiger</span>
+          <span>Gültig für 2026</span>
+        </div>
+
+        <!-- Newspaper Masthead -->
+        <div class="newspaper-masthead">
+          <h2 class="newspaper-name" id="menuNewspaperTitle">Amtliche Speisekarte</h2>
+          <p class="newspaper-subheadline">Frisch vom Grill, aus der Pfanne und aus der Fritteuse · Alle Preise in Euro inkl. MwSt.</p>
+        </div>
+
+        <!-- 3 Broadsheet Columns -->
+        <div class="newspaper-columns">
+
+          <!-- Column 1: Von der Bratplatte -->
+          <div class="newspaper-col">
+            <div class="col-header">
+              <span class="col-number">SPALTE I</span>
+              <h3 class="col-title">Von der Bratplatte</h3>
+              <p class="col-lead-text">Unsere Würste beziehen wir täglich frisch von einem Meisterbetrieb aus dem Berliner Umland. Über Buchenholz geräuchert und auf den Punkt gebraten.</p>
+            </div>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Currywurst mit Darm <span class="badge-pill cult">Kult</span></span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">4,80 €</span>
+                </div>
+                <p class="menu-item-desc">Im zarten Naturdarm, knackig gebraten mit Drei-Pfeffer-Currysauce.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Currywurst ohne Darm <span class="badge-pill">Berliner Art</span></span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">4,80 €</span>
+                </div>
+                <p class="menu-item-desc">Die feine Nackte, samtig im Biss, mit reichlich Currysauce & Gewürz.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Starck-Doppelpack</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">8,90 €</span>
+                </div>
+                <p class="menu-item-desc">Zwei Würste nach Wahl mit einer Riesenportion Pommes Frites.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Rostbratwurst Thüringer Art</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">4,20 €</span>
+                </div>
+                <p class="menu-item-desc">Mit Majoran und Kümmel gewürzt, serviert im frischen Schrippenschlitz.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Rindswurst im Naturdarm</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">4,90 €</span>
+                </div>
+                <p class="menu-item-desc">100 Prozent reines Rindfleisch, kräftig geräuchert und saftig.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Curry-Spezial "Feuerstuhl" <span class="badge-pill new">Scharf</span></span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">5,80 €</span>
+                </div>
+                <p class="menu-item-desc">Mit scharfen Habanerosaucen-Tropfen, Röstzwiebeln und Jalapeños.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Aus der Pfanne & vom Brett -->
+          <div class="newspaper-col">
+            <div class="col-header">
+              <span class="col-number">SPALTE II</span>
+              <h3 class="col-title">Aus der Pfanne</h3>
+              <p class="col-lead-text">Keine Fertigware, kein Schnickschnack. Wir klopfen jedes Schnitzel von Hand und panieren erst dann, wenn die Bestellung am Tresen reinkommt.</p>
+            </div>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Schnitzel Wiener Art <span class="badge-pill cult">Beliebt</span></span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">9,80 €</span>
+                </div>
+                <p class="menu-item-desc">Feines Schweineschnitzel, goldbraun souffliert, mit dicker Zitronenspalte.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Jägerschnitzel Pilzrahm</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">11,90 €</span>
+                </div>
+                <p class="menu-item-desc">Mit hausgemachter Rahmsauce aus gebratenen Waldpilzen & Kräutern.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Zigeunerschnitzel Paprika</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">11,50 €</span>
+                </div>
+                <p class="menu-item-desc">Pikante Tomaten-Paprikasauce mit bunten Streifen und Schmorzwiebeln.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Weddinger Bulette / Frikadelle</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">4,50 €</span>
+                </div>
+                <p class="menu-item-desc">180g hausgemachte Hackfleisch-Spezialität mit Senf & Gewürzgurke.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Bulette in der Schrippe</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">5,20 €</span>
+                </div>
+                <p class="menu-item-desc">Das Berliner Handwerkerfrühstück: Bulette im Brötchen mit Senf.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Schaschliktopf mit Schrippe</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">7,80 €</span>
+                </div>
+                <p class="menu-item-desc">Zartes Fleisch in pikanter Zwiebel-Paprikasauce geschmort.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Beilagen, Salate & Saucen -->
+          <div class="newspaper-col">
+            <div class="col-header">
+              <span class="col-number">SPALTE III</span>
+              <h3 class="col-title">Beilagen & Salate</h3>
+              <p class="col-lead-text">Was wäre die Wurst ohne ordentliche Fritten? Wir wechseln täglich das Frittieröl und salzen frisch aus dem Streuer nach Berliner Schnauze.</p>
+            </div>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Portion Pommes Frites</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">3,80 €</span>
+                </div>
+                <p class="menu-item-desc">Doppelt gebacken, außen super kross, innen zart und heiß.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Pommes Schranke (Rot-Weiß)</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">4,40 €</span>
+                </div>
+                <p class="menu-item-desc">Mit reichlich Berliner Tomatenketchup und milder Mayonnaise.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Süßkartoffel-Pommes</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">5,20 €</span>
+                </div>
+                <p class="menu-item-desc">Aromatisch, knusprig frittiert, mit Kräutermayonnaise serviert.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Oma Inges Kartoffelsalat</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">4,20 €</span>
+                </div>
+                <p class="menu-item-desc">Nach Hausrezept wahlweise mit feiner Brühe & Speck oder milder Mayo.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Berliner Krautsalat</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">3,80 €</span>
+                </div>
+                <p class="menu-item-desc">Knackiger Weißkohl mariniert mit Kümmel, Zwiebeln und Essig.</p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item-row">
+                  <span class="menu-item-name">Hausgemachte Saucen extra</span>
+                  <span class="menu-leader-dots"></span>
+                  <span class="menu-item-price">1,20 €</span>
+                </div>
+                <p class="menu-item-desc">Drei-Pfeffer-Currysauce, scharfe Chilisauce, Bautz’ner Senf oder Mayo.</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Newspaper Drinks Section (Classification style) -->
+        <div class="newspaper-drinks-section">
+          <div class="drinks-header">
+            <h3 class="drinks-title">Durstlöscher aus der Kiste</h3>
+            <span class="dish-time">Eiskalt serviert · Flaschenverkauf</span>
+          </div>
+          <div class="drinks-grid">
+            <div class="drink-item">
+              <span class="drink-name">Berliner Kindl Jubi <span class="drink-volume">(0,5l)</span></span>
+              <span class="drink-price">3,40 €</span>
+            </div>
+            <div class="drink-item">
+              <span class="drink-name">Schultheiss Pilsener <span class="drink-volume">(0,5l)</span></span>
+              <span class="drink-price">3,20 €</span>
+            </div>
+            <div class="drink-item">
+              <span class="drink-name">Berliner Fassbrause <span class="drink-volume">(0,33l)</span></span>
+              <span class="drink-price">2,80 €</span>
+            </div>
+            <div class="drink-item">
+              <span class="drink-name">Fritz-Kola / Zuckerfrei <span class="drink-volume">(0,33l)</span></span>
+              <span class="drink-price">2,90 €</span>
+            </div>
+            <div class="drink-item">
+              <span class="drink-name">Fritz MischMasch <span class="drink-volume">(0,33l)</span></span>
+              <span class="drink-price">2,90 €</span>
+            </div>
+            <div class="drink-item">
+              <span class="drink-name">Spreequell Mineralwasser <span class="drink-volume">(0,33l)</span></span>
+              <span class="drink-price">2,50 €</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newspaper Coupon -->
+        <div class="newspaper-coupon">
+          <div class="coupon-scissors">✂</div>
+          <div class="coupon-text">
+            <h4 class="coupon-title">Weddinger Treue-Kupon</h4>
+            <p class="coupon-desc">Bei Vorlage dieses Abschnitts am Tresen: 1x extra Portion hausgemachte Drei-Pfeffer-Currysauce oder Ketchup gratis zu jeder Wurstbestellung.</p>
+          </div>
+          <a href="#kontakt" class="btn btn-primary coupon-btn">Coupon einlösen</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: "DIE WURST" - SVG DRAWING & SLICING ANIMATION
+         Signature moment: Stroke animation of a currywurst being sliced
+         ===================================================================== -->
+    <section class="section-wurst" id="diewurst" aria-labelledby="wurstTitle">
+      <div class="wurst-card">
+        <div class="wurst-layout">
+
+          <!-- Story & Controls -->
+          <div class="wurst-story">
+            <div class="editorial-kicker" style="justify-content: flex-start;">Signature Interaction · Das Handwerk</div>
+            <h2 class="wurst-subhead" id="wurstTitle">Der perfekte Schnitt</h2>
+            <p class="wurst-manifesto">"Eine ungeschnittene Currywurst ist nur eine Bratwurst. Erst der präzise Schnitt bricht die Rinde und lässt die Sauce in das Herz der Wurst fließen."</p>
+            <p class="wurst-body">Bei uns wird jede Wurst von Hand im 45-Grad-Winkel in genau sechs saftige Segmente geteilt. Danach folgt der warme Strahl unserer Drei-Pfeffer-Sauce und der goldene Regen aus geröstetem Madras-Curry.</p>
+
+            <div class="wurst-controls-box">
+              <div class="wurst-controls-header">
+                <span>Wähle deinen Schärfegrad:</span>
+                <span id="spiceLabel">Wedding-Scharf (Stufe 2)</span>
+              </div>
+              <div class="spiciness-selector" role="group" aria-label="Schärfegrad">
+                <button class="spice-btn" data-level="1" data-title="Mild (Fruchtige Tomate)">Stufe 1: Mild</button>
+                <button class="spice-btn is-active" data-level="2" data-title="Wedding-Scharf (Feiner Pfeffer)">Stufe 2: Wedding</button>
+                <button class="spice-btn" data-level="3" data-title="Feuerstuhl (Echte Habanero)">Stufe 3: Feuerstuhl</button>
+              </div>
+
+              <div class="wurst-actions">
+                <button class="btn btn-primary" id="btnSliceWurst">
+                  Wurst schneiden (Klick!)
+                </button>
+                <button class="btn btn-outline" id="btnResetWurst">
+                  Zurücksetzen
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive SVG Stage -->
+          <div class="wurst-stage-wrap">
+            <div class="wurst-stage" id="wurstStage" aria-label="Interaktive Animation einer geschnittenen Currywurst">
+
+              <!-- SVG Canvas for Currywurst & Knife & Slicing -->
+              <svg class="wurst-svg" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration einer Berliner Currywurst">
+                <defs>
+                  <!-- Filter for realistic drop shadow -->
+                  <filter id="plateShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#121212" flood-opacity="0.18"/>
+                  </filter>
+                  <filter id="wurstShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.25"/>
+                  </filter>
+
+                  <!-- Gradients for Sausage Texture -->
+                  <linearGradient id="sausageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#8F321B"/>
+                    <stop offset="35%" stop-color="#B84224"/>
+                    <stop offset="70%" stop-color="#99351C"/>
+                    <stop offset="100%" stop-color="#5E1D0E"/>
+                  </linearGradient>
+
+                  <!-- Gradient for Curry Sauce -->
+                  <linearGradient id="sauceGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+                    <stop offset="0%" stop-color="#D72A10"/>
+                    <stop offset="50%" stop-color="#E03A1E"/>
+                    <stop offset="100%" stop-color="#BA210B"/>
+                  </linearGradient>
+
+                  <!-- Paper Tray Texture Gradient -->
+                  <linearGradient id="trayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#FFFFFF"/>
+                    <stop offset="100%" stop-color="#F0EDE4"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- 1. Paper Serving Tray (Pappschale) -->
+                <g id="trayGroup" filter="url(#plateShadow)">
+                  <path d="M 60 140 L 90 320 Q 300 355 510 320 L 540 140 Q 300 120 60 140 Z" fill="url(#trayGrad)" stroke="#121212" stroke-width="2.5"/>
+                  <!-- Rim creases of traditional paper tray -->
+                  <path d="M 90 320 L 60 140" stroke="#D5CFBE" stroke-width="2"/>
+                  <path d="M 510 320 L 540 140" stroke="#D5CFBE" stroke-width="2"/>
+                  <path d="M 120 324 L 105 142" stroke="#E5DFC8" stroke-width="1.5" stroke-dasharray="3,3"/>
+                  <path d="M 480 324 L 495 142" stroke="#E5DFC8" stroke-width="1.5" stroke-dasharray="3,3"/>
+                </g>
+
+                <!-- Wooden snack fork (Piekser) placed on the side -->
+                <g id="snackFork" transform="rotate(-28, 480, 160)">
+                  <path d="M 460 140 L 500 140 L 495 240 L 485 240 L 480 170 L 475 240 L 465 240 Z" fill="#D7BE8A" stroke="#121212" stroke-width="1.5"/>
+                </g>
+
+                <!-- 2. Currywurst Body Segments (Separating during slice animation) -->
+                <g id="sausageBody" filter="url(#wurstShadow)">
+                  
+                  <!-- Segment 1 (Left end) -->
+                  <g class="wurst-segment seg-1" id="seg1">
+                    <path d="M 120 225 C 105 210, 105 190, 125 180 C 145 170, 160 175, 170 185 C 172 205, 165 225, 145 232 C 135 235, 126 230, 120 225 Z" fill="url(#sausageGrad)" stroke="#121212" stroke-width="2"/>
+                    <!-- Grill marks -->
+                    <line x1="130" y1="185" x2="140" y2="215" stroke="#3D1308" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+
+                  <!-- Segment 2 -->
+                  <g class="wurst-segment seg-2" id="seg2">
+                    <path d="M 175 186 C 185 178, 215 175, 230 182 C 235 205, 230 228, 215 238 C 195 240, 178 225, 175 186 Z" fill="url(#sausageGrad)" stroke="#121212" stroke-width="2"/>
+                    <line x1="195" y1="182" x2="205" y2="225" stroke="#3D1308" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+
+                  <!-- Segment 3 -->
+                  <g class="wurst-segment seg-3" id="seg3">
+                    <path d="M 235 183 C 255 180, 285 180, 300 186 C 305 210, 298 234, 285 242 C 265 245, 240 236, 235 183 Z" fill="url(#sausageGrad)" stroke="#121212" stroke-width="2"/>
+                    <line x1="265" y1="182" x2="272" y2="230" stroke="#3D1308" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+
+                  <!-- Segment 4 -->
+                  <g class="wurst-segment seg-4" id="seg4">
+                    <path d="M 305 187 C 325 187, 355 190, 370 197 C 372 220, 365 242, 350 248 C 330 250, 310 240, 305 187 Z" fill="url(#sausageGrad)" stroke="#121212" stroke-width="2"/>
+                    <line x1="335" y1="190" x2="340" y2="238" stroke="#3D1308" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+
+                  <!-- Segment 5 -->
+                  <g class="wurst-segment seg-5" id="seg5">
+                    <path d="M 375 198 C 395 200, 425 208, 440 218 C 440 238, 430 255, 415 258 C 395 257, 380 245, 375 198 Z" fill="url(#sausageGrad)" stroke="#121212" stroke-width="2"/>
+                    <line x1="405" y1="205" x2="410" y2="245" stroke="#3D1308" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+
+                  <!-- Segment 6 (Right end) -->
+                  <g class="wurst-segment seg-6" id="seg6">
+                    <path d="M 445 220 C 465 228, 485 240, 485 255 C 480 270, 455 272, 435 268 C 425 264, 435 245, 445 220 Z" fill="url(#sausageGrad)" stroke="#121212" stroke-width="2"/>
+                    <line x1="460" y1="235" x2="465" y2="260" stroke="#3D1308" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+
+                </g>
+
+                <!-- 3. Animated Slicing Guide Lines (Stroke Drawn) -->
+                <g id="sliceLines">
+                  <path class="slice-path" d="M 172 160 L 172 250" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 4"/>
+                  <path class="slice-path" d="M 233 158 L 233 252" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 4"/>
+                  <path class="slice-path" d="M 302 162 L 302 255" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 4"/>
+                  <path class="slice-path" d="M 372 170 L 372 260" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 4"/>
+                  <path class="slice-path" d="M 442 190 L 442 270" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 4"/>
+                </g>
+
+                <!-- 4. Flowing Curry Sauce Stream (Stroke-drawn SVG Path) -->
+                <g id="sauceLayer">
+                  <!-- Rich red gloss line -->
+                  <path class="sauce-stream" id="saucePath"
+                        d="M 110 215 Q 150 170 190 205 T 270 210 T 350 215 T 430 235 T 480 255"
+                        fill="none" stroke="url(#sauceGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Secondary sauce pooling splatter -->
+                  <path class="sauce-stream"
+                        d="M 130 220 Q 180 210 220 230 Q 300 240 380 235 Q 440 245 470 260"
+                        fill="none" stroke="#BA210B" stroke-width="8" stroke-linecap="round"/>
+                  <!-- Highlight gloss sheen -->
+                  <path class="sauce-stream"
+                        d="M 125 205 Q 170 175 210 200 T 290 205 T 370 215 T 440 230"
+                        fill="none" stroke="#FFA785" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+                </g>
+
+                <!-- 5. Curry Powder Particles (Mustard yellow specks) -->
+                <g id="curryPowderGroup">
+                  <circle class="curry-powder-particle" cx="140" cy="195" r="3" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="160" cy="210" r="2.5" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="190" cy="190" r="3.5" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="215" cy="225" r="2.8" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="240" cy="200" r="4" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="265" cy="215" r="3" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="295" cy="195" r="3.2" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="320" cy="220" r="2.5" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="345" cy="205" r="3.8" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="380" cy="225" r="3" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="410" cy="215" r="3.5" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="435" cy="240" r="2.6" fill="#E9B824"/>
+                  <circle class="curry-powder-particle" cx="460" cy="235" r="3.2" fill="#E9B824"/>
+                </g>
+
+                <!-- 6. Animated Knife Blade (Descends during cut) -->
+                <g class="knife-blade" id="knifeBlade">
+                  <path d="M 280 40 L 325 35 L 320 180 L 290 195 Z" fill="#D9D9D9" stroke="#121212" stroke-width="2"/>
+                  <path d="M 285 45 L 295 45 L 290 185 Z" fill="#FFFFFF" opacity="0.8"/>
+                  <!-- Knife Handle -->
+                  <rect x="290" y="5" width="25" height="40" rx="3" fill="#3D2314" stroke="#121212" stroke-width="2"/>
+                  <!-- Rivets on handle -->
+                  <circle cx="302" cy="18" r="2.5" fill="#B08D57"/>
+                  <circle cx="302" cy="32" r="2.5" fill="#B08D57"/>
+                </g>
+
+              </svg>
+            </div>
+            <p class="wurst-stage-caption" id="wurstStatusNote">Klicke auf "Wurst schneiden", um den Berliner Präzisionsschnitt auszulösen.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 6: CATERING FOR OFFICES FORM
+         ===================================================================== -->
+    <section class="section-catering" id="catering" aria-labelledby="cateringTitle">
+      <div class="catering-card">
+        <div class="catering-grid">
+
+          <!-- Left Info & Packages -->
+          <div class="catering-info">
+            <div class="editorial-kicker" style="justify-content: flex-start;">Mittagspause fürs Team</div>
+            <h2 class="section-title" id="cateringTitle">Büro-Catering Wedding & Mitte</h2>
+            <p class="editorial-lead" style="text-align: left; margin: 0;">Kein Kantinenfrust mehr. Wir liefern heiße Currywurst-Töpfe, knusprige Schnitzelplatten und hausgemachte Salate direkt in Ihr Büro, Agentur oder Werkstatt.</p>
+
+            <div class="catering-packages">
+              <div class="package-item">
+                <div class="package-header">
+                  <span class="package-name">Paket I: "Der Wedding-Klassiker"</span>
+                  <span class="package-price">ab 9,50 € p.P.</span>
+                </div>
+                <p class="package-desc">Currywurst (mit & ohne Darm, inkl. vegetarischer Option) im Warmhalte-Behälter, krosse Pommes oder Schrippen, Drei-Pfeffer-Sauce satt und Holzpiekser.</p>
+              </div>
+
+              <div class="package-item">
+                <div class="package-header">
+                  <span class="package-name">Paket II: "Die Schnitzel-Runde"</span>
+                  <span class="package-price">ab 12,90 € p.P.</span>
+                </div>
+                <p class="package-desc">Frisch panierte Schnitzel Wiener Art auf Warmhalteplatten, Oma Inges Kartoffelsalat, Zitronenspalten, Preiselbeeren und frischer Krautsalat.</p>
+              </div>
+
+              <div class="package-item">
+                <div class="package-header">
+                  <span class="package-name">Paket III: "Volle Kanne Tresen"</span>
+                  <span class="package-price">ab 14,50 € p.P.</span>
+                </div>
+                <p class="package-desc">Der Rundum-Sorglos-Mix: Currywurst, Mini-Schnitzel, Buletten, doppelte Pommes, Saucenbar und eiskalte Berliner Fassbrause oder Kindl-Pils.</p>
+              </div>
+            </div>
+
+            <div class="catering-guarantee">
+              <span>Thermo-Liefergarantie: Garantiert heiß bei Ankunft im gesamten Umkreis von Wedding, Moabit, Mitte & Reinickendorf.</span>
+            </div>
+          </div>
+
+          <!-- Right Form Wrap -->
+          <div class="catering-form-wrap">
+            <h3 class="form-title">Catering anfragen</h3>
+            <p class="form-subtitle">Unverbindliche Anfrage · Rückmeldung innerhalb von 60 Minuten während der Öffnungszeiten.</p>
+
+            <!-- Form -->
+            <form class="catering-form" id="cateringForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="catName">Ansprechpartner *</label>
+                  <input class="form-input" type="text" id="catName" name="name" required placeholder="z. B. Stefanie Krüger">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="catCompany">Firma / Team</label>
+                  <input class="form-input" type="text" id="catCompany" name="company" placeholder="z. B. Wedding Digital GmbH">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="catPhone">Telefonnummer *</label>
+                  <input class="form-input" type="tel" id="catPhone" name="phone" required placeholder="+49 888 6661234">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="catEmail">E-Mail-Adresse *</label>
+                  <input class="form-input" type="email" id="catEmail" name="email" required placeholder="name@firma.de">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="catAddress">Lieferadresse (Straße, Hausnr., PLZ) *</label>
+                <input class="form-input" type="text" id="catAddress" name="address" required placeholder="z. B. Müllerstraße 45, 13353 Berlin">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="catDate">Wunschdatum *</label>
+                  <input class="form-input" type="date" id="catDate" name="date" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="catTime">Wunsch-Uhrzeit *</label>
+                  <input class="form-input" type="time" id="catTime" name="time" required value="12:00">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="catPersons">Personenanzahl *</label>
+                  <select class="form-select" id="catPersons" name="persons" required>
+                    <option value="10-15 Personen">10 – 15 Personen</option>
+                    <option value="15-30 Personen" selected>15 – 30 Personen</option>
+                    <option value="30-50 Personen">30 – 50 Personen</option>
+                    <option value="50-100 Personen">50 – 100 Personen</option>
+                    <option value="Über 100 Personen">Über 100 Personen (Großevent)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="catPackage">Gewünschtes Paket *</label>
+                  <select class="form-select" id="catPackage" name="package" required>
+                    <option value="Paket I: Der Wedding-Klassiker">Paket I: Der Wedding-Klassiker (Currywurst & Pommes)</option>
+                    <option value="Paket II: Die Schnitzel-Runde">Paket II: Die Schnitzel-Runde (Schnitzel & Kartoffelsalat)</option>
+                    <option value="Paket III: Volle Kanne Tresen">Paket III: Volle Kanne Tresen (Großer Mix & Drinks)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="catNotes">Besondere Wünsche oder vegetarische Optionen</label>
+                <textarea class="form-textarea" id="catNotes" name="notes" placeholder="z. B. 4x vegetarische Wurst gewünscht, Anlieferung Hinterhof 2. OG"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary catering-submit-btn">
+                Catering verbindlich anfragen
+              </button>
+              <p class="form-hint">Keine Vorauszahlung nötig. Zahlung bequem auf Rechnung oder bar/Karte bei Lieferung.</p>
+            </form>
+
+            <!-- In-Page Confirmation -->
+            <div class="catering-confirmation" id="cateringConfirmation">
+              <span class="conf-stamp">ANFRAGE BESTÄTIGT</span>
+              <h4 class="conf-title">Vielen Dank für Ihre Catering-Anfrage!</h4>
+              <p>Wir haben Ihre Anfrage für das Büro-Catering mit der Auftragsnummer <strong>#STK-2026-C42</strong> erfasst.</p>
+
+              <div class="conf-summary" id="confSummaryDetails">
+                <!-- Dynamically populated via JS -->
+              </div>
+
+              <p class="conf-contacts-note">
+                Bei dringenden Fragen erreichen Sie uns direkt per Telefon: 
+                <a href="tel:+498886661234" style="font-weight: bold; text-decoration: underline;">+49 888 6661234</a> 
+                oder via Telegram: 
+                <a href="https://t.me/rovatt" target="_blank" rel="noopener" style="font-weight: bold; text-decoration: underline;">@rovatt</a>.
+              </p>
+
+              <button class="btn btn-outline" id="btnResetForm">
+                Neue Anfrage stellen
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 7: HOURS + CONTACT + MAP
+         ===================================================================== -->
+    <section class="section-contact" id="kontakt" aria-labelledby="contactTitle">
+      <div class="contact-card">
+        <div class="contact-grid">
+
+          <!-- Left: Hours & Contacts -->
+          <div class="contact-info">
+            <div class="editorial-kicker" style="justify-content: flex-start;">Besuch uns am Tresen</div>
+            <h2 class="section-title" id="contactTitle">Öffnungszeiten & Kontakt</h2>
+            <p class="editorial-lead" style="text-align: left; margin: 0;">Mitten im Herzen des Wedding an der belebten Müllerstraße. Ob schneller Imbiss im Stehen oder gemütliches Mittagessen an unseren Holztischen.</p>
+
+            <div class="hours-box">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--font-masthead); font-size: 1.15rem; text-transform: uppercase;">Grillzeiten</span>
+                <span class="live-badge is-open" id="liveStatusBadgeContact">
+                  <span class="live-badge-dot"></span>
+                  <span id="liveStatusTextContact">Jetzt geöffnet</span>
+                </span>
+              </div>
+              <table class="hours-table">
+                <tbody>
+                  <tr>
+                    <td>Montag – Freitag</td>
+                    <td>11:00 – 21:00 Uhr</td>
+                  </tr>
+                  <tr>
+                    <td>Samstag</td>
+                    <td>12:00 – 20:00 Uhr</td>
+                  </tr>
+                  <tr>
+                    <td>Sonn- & Feiertage</td>
+                    <td style="color: var(--color-red);">Geschlossen (Ruhetag)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="contact-details-list">
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">ORT</div>
+                <div>
+                  <strong>Adresse:</strong><br>
+                  Müllerstraße 142, 13353 Berlin-Wedding<br>
+                  <span style="font-size: 0.8125rem; color: var(--color-ink-muted);">Zwischen U-Bahnhof Leopoldplatz (U6, U9) und U Seestraße</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">TEL</div>
+                <div>
+                  <strong>Telefon:</strong><br>
+                  <a href="tel:+498886661234" class="contact-link-hover">+49 888 6661234</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">MAIL</div>
+                <div>
+                  <strong>E-Mail:</strong><br>
+                  <a href="mailto:12234456789@gmail.com" class="contact-link-hover">12234456789@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">TG</div>
+                <div>
+                  <strong>Telegram:</strong><br>
+                  <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="contact-link-hover">@rovatt (Direkt-Chat)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Believable Stylized Wedding Map -->
+          <div class="map-visual-wrap">
+            <div class="map-header">
+              <span>Umgebungskarte Berlin-Wedding</span>
+              <span>Müllerstraße 142</span>
+            </div>
+            <!-- Stylized Vector Map of Müllerstraße & Leopoldplatz -->
+            <svg class="map-svg" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Karte von Berlin-Wedding an der Müllerstraße">
+              <rect width="100%" height="100%" fill="#EFECE2"/>
+
+              <!-- Parks / Greenspace -->
+              <rect x="30" y="40" width="100" height="90" rx="6" fill="#D8E2D1" stroke="#BDCBB4" stroke-width="1.5"/>
+              <text x="80" y="85" font-family="'Inter', sans-serif" font-size="9" fill="#5F7553" text-anchor="middle" font-weight="600">Schillerpark</text>
+
+              <rect x="360" y="240" width="110" height="80" rx="6" fill="#D8E2D1" stroke="#BDCBB4" stroke-width="1.5"/>
+              <text x="415" y="285" font-family="'Inter', sans-serif" font-size="9" fill="#5F7553" text-anchor="middle" font-weight="600">Volkspark Rehberge</text>
+
+              <!-- Secondary Streets -->
+              <line x1="20" y1="180" x2="480" y2="180" stroke="#FFFFFF" stroke-width="12"/>
+              <line x1="20" y1="180" x2="480" y2="180" stroke="#D3CFC4" stroke-width="14" stroke-opacity="0.3"/>
+              <text x="70" y="174" font-family="'Inter', sans-serif" font-size="9" fill="#777" font-weight="600">Seestraße</text>
+
+              <line x1="160" y1="20" x2="160" y2="360" stroke="#FFFFFF" stroke-width="8"/>
+              <line x1="340" y1="20" x2="340" y2="360" stroke="#FFFFFF" stroke-width="8"/>
+              <line x1="20" y1="300" x2="480" y2="300" stroke="#FFFFFF" stroke-width="10"/>
+              <text x="70" y="294" font-family="'Inter', sans-serif" font-size="9" fill="#777" font-weight="600">Luxemburger Str.</text>
+
+              <!-- Main Street: Müllerstraße (Diagonally slicing through Wedding) -->
+              <line x1="60" y1="360" x2="440" y2="20" stroke="#FFFFFF" stroke-width="26"/>
+              <line x1="60" y1="360" x2="440" y2="20" stroke="#121212" stroke-width="2"/>
+              <line x1="68" y1="368" x2="448" y2="28" stroke="#E9B824" stroke-width="2" stroke-dasharray="8 6"/>
+              <text x="320" y="110" font-family="'Anton', sans-serif" font-size="14" fill="#121212" transform="rotate(-42, 320, 110)" letter-spacing="1">MÜLLERSTRASSE</text>
+
+              <!-- U-Bahn Stations -->
+              <!-- U Seestraße -->
+              <g transform="translate(195, 230)">
+                <circle cx="0" cy="0" r="10" fill="#005B9A"/>
+                <text x="0" y="4" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">U</text>
+                <text x="16" y="4" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#005B9A">U Seestraße (U6)</text>
+              </g>
+
+              <!-- U Leopoldplatz -->
+              <g transform="translate(350, 100)">
+                <circle cx="0" cy="0" r="10" fill="#005B9A"/>
+                <text x="0" y="4" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">U</text>
+                <text x="16" y="4" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#005B9A">U Leopoldplatz (U6, U9)</text>
+              </g>
+
+              <!-- Location Pin for Müllerstraße 142 -->
+              <g transform="translate(260, 180)">
+                <!-- Pulse circle -->
+                <circle cx="0" cy="0" r="22" fill="#E03A1E" opacity="0.25"/>
+                <circle cx="0" cy="0" r="14" fill="#E03A1E" stroke="#121212" stroke-width="2"/>
+                <circle cx="0" cy="0" r="5" fill="#FFFFFF"/>
+                <!-- Pin Label Banner -->
+                <rect x="-85" y="-55" width="170" height="38" rx="2" fill="#121212" stroke="#E03A1E" stroke-width="2"/>
+                <text x="0" y="-38" font-family="'Anton', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">EINFACH STARCK</text>
+                <text x="0" y="-23" font-family="'Inter', sans-serif" font-size="9" fill="#E9B824" text-anchor="middle" font-weight="bold">MÜLLERSTRASSE 142</text>
+                <!-- Pin Pointer -->
+                <polygon points="0,-17 -6,-24 6,-24" fill="#121212"/>
+              </g>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =======================================================================
+       FOOTER
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-title">einfach starck</div>
+          <div class="footer-brand-sub">Klassischer Berliner Imbiss · Müllerstraße 142, 13353 Berlin-Wedding</div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#hero">Titelblatt</a>
+          <a href="#mittagstisch">Mittagstisch</a>
+          <a href="#speisekarte">Speisekarte</a>
+          <a href="#diewurst">Die Wurst</a>
+          <a href="#catering">Catering</a>
+          <a href="#kontakt">Kontakt & Anfahrt</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Telefon: <a href="tel:+498886661234" style="text-decoration: underline;">+49 888 6661234</a> · 
+          E-Mail: <a href="mailto:12234456789@gmail.com" style="text-decoration: underline;">12234456789@gmail.com</a> · 
+          Telegram: <a href="https://t.me/rovatt" target="_blank" rel="noopener" style="text-decoration: underline;">@rovatt</a>
+        </div>
+        <div class="footer-design-credit">
+          Fiktives Demo-Projekt. Gestaltung: Renat.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

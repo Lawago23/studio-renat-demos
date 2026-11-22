@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emosh's · Late-Night Pizza &amp; Döner · Berlin-Friedrichshain · Bis 5 Uhr</title>
+  <meta name="description" content="Original Steinofen-Pizza, 100% Kalbfleisch-Döner und krosse Pommes an der Warschauer Straße in Berlin-Friedrichshain. Täglich heiß bis 05:00 Uhr morgens.">
+  <meta name="theme-color" content="#0B0B12">
+
+  <!-- Google Fonts: Monoton (Logo only) & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B0B12'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%23FF2E88' stroke-width='6'/%3E%3Cpolygon points='50,22 75,70 25,70' fill='%23FFE45E'/%3E%3Ccircle cx='50' cy='46' r='4' fill='%23FF2E88'/%3E%3Ccircle cx='42' cy='58' r='4' fill='%23FF2E88'/%3E%3Ccircle cx='58' cy='58' r='4' fill='%23FF2E88'/%3E%3C/svg%3E">
+
+  <!-- Three.js (exact version r128 with local fallback) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="assets/js/three.min.js"><\/script>');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Top Slim Announcement Bar -->
+  <aside class="demo-top-bar" id="demo-announcement-bar" aria-label="Demo-Hinweis">
+    <div class="demo-top-bar-content">
+      <span class="demo-badge">Demo</span>
+      <span>Demo-Projekt von Renat · Alle Angaben auf dieser Seite sind fiktiv.</span>
+    </div>
+    <button type="button" class="demo-close-btn" id="close-demo-bar" aria-label="Hinweisleiste schließen">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </aside>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <div class="brand-logo-group">
+        <a href="#hero" class="brand-logo" aria-label="Emosh's Startseite">EMOSH'S</a>
+        <span class="brand-sub">Warschauer Str. · F'hain</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="#nach-mitternacht" class="nav-link">Nach Mitternacht</a>
+        <a href="#speisekarte" class="nav-link">Speisekarte</a>
+        <a href="#deals" class="nav-link">Tickets &amp; Deals</a>
+        <a href="#box-3d-section" class="nav-link">3D Box</a>
+        <a href="#vibe-wall" class="nav-link">Kiez Vibe</a>
+        <a href="#kontakt" class="nav-link">Öffnungszeiten</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+498886661234" class="nav-link" style="display:none; font-size:13px; font-weight:700;" id="header-phone-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:4px; vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          0888 6661234
+        </a>
+        <button type="button" class="btn-header-order" id="nav-order-trigger">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          Bestellen
+        </button>
+        <button type="button" class="hamburger-btn" id="nav-toggle" aria-expanded="false" aria-label="Menü öffnen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="main-nav" aria-label="Mobiles Navigationsmenü">
+    <a href="#nach-mitternacht" class="mobile-nav-link">
+      <span>Nach Mitternacht</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    <a href="#speisekarte" class="mobile-nav-link">
+      <span>Speisekarte</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    <a href="#deals" class="mobile-nav-link">
+      <span>Tickets &amp; Deals</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    <a href="#box-3d-section" class="mobile-nav-link">
+      <span>3D Neon Box</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    <a href="#vibe-wall" class="mobile-nav-link">
+      <span>Kiez Vibe</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    <a href="#kontakt" class="mobile-nav-link">
+      <span>Kontakt &amp; Öffnungszeiten</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+
+    <div class="mobile-drawer-contact">
+      <div style="font-size:12px; font-weight:700; color:var(--neon-cyan); letter-spacing:1px; text-transform:uppercase;">Direktkontakt</div>
+      <a href="tel:+498886661234" class="nav-link" style="display:flex; align-items:center; gap:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        +49 888 6661234
+      </a>
+      <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="nav-link" style="display:flex; align-items:center; gap:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        Telegram: @rovatt
+      </a>
+      <a href="mailto:12234456789@gmail.com" class="nav-link" style="display:flex; align-items:center; gap:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        12234456789@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-section" id="hero" aria-label="Willkommen bei Emosh's">
+      <canvas id="hero-bokeh" aria-hidden="true"></canvas>
+
+      <div class="container hero-content">
+        <div class="hero-status-tag">
+          <span class="status-dot-pulse" aria-hidden="true"></span>
+          <span>Friedrichshain · Bis 05:00 Uhr Heiss</span>
+        </div>
+
+        <div class="neon-sign-wrapper">
+          <h1 class="neon-sign-title">
+            <span class="char-pink neon-flicker-char">E</span><span class="char-pink neon-flicker-char">M</span><span class="char-pink neon-flicker-char">O</span><span class="char-pink neon-flicker-char">S</span><span class="char-pink neon-flicker-char">H</span><span class="char-pink neon-flicker-char">'</span><span class="char-pink neon-flicker-char">S</span>
+          </h1>
+        </div>
+
+        <h2 class="hero-subheading">Late-Night Pizza &amp; Döner an der Warschauer Brücke</h2>
+
+        <p class="hero-description">
+          Wenn ganz Berlin schläft, glüht bei uns der Steinofen. Handgeschichteter Kalbsdöner, 40-Zentimeter-Pizzen mit knusprigem Rand und legendäre Knoblauchsauce für die längsten Nächte im Kiez.
+        </p>
+
+        <div class="hero-action-group">
+          <a href="#speisekarte" class="btn-primary-neon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            Speisekarte ansehen
+          </a>
+          <button type="button" class="btn-secondary-neon" id="hero-order-trigger">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            Telegram Vorbestellung
+          </button>
+        </div>
+
+        <div class="hero-feature-pills">
+          <span class="feature-pill">Steinofen bis 5 Uhr</span>
+          <span class="feature-pill">100% Kalbfleisch</span>
+          <span class="feature-pill">Hausgemachter Teig</span>
+          <span class="feature-pill">Knoblauchsauce Legendär</span>
+          <span class="feature-pill">Direkt am RAW-Gelände</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. "Nach Mitternacht" Section -->
+    <section class="after-midnight-section" id="nach-mitternacht" aria-label="Nach Mitternacht Status">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="section-neon-badge">Live Berlin-Time Tracker</span>
+        </div>
+        <h2 class="section-title">Nach Mitternacht</h2>
+        <p class="section-subtitle">
+          Die Nachtschicht an der Warschauer Straße. Sieh genau, wie lange der Ofen heute noch brennt.
+        </p>
+
+        <div class="midnight-clock-card">
+          <div class="midnight-clock-header">
+            <div class="status-pill open" id="clock-status-pill">JETZT GEÖFFNET BIS 05:00 UHR</div>
+            <div class="night-phase-badge" id="night-phase-badge">High Peak · Club Exit &amp; Hunger</div>
+          </div>
+
+          <div class="clock-display-flex">
+            <!-- Circular Progress Ring -->
+            <div class="clock-ring-wrap">
+              <svg class="clock-ring-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-bg" cx="50" cy="50" r="46" fill="transparent" stroke-width="7"></circle>
+                <circle class="ring-active" id="clock-progress-ring" cx="50" cy="50" r="46" fill="transparent" stroke-width="7"></circle>
+              </svg>
+              <div class="clock-ring-icon">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+            </div>
+
+            <!-- Big Digits Display -->
+            <div class="clock-digits-group" role="timer" aria-live="polite">
+              <div class="digit-box">
+                <div class="digit-number" id="clock-hours">02</div>
+                <div class="digit-label">Stunden</div>
+              </div>
+              <div class="digit-divider" aria-hidden="true">:</div>
+              <div class="digit-box">
+                <div class="digit-number" id="clock-mins">14</div>
+                <div class="digit-label">Minuten</div>
+              </div>
+              <div class="digit-divider" aria-hidden="true">:</div>
+              <div class="digit-box">
+                <div class="digit-number" id="clock-secs">30</div>
+                <div class="digit-label">Sekunden</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clock-info-text">
+            <h3 class="clock-headline" id="clock-headline">Noch 02 Std : 14 Min geöffnet</h3>
+            <p class="clock-subline" id="clock-subline">Berlin-Zeit: 02:46 Uhr · Heiße Pizza &amp; Kalb-Döner direkt an der Warschauer Brücke.</p>
+          </div>
+
+          <!-- Time Simulator for Evaluation & Demo -->
+          <div class="midnight-simulator-wrap">
+            <div class="sim-title">Nacht-Simulator · Teste die verschiedenen Schichten</div>
+            <div class="sim-buttons-flex">
+              <button type="button" class="time-sim-btn active" data-hour="live">Live Berlin Zeit</button>
+              <button type="button" class="time-sim-btn" data-hour="01:30">01:30 Uhr (Bar Peak)</button>
+              <button type="button" class="time-sim-btn" data-hour="04:45">04:45 Uhr (Last Call)</button>
+              <button type="button" class="time-sim-btn" data-hour="14:00">14:00 Uhr (Tagsüber)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Menu Section: Big Swipeable Cards with Neon Outlines -->
+    <section class="menu-section" id="speisekarte" aria-label="Speisekarte">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="section-neon-badge">Frisch aus dem Ofen</span>
+        </div>
+        <h2 class="section-title">Late-Night Speisekarte</h2>
+        <p class="section-subtitle">
+          Wische horizontal durch unsere Spezialitäten. Jede Pizza im Steinofen gebacken, jeder Döner frisch geschnitten.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="menu-filter-container" role="tablist" aria-label="Menü-Kategorien">
+          <button type="button" class="menu-filter-chip active" data-category="all" role="tab" aria-selected="true">Alle Gerichte</button>
+          <button type="button" class="menu-filter-chip" data-category="pizza" role="tab" aria-selected="false">Pizza</button>
+          <button type="button" class="menu-filter-chip" data-category="doener" role="tab" aria-selected="false">Döner</button>
+          <button type="button" class="menu-filter-chip" data-category="box" role="tab" aria-selected="false">Box</button>
+          <button type="button" class="menu-filter-chip" data-category="pommes" role="tab" aria-selected="false">Pommes</button>
+          <button type="button" class="menu-filter-chip" data-category="drinks" role="tab" aria-selected="false">Drinks</button>
+        </div>
+
+        <!-- Navigation Controls & Scroll Indicator -->
+        <div class="menu-controls-bar">
+          <div class="menu-scroll-indicator" aria-hidden="true">
+            <div class="menu-progress-bar" id="menu-progress-bar"></div>
+          </div>
+          <div class="menu-arrow-nav">
+            <button type="button" class="menu-nav-btn" id="menu-prev-btn" aria-label="Vorherige Gerichte anzeigen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="menu-nav-btn" id="menu-next-btn" aria-label="Nächste Gerichte anzeigen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Swipeable Track Carousel Wrapper -->
+        <div class="menu-carousel-wrapper">
+          <button type="button" class="menu-carousel-arrow menu-carousel-prev" id="menu-track-prev-btn" aria-label="Vorherige Gerichte anzeigen">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <div class="menu-cards-track" id="menu-cards-track" tabindex="0" aria-label="Gerichte-Karussell">
+
+          <!-- 1. Pizza Warschauer Slice -->
+          <article class="menu-card neon-pink-border" data-category="pizza">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/photo-f92853501-960.jpg" alt="Steinofenpizza Margherita mit frischem Basilikum und geschmolzenem Mozzarella" width="960" height="640" loading="lazy">
+              <span class="card-tag-badge pink">Bestseller</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Pizza Warschauer Slice (40cm)</h3>
+                <span class="menu-card-price">11,00 €</span>
+              </div>
+              <p class="menu-card-desc">
+                San Marzano Tomaten, Fior di Latte Mozzarella, Knoblauchöl, frisches Basilikum und knusprige Teigblasen aus dem 420-Grad-Steinofen.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Pizza Warschauer Slice" data-item-price="11,00 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 2. Pizza Sucuk Inferno -->
+          <article class="menu-card neon-yellow-border" data-category="pizza">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/photo-f92853430.jpg" alt="Pikante Steinofenpizza mit würziger Knoblauch-Sucuk und Peperoni" width="960" height="640" loading="lazy">
+              <span class="card-tag-badge yellow">Scharf</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Pizza Sucuk Inferno</h3>
+                <span class="menu-card-price">13,50 €</span>
+              </div>
+              <p class="menu-card-desc">
+                Kräftige Rindersucuk vom Berliner Metzger, milde Peperoni, rote Zwiebeln, geräucherter Paprika und extra Käse.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Pizza Sucuk Inferno" data-item-price="13,50 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 3. Emosh's Kalb Döner -->
+          <article class="menu-card neon-cyan-border" data-category="doener">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/photo-f151565046-960.jpg" alt="Original Berliner Döner Kebab im getoasteten Sesam-Fladenbrot mit frischem Salat" width="960" height="640" loading="lazy">
+              <span class="card-tag-badge cyan">Signature</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Signature Kalb Döner</h3>
+                <span class="menu-card-price">8,50 €</span>
+              </div>
+              <p class="menu-card-desc">
+                100% geschichtetes Kalbfleisch im krossen Sesamfladen. Knackiger Rotkohl, Sumach-Zwiebeln, Gurke und hausgemachte Knoblauchsauce.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Signature Kalb Döner" data-item-price="8,50 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 4. Crispy Chicken Gemüsedöner -->
+          <article class="menu-card neon-pink-border" data-category="doener">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/photo-f114853886-500.jpg" alt="Berliner Chicken Döner mit Grillgemüse, Feta und frischer Minze" width="500" height="500" loading="lazy">
+              <span class="card-tag-badge pink">F'hain Klassiker</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Chicken Gemüsedöner</h3>
+                <span class="menu-card-price">8,00 €</span>
+              </div>
+              <p class="menu-card-desc">
+                Zartes marinierte Hähnchenfleisch mit gebratenen Auberginen, Zucchini, Kartoffeln, Schafskäse und frischem Zitronensaft.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Chicken Gemüsedöner" data-item-price="8,00 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 5. Döner Box Classic -->
+          <article class="menu-card neon-cyan-border" data-category="box">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/photo-f127138434-960.jpg" alt="Döner Box gefüllt mit knusprigen Pommes Frites, Dönerfleisch und scharfer Chilisauce" width="960" height="640" loading="lazy">
+              <span class="card-tag-badge cyan">To Go</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Döner Box Classic</h3>
+                <span class="menu-card-price">7,50 €</span>
+              </div>
+              <p class="menu-card-desc">
+                Goldgelbe belgische Pommes, geschichtetes Fleisch nach Wahl, Kräutersauce und Chilisauce im handlichen Mitnehmbecher.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Döner Box Classic" data-item-price="7,50 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 6. Loaded Afterhour Box -->
+          <article class="menu-card neon-yellow-border" data-category="box">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/photo-f128095734-960.jpg" alt="Große Fleisch-Box mit gerösteten Zwiebeln, Käsesauce und Pommes" width="960" height="640" loading="lazy">
+              <span class="card-tag-badge yellow">XXL Portion</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Loaded Afterhour Box</h3>
+                <span class="menu-card-price">9,90 €</span>
+              </div>
+              <p class="menu-card-desc">
+                Doppelt Fleisch, Pommes Frites, warmer Cheddar-Cheese-Dip, feurige Jalapeños und knusprige Röstzwiebeln.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Loaded Afterhour Box" data-item-price="9,90 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 7. Crispy Skin Pommes -->
+          <article class="menu-card neon-pink-border" data-category="pommes">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/photo-f119348581-960.jpg" alt="Frische knusprige Pommes Frites mit Meersalz und Paprika-Würzung" width="960" height="640" loading="lazy">
+              <span class="card-tag-badge pink">Snack</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Crispy Skin Pommes</h3>
+                <span class="menu-card-price">4,50 €</span>
+              </div>
+              <p class="menu-card-desc">
+                Zweifach in Pflanzenöl frittiert mit Kartoffelschale. Gewürzt mit Meersalz, geräuchertem Paprika und Knoblauch-Mayonnaise.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Crispy Skin Pommes" data-item-price="4,50 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 8. Club-Mate Chilled -->
+          <article class="menu-card neon-cyan-border" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/drinks-mate-night.jpg" alt="Gekühlte Flasche Club-Mate mit Wassertropfen vor nächtlicher Neon-Kulisse" width="960" height="960" loading="lazy">
+              <span class="card-tag-badge cyan">Berliner Wachmacher</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Club-Mate (0,5l)</h3>
+                <span class="menu-card-price">3,20 €</span>
+              </div>
+              <p class="menu-card-desc">
+                Eiskalt aus dem Kühlschrank. Hoher Koffeingehalt für die Spätschicht und den Heimweg über die Oberbaumbrücke.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Club-Mate 0,5l" data-item-price="3,20 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 9. Hausgemachter Ayran -->
+          <article class="menu-card neon-yellow-border" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="assets/img/drinks-ayran-night.jpg" alt="Frischer schaumiger Ayran mit Minze in gekühltem Glas mit Neon-Reflexionen" width="960" height="960" loading="lazy">
+              <span class="card-tag-badge yellow">Frisch Gekühlt</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-title">Hausgemachter Ayran (0,4l)</h3>
+                <span class="menu-card-price">2,50 €</span>
+              </div>
+              <p class="menu-card-desc">
+                Frisch aufgeschlagener Joghurt mit Meersalz, Eiswürfeln und einem Hauch getrockneter Minze. Perfekt gegen Schärfe.
+              </p>
+              <button type="button" class="card-order-btn" data-item-title="Hausgemachter Ayran 0,4l" data-item-price="2,50 €">
+                <span>Auswählen</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <button type="button" class="menu-carousel-arrow menu-carousel-next" id="menu-track-next-btn" aria-label="Nächste Gerichte anzeigen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Fade indicators on right (and left when scrolled) -->
+        <div class="menu-track-fade menu-track-fade-right" id="menu-track-fade-right" aria-hidden="true"></div>
+        <div class="menu-track-fade menu-track-fade-left" id="menu-track-fade-left" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- 4. Combo Deals as "Tickets" with Perforated Edges & Tear-Off Animation -->
+    <section class="deals-section" id="deals" aria-label="Combo Deals als Club-Tickets">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="section-neon-badge">Late-Night Specials</span>
+        </div>
+        <h2 class="section-title">Combo-Deals &amp; Club-Tickets</h2>
+        <p class="section-subtitle">
+          Tippe auf den Abreißstreifen, um dein Ticket zu entwerten und den Sparpreis direkt für die Abholung zu sichern.
+        </p>
+
+        <div class="deals-grid">
+
+          <!-- Ticket 1: Berghain Survivor Ticket -->
+          <div class="deal-ticket" data-deal-name="Berghain Survivor Ticket" data-promo-code="SURVIVOR-5AM">
+            <div class="ticket-main-body">
+              <div class="ticket-header-meta">
+                <span class="ticket-badge">VIP Ticket #01</span>
+                <span class="ticket-id">GATE 5AM · RAW-KIEZ</span>
+              </div>
+              <h3 class="ticket-title">Berghain Survivor Ticket</h3>
+              <p class="ticket-includes">
+                1x Signature Kalb Döner im Sesamfladen + 1x Portion Crispy Skin Pommes + 1x Club-Mate 0,5l eiskalt.
+              </p>
+              <div class="ticket-price-row">
+                <span class="ticket-deal-price">11,90 €</span>
+                <span class="ticket-old-price">14,70 €</span>
+                <span class="ticket-savings-tag">Spar 2,80 €</span>
+              </div>
+            </div>
+
+            <!-- Perforation Divider -->
+            <div class="ticket-perforation" aria-hidden="true">
+              <div class="perforation-notch-top"></div>
+              <div class="perforation-notch-left"></div>
+              <div class="perforation-line"></div>
+              <div class="perforation-notch-right"></div>
+              <div class="perforation-notch-bottom"></div>
+            </div>
+
+            <!-- Ticket Stub (Abreißstreifen) -->
+            <div class="ticket-stub" role="button" tabindex="0" aria-label="Ticket Berghain Survivor abreißen">
+              <svg class="stub-barcode-svg" viewBox="0 0 120 30" fill="currentColor" aria-hidden="true">
+                <rect x="0" y="0" width="3" height="30"></rect>
+                <rect x="5" y="0" width="2" height="30"></rect>
+                <rect x="10" y="0" width="4" height="30"></rect>
+                <rect x="16" y="0" width="1" height="30"></rect>
+                <rect x="20" y="0" width="5" height="30"></rect>
+                <rect x="28" y="0" width="2" height="30"></rect>
+                <rect x="33" y="0" width="3" height="30"></rect>
+                <rect x="39" y="0" width="1" height="30"></rect>
+                <rect x="43" y="0" width="4" height="30"></rect>
+                <rect x="50" y="0" width="3" height="30"></rect>
+                <rect x="56" y="0" width="2" height="30"></rect>
+                <rect x="61" y="0" width="4" height="30"></rect>
+                <rect x="68" y="0" width="1" height="30"></rect>
+                <rect x="72" y="0" width="5" height="30"></rect>
+                <rect x="80" y="0" width="2" height="30"></rect>
+                <rect x="85" y="0" width="3" height="30"></rect>
+                <rect x="91" y="0" width="1" height="30"></rect>
+                <rect x="95" y="0" width="4" height="30"></rect>
+                <rect x="102" y="0" width="2" height="30"></rect>
+                <rect x="107" y="0" width="3" height="30"></rect>
+                <rect x="113" y="0" width="2" height="30"></rect>
+              </svg>
+              <button type="button" class="ticket-tear-btn">Abreißen</button>
+              <div class="ticket-code-badge">SURVIVOR-5AM</div>
+              <button type="button" class="ticket-telegram-btn">In Telegram bestellen</button>
+            </div>
+          </div>
+
+          <!-- Ticket 2: Warschauer Duo Ticket -->
+          <div class="deal-ticket" data-deal-name="Warschauer Duo Ticket" data-promo-code="DUO-PIZZA">
+            <div class="ticket-main-body">
+              <div class="ticket-header-meta">
+                <span class="ticket-badge">Duo Ticket #02</span>
+                <span class="ticket-id">PAIR-PASS · F'HAIN</span>
+              </div>
+              <h3 class="ticket-title">Warschauer Duo Ticket</h3>
+              <p class="ticket-includes">
+                2x Ganze 40cm Steinofen-Pizzen nach Wahl + 2x Softdrinks nach Wahl + 1x Knoblauch-Kräuter-Dip gratis.
+              </p>
+              <div class="ticket-price-row">
+                <span class="ticket-deal-price">24,50 €</span>
+                <span class="ticket-old-price">30,00 €</span>
+                <span class="ticket-savings-tag">Spar 5,50 €</span>
+              </div>
+            </div>
+
+            <!-- Perforation Divider -->
+            <div class="ticket-perforation" aria-hidden="true">
+              <div class="perforation-notch-top"></div>
+              <div class="perforation-notch-left"></div>
+              <div class="perforation-line"></div>
+              <div class="perforation-notch-right"></div>
+              <div class="perforation-notch-bottom"></div>
+            </div>
+
+            <!-- Ticket Stub -->
+            <div class="ticket-stub" role="button" tabindex="0" aria-label="Ticket Warschauer Duo abreißen">
+              <svg class="stub-barcode-svg" viewBox="0 0 120 30" fill="currentColor" aria-hidden="true">
+                <rect x="0" y="0" width="4" height="30"></rect>
+                <rect x="6" y="0" width="1" height="30"></rect>
+                <rect x="10" y="0" width="3" height="30"></rect>
+                <rect x="16" y="0" width="4" height="30"></rect>
+                <rect x="23" y="0" width="2" height="30"></rect>
+                <rect x="28" y="0" width="3" height="30"></rect>
+                <rect x="34" y="0" width="1" height="30"></rect>
+                <rect x="38" y="0" width="5" height="30"></rect>
+                <rect x="46" y="0" width="2" height="30"></rect>
+                <rect x="51" y="0" width="3" height="30"></rect>
+                <rect x="57" y="0" width="1" height="30"></rect>
+                <rect x="61" y="0" width="4" height="30"></rect>
+                <rect x="68" y="0" width="3" height="30"></rect>
+                <rect x="74" y="0" width="2" height="30"></rect>
+                <rect x="79" y="0" width="4" height="30"></rect>
+                <rect x="86" y="0" width="1" height="30"></rect>
+                <rect x="90" y="0" width="5" height="30"></rect>
+                <rect x="98" y="0" width="2" height="30"></rect>
+                <rect x="103" y="0" width="4" height="30"></rect>
+                <rect x="110" y="0" width="2" height="30"></rect>
+              </svg>
+              <button type="button" class="ticket-tear-btn">Abreißen</button>
+              <div class="ticket-code-badge">DUO-PIZZA</div>
+              <button type="button" class="ticket-telegram-btn">In Telegram bestellen</button>
+            </div>
+          </div>
+
+          <!-- Ticket 3: Afterhour Crew Pass -->
+          <div class="deal-ticket" data-deal-name="Afterhour Crew Pass" data-promo-code="CREW-NIGHT">
+            <div class="ticket-main-body">
+              <div class="ticket-header-meta">
+                <span class="ticket-badge">Crew Pass #03</span>
+                <span class="ticket-id">GROUP · 4 PAX</span>
+              </div>
+              <h3 class="ticket-title">Afterhour Crew Pass</h3>
+              <p class="ticket-includes">
+                4x Döner Boxen (Kalb oder Chicken) + 2x Portionen Loaded Fries + 4x Eiskalte Ayran oder Softdrinks.
+              </p>
+              <div class="ticket-price-row">
+                <span class="ticket-deal-price">34,00 €</span>
+                <span class="ticket-old-price">43,00 €</span>
+                <span class="ticket-savings-tag">Spar 9,00 €</span>
+              </div>
+            </div>
+
+            <!-- Perforation Divider -->
+            <div class="ticket-perforation" aria-hidden="true">
+              <div class="perforation-notch-top"></div>
+              <div class="perforation-notch-left"></div>
+              <div class="perforation-line"></div>
+              <div class="perforation-notch-right"></div>
+              <div class="perforation-notch-bottom"></div>
+            </div>
+
+            <!-- Ticket Stub -->
+            <div class="ticket-stub" role="button" tabindex="0" aria-label="Ticket Crew Pass abreißen">
+              <svg class="stub-barcode-svg" viewBox="0 0 120 30" fill="currentColor" aria-hidden="true">
+                <rect x="0" y="0" width="2" height="30"></rect>
+                <rect x="5" y="0" width="5" height="30"></rect>
+                <rect x="13" y="0" width="1" height="30"></rect>
+                <rect x="17" y="0" width="3" height="30"></rect>
+                <rect x="23" y="0" width="4" height="30"></rect>
+                <rect x="30" y="0" width="2" height="30"></rect>
+                <rect x="35" y="0" width="3" height="30"></rect>
+                <rect x="41" y="0" width="1" height="30"></rect>
+                <rect x="45" y="0" width="5" height="30"></rect>
+                <rect x="53" y="0" width="2" height="30"></rect>
+                <rect x="58" y="0" width="3" height="30"></rect>
+                <rect x="64" y="0" width="1" height="30"></rect>
+                <rect x="68" y="0" width="4" height="30"></rect>
+                <rect x="75" y="0" width="3" height="30"></rect>
+                <rect x="81" y="0" width="2" height="30"></rect>
+                <rect x="86" y="0" width="4" height="30"></rect>
+                <rect x="93" y="0" width="2" height="30"></rect>
+                <rect x="98" y="0" width="5" height="30"></rect>
+                <rect x="106" y="0" width="2" height="30"></rect>
+                <rect x="111" y="0" width="3" height="30"></rect>
+              </svg>
+              <button type="button" class="ticket-tear-btn">Abreißen</button>
+              <div class="ticket-code-badge">CREW-NIGHT</div>
+              <button type="button" class="ticket-telegram-btn">In Telegram bestellen</button>
+            </div>
+          </div>
+
+          <!-- Ticket 4: Nightliner Solo Slice -->
+          <div class="deal-ticket" data-deal-name="Nightliner Solo Slice" data-promo-code="SOLO-NIGHT">
+            <div class="ticket-main-body">
+              <div class="ticket-header-meta">
+                <span class="ticket-badge">Solo Ticket #04</span>
+                <span class="ticket-id">QUICK BITE · 1 PAX</span>
+              </div>
+              <h3 class="ticket-title">Nightliner Solo Slice</h3>
+              <p class="ticket-includes">
+                1x XXL Steinofen Pizza Slice nach Wahl + 1x Kaltgetränk nach Wahl (Fritz-Kola, Ayran oder Wasser).
+              </p>
+              <div class="ticket-price-row">
+                <span class="ticket-deal-price">6,50 €</span>
+                <span class="ticket-old-price">8,50 €</span>
+                <span class="ticket-savings-tag">Spar 2,00 €</span>
+              </div>
+            </div>
+
+            <!-- Perforation Divider -->
+            <div class="ticket-perforation" aria-hidden="true">
+              <div class="perforation-notch-top"></div>
+              <div class="perforation-notch-left"></div>
+              <div class="perforation-line"></div>
+              <div class="perforation-notch-right"></div>
+              <div class="perforation-notch-bottom"></div>
+            </div>
+
+            <!-- Ticket Stub -->
+            <div class="ticket-stub" role="button" tabindex="0" aria-label="Ticket Solo Slice abreißen">
+              <svg class="stub-barcode-svg" viewBox="0 0 120 30" fill="currentColor" aria-hidden="true">
+                <rect x="0" y="0" width="3" height="30"></rect>
+                <rect x="6" y="0" width="2" height="30"></rect>
+                <rect x="11" y="0" width="4" height="30"></rect>
+                <rect x="18" y="0" width="1" height="30"></rect>
+                <rect x="22" y="0" width="3" height="30"></rect>
+                <rect x="28" y="0" width="4" height="30"></rect>
+                <rect x="35" y="0" width="2" height="30"></rect>
+                <rect x="40" y="0" width="3" height="30"></rect>
+                <rect x="46" y="0" width="1" height="30"></rect>
+                <rect x="50" y="0" width="5" height="30"></rect>
+                <rect x="58" y="0" width="2" height="30"></rect>
+                <rect x="63" y="0" width="3" height="30"></rect>
+                <rect x="69" y="0" width="1" height="30"></rect>
+                <rect x="73" y="0" width="4" height="30"></rect>
+                <rect x="80" y="0" width="3" height="30"></rect>
+                <rect x="86" y="0" width="2" height="30"></rect>
+                <rect x="91" y="0" width="4" height="30"></rect>
+                <rect x="98" y="0" width="2" height="30"></rect>
+                <rect x="103" y="0" width="4" height="30"></rect>
+                <rect x="110" y="0" width="3" height="30"></rect>
+              </svg>
+              <button type="button" class="ticket-tear-btn">Abreißen</button>
+              <div class="ticket-code-badge">SOLO-NIGHT</div>
+              <button type="button" class="ticket-telegram-btn">In Telegram bestellen</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 3D Neon Pizza Box (Three.js r128) -->
+    <section class="three-box-section" id="box-3d-section" aria-label="3D Neon Pizza Box Unboxing">
+      <div class="container">
+        <div class="three-box-layout">
+
+          <div class="three-box-info">
+            <span class="three-box-badge">Signature 3D Experience</span>
+            <h2 class="three-box-title">The Midnight Unboxing</h2>
+            <p class="three-box-text">
+              Scrolle durch diesen Bereich, um den Deckel unserer legendären Neon-Pizzabox aufzuklappen. Innen dampft eine frische Steinofen-Pizza mit knusprigem Rand, Rindersucuk und geschmolzenem Mozzarella.
+            </p>
+
+            <div class="three-box-controls">
+              <button type="button" class="btn-3d-control" id="box-lid-toggle" aria-pressed="false">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>Deckel umschalten</span>
+              </button>
+              <button type="button" class="btn-3d-control active" id="box-rotate-toggle" aria-pressed="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                <span>Drehung an/aus</span>
+              </button>
+            </div>
+
+            <div class="box-lid-status" id="box-lid-status">
+              Status: Scrollen zum Öffnen
+            </div>
+          </div>
+
+          <!-- 3D Canvas Container -->
+          <div class="three-canvas-wrapper" aria-label="Interaktive 3D Box. Zum Drehen mit der Maus oder dem Finger ziehen.">
+            <div id="three-box-container"></div>
+
+            <div class="three-box-fallback" id="three-box-fallback" aria-label="Interaktive CSS 3D Neon Pizzabox">
+              <div class="css3d-scene" id="css3d-scene">
+                <div class="css3d-box" id="css3d-box">
+                  <!-- Floor shadow -->
+                  <div class="css3d-shadow"></div>
+
+                  <!-- Box Tray Bottom & Walls -->
+                  <div class="css3d-base">
+                    <!-- Real Pizza inside the box -->
+                    <div class="css3d-pizza">
+                      <img src="assets/img/photo-f92853501-960.jpg" alt="Dampfende frische Steinofen-Pizza Margherita mit Mozzarella und Basilikum" class="css3d-pizza-photo" loading="lazy">
+                      <div class="css3d-pizza-glow"></div>
+                      <div class="css3d-steam-container" aria-hidden="true">
+                        <span class="css3d-steam s1"></span>
+                        <span class="css3d-steam s2"></span>
+                        <span class="css3d-steam s3"></span>
+                        <span class="css3d-steam s4"></span>
+                        <span class="css3d-steam s5"></span>
+                      </div>
+                    </div>
+
+                    <!-- 3D Box Tray Walls -->
+                    <div class="css3d-wall css3d-wall-front"></div>
+                    <div class="css3d-wall css3d-wall-back"></div>
+                    <div class="css3d-wall css3d-wall-left"></div>
+                    <div class="css3d-wall css3d-wall-right"></div>
+                  </div>
+
+                  <!-- Hinged 3D Lid -->
+                  <div class="css3d-lid" id="css3d-lid">
+                    <!-- Lid Outer Top Face (Neon Brand Artwork) -->
+                    <div class="css3d-lid-face css3d-lid-top">
+                      <div class="css3d-lid-bracket br-tl"></div>
+                      <div class="css3d-lid-bracket br-tr"></div>
+                      <div class="css3d-lid-bracket br-bl"></div>
+                      <div class="css3d-lid-bracket br-br"></div>
+                      <div class="css3d-lid-branding">
+                        <div class="css3d-lid-city">★ BERLIN-FRIEDRICHSHAIN ★</div>
+                        <div class="css3d-lid-title">EMOSH'S</div>
+                        <div class="css3d-lid-tagline">HOT &amp; FRESH UNTIL 5 AM</div>
+                        <div class="css3d-lid-badge">
+                          <span>PIZZA &amp; DÖNER</span>
+                          <span class="badge-orig">ORIGINAL</span>
+                        </div>
+                        <div class="css3d-lid-details">40CM STEINOFEN · 100% KALB</div>
+                      </div>
+                    </div>
+
+                    <!-- Lid Inner Underface (Visible when opened!) -->
+                    <div class="css3d-lid-face css3d-lid-inside">
+                      <div class="css3d-lid-inside-content">
+                        <div class="css3d-inside-badge">★ EMOSH'S LATE-NIGHT ★</div>
+                        <p class="css3d-inside-text">420°C Steinofen · Frischer Sucuk &amp; Mozzarella</p>
+                        <span class="css3d-inside-sub">Warschauer Str. 42 · Täglich bis 5:00 Uhr</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="three-hint-pill" aria-hidden="true">
+              Scrollen zum Öffnen · Ziehen zum Drehen
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Instagram-Style Photo Wall -->
+    <section class="insta-wall-section" id="vibe-wall" aria-label="Foto-Wand & Instagram Feed">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="section-neon-badge">@emoshs.berlin</span>
+        </div>
+        <h2 class="section-title">Kiez Vibe &amp; Impressionen</h2>
+        <p class="section-subtitle">
+          Echte Aufnahmen aus unserem Laden an der Warschauer Straße. Heiße Glut, frische Fladen und die Energie des Friedrichshainer Nachtlebens.
+        </p>
+
+        <div class="insta-grid">
+
+          <!-- Photo 1 -->
+          <div class="insta-grid-item" tabindex="0" role="button" aria-label="Foto 1 vergrößern: Steinofen mit feuriger Glut">
+            <img src="assets/img/photo-f23064597-960.jpg" alt="Pizza backt im Steinofen bei offener Flamme und glühendem Holz" width="960" height="640" loading="lazy">
+            <div class="insta-overlay">
+              <div class="insta-overlay-meta">
+                <span>@emoshs.berlin</span>
+                <span>Warschauer Str. 42</span>
+              </div>
+              <div class="insta-overlay-text">420°C im Steinofen. Jede Nacht bis 5 Uhr frisch gebacken.</div>
+            </div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="insta-grid-item" tabindex="0" role="button" aria-label="Foto 2 vergrößern: Döner Kebab mit Pommes">
+            <img src="assets/img/photo-f127138434-960.jpg" alt="Döner Kebab Teller mit knusprigen Pommes und pikanter Chilisauce" width="960" height="640" loading="lazy">
+            <div class="insta-overlay">
+              <div class="insta-overlay-meta">
+                <span>@emoshs.berlin</span>
+                <span>RAW-Gelände Kiez</span>
+              </div>
+              <div class="insta-overlay-text">Nach der Party: Dönerfleisch und frische Pommes mit scharfer Chilisauce.</div>
+            </div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="insta-grid-item" tabindex="0" role="button" aria-label="Foto 3 vergrößern: Ganze Steinofenpizza">
+            <img src="assets/img/photo-f92853501-960.jpg" alt="Ganze knusprige Steinofenpizza mit Mozzarella und Basilikumblättern" width="960" height="640" loading="lazy">
+            <div class="insta-overlay">
+              <div class="insta-overlay-meta">
+                <span>@emoshs.berlin</span>
+                <span>Friedrichshain</span>
+              </div>
+              <div class="insta-overlay-text">Der Teig ruht 48 Stunden. Der Rand wirft Blasen wie in Neapel.</div>
+            </div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div class="insta-grid-item" tabindex="0" role="button" aria-label="Foto 4 vergrößern: Sucuk Döner Spezial">
+            <img src="assets/img/photo-f151565046-960.jpg" alt="Frischer Döner mit gebratener Rindersucuk und frischen Kräutern" width="960" height="640" loading="lazy">
+            <div class="insta-overlay">
+              <div class="insta-overlay-meta">
+                <span>@emoshs.berlin</span>
+                <span>Warschauer Brücke</span>
+              </div>
+              <div class="insta-overlay-text">Sucuk Döner mit Rindfleisch und hausgemachter Knoblauchsauce.</div>
+            </div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div class="insta-grid-item" tabindex="0" role="button" aria-label="Foto 5 vergrößern: Frische Pommes Frites">
+            <img src="assets/img/photo-f119348581-960.jpg" alt="Frittierte goldbraune Pommes Frites mit Meersalz" width="960" height="640" loading="lazy">
+            <div class="insta-overlay">
+              <div class="insta-overlay-meta">
+                <span>@emoshs.berlin</span>
+                <span>Late Night Kitchen</span>
+              </div>
+              <div class="insta-overlay-text">Zweifach frittiert. Außen glasig-knusprig, innen cremig.</div>
+            </div>
+          </div>
+
+          <!-- Photo 6 -->
+          <div class="insta-grid-item" tabindex="0" role="button" aria-label="Foto 6 vergrößern: Kalbfleisch Kebab Spieß">
+            <img src="assets/img/photo-f127138438-960.jpg" alt="Frisch geschnittenes Dönerfleisch mit roten Zwiebeln und Kräutern" width="960" height="640" loading="lazy">
+            <div class="insta-overlay">
+              <div class="insta-overlay-meta">
+                <span>@emoshs.berlin</span>
+                <span>Friedrichshain</span>
+              </div>
+              <div class="insta-overlay-text">100% Kalbfleisch ohne Streckmittel. Fein gewürzt und saftig.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Contact, Hours & Quick Telegram Order Form -->
+    <section class="contact-section" id="kontakt" aria-label="Kontakt, Öffnungszeiten und Vorbestellung">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="section-neon-badge">Komm Vorbei oder Schreib Uns</span>
+        </div>
+        <h2 class="section-title">Kontakt &amp; Öffnungszeiten</h2>
+        <p class="section-subtitle">
+          Finde uns direkt an der Warschauer Straße. Bestelle vorab via Telegram oder Telefon, um Wartezeiten in der Schlange zu umgehen.
+        </p>
+
+        <div class="contact-layout">
+
+          <!-- Left Card: Contact Info & Opening Hours -->
+          <div class="contact-card-info">
+            <h3 class="contact-card-title">Emosh's Friedrichshain</h3>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-item-label">Adresse</span>
+                  <span class="contact-item-value">Warschauer Straße 42, 10243 Berlin</span>
+                  <span style="font-size:12px; color:var(--text-muted); margin-top:2px;">(Zwischen S-Bhf Warschauer Str. und Revaler Str.)</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-item-label">Telefon für Vorbestellungen</span>
+                  <a href="tel:+498886661234" class="contact-item-value">+49 888 6661234</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-item-label">Telegram Order Bot &amp; Support</span>
+                  <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="contact-item-value">@rovatt (t.me/rovatt)</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-item-label">E-Mail</span>
+                  <a href="mailto:12234456789@gmail.com" class="contact-item-value">12234456789@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-size:14px; font-weight:700; color:var(--neon-pink); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px;">Öffnungszeiten</div>
+            <table class="hours-table" aria-label="Wöchentliche Öffnungszeiten">
+              <tbody>
+                <tr>
+                  <td>Montag – Donnerstag</td>
+                  <td>18:00 – 05:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td>Freitag – Samstag</td>
+                  <td>18:00 – 06:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td>Sonntag</td>
+                  <td>18:00 – 05:00 Uhr</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Right Card: Interactive Quick Order Form -->
+          <div class="order-form-card">
+            <h3 class="contact-card-title">Express-Vorbestellung</h3>
+            <form id="quick-order-form">
+              <div class="form-group">
+                <label for="order-name-input" class="form-label">Dein Name für die Abholung</label>
+                <input type="text" id="order-name-input" class="form-input" placeholder="z. B. Alex" required>
+              </div>
+
+              <div class="form-group">
+                <label for="order-item-select" class="form-label">Gewähltes Gericht oder Deal</label>
+                <select id="order-item-select" class="form-select" required>
+                  <option value="Berghain Survivor Ticket (11,90 €)">Berghain Survivor Ticket (11,90 €)</option>
+                  <option value="Warschauer Duo Ticket (24,50 €)">Warschauer Duo Ticket (24,50 €)</option>
+                  <option value="Afterhour Crew Pass (34,00 €)">Afterhour Crew Pass (34,00 €)</option>
+                  <option value="Nightliner Solo Slice (6,50 €)">Nightliner Solo Slice (6,50 €)</option>
+                  <option value="Pizza Warschauer Slice (11,00 €)">Pizza Warschauer Slice (11,00 €)</option>
+                  <option value="Pizza Sucuk Inferno (13,50 €)">Pizza Sucuk Inferno (13,50 €)</option>
+                  <option value="Signature Kalb Döner (8,50 €)">Signature Kalb Döner (8,50 €)</option>
+                  <option value="Chicken Gemüsedöner (8,00 €)">Chicken Gemüsedöner (8,00 €)</option>
+                  <option value="Döner Box Classic (7,50 €)">Döner Box Classic (7,50 €)</option>
+                  <option value="Loaded Afterhour Box (9,90 €)">Loaded Afterhour Box (9,90 €)</option>
+                  <option value="Crispy Skin Pommes (4,50 €)">Crispy Skin Pommes (4,50 €)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="order-time-select" class="form-label">Gewünschte Abholzeit</label>
+                <select id="order-time-select" class="form-select">
+                  <option value="In 15 Minuten (Sofort)">In 15 Minuten (Sofort)</option>
+                  <option value="In 30 Minuten">In 30 Minuten</option>
+                  <option value="In 45 Minuten">In 45 Minuten</option>
+                  <option value="In 60 Minuten">In 60 Minuten</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="order-notes-input" class="form-label">Sonderwünsche (Saucen, Schärfe, etc.)</label>
+                <textarea id="order-notes-input" class="form-textarea" placeholder="z. B. Viel Knoblauchsauce, ohne Zwiebeln, extra scharf"></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit-order">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span>Bestellung an @rovatt senden</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Berlin Vector Map -->
+        <div class="berlin-map-container">
+          <div class="map-header">
+            <span class="map-title">Lageplan · Berlin-Friedrichshain</span>
+            <span style="font-size:12px; color:var(--text-muted);">S+U Warschauer Str. · 2 Min Fußweg</span>
+          </div>
+          <div class="map-svg-wrap">
+            <svg class="map-svg" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Karte von Friedrichshain mit Emosh's Standort">
+              <!-- Dark background and water (Spree river) -->
+              <rect width="800" height="240" fill="#0c0c16"></rect>
+              <path d="M0 210 Q 200 200, 400 220 T 800 215 L 800 240 L 0 240 Z" fill="#071822"></path>
+              <text x="40" y="230" fill="rgba(25,227,255,0.4)" font-size="11" font-weight="600" letter-spacing="1">SPREE</text>
+
+              <!-- Main Roads -->
+              <!-- Warschauer Straße (vertical prominent) -->
+              <line x1="380" y1="0" x2="420" y2="240" stroke="#1f1f33" stroke-width="24"></line>
+              <line x1="380" y1="0" x2="420" y2="240" stroke="#ff2e88" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"></line>
+              <text x="310" y="50" fill="#a0a0c0" font-size="11" font-weight="700" letter-spacing="1">WARSCHAUER STR.</text>
+
+              <!-- Revaler Straße (horizontal) -->
+              <line x1="0" y1="90" x2="800" y2="80" stroke="#1a1a2b" stroke-width="16"></line>
+              <text x="490" y="74" fill="#a0a0c0" font-size="11" font-weight="600">Revaler Str. (RAW-Gelände)</text>
+
+              <!-- Boxhagener Straße -->
+              <line x1="0" y1="35" x2="800" y2="30" stroke="#151524" stroke-width="12"></line>
+              <text x="120" y="28" fill="#707090" font-size="10">Boxhagener Str.</text>
+
+              <!-- Railway Tracks (S-Bahn / Fernbahn) -->
+              <line x1="0" y1="140" x2="800" y2="135" stroke="#252538" stroke-width="14"></line>
+              <line x1="0" y1="140" x2="800" y2="135" stroke="#ffe45e" stroke-width="2" stroke-dasharray="10 8" opacity="0.5"></line>
+              <rect x="360" y="125" width="80" height="25" rx="4" fill="#18182a" stroke="#ffe45e" stroke-width="1"></rect>
+              <text x="370" y="141" fill="#ffe45e" font-size="10" font-weight="700">S+U WARSCHAUER</text>
+
+              <!-- Oberbaumbrücke -->
+              <rect x="408" y="200" width="24" height="40" fill="#2a1525" stroke="#ff2e88" stroke-width="1"></rect>
+              <text x="440" y="222" fill="#ff2e88" font-size="10" font-weight="600">Oberbaumbrücke</text>
+
+              <!-- RAW Gelände Area -->
+              <rect x="450" y="95" width="240" height="35" rx="6" fill="rgba(255,46,136,0.06)" stroke="rgba(255,46,136,0.2)" stroke-dasharray="4 4"></rect>
+              <text x="500" y="117" fill="rgba(255,255,255,0.7)" font-size="11" font-weight="700">RAW-GELÄNDE · CLUBS</text>
+
+              <!-- Emosh's Pulsing Marker -->
+              <circle cx="395" cy="85" r="26" fill="rgba(25,227,255,0.15)">
+                <animate attributeName="r" values="18;34;18" dur="2.4s" repeatCount="indefinite"></animate>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.4s" repeatCount="indefinite"></animate>
+              </circle>
+              <circle cx="395" cy="85" r="10" fill="#19E3FF" stroke="#FFFFFF" stroke-width="3"></circle>
+
+              <g transform="translate(395, 52)">
+                <rect x="-70" y="0" width="140" height="26" rx="13" fill="#12121E" stroke="#19E3FF" stroke-width="1.5"></rect>
+                <text x="0" y="17" fill="#FFFFFF" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="0.5">EMOSH'S #42</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">EMOSH'S</div>
+          <div class="footer-tagline">Late-Night Pizza &amp; Döner · Warschauer Str. 42 · 10243 Berlin</div>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer-Links">
+          <a href="#speisekarte" class="footer-link">Speisekarte</a>
+          <a href="#deals" class="footer-link">Tickets &amp; Deals</a>
+          <a href="#kontakt" class="footer-link">Öffnungszeiten</a>
+          <a href="#" class="footer-link" id="open-impressum-btn">Impressum</a>
+          <a href="#" class="footer-link" id="open-datenschutz-btn">Datenschutz</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Fiktives Demo-Projekt. Gestaltung: <span class="footer-designer">Renat</span>.</div>
+        <div>Telefon: <a href="tel:+498886661234" style="color:var(--neon-cyan); padding:8px 4px; display:inline-block;">+49 888 6661234</a> · Telegram: <a href="https://t.me/rovatt" target="_blank" rel="noopener" style="color:var(--neon-pink); padding:8px 4px; display:inline-block;">@rovatt</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Photo Wall -->
+  <div class="lightbox-modal" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Foto Großansicht">
+    <div class="lightbox-content">
+      <button type="button" class="modal-close-btn" id="lightbox-close" aria-label="Großansicht schließen" style="top:-50px; right:0;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <img id="lightbox-img" src="assets/img/photo-f92853501-960.jpg" alt="Vergrößertes Foto">
+      <div class="lightbox-caption" id="lightbox-caption">Emosh's Late Night Pizza &amp; Döner Berlin</div>
+    </div>
+  </div>
+
+  <!-- Order Modal Dialog -->
+  <div class="site-modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="modal-order-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn close-order-modal" aria-label="Fenster schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <h3 class="modal-title" id="modal-order-title">Bestellung zur Abholung</h3>
+      <p class="modal-body-text" style="margin-bottom:20px;">
+        Wähle dein Gericht und deine gewünschte Abholzeit. Deine Bestellung geht direkt an unser Kiez-Team.
+      </p>
+      <!-- Re-usable quick form inside modal -->
+      <form onsubmit="document.getElementById('quick-order-form').dispatchEvent(new Event('submit')); return false;">
+        <p style="font-size:13px; color:var(--neon-yellow); margin-bottom:16px;">
+          Nutze das Express-Bestellformular unten auf der Seite oder tippe auf "Bestätigen".
+        </p>
+        <button type="button" class="btn-primary-neon close-order-modal" style="width:100%; min-height:46px;">
+          Zum Bestellformular
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- In-Page Order Confirmation Modal -->
+  <div class="site-modal" id="order-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="modal-confirm-title">
+    <div class="modal-dialog" style="text-align:center;">
+      <button type="button" class="modal-close-btn close-order-modal" aria-label="Bestätigung schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div style="width:56px; height:56px; border-radius:50%; background:rgba(25,227,255,0.15); border:1px solid var(--border-cyan); color:var(--neon-cyan); display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h3 class="modal-title" id="modal-confirm-title">Bestellung Vorgemerkt!</h3>
+      <div class="modal-body-text" id="confirm-order-details" style="margin-bottom:24px; text-align:left; background:rgba(255,255,255,0.04); padding:16px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle);">
+        Bestellung erfolgreich registriert.
+      </div>
+      <a href="https://t.me/rovatt" id="confirm-telegram-btn" target="_blank" rel="noopener" class="btn-primary-neon" style="width:100%; min-height:48px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        <span>Bestellung via Telegram @rovatt senden</span>
+      </a>
+      <button type="button" class="close-order-modal" style="margin-top:14px; font-size:13px; color:var(--text-muted); padding:8px;">
+        Schließen
+      </button>
+    </div>
+  </div>
+
+  <!-- Legal Modal: Impressum -->
+  <div class="site-modal" id="impressum-modal" role="dialog" aria-modal="true" aria-labelledby="modal-impressum-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn close-legal-modal" aria-label="Impressum schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <h3 class="modal-title" id="modal-impressum-title">Impressum</h3>
+      <div class="modal-body-text">
+        <p><strong>Emosh's Late Night Pizza &amp; Döner</strong><br>
+        Inhaber: Fiktiver Betrieb · Konzept &amp; Webdesign: Renat<br>
+        Warschauer Straße 42<br>
+        10243 Berlin-Friedrichshain</p>
+        <br>
+        <p><strong>Kontakt:</strong><br>
+        Telefon: <a href="tel:+498886661234" style="color:var(--neon-cyan);">+49 888 6661234</a><br>
+        E-Mail: <a href="mailto:12234456789@gmail.com" style="color:var(--neon-pink);">12234456789@gmail.com</a><br>
+        Telegram: <a href="https://t.me/rovatt" target="_blank" rel="noopener" style="color:var(--neon-cyan);">@rovatt</a></p>
+        <br>
+        <p><strong>Hinweis zum Demo-Status:</strong><br>
+        Dies ist eine fiktive Präsentations- und Portfolio-Webseite. Alle Gerichte, Preise, Öffnungszeiten und Aktionen dienen ausschließlich Demonstrationszwecken. Es werden keine rechtsverbindlichen Kaufverträge über diese Website geschlossen.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Modal: Datenschutz -->
+  <div class="site-modal" id="datenschutz-modal" role="dialog" aria-modal="true" aria-labelledby="modal-datenschutz-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn close-legal-modal" aria-label="Datenschutzhinweise schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <h3 class="modal-title" id="modal-datenschutz-title">Datenschutzerklärung</h3>
+      <div class="modal-body-text">
+        <p><strong>1. Datenschutz auf einen Blick</strong><br>
+        Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Auf dieser Demonstrationsseite werden keine personenbezogenen Daten auf externen Servern dauerhaft gespeichert oder an Dritte weitergegeben.</p>
+        <br>
+        <p><strong>2. Datenerfassung auf dieser Website</strong><br>
+        Die im Express-Vorbestellformular eingegebenen Daten verbleiben lokal in Ihrem Browser und werden lediglich zur Erzeugung eines vorformulierten Telegram-Nachrichtenlinks (t.me/rovatt) genutzt. Es existiert kein serverseitiges Tracking.</p>
+        <br>
+        <p><strong>3. Lokale Speicherung (Session Storage)</strong><br>
+        Um den Schließzustand der oberen Demo-Hinweisleiste während Ihres Besuchs zu speichern, wird ein lokaler Session-Storage-Eintrag genutzt.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/canvas-bokeh.js"></script>
+  <script src="js/three-box.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

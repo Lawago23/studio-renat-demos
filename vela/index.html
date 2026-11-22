@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Studio Vela – Nails & Beauty · Berlin-Mitte | Signature Maniküre & Nageldesign</title>
+  <meta name="description"
+    content="Studio Vela – High-End Nagelstudio in Berlin-Mitte (Linienstraße 139). BIAB Russian Manicure, Glazed Chrome, Micro French & individuelle Nagelkunst. Jetzt online buchen.">
+  <meta name="theme-color" content="#F4E1DC">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Studio Vela – Nails & Beauty · Berlin-Mitte">
+  <meta property="og:description"
+    content="Feine Nagelkunst, BIAB Maniküre und moderne Ästhetik im Herzen von Berlin-Mitte.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/gallery-nude-1.jpg">
+
+  <!-- Google Fonts: Italiana + Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js r128 from cdnjs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+  <!-- 0. Top Slim Demo Banner -->
+  <aside class="demo-topbar" id="demoTopBar" aria-label="Demo-Projekt Hinweis">
+    <div class="demo-topbar-inner">
+      <span class="demo-topbar-badge">Fiktiv</span>
+      <p class="demo-topbar-text">Demo-Projekt von Renat · Alle Angaben auf dieser Seite sind fiktiv.</p>
+    </div>
+    <button class="demo-topbar-close" id="demoTopBarClose" aria-label="Hinweis schließen">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- Navigation / Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-link" aria-label="Studio Vela Startseite">
+        <span class="brand-title">Studio Vela</span>
+        <span class="brand-sub">Nails & Beauty · Mitte</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Hauptnavigation">
+        <a href="#shade-week" class="nav-link">Farbe der Woche</a>
+        <a href="#gallery" class="nav-link">Galerie</a>
+        <a href="#calculator" class="nav-link">Kalkulator</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#aftercare" class="nav-link">Pflege</a>
+        <a href="#contact" class="nav-link">Salon & Zeiten</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+498886661234" class="btn-tel-link" aria-label="Studio Vela anrufen">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span class="tel-number">+49 888 6661234</span>
+        </a>
+        <a href="#booking" class="btn-primary-header">Termin buchen</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-links">
+        <a href="#shade-week" class="drawer-link">Farbe der Woche</a>
+        <a href="#gallery" class="drawer-link">Nageldesign-Galerie</a>
+        <a href="#calculator" class="drawer-link">Preiskalkulator</a>
+        <a href="#team" class="drawer-link">Künstlerinnen</a>
+        <a href="#booking" class="drawer-link">Termin buchen</a>
+        <a href="#aftercare" class="drawer-link">Pflegehinweise</a>
+        <a href="#contact" class="drawer-link">Salon & Zeiten</a>
+      </div>
+      <div class="drawer-contacts">
+        <p class="drawer-address">Linienstraße 139, 10115 Berlin-Mitte</p>
+        <div class="drawer-ctas">
+          <a href="tel:+498886661234" class="drawer-btn">+49 888 6661234</a>
+          <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="drawer-btn">Telegram
+            @rovatt</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION WITH 3D GLOSSY POLISH BOTTLE -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-accent" aria-hidden="true"></div>
+      <div class="container hero-grid">
+
+        <!-- Hero Copy -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Atelier für Hand- & Nagelästhetik · Berlin-Mitte</span>
+          </div>
+          <h1 class="hero-headline">
+            Ästhetik bis in die <span class="highlight-mauve">Fingerspitzen.</span>
+          </h1>
+          <p class="hero-lead">
+            Studio Vela verbindet meisterhafte russische BIAB-Präzision mit moderner Pariser Zurückhaltung. Schimmernde
+            Chrome-Finishes, hauchdünne Micro-French Linien und gesunde Naturnägel, die bis zu vier Wochen makellos
+            bleiben.
+          </p>
+
+          <div class="hero-button-row">
+            <a href="#booking" class="btn-primary">
+              <span>Wunschtermin wählen</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#calculator" class="btn-secondary">
+              <span>Preise berechnen</span>
+            </a>
+          </div>
+
+          <div class="hero-features-strip">
+            <div class="hero-feature-item">
+              <span class="feature-num">100%</span>
+              <span class="feature-label">Säurefreie Gele & BIAB</span>
+            </div>
+            <div class="feature-sep" aria-hidden="true"></div>
+            <div class="hero-feature-item">
+              <span class="feature-num">4+</span>
+              <span class="feature-label">Wochen Haltbarkeit</span>
+            </div>
+            <div class="feature-sep" aria-hidden="true"></div>
+            <div class="hero-feature-item">
+              <span class="feature-num">Linienstr.</span>
+              <span class="feature-label">Berlin-Mitte</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Polish Bottle Stage -->
+        <div class="hero-canvas-wrapper" id="heroCanvasWrapper">
+          <div class="canvas-glass-card">
+            <div class="canvas-card-header">
+              <div class="badge-signature">3D-Lackatelier</div>
+              <span class="drag-hint" id="dragHint">Drehen & Berühren</span>
+            </div>
+
+            <!-- The WebGL Canvas Container -->
+            <div class="canvas-viewport" id="canvasViewport" role="img"
+              aria-label="3D interaktiver Flakon von Studio Vela mit wechselbarer Nagellackfarbe">
+              <div class="canvas-loading" id="canvasLoading">Atelier lädt...</div>
+              <!-- Fallback SVG if WebGL not supported -->
+              <div class="canvas-fallback" id="canvasFallback" aria-hidden="true">
+                <div class="fallback-flacon">
+                  <div class="fallback-cap"></div>
+                  <div class="fallback-neck"></div>
+                  <div class="fallback-body">
+                    <div class="fallback-liquid" id="fallbackLiquid"></div>
+                    <div class="fallback-shimmer"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Color Dots Strip -->
+            <div class="polish-controls">
+              <div class="shade-info-bar">
+                <span class="shade-code" id="activeShadeCode">No. 01</span>
+                <h4 class="shade-name" id="activeShadeName">Mauve Nocturne</h4>
+                <span class="shade-desc" id="activeShadeDesc">Tiefes, pudriges Samt-Mauve</span>
+              </div>
+              <div class="color-dots-row" id="colorDotsRow" role="radiogroup" aria-label="Nagellackfarbe wählen">
+                <button class="color-dot active" data-color="#8C5A6E" data-code="No. 01" data-name="Mauve Nocturne"
+                  data-desc="Tiefes, pudriges Samt-Mauve" style="--dot-color: #8C5A6E;" role="radio" aria-checked="true"
+                  aria-label="Mauve Nocturne wählen"></button>
+                <button class="color-dot" data-color="#F4E1DC" data-code="No. 02" data-name="Blush Poudré"
+                  data-desc="Sanfter, transparenter Rosenblüten-Ton" style="--dot-color: #F4E1DC;" role="radio"
+                  aria-checked="false" aria-label="Blush Poudré wählen"></button>
+                <button class="color-dot" data-color="#D4B483" data-code="No. 03" data-name="Champagne Glaze"
+                  data-desc="Flüssiger Champagner mit Goldschimmer" style="--dot-color: #D4B483;" role="radio"
+                  aria-checked="false" aria-label="Champagne Glaze wählen"></button>
+                <button class="color-dot" data-color="#4A1828" data-code="No. 04" data-name="Rouge Berlin"
+                  data-desc="Klassisches dunkles Kirsch-Bordeaux" style="--dot-color: #4A1828;" role="radio"
+                  aria-checked="false" aria-label="Rouge Berlin wählen"></button>
+                <button class="color-dot" data-color="#E5C7B8" data-code="No. 05" data-name="Nude Cashmere"
+                  data-desc="Warmer, milchiger Kaschmir-Nude" style="--dot-color: #E5C7B8;" role="radio"
+                  aria-checked="false" aria-label="Nude Cashmere wählen"></button>
+                <button class="color-dot" data-color="#FDFBF7" data-code="No. 06" data-name="Perle de Rosée"
+                  data-desc="Glazed-Donut Perlmutt-Reflexe" style="--dot-color: #FDFBF7;" role="radio"
+                  aria-checked="false" aria-label="Perle de Rosée wählen"></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. "FARBE DER WOCHE" PALETTE STRIP -->
+    <section class="section-palette-strip" id="shade-week">
+      <div class="container">
+
+        <div class="palette-card">
+          <div class="palette-header">
+            <div class="palette-badge-row">
+              <span class="curated-badge">Kuratierte Nuance der Saison</span>
+              <span class="week-stamp">Woche 47 · Berlin-Mitte Trend</span>
+            </div>
+            <h2 class="palette-headline">Farbe der Woche: No. 24 · Mauve Éthéré</h2>
+            <p class="palette-sub">
+              Ein edles, rauchiges Altrosa mit mikroskopischen Champagner-Partikeln. Entwickelt für dezente Eleganz im
+              Berliner Herbstlicht. Harmonisch zu Strick, Trenchcoats und warmem Goldschmuck.
+            </p>
+          </div>
+
+          <!-- Color Strips Grid -->
+          <div class="swatches-grid">
+            <div class="swatch-item">
+              <div class="swatch-color" style="background-color: #EEDFD9;"></div>
+              <div class="swatch-meta">
+                <span class="swatch-role">Basis</span>
+                <strong class="swatch-name">Voile Nude</strong>
+                <span class="swatch-hex">#EEDFD9</span>
+              </div>
+            </div>
+
+            <div class="swatch-item featured-swatch">
+              <div class="swatch-color" style="background-color: #8C5A6E;">
+                <span class="swatch-star">Key-Nuance</span>
+              </div>
+              <div class="swatch-meta">
+                <span class="swatch-role">Hauptton</span>
+                <strong class="swatch-name">Mauve Éthéré</strong>
+                <span class="swatch-hex">#8C5A6E</span>
+              </div>
+            </div>
+
+            <div class="swatch-item">
+              <div class="swatch-color" style="background-color: #D4B483;"></div>
+              <div class="swatch-meta">
+                <span class="swatch-role">Akzent</span>
+                <strong class="swatch-name">Champagne Dust</strong>
+                <span class="swatch-hex">#D4B483</span>
+              </div>
+            </div>
+
+            <div class="swatch-item">
+              <div class="swatch-color" style="background-color: #38252C;"></div>
+              <div class="swatch-meta">
+                <span class="swatch-role">Kontrast</span>
+                <strong class="swatch-name">Velours Noir</strong>
+                <span class="swatch-hex">#38252C</span>
+              </div>
+            </div>
+
+            <div class="swatch-item">
+              <div class="swatch-color" style="background: linear-gradient(135deg, #FFFDF8 0%, #E8D3C8 100%);"></div>
+              <div class="swatch-meta">
+                <span class="swatch-role">Finish</span>
+                <strong class="swatch-name">Glaze Mirror Top</strong>
+                <span class="swatch-hex">High Shine</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="palette-footer">
+            <div class="palette-tip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Tipp unserer Stylistin Sora: Wirkt besonders harmonisch als Micro-French auf natürlicher
+                Mandelform.</span>
+            </div>
+            <button class="btn-palette-book" id="btnBookPaletteShade" data-shade="No. 24 Mauve Éthéré">
+              Nuance für Termin merken
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. NAIL DESIGN GALLERY AS MASONRY GRID WITH FILTERS -->
+    <section class="section-gallery" id="gallery">
+      <div class="container">
+
+        <div class="section-title-wrap text-center">
+          <span class="section-subtitle">Portfolio & Ästhetik</span>
+          <h2 class="section-headline">Kuratierte Nagelkunst</h2>
+          <p class="section-desc">
+            Von reduzierter Clean-Girl Ästhetik bis hin zu handgefertigter Miniaturmalerei. Alle Designs werden
+            ausschließlich mit veganen, schonenden Gelelementen gearbeitet.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-filters" role="tablist" aria-label="Galerie-Filter">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            <span>Alle Werke</span> <span class="filter-count">8</span>
+          </button>
+          <button class="filter-btn" data-filter="french" role="tab" aria-selected="false">
+            <span>French</span> <span class="filter-count">2</span>
+          </button>
+          <button class="filter-btn" data-filter="chrome" role="tab" aria-selected="false">
+            <span>Chrome</span> <span class="filter-count">2</span>
+          </button>
+          <button class="filter-btn" data-filter="nude" role="tab" aria-selected="false">
+            <span>Nude</span> <span class="filter-count">2</span>
+          </button>
+          <button class="filter-btn" data-filter="art" role="tab" aria-selected="false">
+            <span>Art</span> <span class="filter-count">2</span>
+          </button>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="masonry-grid" id="masonryGrid">
+
+          <!-- Item 1: Nude 1 -->
+          <article class="gallery-item crop-1" data-category="nude" data-title="Minimalist Nude & Gold Line"
+            data-artist="Elena Vaneva" data-price="75 €" data-duration="70 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-nude-1.jpg" alt="Minimalist Nude Maniküre mit Champagner-Chromlinie auf Leinen"
+                  width="1000" height="747" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Nude</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Minimalist Nude & Gold Line</h3>
+                    <p class="gallery-meta">Elena Vaneva · BIAB Basis</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details zu Minimalist Nude anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Chrome 1 -->
+          <article class="gallery-item crop-2" data-category="chrome" data-title="Glazed Donut Pearl Sheen"
+            data-artist="Mira Lindemann" data-price="80 €" data-duration="75 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-chrome-1.jpg" alt="Glazed Donut Perlmutt Chrome Maniküre auf Mandelform"
+                  width="700" height="850" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Chrome</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Glazed Donut Pearl Sheen</h3>
+                    <p class="gallery-meta">Mira Lindemann · High Glaze</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: French 1 -->
+          <article class="gallery-item crop-3" data-category="french" data-title="Micro French Mauve"
+            data-artist="Sora Chen" data-price="85 €" data-duration="80 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-french-1.jpg" alt="Zarte Micro French Maniküre mit Spitzen in Mauve-Rose"
+                  width="750" height="750" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">French</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Micro French Mauve</h3>
+                    <p class="gallery-meta">Sora Chen · Squoval Shape</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Art 1 -->
+          <article class="gallery-item crop-4" data-category="art" data-title="Negative Space Velvet Swirls"
+            data-artist="Mira Lindemann" data-price="95 €" data-duration="90 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-art-1.jpg" alt="Abstrakte Negative Space Linien und Samt-Mauve Wirbel" width="700"
+                  height="850" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Art</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Negative Space Velvet Swirls</h3>
+                    <p class="gallery-meta">Mira Lindemann · Freehand Art</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Nude 2 -->
+          <article class="gallery-item crop-5" data-category="nude" data-title="Milky Bath Almond Care"
+            data-artist="Elena Vaneva" data-price="65 €" data-duration="60 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-nude-2.jpg" alt="Milchige Nude Mandel-Maniküre mit tiefenwirksamer Pflege"
+                  width="700" height="850" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Nude</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Milky Bath Almond Care</h3>
+                    <p class="gallery-meta">Elena Vaneva · Russian Prep</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Chrome 2 -->
+          <article class="gallery-item crop-6" data-category="chrome" data-title="Molten Rose-Gold Mirror"
+            data-artist="Sora Chen" data-price="90 €" data-duration="85 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-chrome-2.jpg" alt="Flüssiges Roségold Chrome auf kurzen geometrischen Nägeln"
+                  width="750" height="750" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Chrome</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Molten Rose-Gold Mirror</h3>
+                    <p class="gallery-meta">Sora Chen · Metallic Mirror</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: French 2 -->
+          <article class="gallery-item crop-7" data-category="french" data-title="Double Gold Leaf Smile Line"
+            data-artist="Elena Vaneva" data-price="85 €" data-duration="75 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-french-2.jpg" alt="Double French Maniküre mit Blattgold-Lächeln" width="700"
+                  height="850" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">French</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Double Gold Leaf Smile Line</h3>
+                    <p class="gallery-meta">Elena Vaneva · Foil Accent</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Art 2 -->
+          <article class="gallery-item crop-8" data-category="art" data-title="Fine-Line Botanicals"
+            data-artist="Mira Lindemann" data-price="105 €" data-duration="95 Min.">
+            <div class="gallery-card">
+              <div class="gallery-thumb-wrap">
+                <img src="img/gallery-art-2.jpg" alt="Feine handgemalte botanische Kirschblüten auf transparentem Gel"
+                  width="750" height="750" loading="lazy">
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Art</span>
+                  <div class="gallery-info">
+                    <h3 class="gallery-name">Fine-Line Botanicals</h3>
+                    <p class="gallery-meta">Mira Lindemann · Handpainted</p>
+                  </div>
+                  <button class="btn-inspect" aria-label="Details anzeigen">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal for Gallery Lightbox -->
+    <div class="gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-label="Design-Details">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-card">
+        <button class="modal-close" id="modalClose" aria-label="Modal schließen">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <div class="modal-img-wrap">
+            <img src="" alt="" id="modalImg">
+          </div>
+          <div class="modal-details">
+            <span class="modal-category" id="modalCategory">Kategorie</span>
+            <h3 class="modal-title" id="modalTitle">Design Titel</h3>
+            <p class="modal-artist-line">Ausführung von <strong id="modalArtist">Elena Vaneva</strong></p>
+            <div class="modal-metrics">
+              <div class="metric-box">
+                <span class="metric-label">Richtpreis</span>
+                <span class="metric-val" id="modalPrice">75 €</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-label">Dauer ca.</span>
+                <span class="metric-val" id="modalDuration">70 Min.</span>
+              </div>
+            </div>
+            <p class="modal-text">Inklusive schonender russischer Nagelhautentfernung, stärkender BIAB-Basis und
+              hochglänzendem Versiegelungs-Topcoat.</p>
+            <button class="btn-primary modal-cta" id="modalBookBtn">Diesen Look reservieren</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SIGNATURE INTERACTIVE PRICE CALCULATOR -->
+    <section class="section-calculator" id="calculator">
+      <div class="container">
+
+        <div class="section-title-wrap text-center">
+          <span class="section-subtitle">Transparenz & Planung</span>
+          <h2 class="section-headline">Individueller Preiskalkulator</h2>
+          <p class="section-desc">
+            Wähle deine Basisbehandlung und kombiniere deine gewünschten Extras. Preis und Behandlungsdauer berechnen
+            sich live in Echtzeit.
+          </p>
+        </div>
+
+        <div class="calc-layout-grid">
+
+          <!-- Left: Options Builder -->
+          <div class="calc-builder">
+
+            <!-- Step 1: Base Treatment -->
+            <div class="calc-group">
+              <div class="calc-step-header">
+                <span class="step-num">01</span>
+                <div>
+                  <h3 class="calc-group-title">Basisbehandlung wählen</h3>
+                  <p class="calc-group-sub">Jede Behandlung beinhaltet unsere schonende Cuticle-Care</p>
+                </div>
+              </div>
+
+              <div class="calc-options-grid radio-group" role="radiogroup" aria-label="Basisbehandlung">
+
+                <label class="calc-card radio-card selected" data-type="base" data-price="65" data-duration="60"
+                  data-name="BIAB Russian Manicure">
+                  <input type="radio" name="baseTreatment" value="biab" checked>
+                  <div class="card-glow"></div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <span class="card-badge-popular">Beliebteste Wahl</span>
+                      <span class="card-price">65 €</span>
+                    </div>
+                    <strong class="card-title">BIAB Russian Manicure</strong>
+                    <p class="card-desc">Apparative Nagelhautglättung, stärkender Builder-Gel-Aufbau auf Naturnägeln.
+                      Hält 4 Wochen.</p>
+                    <span class="card-dur">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      60 Min.
+                    </span>
+                  </div>
+                </label>
+
+                <label class="calc-card radio-card" data-type="base" data-price="45" data-duration="45"
+                  data-name="Classic Studio Maniküre">
+                  <input type="radio" name="baseTreatment" value="classic">
+                  <div class="card-glow"></div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <span class="card-tag">Essentiell</span>
+                      <span class="card-price">45 €</span>
+                    </div>
+                    <strong class="card-title">Classic Studio Maniküre</strong>
+                    <p class="card-desc">Formfeilen, Handbad, sanftes Cuticle-Finishing, stärkender Pflegelack oder
+                      Nude-Gloss.</p>
+                    <span class="card-dur">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      45 Min.
+                    </span>
+                  </div>
+                </label>
+
+                <label class="calc-card radio-card" data-type="base" data-price="85" data-duration="90"
+                  data-name="Gel Neumodellage & Verlängerung">
+                  <input type="radio" name="baseTreatment" value="extension">
+                  <div class="card-glow"></div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <span class="card-tag">Skulptur</span>
+                      <span class="card-price">85 €</span>
+                    </div>
+                    <strong class="card-title">Gel Neumodellage & Verlängerung</strong>
+                    <p class="card-desc">Verlängerung über Schablone mit Hightech-Gel, Wunschlänge & Wunschform
+                      (Mandel/Square).</p>
+                    <span class="card-dur">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      90 Min.
+                    </span>
+                  </div>
+                </label>
+
+                <label class="calc-card radio-card" data-type="base" data-price="60" data-duration="50"
+                  data-name="Deluxe Spa Pediküre">
+                  <input type="radio" name="baseTreatment" value="pedicure">
+                  <div class="card-glow"></div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <span class="card-tag">Füße</span>
+                      <span class="card-price">60 €</span>
+                    </div>
+                    <strong class="card-title">Deluxe Spa Pediküre</strong>
+                    <p class="card-desc">Aroma-Fußbad, Peeling, Hornhautabtragung, Nagelmodellage mit langanhaltendem
+                      Gellack.</p>
+                    <span class="card-dur">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      50 Min.
+                    </span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 2: Extras & Add-ons -->
+            <div class="calc-group">
+              <div class="calc-step-header">
+                <span class="step-num">02</span>
+                <div>
+                  <h3 class="calc-group-title">Veredelungen & Nail-Art ergänzen</h3>
+                  <p class="calc-group-sub">Kombiniere beliebige Finishes für deinen individuellen Look</p>
+                </div>
+              </div>
+
+              <div class="calc-options-grid checkbox-group" aria-label="Zusatzleistungen">
+
+                <label class="calc-card checkbox-card" data-type="extra" data-price="15" data-duration="15"
+                  data-name="Chrom / Glazed Pearl Finish">
+                  <input type="checkbox" name="extra_chrome">
+                  <div class="card-check-box">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <strong class="card-title">Chrom / Glazed Pearl Finish</strong>
+                      <span class="card-price">+15 €</span>
+                    </div>
+                    <p class="card-desc">Feinstes Puder für spiegelnden Perlmuttschimmer (Hailey Bieber Effekt).</p>
+                    <span class="card-dur">+15 Min.</span>
+                  </div>
+                </label>
+
+                <label class="calc-card checkbox-card" data-type="extra" data-price="20" data-duration="20"
+                  data-name="Micro French Design">
+                  <input type="checkbox" name="extra_french">
+                  <div class="card-check-box">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <strong class="card-title">Micro French Design</strong>
+                      <span class="card-price">+20 €</span>
+                    </div>
+                    <p class="card-desc">Hauchdünne Smile-Line an den Spitzen in deiner Wunschfarbe (Mauve, Gold, Weiß).
+                    </p>
+                    <span class="card-dur">+20 Min.</span>
+                  </div>
+                </label>
+
+                <label class="calc-card checkbox-card" data-type="extra" data-price="25" data-duration="25"
+                  data-name="Custom Handpainted Nail Art">
+                  <input type="checkbox" name="extra_art">
+                  <div class="card-check-box">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <strong class="card-title">Custom Handpainted Art</strong>
+                      <span class="card-price">+25 €</span>
+                    </div>
+                    <p class="card-desc">Botanische Blüten, Swirls oder geometrische Linien mit Spezialpinseln.</p>
+                    <span class="card-dur">+25 Min.</span>
+                  </div>
+                </label>
+
+                <label class="calc-card checkbox-card" data-type="extra" data-price="18" data-duration="15"
+                  data-name="Paraffin Handmaske & Hot Towel">
+                  <input type="checkbox" name="extra_spa">
+                  <div class="card-check-box">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <strong class="card-title">Paraffin Handmaske & Spa</strong>
+                      <span class="card-price">+18 €</span>
+                    </div>
+                    <p class="card-desc">Warme Pflegewachspackung für samtweiche Haut und Tiefenentspannung.</p>
+                    <span class="card-dur">+15 Min.</span>
+                  </div>
+                </label>
+
+                <label class="calc-card checkbox-card" data-type="extra" data-price="15" data-duration="20"
+                  data-name="Schonende Altgel-Entfernung">
+                  <input type="checkbox" name="extra_removal">
+                  <div class="card-check-box">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <strong class="card-title">Altmaterial-Entfernung</strong>
+                      <span class="card-price">+15 €</span>
+                    </div>
+                    <p class="card-desc">Fräsen & Abtragen von Fremdgel ohne Beschädigung deiner Nagelmatrix.</p>
+                    <span class="card-dur">+20 Min.</span>
+                  </div>
+                </label>
+
+                <label class="calc-card checkbox-card" data-type="extra" data-price="10" data-duration="10"
+                  data-name="Bio-Kutikula Elixier & Peeling">
+                  <input type="checkbox" name="extra_oil">
+                  <div class="card-check-box">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-top">
+                      <strong class="card-title">Bio-Kutikula Elixier</strong>
+                      <span class="card-price">+10 €</span>
+                    </div>
+                    <p class="card-desc">Intensive Pflege mit Jojoba, Vitamin E und feinem Rosmarinduft.</p>
+                    <span class="card-dur">+10 Min.</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Live Summary Card -->
+          <div class="calc-summary-panel">
+            <div class="summary-card" id="summaryCard">
+              <div class="summary-top">
+                <span class="summary-badge">Live-Berechnung</span>
+                <span class="summary-sub">Preise inkl. MwSt.</span>
+              </div>
+
+              <div class="summary-price-display">
+                <div class="price-val-wrap">
+                  <span class="currency">€</span>
+                  <span class="amount" id="calcTotalAmount">65</span>
+                </div>
+                <div class="duration-val-wrap">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span id="calcTotalDuration">60 Min.</span>
+                </div>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <h4 class="summary-items-title">Gewählte Leistungen:</h4>
+              <ul class="summary-list" id="calcSummaryList">
+                <li class="summary-item base-item">
+                  <span class="item-name">BIAB Russian Manicure</span>
+                  <span class="item-price">65 €</span>
+                </li>
+              </ul>
+
+              <div class="summary-promise">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Haltbarkeits-Garantie: 10 Tage kostenfreies Touch-Up bei Absplitterung.</span>
+              </div>
+
+              <button class="btn-primary summary-cta" id="btnTransferToBooking">
+                <span>In Terminplaner übernehmen</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. TEAM OF 3 NAIL ARTISTS -->
+    <section class="section-team" id="team">
+      <div class="container">
+
+        <div class="section-title-wrap text-center">
+          <span class="section-subtitle">Meisterschaft & Leidenschaft</span>
+          <h2 class="section-headline">Die Künstlerinnen von Vela</h2>
+          <p class="section-desc">
+            Drei spezialisierte Persönlichkeiten mit jahrelanger Erfahrung in apparativer Cuticle-Pflege,
+            zeitgenössischer Nail-Art und gesunder Nagelarchitektur.
+          </p>
+        </div>
+
+        <div class="team-grid">
+
+          <!-- Artist 1: Elena Vaneva -->
+          <article class="artist-card">
+            <div class="artist-img-frame">
+              <img src="img/artist-elena.jpg" alt="Porträt Elena Vaneva, Gründerin & Master Stylistin bei Studio Vela"
+                width="600" height="750" loading="lazy">
+              <div class="artist-tag-pill">Gründerin & Master Stylist</div>
+            </div>
+            <div class="artist-body">
+              <h3 class="artist-name">Elena Vaneva</h3>
+              <p class="artist-specialty">BIAB Russian Manicure · Naturnagelaufbau</p>
+              <p class="artist-bio">
+                Mit elf Jahren Salonpraxis in Sofia und Berlin hat Elena die apparative Cuticle-Technik perfektioniert.
+                Sie glaubt an Natürlichkeit, gesunde Nagelbetten und langanhaltenden Glanz ohne aggressives Abfeilen.
+              </p>
+              <div class="artist-signature-details">
+                <div class="detail-row">
+                  <span class="detail-label">Signatur:</span>
+                  <span class="detail-value">Hauchdünne BIAB-Verstärkung</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Lieblingsnuance:</span>
+                  <span class="detail-value">No. 02 Blush Poudré</span>
+                </div>
+              </div>
+              <button class="btn-artist-book" data-artist="Elena Vaneva">
+                Termin bei Elena anfragen
+              </button>
+            </div>
+          </article>
+
+          <!-- Artist 2: Mira Lindemann -->
+          <article class="artist-card">
+            <div class="artist-img-frame">
+              <img src="img/artist-mira.jpg" alt="Porträt Mira Lindemann, Senior Nail Artist bei Studio Vela"
+                width="600" height="750" loading="lazy">
+              <div class="artist-tag-pill">Senior Nail Artist & Art Lead</div>
+            </div>
+            <div class="artist-body">
+              <h3 class="artist-name">Mira Lindemann</h3>
+              <p class="artist-specialty">Freihand Nail-Art · Chrome & Swirls</p>
+              <p class="artist-bio">
+                Mira studierte freie Kunst an der UdK Berlin, bevor sie sich auf Miniatur-Malerei auf Fingernägeln
+                spezialisierte. Ihre botanischen Motive und organischen Swirls sind in ganz Mitte bekannt.
+              </p>
+              <div class="artist-signature-details">
+                <div class="detail-row">
+                  <span class="detail-label">Signatur:</span>
+                  <span class="detail-value">Fine-Line Botanicals & Chromglaze</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Lieblingsnuance:</span>
+                  <span class="detail-value">No. 01 Mauve Nocturne</span>
+                </div>
+              </div>
+              <button class="btn-artist-book" data-artist="Mira Lindemann">
+                Termin bei Mira anfragen
+              </button>
+            </div>
+          </article>
+
+          <!-- Artist 3: Sora Chen -->
+          <article class="artist-card">
+            <div class="artist-img-frame">
+              <img src="img/artist-sora.jpg" alt="Porträt Sora Chen, Sculpting & Extension Specialist bei Studio Vela"
+                width="600" height="750" loading="lazy">
+              <div class="artist-tag-pill">Sculpting & Gel Specialist</div>
+            </div>
+            <div class="artist-body">
+              <h3 class="artist-name">Sora Chen</h3>
+              <p class="artist-specialty">Gel Neumodellage · Micro-French Linien</p>
+              <p class="artist-bio">
+                Sora widmet sich der Statik und Formvollendung. Ob makellose C-Kurve, filigranste Verlängerungen über
+                Schablone oder messerscharfe French-Smile-Lines: Soras Arbeiten wirken wie maßgeschneiderter Schmuck.
+              </p>
+              <div class="artist-signature-details">
+                <div class="detail-row">
+                  <span class="detail-label">Signatur:</span>
+                  <span class="detail-value">Micro French & Ballerina Shape</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Lieblingsnuance:</span>
+                  <span class="detail-value">No. 03 Champagne Glaze</span>
+                </div>
+              </div>
+              <button class="btn-artist-book" data-artist="Sora Chen">
+                Termin bei Sora anfragen
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. BOOKING WITH TIME SLOTS -->
+    <section class="section-booking" id="booking">
+      <div class="container">
+
+        <div class="booking-wrapper">
+          <div class="booking-header text-center">
+            <span class="section-subtitle">Online-Reservierung</span>
+            <h2 class="section-headline">Dein Termin im Vela Atelier</h2>
+            <p class="section-desc">
+              Wähle deinen Wunschtag und eine freie Zeit. Keine Vorauszahlung nötig — Bezahlung erfolgt bequem vor Ort
+              im Studio (EC, Kreditkarte oder bar).
+            </p>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+
+            <!-- Step A: Selected Service Summary -->
+            <div class="form-row-service">
+              <div class="form-service-badge">
+                <span class="service-label">Behandlung:</span>
+                <strong class="service-name-active" id="bookingServiceName">BIAB Russian Manicure</strong>
+                <span class="service-meta-active" id="bookingServiceMeta">65 € · 60 Min.</span>
+              </div>
+              <a href="#calculator" class="change-service-link">Ändern im Kalkulator</a>
+            </div>
+
+            <!-- Step B: Select Artist -->
+            <div class="form-section">
+              <label class="form-label">1. Stylistin wählen:</label>
+              <div class="artist-select-grid" role="radiogroup" aria-label="Stylistin wählen">
+                <label class="artist-radio-pill selected">
+                  <input type="radio" name="selectedArtist" value="any" checked>
+                  <span>Nächster freier Slot</span>
+                </label>
+                <label class="artist-radio-pill">
+                  <input type="radio" name="selectedArtist" value="Elena Vaneva">
+                  <span>Elena Vaneva</span>
+                </label>
+                <label class="artist-radio-pill">
+                  <input type="radio" name="selectedArtist" value="Mira Lindemann">
+                  <span>Mira Lindemann</span>
+                </label>
+                <label class="artist-radio-pill">
+                  <input type="radio" name="selectedArtist" value="Sora Chen">
+                  <span>Sora Chen</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step C: Select Date (Next 7 days) -->
+            <div class="form-section">
+              <label class="form-label">2. Wunschdatum wählen (nächste Tage):</label>
+              <div class="date-scroll-row" id="datePickerRow" role="radiogroup" aria-label="Datum wählen">
+                <!-- Dynamically populated or static baseline -->
+              </div>
+            </div>
+
+            <!-- Step D: Select Time Slot -->
+            <div class="form-section">
+              <label class="form-label">3. Uhrzeit wählen:</label>
+              <div class="slots-grid" id="slotsGrid" role="radiogroup" aria-label="Uhrzeit wählen">
+                <button type="button" class="slot-btn" data-slot="10:00" role="radio" aria-checked="false">
+                  <span class="slot-time">10:00</span>
+                  <span class="slot-status">Verfügbar</span>
+                </button>
+                <button type="button" class="slot-btn selected" data-slot="11:30" role="radio" aria-checked="true">
+                  <span class="slot-time">11:30</span>
+                  <span class="slot-status">Frei</span>
+                </button>
+                <button type="button" class="slot-btn" data-slot="13:00" role="radio" aria-checked="false">
+                  <span class="slot-time">13:00</span>
+                  <span class="slot-status">Verfügbar</span>
+                </button>
+                <button type="button" class="slot-btn" data-slot="14:30" role="radio" aria-checked="false">
+                  <span class="slot-time">14:30</span>
+                  <span class="slot-status">Nur 1 Slot</span>
+                </button>
+                <button type="button" class="slot-btn" data-slot="16:00" role="radio" aria-checked="false">
+                  <span class="slot-time">16:00</span>
+                  <span class="slot-status">Verfügbar</span>
+                </button>
+                <button type="button" class="slot-btn" data-slot="17:30" role="radio" aria-checked="false">
+                  <span class="slot-time">17:30</span>
+                  <span class="slot-status">Beliebt</span>
+                </button>
+                <button type="button" class="slot-btn" data-slot="19:00" role="radio" aria-checked="false">
+                  <span class="slot-time">19:00</span>
+                  <span class="slot-status">Abendslot</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step E: Client Contact Info -->
+            <div class="form-section contact-inputs">
+              <label class="form-label">4. Deine Angaben:</label>
+              <div class="input-grid">
+                <div class="input-field">
+                  <label for="clientName">Vollständiger Name *</label>
+                  <input type="text" id="clientName" name="clientName" placeholder="z. B. Clara Meyer" required
+                    autocomplete="name">
+                </div>
+                <div class="input-field">
+                  <label for="clientPhone">Mobilnummer für Bestätigungs-SMS *</label>
+                  <input type="tel" id="clientPhone" name="clientPhone" placeholder="+49 170 1234567" required
+                    autocomplete="tel">
+                </div>
+                <div class="input-field full-width">
+                  <label for="clientEmail">E-Mail-Adresse für Kalender-Einladung *</label>
+                  <input type="email" id="clientEmail" name="clientEmail" placeholder="clara.meyer@beispiel.de" required
+                    autocomplete="email">
+                </div>
+                <div class="input-field full-width">
+                  <label for="clientNotes">Wunschfarbe oder Referenzwünsche (optional)</label>
+                  <input type="text" id="clientNotes" name="clientNotes"
+                    placeholder="z. B. No. 24 Mauve Éthéré oder Mandelform">
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button & Confirmation Notice -->
+            <div class="booking-submit-wrap">
+              <button type="submit" class="btn-primary submit-booking-btn" id="btnSubmitBooking">
+                <span>Termin verbindlich reservieren</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </button>
+              <p class="booking-terms-note">
+                Kostenlose Stornierung bis 24 Stunden vor dem Termin möglich. Keine Stornierungsgebühr bei rechtzeitiger
+                Absage.
+              </p>
+            </div>
+
+          </form>
+
+          <!-- In-Page Confirmation Card (hidden initially) -->
+          <div class="booking-confirmation-card" id="bookingConfirmationCard" aria-live="polite" hidden
+            style="display: none;">
+            <div class="confirm-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8C5A6E" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span class="confirm-badge">Termin erfolgreich bestätigt</span>
+            <h3 class="confirm-title">Wir freuen uns auf deinen Besuch!</h3>
+            <p class="confirm-lead" id="confirmSummaryText">
+              Dein Termin im Studio Vela wurde reserviert. Eine Bestätigung wurde an deine Mobilnummer gesendet.
+            </p>
+
+            <div class="confirm-ticket">
+              <div class="ticket-row">
+                <span class="ticket-label">Buchungs-Code:</span>
+                <strong class="ticket-val" id="confirmCode">VELA-2026-M89</strong>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Behandlung:</span>
+                <span class="ticket-val" id="confirmTreatment">BIAB Russian Manicure</span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Stylistin:</span>
+                <span class="ticket-val" id="confirmArtist">Elena Vaneva</span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Datum & Zeit:</span>
+                <strong class="ticket-val" id="confirmDateTime">Dienstag, 24. Nov · 11:30 Uhr</strong>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Ort:</span>
+                <span class="ticket-val">Linienstraße 139, 10115 Berlin-Mitte</span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Gesamtbetrag vor Ort:</span>
+                <strong class="ticket-val" id="confirmPrice">65 €</strong>
+              </div>
+            </div>
+
+            <div class="confirm-actions">
+              <button class="btn-secondary" id="btnDownloadIcs">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                In Kalender eintragen
+              </button>
+              <button class="btn-primary" id="btnResetBooking">Neuen Termin buchen</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. AFTERCARE TIPS ACCORDION -->
+    <section class="section-aftercare" id="aftercare">
+      <div class="container">
+
+        <div class="section-title-wrap text-center">
+          <span class="section-subtitle">Nachhaltige Schönheit</span>
+          <h2 class="section-headline">Pflegehinweise nach der Behandlung</h2>
+          <p class="section-desc">
+            Mit den richtigen Handgriffen bleibt deine Modellage vier Wochen lang makellos glänzend und deine Naturnägel
+            wachsen kräftig nach.
+          </p>
+        </div>
+
+        <div class="accordion-container" id="aftercareAccordion">
+
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item active">
+            <button class="accordion-header" aria-expanded="true" aria-controls="aftercare-1" id="accordion-btn-1">
+              <span class="accordion-number">01</span>
+              <span class="accordion-title">Die ersten 24 Stunden: Hitze & langes Wasserbad meiden</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-body" id="aftercare-1" role="region" aria-labelledby="accordion-btn-1">
+              <div class="accordion-inner">
+                <p>
+                  Obwohl moderne UV-Gele unter der LED-Lampe sofort aushärten, benötigt die molekulare Bindung zum
+                  Naturnagel ca. 24 Stunden, um ihre finale Flexibilität zu erreichen. Vermeide am Behandlungstag
+                  Saunagänge, heiße Wannenbäder und längeres Spülen ohne Handschuhe.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="aftercare-2" id="accordion-btn-2">
+              <span class="accordion-number">02</span>
+              <span class="accordion-title">Tägliche Kutikula-Pflege: Der Schlüssel zu 4 Wochen Halt</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-body" id="aftercare-2" role="region" aria-labelledby="accordion-btn-2" hidden>
+              <div class="accordion-inner">
+                <p>
+                  Trage täglich morgens und abends einen Tropfen hochwertiges Jojoba- oder Mandelöl rund um den
+                  Nagelfalz auf und massiere es leicht ein. Das Öl hält die Gel-Schicht elastisch und verhindert
+                  mikroskopische Liftings an den Rändern, während die nachwachsende Nagelmatrix genährt wird.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="aftercare-3" id="accordion-btn-3">
+              <span class="accordion-number">03</span>
+              <span class="accordion-title">Fingernägel sind Juwelen, keine Werkzeuge</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-body" id="aftercare-3" role="region" aria-labelledby="accordion-btn-3" hidden>
+              <div class="accordion-inner">
+                <p>
+                  Öffne Getränkedosen, Pakete oder feste Verschlüsse niemals mit den Nagelspitzen. Die dabei entstehende
+                  Hebelwirkung belastet den sogenannten Stresspunkt des Nagels und kann zu Rissen im Naturnagel führen.
+                  Benutze bei Haushaltsreinigern stets Schutzhandschuhe.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="aftercare-4" id="accordion-btn-4">
+              <span class="accordion-number">04</span>
+              <span class="accordion-title">Niemals selbst abziehen oder abreißen</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-body" id="aftercare-4" role="region" aria-labelledby="accordion-btn-4" hidden>
+              <div class="accordion-inner">
+                <p>
+                  Sollte sich eine Ecke lösen, ziehe das Gel niemals mit den Zähnen oder Fingern ab. Das Gel haftet an
+                  der obersten Keratinschicht deines Nagels — beim Abziehen reißt diese mit ab, was zu dünnen,
+                  schmerzempfindlichen Nägeln führt. Buche stattdessen unseren 15-minütigen schonenden
+                  Express-Entfernungsservice.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="aftercare-5" id="accordion-btn-5">
+              <span class="accordion-number">05</span>
+              <span class="accordion-title">Der empfohlene Auffüll-Rhythmus: 3 bis 4 Wochen</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-body" id="aftercare-5" role="region" aria-labelledby="accordion-btn-5" hidden>
+              <div class="accordion-inner">
+                <p>
+                  Wenn der Naturnagel wächst, wandert der architektonische Schwerpunkt der Modellage nach vorne zur
+                  Spitze. Nach vier Wochen entsteht dadurch eine Hebelkraft bei Stößen. Ein regelmäßiger Refill alle 3
+                  bis 4 Wochen garantiert maximale Festigkeit und ein stets gepflegtes Erscheinungsbild.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. CONTACT + HOURS -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <!-- Contact Details Column -->
+          <div class="contact-info-col">
+            <span class="section-subtitle">Atelier & Öffnungszeiten</span>
+            <h2 class="contact-headline">Besuche uns in Berlin-Mitte</h2>
+            <p class="contact-desc">
+              Gelegen in der ruhigen Linienstraße zwischen Kunstgalerien und Boutiquen. Ein Rückzugsort voller Licht,
+              sanfter Musik und erfrischendem Kräutertee.
+            </p>
+
+            <div class="contact-cards-stack">
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <strong class="info-label">Adresse</strong>
+                  <p class="info-val">Linienstraße 139, 10115 Berlin-Mitte</p>
+                  <span class="info-hint">U6 Oranienburger Tor (3 Min.) · S-Bhf Oranienburger Str.</span>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <strong class="info-label">Öffnungszeiten</strong>
+                  <div class="hours-row">
+                    <span class="day">Dienstag – Freitag:</span>
+                    <strong class="time">10:00 – 20:00 Uhr</strong>
+                  </div>
+                  <div class="hours-row">
+                    <span class="day">Samstag:</span>
+                    <strong class="time">10:00 – 18:00 Uhr</strong>
+                  </div>
+                  <div class="hours-row closed">
+                    <span class="day">Sonntag & Montag:</span>
+                    <span class="time">Geschlossen (Schulungen)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <strong class="info-label">Direktkontakt</strong>
+                  <p class="contact-links-row">
+                    <a href="tel:+498886661234" class="contact-link">+49 888 6661234</a>
+                    <span class="sep">·</span>
+                    <a href="mailto:12234456789@gmail.com" class="contact-link">12234456789@gmail.com</a>
+                  </p>
+                  <p class="telegram-row">
+                    <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="telegram-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      </svg>
+                      Telegram: @rovatt
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Quick Message / Studio Card Column -->
+          <div class="contact-form-col">
+            <div class="studio-ambiance-card">
+              <div class="ambiance-img-wrap">
+                <img src="img/studio-interior.jpg"
+                  alt="Minimalistisches Interieur des Nagelstudios Vela in Berlin-Mitte mit warmem Travertin und Bogen-Design"
+                  width="900" height="600" loading="lazy">
+                <div class="ambiance-overlay">
+                  <span class="ambiance-tag">Atelier Linienstraße</span>
+                  <span class="ambiance-quote">„Ein Ort der Ruhe und des Lichts.“</span>
+                </div>
+              </div>
+
+              <!-- Quick Inquiry Form -->
+              <form class="quick-inquiry-form" id="quickInquiryForm">
+                <h4 class="inquiry-title">Kurze Frage oder Terminwunsch?</h4>
+                <div class="inquiry-fields">
+                  <input type="text" name="inquiryName" placeholder="Dein Name" required>
+                  <input type="email" name="inquiryEmail" placeholder="E-Mail oder Telefon" required>
+                  <textarea name="inquiryMessage" rows="3" placeholder="Deine Nachricht an unser Team..."
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn-primary inquiry-btn" id="btnSendInquiry">
+                  Nachricht senden
+                </button>
+                <div class="inquiry-success-msg" id="inquirySuccess" hidden>
+                  Vielen Dank! Wir melden uns innerhalb von 2 Stunden bei dir.
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">Studio Vela</span>
+          <p class="footer-desc">
+            Signature Nails & Pure Beauty im Scheunenviertel, Berlin-Mitte.<br>
+            Linienstraße 139 · Tel: <a href="tel:+498886661234">+49 888 6661234</a>
+          </p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <span class="col-title">Navigation</span>
+            <a href="#shade-week">Farbe der Woche</a>
+            <a href="#gallery">Design Galerie</a>
+            <a href="#calculator">Preiskalkulator</a>
+            <a href="#team">Unser Team</a>
+          </div>
+          <div class="footer-col">
+            <span class="col-title">Service & Studio</span>
+            <a href="#booking">Termin online buchen</a>
+            <a href="#aftercare">Pflegehinweise</a>
+            <a href="#contact">Öffnungszeiten & Anfahrt</a>
+            <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer">Telegram Chat</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Fiktives Demo-Projekt. Gestaltung: Renat.
+        </p>
+        <div class="footer-legal">
+          <button class="legal-btn" id="btnImpressum">Impressum</button>
+          <span class="sep">·</span>
+          <button class="legal-btn" id="btnDatenschutz">Datenschutz</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Legal Modal (Impressum & Datenschutz) -->
+  <div class="legal-modal" id="legalModal" aria-hidden="true" role="dialog" aria-label="Rechtliche Hinweise">
+    <div class="modal-backdrop" id="legalModalBackdrop"></div>
+    <div class="legal-card">
+      <button class="modal-close" id="legalModalClose" aria-label="Schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="legal-body" id="legalModalBody">
+        <!-- Content injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

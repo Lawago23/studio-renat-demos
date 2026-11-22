@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Döner der Sonne · Kreuzbergs Premium Döner am Kottbusser Tor</title>
+  <meta name="description" content="100% Schichtfleisch ohne Hack, hausgemachte Marinaden, ofenfrisches Sesam-Fladenbrot und Berliner Nacht-Kultur am Kotti. Täglich frisch gesteckt.">
+  <meta name="theme-color" content="#161616">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Döner der Sonne · Kreuzbergs Premium Döner">
+  <meta property="og:description" content="100% Scheibenfleisch, eigenes Steinofenbrot, 24h Marinade. Legendärer Döner in Berlin-Kreuzberg am Kottbusser Tor.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="assets/img/doner_kebab-960.jpg">
+
+  <!-- Google Fonts: Archivo Black + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23F5B700'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23161616'/%3E%3Cpath d='M16 4v4M16 24v4M4 16h4M24 16h4M7.5 7.5l2.8 2.8M21.7 21.7l2.8 2.8M7.5 24.5l2.8-2.8M21.7 10.3l2.8-2.8' stroke='%23F5B700' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NOTICE BAR (Renat Demo Notice)
+       ======================================================================== -->
+  <div id="top-notice-bar" class="top-notice-bar" role="region" aria-label="Hinweis zum Demoprojekt">
+    <div class="top-notice-bar__inner">
+      <div class="top-notice-bar__text">
+        <strong>Demo-Projekt von Renat</strong> · Alle Angaben auf dieser Seite sind fiktiv.
+      </div>
+      <button id="close-notice-btn" class="top-notice-bar__close" aria-label="Hinweisleiste schließen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SITE HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#hero" class="logo" aria-label="Döner der Sonne Startseite">
+        <svg class="logo-sun" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="13" fill="#F5B700"/>
+          <circle cx="22" cy="22" r="8" fill="#161616"/>
+          <path d="M22 2V6M22 38V42M2 22H6M38 22H42M7.8 7.8L10.6 10.6M33.4 33.4L36.2 36.2M7.8 36.2L10.6 33.4M33.4 10.6L36.2 7.8" stroke="#F5B700" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text-group">
+          <span class="logo-title">DÖNER DER <span>SONNE</span></span>
+          <span class="logo-sub">KREUZBERG 36 · KOTTI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#builder" class="nav-link">Baukasten</a>
+        <a href="#menu" class="nav-link">Speisekarte</a>
+        <a href="#spiess" class="nav-link">Der Spieß</a>
+        <a href="#hours" class="nav-link">Zeiten</a>
+        <a href="#contact" class="nav-link">Kontakt</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <!-- Live Status Pill -->
+        <div id="live-status-pill" class="live-status-pill" title="Aktueller Öffnungsstatus">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="live-status-pill-text">Jetzt geöffnet</span>
+        </div>
+
+        <!-- Phone Direct -->
+        <a href="tel:+498886661234" class="btn btn-outline" style="display: none; padding: 8px 14px; font-size: 0.8125rem;" id="header-phone-link" aria-label="Telefonisch anrufen">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Anrufen</span>
+        </a>
+
+        <!-- Cart Button -->
+        <button id="cart-trigger-btn" class="cart-trigger-btn" aria-label="Warenkorb öffnen">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count-badge">1</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobiles Navigationsmenü">
+    <a href="#hero" class="nav-link">1. Montage & Hero</a>
+    <a href="#builder" class="nav-link">2. Baukasten</a>
+    <a href="#menu" class="nav-link">3. Speisekarte</a>
+    <a href="#spiess" class="nav-link">4. Der Spieß</a>
+    <a href="#hours" class="nav-link">5. Öffnungszeiten</a>
+    <a href="#delivery" class="nav-link">6. Liefergebiet</a>
+    <a href="#reviews" class="nav-link">7. Kiez-Stimmen</a>
+    <a href="#contact" class="nav-link">8. Kontakt & Bestellen</a>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+      <a href="tel:+498886661234" class="btn btn-primary" style="width: 100%;">
+        Telefon: +49 888 6661234
+      </a>
+      <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
+        Telegram: @rovatt
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO: LAYERED DÖNER ASSEMBLY & STEAM PARTICLES
+         ====================================================================== -->
+    <section id="hero" class="hero-scroll-wrapper">
+      <div class="hero-sticky-frame">
+        <div class="container hero-content-grid">
+          
+          <!-- Left Column: Typography & Step Tracker -->
+          <div class="hero-text-col">
+            <div class="hero-location-badge">
+              <span class="status-dot" style="background-color: var(--sun-yellow);" aria-hidden="true"></span>
+              Kreuzberg 36 · U Kottbusser Tor
+            </div>
+
+            <h1 class="hero-title">
+              DER DÖNER, DER DIE <span class="highlight-yellow">SONNE</span> BRINGT.
+            </h1>
+
+            <p class="hero-description">
+              Täglich von Hand geschichtet. Kein billiges Hackfleisch. 24 Stunden gereifte Kräutermarinade und im Steinofen frisch gebackenes Sesam-Fladenbrot. Erlebe jede Schicht beim Scrollen.
+            </p>
+
+            <!-- Dynamic Assembly Step Card -->
+            <div class="assembly-step-card" id="assembly-step-card" aria-live="polite">
+              <div class="step-card-meta">
+                <span class="step-card-num" id="step-card-num">01 / 06</span>
+                <span class="step-card-indicator">Schicht im Fokus</span>
+              </div>
+              <div class="step-card-name" id="step-card-name">Steinofen-Fladenbrot</div>
+              <div class="step-card-desc" id="step-card-desc">Frisch gebacken mit goldbrauner Kruste, Sesam und Schwarzkümmel.</div>
+            </div>
+
+            <!-- Scrubber Pills -->
+            <div class="assembly-pills-row" aria-label="Schichten direkt ansteuern">
+              <button class="pill-step-btn is-active" data-step="0">1. Brot</button>
+              <button class="pill-step-btn" data-step="1">2. Sauce</button>
+              <button class="pill-step-btn" data-step="2">3. Fleisch</button>
+              <button class="pill-step-btn" data-step="3">4. Salat</button>
+              <button class="pill-step-btn" data-step="4">5. Extras</button>
+              <button class="pill-step-btn" data-step="5">6. Deckel</button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hero-btn-group" style="margin-top: 24px;">
+              <a href="#builder" class="btn btn-primary">
+                Döner selbst bauen
+              </a>
+              <a href="#menu" class="btn btn-outline">
+                Speisekarte
+              </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="hero-scroll-hint" aria-hidden="true">
+              <span>Scrollen zum Zusammenbauen</span>
+              <div class="scroll-hint-bar">
+                <div class="scroll-hint-fill" id="scroll-hint-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Layered Döner Assembly & Steam Canvas -->
+          <div class="hero-stage-col" aria-hidden="true">
+            <div class="doner-assembly-viewport">
+              
+              <!-- Steam Canvas Effect -->
+              <canvas id="steam-canvas" width="460" height="440"></canvas>
+
+              <!-- Radial Assembled Glow -->
+              <div class="assembly-glow" id="assembly-glow"></div>
+
+              <!-- Döner Assembly Layers -->
+              <div class="doner-layer-stack" id="doner-layer-stack">
+
+                <!-- 1. Bottom Bread Layer -->
+                <div class="doner-layer layer-bottom-bread" id="layer-bottom-bread">
+                  <svg viewBox="0 0 380 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="breadGradBottom" x1="50%" y1="0%" x2="50%" y2="100%">
+                        <stop offset="0%" stop-color="#E59B3C"/>
+                        <stop offset="60%" stop-color="#C27A23"/>
+                        <stop offset="100%" stop-color="#7C470E"/>
+                      </linearGradient>
+                      <filter id="breadShadow" x="-10%" y="-10%" width="130%" height="130%">
+                        <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.6"/>
+                      </filter>
+                    </defs>
+                    <!-- Bottom Bread Crust Contour -->
+                    <path d="M20 90 C 70 145, 310 145, 360 90 C 375 75, 350 50, 190 45 C 30 50, 5 75, 20 90 Z" fill="url(#breadGradBottom)" filter="url(#breadShadow)"/>
+                    <path d="M40 85 C 90 120, 290 120, 340 85 C 330 65, 260 55, 190 55 C 120 55, 50 65, 40 85 Z" fill="#F4CF96" opacity="0.9"/>
+                    <!-- Baked Sesame & Nigella Seeds -->
+                    <circle cx="80" cy="95" r="3" fill="#FFECCC"/><circle cx="83" cy="97" r="2" fill="#1C140A"/>
+                    <circle cx="140" cy="108" r="3" fill="#FFECCC"/><circle cx="143" cy="110" r="2.5" fill="#1C140A"/>
+                    <circle cx="210" cy="112" r="3" fill="#FFECCC"/><circle cx="213" cy="114" r="2" fill="#1C140A"/>
+                    <circle cx="280" cy="102" r="3" fill="#FFECCC"/><circle cx="283" cy="104" r="2.5" fill="#1C140A"/>
+                    <circle cx="180" cy="98" r="3.5" fill="#FFECCC"/>
+                    <circle cx="250" cy="94" r="3" fill="#FFECCC"/>
+                  </svg>
+                </div>
+
+                <!-- 2. Sauce Foundation Layer -->
+                <div class="doner-layer layer-sauce" id="layer-sauce">
+                  <svg viewBox="0 0 380 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Creamy Garlic-Herb Waves -->
+                    <path d="M50 70 C 80 50, 110 85, 150 65 C 190 45, 230 80, 280 60 C 320 45, 340 75, 330 85 C 290 105, 230 95, 180 105 C 120 115, 70 95, 50 70 Z" fill="#F7F5EE" opacity="0.95"/>
+                    <!-- Tahini Gold Ripples -->
+                    <path d="M75 75 C 120 60, 160 80, 210 70 C 260 60, 295 78, 310 82" stroke="#CCA056" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+                    <!-- Chopped Herbs -->
+                    <circle cx="95" cy="72" r="2" fill="#2E7D32"/>
+                    <circle cx="130" cy="65" r="2.5" fill="#1B5E20"/>
+                    <circle cx="165" cy="78" r="2" fill="#2E7D32"/>
+                    <circle cx="225" cy="68" r="2.5" fill="#1B5E20"/>
+                    <circle cx="270" cy="75" r="2" fill="#2E7D32"/>
+                  </svg>
+                </div>
+
+                <!-- 3. Meat Layer (100% Yaprak Veal Slices) -->
+                <div class="doner-layer layer-meat" id="layer-meat">
+                  <svg viewBox="0 0 380 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="meatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#542813"/>
+                        <stop offset="35%" stop-color="#874720"/>
+                        <stop offset="70%" stop-color="#A85929"/>
+                        <stop offset="100%" stop-color="#3D1807"/>
+                      </linearGradient>
+                    </defs>
+                    <!-- Layered Roasted Slices with Charred Crispy Edges -->
+                    <path d="M40 75 Q 70 50 110 65 Q 150 80 180 60 Q 220 40 260 65 Q 310 50 340 75 Q 310 110 260 95 Q 210 115 170 100 Q 110 115 70 95 Q 40 85 40 75 Z" fill="url(#meatGrad)"/>
+                    <!-- Distinct shaved ribbons -->
+                    <path d="M60 70 C 90 55, 130 85, 170 70" stroke="#2B1004" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M165 72 C 205 55, 245 80, 290 65" stroke="#2B1004" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M90 85 C 130 70, 180 95, 230 80" stroke="#FFBF75" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                    <path d="M210 85 C 250 72, 280 90, 315 80" stroke="#2B1004" stroke-width="4.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <!-- 4. Fresh Salad & Herbs Layer -->
+                <div class="doner-layer layer-salad" id="layer-salad">
+                  <svg viewBox="0 0 380 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Red Cabbage Ribbons -->
+                    <path d="M55 60 Q 75 40 100 65 Q 120 90 145 65" stroke="#7A1D54" stroke-width="7" stroke-linecap="round"/>
+                    <path d="M220 55 Q 245 35 270 60 Q 295 85 320 60" stroke="#8E2463" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M130 75 Q 160 50 190 70 Q 210 85 235 65" stroke="#681545" stroke-width="7" stroke-linecap="round"/>
+                    <!-- Crisp Green Iceberg / Romaine Lettuce -->
+                    <path d="M70 50 Q 95 30 120 50 Q 140 70 165 45 Q 190 25 215 50 Q 245 30 275 55 Q 300 40 325 55" fill="#4CAF50" opacity="0.9"/>
+                    <!-- Ripe Red Tomatoes -->
+                    <circle cx="115" cy="52" r="14" fill="#D7263D"/>
+                    <circle cx="255" cy="48" r="15" fill="#D7263D"/>
+                    <circle cx="185" cy="42" r="13" fill="#D7263D"/>
+                    <!-- Cucumber Ribbons -->
+                    <ellipse cx="145" cy="48" rx="16" ry="7" fill="#81C784" stroke="#2E7D32" stroke-width="2" transform="rotate(-15 145 48)"/>
+                    <ellipse cx="225" cy="46" rx="16" ry="7" fill="#81C784" stroke="#2E7D32" stroke-width="2" transform="rotate(20 225 46)"/>
+                    <!-- Sumac Red Onions -->
+                    <path d="M85 45 Q 105 25 130 45" stroke="#A83279" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M260 40 Q 280 20 305 40" stroke="#A83279" stroke-width="4" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <!-- 5. Extras, Feta & Harissa Layer -->
+                <div class="doner-layer layer-extras" id="layer-extras">
+                  <svg viewBox="0 0 380 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Feta / Hirtenkäse Cubes -->
+                    <rect x="90" y="42" width="16" height="15" rx="3" fill="#FFFDF8" stroke="#E6E0D2" stroke-width="1.5" transform="rotate(12 90 42)"/>
+                    <rect x="165" y="32" width="18" height="17" rx="3" fill="#FFFDF8" stroke="#E6E0D2" stroke-width="1.5" transform="rotate(-8 165 32)"/>
+                    <rect x="245" y="36" width="17" height="16" rx="3" fill="#FFFDF8" stroke="#E6E0D2" stroke-width="1.5" transform="rotate(18 245 36)"/>
+                    <!-- Grilled Zucchini & Pepper strips -->
+                    <path d="M125 35 Q 145 25 160 40" stroke="#E65100" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M205 32 Q 225 22 240 38" stroke="#33691E" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Spicy Harissa Chili Drizzle -->
+                    <path d="M80 50 Q 120 20 160 45 Q 200 15 240 40 Q 280 15 310 45" stroke="#D7263D" stroke-width="5" stroke-linecap="round"/>
+                    <circle cx="105" cy="46" r="3" fill="#D7263D"/>
+                    <circle cx="190" cy="38" r="3.5" fill="#D7263D"/>
+                    <circle cx="280" cy="42" r="3" fill="#D7263D"/>
+                  </svg>
+                </div>
+
+                <!-- 6. Top Bread Lid Layer -->
+                <div class="doner-layer layer-top-bread" id="layer-top-bread">
+                  <svg viewBox="0 0 380 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="breadGradTop" x1="50%" y1="0%" x2="50%" y2="100%">
+                        <stop offset="0%" stop-color="#F2AE4E"/>
+                        <stop offset="50%" stop-color="#D98A28"/>
+                        <stop offset="100%" stop-color="#995813"/>
+                      </linearGradient>
+                      <filter id="topBreadShadow" x="-10%" y="-10%" width="130%" height="130%">
+                        <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#000" flood-opacity="0.5"/>
+                      </filter>
+                    </defs>
+                    <!-- Golden Puffed Bread Wedge Lid -->
+                    <path d="M30 110 C 60 40, 320 40, 350 110 C 360 135, 330 145, 190 148 C 50 145, 20 135, 30 110 Z" fill="url(#breadGradTop)" filter="url(#topBreadShadow)"/>
+                    <!-- Surface highlights & crust cuts -->
+                    <path d="M60 95 C 100 65, 170 55, 230 60 C 290 65, 320 85, 335 105" stroke="#FCE0B6" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M110 80 Q 190 70 270 80" stroke="#87470E" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+                    <!-- Baked Sesame & Nigella Seeds on Top -->
+                    <circle cx="95" cy="88" r="3.5" fill="#FFF2DC"/><circle cx="98" cy="90" r="2.5" fill="#1A1208"/>
+                    <circle cx="150" cy="72" r="3.5" fill="#FFF2DC"/><circle cx="153" cy="74" r="2.5" fill="#1A1208"/>
+                    <circle cx="205" cy="68" r="4" fill="#FFF2DC"/><circle cx="209" cy="70" r="2.8" fill="#1A1208"/>
+                    <circle cx="260" cy="75" r="3.5" fill="#FFF2DC"/><circle cx="263" cy="77" r="2.5" fill="#1A1208"/>
+                    <circle cx="305" cy="95" r="3.5" fill="#FFF2DC"/><circle cx="308" cy="97" r="2.5" fill="#1A1208"/>
+                    <circle cx="175" cy="85" r="3" fill="#FFF2DC"/>
+                    <circle cx="235" cy="88" r="3" fill="#FFF2DC"/>
+                    <circle cx="125" cy="98" r="2.5" fill="#1A1208"/>
+                    <circle cx="250" cy="100" r="2.5" fill="#1A1208"/>
+                  </svg>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. "BAU DIR DEINEN DÖNER" (Interactive Builder)
+         ====================================================================== -->
+    <section id="builder" class="builder-section">
+      <div class="container">
+        
+        <div class="section-head text-center" style="text-align: center; max-width: 720px; margin: 0 auto;">
+          <span class="section-eyebrow">Individuelles Kiez-Handwerk</span>
+          <h2 class="section-title">BAU DIR DEINEN DÖNER</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Wähle dein ofenfrisches Brot, saftiges Fleisch oder vegane Basis, hausgemachte Saucen und feine Extras. Der Preis und die Vorschau aktualisieren sich in Echtzeit.
+          </p>
+        </div>
+
+        <div class="builder-layout">
+          
+          <!-- Options Column -->
+          <div class="builder-controls-col">
+            
+            <!-- 1. Brot Type -->
+            <div class="builder-group">
+              <div class="builder-group-title">
+                <span>1. Brot-Variante</span>
+                <span class="builder-group-tag">Einfachauswahl</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card is-selected" data-type="bread" data-name="Klassisches Sesam-Fladenbrot" data-price="0.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Klassisches Fladenbrot</span>
+                    <span class="option-price">inklusive</span>
+                  </div>
+                  <p class="option-desc">Frisch aus dem Steinofen mit Sesam & Schwarzkümmel.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="bread" data-name="Dürüm (Dünnes Lavash)" data-price="0.50" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Dürüm (Lavash)</span>
+                    <span class="option-price">+0,50 €</span>
+                  </div>
+                  <p class="option-desc">Hauchdünner Teigfladen, vor deinen Augen gerollt.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="bread" data-name="Vollkorn-Dinkelbrot" data-price="0.50" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Vollkorn-Dinkelbrot</span>
+                    <span class="option-price">+0,50 €</span>
+                  </div>
+                  <p class="option-desc">Kräftig-nussige Krume, reich an Ballaststoffen.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="bread" data-name="Döner-Box (Ohne Brot)" data-price="0.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Döner-Box</span>
+                    <span class="option-price">inklusive</span>
+                  </div>
+                  <p class="option-desc">Kompakt auf krossen Pommes frites oder Marktsalat.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Fleisch / Basis -->
+            <div class="builder-group">
+              <div class="builder-group-title">
+                <span>2. Fleisch & Proteine</span>
+                <span class="builder-group-tag">Einfachauswahl</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card is-selected" data-type="meat" data-name="100% Kalb-Schichtfleisch (Yaprak)" data-price="8.50" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">100% Kalb-Yaprak</span>
+                    <span class="option-price">8,50 € Basis</span>
+                  </div>
+                  <p class="option-desc">Reines Scheibenfleisch ohne Hack, saftig und zart.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="meat" data-name="Kräuter-Maishähnchen" data-price="8.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Kräuter-Maishähnchen</span>
+                    <span class="option-price">8,00 € Basis</span>
+                  </div>
+                  <p class="option-desc">Zartes Geflügel mit Zitronen-Rosmarin-Marinade.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="meat" data-name="Gemischter Spieß (Kalb & Huhn)" data-price="8.50" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Mix Spieß (Kalb/Huhn)</span>
+                    <span class="option-price">8,50 € Basis</span>
+                  </div>
+                  <p class="option-desc">Das Beste aus beiden Welten auf einem Brot.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="meat" data-name="Bio-Seitan Kebab (Vegan)" data-price="8.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Bio-Seitan (Vegan)</span>
+                    <span class="option-price">8,00 € Basis</span>
+                  </div>
+                  <p class="option-desc">Würzig gebratener Weizenkeim-Schnitt mit Grillgemüse.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="meat" data-name="Hausgemachte Falafel (Vegan)" data-price="7.50" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Falafel (Vegan)</span>
+                    <span class="option-price">7,50 € Basis</span>
+                  </div>
+                  <p class="option-desc">4 frittierte Kichererbsen-Kräuter-Bällchen.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Saucen -->
+            <div class="builder-group">
+              <div class="builder-group-title">
+                <span>3. Hausgemachte Saucen</span>
+                <span class="builder-group-tag">Bis zu 3 wählen</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card is-selected" data-type="sauce" data-name="Hausgemachte Knoblauch-Kräuter" data-price="0.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Knoblauch-Kräuter</span>
+                    <span class="option-price">inklusive</span>
+                  </div>
+                  <p class="option-desc">Cremiger Joghurt, frischer Dill, Petersilie & Knoblauch.</p>
+                </div>
+
+                <div class="builder-option-card is-selected" data-type="sauce" data-name="Feurige Harissa-Chilisauce" data-price="0.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Scharfe Harissa-Chili</span>
+                    <span class="option-price">inklusive</span>
+                  </div>
+                  <p class="option-desc">Eingekochte Paprikapaste mit Kreuzkümmel & Chili.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="sauce" data-name="Samtige Sesam-Tahini" data-price="0.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Sesam-Tahini</span>
+                    <span class="option-price">inklusive</span>
+                  </div>
+                  <p class="option-desc">Nussig, samtweich und leicht mit Zitrone verfeinert.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="sauce" data-name="Erfrischende Joghurt-Minze" data-price="0.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Joghurt-Minze</span>
+                    <span class="option-price">inklusive</span>
+                  </div>
+                  <p class="option-desc">Kühlend, mild und perfekt zu gegrilltem Fleisch.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="sauce" data-name="Vegane Kräuter-Creme" data-price="0.50" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Vegane Kräuter-Creme</span>
+                    <span class="option-price">+0,50 €</span>
+                  </div>
+                  <p class="option-desc">Reine Pflanzenbasis aus Bio-Hafer und Bergkräutern.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Extras & Toppings -->
+            <div class="builder-group">
+              <div class="builder-group-title">
+                <span>4. Extras & Toppings</span>
+                <span class="builder-group-tag">Mehrfachauswahl</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card is-selected" data-type="extra" data-name="Echter Hirtenkäse" data-price="1.00" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Echter Hirtenkäse</span>
+                    <span class="option-price">+1,00 €</span>
+                  </div>
+                  <p class="option-desc">Cremig, leicht salzig, aus Kuh- & Schafsmilch.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="extra" data-name="Gegrillte Zucchini & Paprika" data-price="1.20" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Gegrilltes Gemüse</span>
+                    <span class="option-price">+1,20 €</span>
+                  </div>
+                  <p class="option-desc">In Olivenöl geschmorte Zucchini und Paprikastreifen.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="extra" data-name="Eingelegte Jalapeños" data-price="0.80" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Jalapeños (Feurig)</span>
+                    <span class="option-price">+0,80 €</span>
+                  </div>
+                  <p class="option-desc">Knackig-scharfe Scheiben für echten Biss.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="extra" data-name="Granatapfelkerne & Sumach" data-price="0.80" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Granatapfel & Sumach</span>
+                    <span class="option-price">+0,80 €</span>
+                  </div>
+                  <p class="option-desc">Fruchtig-herbe Frische nach levantinischer Art.</p>
+                </div>
+
+                <div class="builder-option-card" data-type="extra" data-name="Extra Fleisch-Portion" data-price="2.50" tabindex="0" role="button">
+                  <div class="option-head">
+                    <span class="option-name">Extra Fleisch (+50%)</span>
+                    <span class="option-price">+2,50 €</span>
+                  </div>
+                  <p class="option-desc">Für den großen Kreuzberger Bärenhunger.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sticky Live Preview Card -->
+          <div class="builder-preview-col">
+            <div class="builder-preview-sticky">
+              <div class="builder-summary-card">
+                
+                <div class="summary-card-header">
+                  <span class="summary-card-title">DEINE KREATION</span>
+                  <span class="live-price-tag" id="builder-live-price">9,50 €</span>
+                </div>
+
+                <!-- Dynamic Photo Display -->
+                <div class="builder-photo-display">
+                  <img id="builder-photo-img" class="builder-photo-img" src="assets/img/doner_kebab-960.jpg" srcset="assets/img/doner_kebab-500.jpg 500w, assets/img/doner_kebab-960.jpg 960w" sizes="(max-width: 768px) 100vw, 420px" alt="Vorschau des konfigurierten Döners" width="480" height="300" loading="lazy">
+                  <div class="builder-photo-badge" id="builder-photo-badge">Döner im Steinofenbrot</div>
+                </div>
+
+                <!-- Recipe Breakdown -->
+                <div class="builder-recipe-list">
+                  <div class="recipe-row">
+                    <span class="recipe-label">Brot:</span>
+                    <span class="recipe-value" id="recipe-bread-val">Klassisches Sesam-Fladenbrot</span>
+                  </div>
+                  <div class="recipe-row">
+                    <span class="recipe-label">Fleisch/Basis:</span>
+                    <span class="recipe-value" id="recipe-meat-val">100% Kalb-Schichtfleisch (Yaprak)</span>
+                  </div>
+                  <div class="recipe-row">
+                    <span class="recipe-label">Saucen:</span>
+                    <span class="recipe-value" id="recipe-sauces-val">Knoblauch-Kräuter, Harissa-Chili</span>
+                  </div>
+                  <div class="recipe-row">
+                    <span class="recipe-label">Extras:</span>
+                    <span class="recipe-value" id="recipe-extras-val">Echter Hirtenkäse</span>
+                  </div>
+                </div>
+
+                <!-- Add to cart CTA -->
+                <button type="button" id="btn-builder-add" class="btn btn-primary btn-builder-add">
+                  Diesen Döner in den Warenkorb (9,50 €)
+                </button>
+
+                <p style="font-size: 0.75rem; color: var(--warm-muted); text-align: center; margin-top: 12px;">
+                  Vor deinen Augen frisch zubereitet · Abholung oder Express-Lieferung
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. SPEISEKARTE (Menu Grid with Category Filters)
+         ====================================================================== -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        
+        <div class="menu-header-row">
+          <div>
+            <span class="section-eyebrow">Frisch aus unserer Kiez-Küche</span>
+            <h2 class="section-title">UNSERE SPEISEKARTE</h2>
+            <p class="section-subtitle">
+              Alle Gerichte werden mit täglich frisch gebackenem Brot, ausgewählten Zutaten und unseren Geheimrezept-Saucen serviert.
+            </p>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="menu-filters-wrapper" role="tablist" aria-label="Menükategorien filtern">
+            <button class="menu-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Alle</button>
+            <button class="menu-filter-btn" data-filter="doner" role="tab" aria-selected="false">Döner</button>
+            <button class="menu-filter-btn" data-filter="durum" role="tab" aria-selected="false">Dürüm</button>
+            <button class="menu-filter-btn" data-filter="teller" role="tab" aria-selected="false">Teller</button>
+            <button class="menu-filter-btn" data-filter="vegan" role="tab" aria-selected="false">Vegan</button>
+            <button class="menu-filter-btn" data-filter="drinks" role="tab" aria-selected="false">Getränke & Beilagen</button>
+          </div>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-grid" id="menu-grid">
+          
+          <!-- Item 1: Sonne Klassik Kalb (Döner) -->
+          <article class="menu-card" data-category="doner">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/doner_kebab-960.jpg" srcset="assets/img/doner_kebab-500.jpg 500w, assets/img/doner_kebab-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Sonne Klassik Kalb Döner im Fladenbrot" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Bestseller</span>
+              <span class="menu-card-badge">8,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Sonne Klassik Kalb</h3>
+              <p class="menu-card-desc">
+                100% zartes Kalb-Schichtfleisch (kein Hack), knackiger Rotkohl, Eisbergsalat, Tomaten, Gurken, Sumach-Zwiebeln und Knoblauch-Kräutersauce im krossen Steinofenbrot.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, C, G, K</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Sonne Chicken Crunch (Döner) -->
+          <article class="menu-card" data-category="doner">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/photo-f151565046-960.jpg" srcset="assets/img/photo-f151565046-500.jpg 500w, assets/img/photo-f151565046-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Sonne Chicken Crunch Döner" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Kräuter-Note</span>
+              <span class="menu-card-badge">8,00 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Sonne Chicken Crunch</h3>
+              <p class="menu-card-desc">
+                Zart gegrilltes Maishähnchen vom Spieß, geröstetes Sommergemüse, frische Minze, Petersilie, Spritzer frische Zitrone und feurige Harissa-Sauce.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, G, K</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Kotti Spezial Döner (Döner) -->
+          <article class="menu-card" data-category="doner">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/doner_kebab-960.jpg" srcset="assets/img/doner_kebab-500.jpg 500w, assets/img/doner_kebab-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Kotti Spezial Döner mit Hirtenkäse" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Chef-Empfehlung</span>
+              <span class="menu-card-badge">10,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Kotti Spezial Döner</h3>
+              <p class="menu-card-desc">
+                Doppelte Portion Kalbfleisch, cremiger Hirtenkäse, gebratene Auberginen, Granatapfelkerne, Knoblauch-Tahini und feurige rote Chilisauce.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, G, K</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Döner Box mit Pommes (Döner) -->
+          <article class="menu-card" data-category="doner">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/doner_box-960.jpg" srcset="assets/img/doner_box-500.jpg 500w, assets/img/doner_box-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Döner Box mit Pommes frites und Kalbfleisch" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">To-Go Favorit</span>
+              <span class="menu-card-badge">7,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Döner Box mit Pommes</h3>
+              <p class="menu-card-desc">
+                Knusprige goldgelbe Pommes frites belegt mit saftigem Kalb- oder Hähnchenfleisch und deiner Lieblingssauce in der praktischen Box für unterwegs.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: C, G</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Dürüm Yaprak Deluxe (Dürüm) -->
+          <article class="menu-card" data-category="durum">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/durum_doner-960.jpg" srcset="assets/img/durum_doner-500.jpg 500w, assets/img/durum_doner-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Dürüm Yaprak Deluxe gerollt" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Handgerollt</span>
+              <span class="menu-card-badge">9,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Dürüm Yaprak Deluxe</h3>
+              <p class="menu-card-desc">
+                Hauchdünnes, handgezogenes Lavash-Brot, frisch gerollt mit 100% Kalbsfleisch, knackigem Marktsalat, frischen Kräutern und cremiger Knoblauch-Tahini.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, G, K</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Halloumi Dürüm (Dürüm) -->
+          <article class="menu-card" data-category="durum">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/halloumi_durum-960.jpg" srcset="assets/img/halloumi_durum-500.jpg 500w, assets/img/halloumi_durum-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Halloumi Dürüm frisch gerollt" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Vegetarisch</span>
+              <span class="menu-card-badge">8,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Halloumi Dürüm Kiez-Style</h3>
+              <p class="menu-card-desc">
+                Goldbraun gegrillter zypriotischer Halloumi, geröstetes Gemüse, frische Minzblätter, Gurken, Strauchtomaten und erfrischende Joghurt-Kräutersauce.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, G</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Großer Sonne Teller (Teller) -->
+          <article class="menu-card" data-category="teller">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/donerteller-960.jpg" srcset="assets/img/donerteller-500.jpg 500w, assets/img/donerteller-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Großer Sonne Döner Teller mit Pommes und Salat" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Großer Hunger</span>
+              <span class="menu-card-badge">13,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Großer Sonne Teller</h3>
+              <p class="menu-card-desc">
+                Reichlich Kalbs- oder Hähnchenfleisch, krosse Pommes frites oder duftender Reis, bunter Salat, zwei Saucen nach Wahl und ein warmes Viertel-Fladenbrot.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, C, G, K</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Iskender Kebab Berlin (Teller) -->
+          <article class="menu-card" data-category="teller">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/photo-f127138438-960.jpg" srcset="assets/img/photo-f127138438-500.jpg 500w, assets/img/photo-f127138438-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Iskender Kebab Teller mit Tomatensauce und Joghurt" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Traditionell</span>
+              <span class="menu-card-badge">14,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Iskender Kebab Berlin</h3>
+              <p class="menu-card-desc">
+                Zartes Kalb-Scheibenfleisch auf gerösteten Fladenbrotwürfeln, übergossen mit heißer Butter- und Tomatensauce, serviert mit kühlem Stichfestem Joghurt.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, G</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: Falafel Sonne Sandwich (Vegan) -->
+          <article class="menu-card" data-category="vegan">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/falafel-960.jpg" srcset="assets/img/falafel-500.jpg 500w, assets/img/falafel-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Falafel Sonne Sandwich vegan" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">100% Vegan</span>
+              <span class="menu-card-badge">7,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Falafel Sonne Sandwich</h3>
+              <p class="menu-card-desc">
+                Hausgemachte knusprige Kichererbsen-Falafel nach Kreuzberger Familienrezept, samtiges Hummus, Tahini, knackiger Rotkohl, Gurken und frische Petersilie.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, K</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 10: Veganer Sonne Bowl (Vegan) -->
+          <article class="menu-card" data-category="vegan">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/salat_falafelbowl-960.jpg" srcset="assets/img/salat_falafelbowl-500.jpg 500w, assets/img/salat_falafelbowl-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Veganer Sonne Bowl mit Falafel und Hummus" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Vegan Bowl</span>
+              <span class="menu-card-badge">8,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Veganer Sonne Bowl</h3>
+              <p class="menu-card-desc">
+                Falafel, würziger Seitan vom Grill, geröstetes Sommergemüse, cremiges Kichererbsen-Hummus, Granatapfelkerne, Quinoa und hausgemachte Tahini-Zitronen-Sauce.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, K</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 11: Knusprige Kiez-Pommes (Drinks & Sides) -->
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/photo-f119348581-960.jpg" srcset="assets/img/photo-f119348581-500.jpg 500w, assets/img/photo-f119348581-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Knusprige Pommes frites" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Beilage</span>
+              <span class="menu-card-badge">4,00 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Knusprige Kiez-Pommes</h3>
+              <p class="menu-card-desc">
+                Doppelt frittierte goldbraune Pommes frites aus regionalen Kartoffeln, gewürzt mit Meersalz und feinem Paprikapulver, serviert mit Sauce nach Wahl.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: keine</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 12: Hausgemachtes Baklava (Drinks & Sides) -->
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/dessert_baklava-960.jpg" srcset="assets/img/dessert_baklava-500.jpg 500w, assets/img/dessert_baklava-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Hausgemachtes Pistazien-Baklava" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Dessert</span>
+              <span class="menu-card-badge">4,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Pistazien-Baklava (3 Stk.)</h3>
+              <p class="menu-card-desc">
+                Knusprig hauchdünne Teigschichten gefüllt mit aromatischen Antep-Pistazien, feiner Butter und leichtem Zuckersirup nach alter Bäckertradition.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: A, G, H</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 13: Original Ayran (Drinks & Sides) -->
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/getraenk_ayran-960.jpg" srcset="assets/img/getraenk_ayran-500.jpg 500w, assets/img/getraenk_ayran-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Original gekühlter Ayran Joghurt Drink" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Erfrischung</span>
+              <span class="menu-card-badge">2,00 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Original Ayran (0,25 l)</h3>
+              <p class="menu-card-desc">
+                Traditioneller gekühlter Joghurt-Drink, cremig aufgeschlagen, leicht gesalzen – der perfekte Ausgleich zur feurigen Chilisauce.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Allergene: G</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 14: Uludağ Gazoz (Drinks & Sides) -->
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/getraenk_uludag-960.jpg" srcset="assets/img/getraenk_uludag-500.jpg 500w, assets/img/getraenk_uludag-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Uludag Gazoz Limonade Dose" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Klassiker</span>
+              <span class="menu-card-badge">2,50 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Uludağ Gazoz (0,33 l)</h3>
+              <p class="menu-card-desc">
+                Legendäre prickelnde Limonade aus der Türkei mit dem unverwechselbaren fruchtig-süßen Aroma. Eiskalt serviert.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Koffeinfrei</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 15: Fritz-Kola (Drinks & Sides) -->
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img class="menu-card-img" src="assets/img/getraenk_fritz-960.jpg" srcset="assets/img/getraenk_fritz-500.jpg 500w, assets/img/getraenk_fritz-960.jpg 960w" sizes="(max-width: 600px) 100vw, 360px" alt="Fritz-Kola Glasflasche" width="480" height="330" loading="lazy">
+              <span class="menu-card-tag">Kiez-Kult</span>
+              <span class="menu-card-badge">3,00 €</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Fritz-Kola (0,33 l)</h3>
+              <p class="menu-card-desc">
+                Original Berliner Späti- und Club-Liebling mit echtem Kolanussextrakt und natürlichem Koffein. Erhältlich in Kola oder Mischmasch.
+              </p>
+              <div class="menu-card-meta">
+                <span class="menu-card-allergens">Enthält Koffein</span>
+                <button type="button" class="btn btn-primary btn-card-order">Bestellen</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. "DER SPIESS": STORY OF THE MEAT & BIG NUMBERS
+         ====================================================================== -->
+    <section id="spiess" class="spiess-section">
+      <div class="container">
+        
+        <div class="spiess-grid">
+          
+          <!-- Image Box -->
+          <div class="spiess-visual-box">
+            <img class="spiess-img" src="assets/img/spiess_rotisserie-960.jpg" srcset="assets/img/spiess_rotisserie-500.jpg 500w, assets/img/spiess_rotisserie-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 560px" alt="Artisanaler Kalb-Döner-Spieß am vertikalen Grill" width="960" height="720" loading="lazy">
+            <div class="spiess-heat-badge">
+              <svg class="heat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+              </svg>
+              <div>
+                <div class="heat-text-title">450°C KERAMIK-GRILL</div>
+                <div class="heat-text-sub">Kross karamellisierte Tranchen</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Text & Stats -->
+          <div class="spiess-text-box">
+            <span class="section-eyebrow">Kein Hack · Reine Qualität</span>
+            <h2 class="section-title">DAS GEHEIMNIS DES SPIESSES</h2>
+            
+            <p style="font-size: 1.05rem; color: var(--warm-white); line-height: 1.65; margin-bottom: 16px;">
+              Jeden Morgen um Punkt 6:00 Uhr wird unser Spieß in unserer Kreuzberger Backstube von Hand gesteckt. Wir verzichten radikal auf vorgefertigtes Industriehackfleisch und chemische Bindemittel.
+            </p>
+            
+            <p style="font-size: 0.9375rem; color: var(--warm-muted); line-height: 1.65; margin-bottom: 24px;">
+              Wir verwenden ausschließlich 100% zarte Kalbs- und Rindfleischscheiben, die 24 Stunden lang in unserer Hausmarinade aus kühlem Bergjoghurt, geröstetem Kreuzkümmel, sonnengetrocknetem Aleppo-Chili und kaltgepresstem Olivenöl ruhen. Wenn der Spieß am vertikalen Grill rotiert, karamellisieren die Ränder im Sekundentakt. Jede Tranche wird hauchdünn mit unserem geschliffenen Messer von Hand geschnitten.
+            </p>
+
+            <!-- Big Animated Counter Numbers -->
+            <div class="stats-grid">
+              
+              <div class="stat-item">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="100">0</span>
+                  <span class="stat-unit">%</span>
+                </div>
+                <div class="stat-label">Schichtfleisch</div>
+                <p class="stat-desc">Ausschließlich reine Scheiben, garantiert 0% Hackfleischanteil.</p>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="24">0</span>
+                  <span class="stat-unit">h</span>
+                </div>
+                <div class="stat-label">Marinierzeit</div>
+                <p class="stat-desc">Volle 24 Stunden Reife in Gewürzjoghurt und kaltgepresstem Öl.</p>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="0">0</span>
+                  <span class="stat-unit">%</span>
+                </div>
+                <div class="stat-label">Zusatzstoffe</div>
+                <p class="stat-desc">Keine Geschmacksverstärker, keine Phosphate, pure Natur.</p>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="450">0</span>
+                  <span class="stat-unit">°C</span>
+                </div>
+                <div class="stat-label">Grill-Hitze</div>
+                <p class="stat-desc">Intensive Hitze für sekundenschnelle goldene Röstaromen.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. LATE-NIGHT HOURS & LIVE STATUS BLOCK
+         ====================================================================== -->
+    <section id="hours" class="hours-section">
+      <div class="container">
+        
+        <div class="section-head text-center" style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="section-eyebrow">Kreuzberg schläft nie</span>
+          <h2 class="section-title">ÖFFNUNGSZEITEN & NACHT-SERVICE</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Ob Mittagspause, Feierabend am Kanal oder Hunger nach dem Club: Unsere Messer schneiden durchgehend bis in die frühen Morgenstunden.
+          </p>
+        </div>
+
+        <div class="hours-card-container">
+          <div class="hours-grid">
+            
+            <!-- Live Status Indicator Box -->
+            <div class="live-now-box is-open" id="live-now-box">
+              <div class="live-indicator-ring" aria-hidden="true"></div>
+              <h3 class="live-status-headline" id="live-status-headline">JETZT GEÖFFNET</h3>
+              <p class="live-status-subtext" id="live-status-subtext">
+                Der Spieß dreht sich! Heute durchgehend geöffnet bis 03:00 Uhr morgens.
+              </p>
+              <div class="live-clock-badge" id="live-kiez-clock">
+                Aktuelle Kiez-Zeit: 04:21 Uhr (Berlin)
+              </div>
+            </div>
+
+            <!-- Schedule Table -->
+            <div class="schedule-table-wrap">
+              <div class="schedule-table" role="table" aria-label="Wochen-Öffnungszeiten">
+                
+                <div class="schedule-row" role="row">
+                  <span class="schedule-day" role="cell">Montag</span>
+                  <span class="schedule-time" role="cell">11:00 – 03:00 Uhr</span>
+                </div>
+
+                <div class="schedule-row" role="row">
+                  <span class="schedule-day" role="cell">Dienstag</span>
+                  <span class="schedule-time" role="cell">11:00 – 03:00 Uhr</span>
+                </div>
+
+                <div class="schedule-row" role="row">
+                  <span class="schedule-day" role="cell">Mittwoch</span>
+                  <span class="schedule-time" role="cell">11:00 – 03:00 Uhr</span>
+                </div>
+
+                <div class="schedule-row" role="row">
+                  <span class="schedule-day" role="cell">Donnerstag</span>
+                  <span class="schedule-time" role="cell">11:00 – 03:00 Uhr</span>
+                </div>
+
+                <div class="schedule-row" role="row">
+                  <span class="schedule-day" role="cell">Freitag <span class="today-chip">Nachtschicht</span></span>
+                  <span class="schedule-time" role="cell">11:00 – 06:00 Uhr</span>
+                </div>
+
+                <div class="schedule-row" role="row">
+                  <span class="schedule-day" role="cell">Samstag <span class="today-chip">Nachtschicht</span></span>
+                  <span class="schedule-time" role="cell">11:00 – 06:00 Uhr</span>
+                </div>
+
+                <div class="schedule-row" role="row">
+                  <span class="schedule-day" role="cell">Sonntag</span>
+                  <span class="schedule-time" role="cell">12:00 – 03:00 Uhr</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. DELIVERY MAP OF BERLIN DISTRICTS (Interactive SVG)
+         ====================================================================== -->
+    <section id="delivery" class="delivery-section">
+      <div class="container">
+        
+        <div class="section-head text-center" style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="section-eyebrow">Heiß & Schnell zu dir</span>
+          <h2 class="section-title">UNSER LIEFERGEBIET IN BERLIN</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Tippe oder fahre mit der Maus über deinen Bezirk, um Lieferzeiten, Mindestbestellwert und Konditionen einzusehen.
+          </p>
+        </div>
+
+        <div class="delivery-layout">
+          
+          <!-- Interactive SVG Map -->
+          <div class="svg-map-wrapper">
+            <svg class="berlin-svg-map" viewBox="0 0 600 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktive Karte der Berliner Lieferbezirke">
+              <defs>
+                <filter id="glowPin" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#F5B700" flood-opacity="0.8"/>
+                </filter>
+              </defs>
+
+              <!-- River Spree & Landwehrkanal -->
+              <path class="map-spree" d="M30 140 Q 150 160 260 120 T 420 130 T 580 180" />
+              <path class="map-spree" d="M120 280 Q 220 270 330 250 T 480 270" stroke-width="2.5" opacity="0.6" />
+
+              <!-- District 1: Berlin-Mitte -->
+              <polygon class="map-district" data-district="mitte" points="160,80 320,60 360,130 250,150 170,120" role="button" tabindex="0" aria-label="Bezirk Berlin-Mitte"/>
+              <text x="240" y="105" fill="#888" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">MITTE</text>
+
+              <!-- District 2: Friedrichshain -->
+              <polygon class="map-district" data-district="friedrichshain" points="360,130 520,110 540,210 400,210 370,160" role="button" tabindex="0" aria-label="Bezirk Friedrichshain"/>
+              <text x="440" y="165" fill="#888" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">FRIEDRICHSHAIN</text>
+
+              <!-- District 3: Kreuzberg (Zentrum / Base) -->
+              <polygon class="map-district is-active" data-district="kreuzberg" points="190,170 370,160 410,250 250,280 170,220" role="button" tabindex="0" aria-label="Bezirk Kreuzberg"/>
+              <text x="280" y="215" fill="#F5B700" font-size="13" font-weight="800" text-anchor="middle" pointer-events="none">KREUZBERG 36</text>
+
+              <!-- District 4: Neukölln -->
+              <polygon class="map-district" data-district="neukoelln" points="250,280 410,250 430,370 270,390" role="button" tabindex="0" aria-label="Bezirk Neukölln"/>
+              <text x="340" y="325" fill="#888" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">NEUKÖLLN NORD</text>
+
+              <!-- District 5: Alt-Treptow -->
+              <polygon class="map-district" data-district="treptow" points="410,250 540,210 570,320 430,370" role="button" tabindex="0" aria-label="Bezirk Alt-Treptow"/>
+              <text x="480" y="295" fill="#888" font-size="10" font-weight="700" text-anchor="middle" pointer-events="none">ALT-TREPTOW</text>
+
+              <!-- District 6: Schöneberg -->
+              <polygon class="map-district" data-district="schoeneberg" points="60,200 170,180 200,290 90,320" role="button" tabindex="0" aria-label="Bezirk Schöneberg"/>
+              <text x="125" y="255" fill="#888" font-size="10" font-weight="700" text-anchor="middle" pointer-events="none">SCHÖNEBERG</text>
+
+              <!-- Shop Pin at Kottbusser Tor (Kreuzberg) -->
+              <g class="map-pin" filter="url(#glowPin)" transform="translate(295, 215)">
+                <circle cx="0" cy="0" r="9" fill="#F5B700"/>
+                <circle cx="0" cy="0" r="4" fill="#161616"/>
+                <text x="14" y="4" fill="#F5B700" font-size="10" font-weight="800">KOTTBUSSER TOR (SHOP)</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- District Info Display Card -->
+          <div class="delivery-info-card" id="delivery-info-card">
+            
+            <div class="district-header">
+              <div class="district-badge">Ausgewählter Lieferbezirk</div>
+              <h3 class="district-title" id="district-name">Kreuzberg 36 & 61</h3>
+              <p style="font-size: 0.8125rem; color: var(--warm-muted); margin-top: 4px;" id="district-zip">
+                PLZ: 10999, 10967, 10961
+              </p>
+            </div>
+
+            <div class="district-specs-grid">
+              
+              <div class="district-spec-box">
+                <div class="spec-title">Lieferzeit</div>
+                <div class="spec-val highlight" id="district-time">15–25 Min</div>
+              </div>
+
+              <div class="district-spec-box">
+                <div class="spec-title">Mindestbestellung</div>
+                <div class="spec-val" id="district-min">12,00 €</div>
+              </div>
+
+              <div class="district-spec-box" style="grid-column: 1 / -1;">
+                <div class="spec-title">Liefergebühr</div>
+                <div class="spec-val" id="district-fee" style="font-size: 1.05rem;">
+                  Kostenlos ab 20 € (sonst 1,00 €)
+                </div>
+              </div>
+
+            </div>
+
+            <button type="button" id="btn-select-district" class="btn btn-primary" style="width: 100%;">
+              Lieferung nach Kreuzberg bestellen
+            </button>
+
+            <p style="font-size: 0.75rem; color: var(--warm-muted); margin-top: 14px; text-align: center;">
+              Heiße Thermoboxen · Auslieferung mit E-Bike & Roller
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. REVIEWS STRIP (3 Invented Authentic Berlin Reviews)
+         ====================================================================== -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        
+        <div class="section-head text-center" style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="section-eyebrow">Echtes Kiez-Urteil</span>
+          <h2 class="section-title">STIMMEN AUS KREUZBERG</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Vom alteingesessenen Nachbarn bis zur Club-Nachteule: So schmeckt der Döner der Sonne am Kotti.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1: Cem A. -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 von 5 Sternen">
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">
+                "Wer am Kottbusser Tor Döner isst, kennt den Unterschied zwischen Industrieware und echtem Handwerk. Bei Döner der Sonne schmeckt man das 100% Schichtfleisch und die gerösteten Gewürze ab dem ersten Bissen. Die Knoblauchsauce sucht in ganz Berlin ihresgleichen."
+              </p>
+            </div>
+            <div class="review-author-wrap">
+              <div class="author-avatar">CA</div>
+              <div class="author-info">
+                <span class="author-name">Cem Arslan</span>
+                <span class="author-role">Kiez-Anwohner (Adalbertstraße)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2: Lisa M. -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 von 5 Sternen">
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">
+                "Endlich ein Dönerladen, der den Spieß als echtes Kulinarik-Handwerk begreift. Das Brot wird vor deinen Augen im Ofen gebacken, die Kombination aus krossen Fleischtranchen, Granatapfelkernen und Sumach-Zwiebeln ist pure Perfektion. Auch nachts um 4 Uhr mit vollem Einsatz."
+              </p>
+            </div>
+            <div class="review-author-wrap">
+              <div class="author-avatar">LM</div>
+              <div class="author-info">
+                <span class="author-name">Lisa Meinhardt</span>
+                <span class="author-role">Food-Journalistin (Berlin-Neukölln)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3: Malte B. -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 von 5 Sternen">
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">
+                "Nach der Schicht am Maybachufer gibt es für uns nur einen einzigen Halt: Der große Sonne-Dürüm mit extra Jalapeños und eiskaltem Ayran. Frische Zutaten, perfekt gewürzt, saftig bis zum letzten Zentimeter. Eine feste Berliner Institution."
+              </p>
+            </div>
+            <div class="review-author-wrap">
+              <div class="author-avatar">MB</div>
+              <div class="author-info">
+                <span class="author-name">Malte Brinkmann</span>
+                <span class="author-role">DJ & Nachtmensch (Kreuzberg 36)</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. CONTACT & ORDER VIA PHONE / TELEGRAM
+         ====================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        
+        <div class="section-head text-center" style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="section-eyebrow">Direkt am Kotti oder geliefert</span>
+          <h2 class="section-title">KONTAKT & SCHNELLE BESTELLUNG</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Ruf uns direkt an, schreib uns auf Telegram oder bestelle dein Essen vor – frisch, heiß und ohne lange Wartezeit.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- Channels & Address -->
+          <div class="contact-info-col">
+            
+            <!-- Phone Card -->
+            <a href="tel:+498886661234" class="contact-channel-card">
+              <div class="channel-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="channel-text-group">
+                <span class="channel-label">Telefonische Hotline</span>
+                <span class="channel-value">+49 888 6661234</span>
+              </div>
+            </a>
+
+            <!-- Telegram Card -->
+            <a href="https://t.me/rovatt" target="_blank" rel="noopener" class="contact-channel-card">
+              <div class="channel-icon-wrap is-blue">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div class="channel-text-group">
+                <span class="channel-label">Telegram Express-Chat</span>
+                <span class="channel-value">@rovatt</span>
+              </div>
+            </a>
+
+            <!-- Email Card -->
+            <a href="mailto:12234456789@gmail.com" class="contact-channel-card">
+              <div class="channel-icon-wrap is-red">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-text-group">
+                <span class="channel-label">E-Mail für Anfragen</span>
+                <span class="channel-value">12234456789@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- Address Card -->
+            <div class="contact-channel-card" style="cursor: default;">
+              <div class="channel-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-text-group">
+                <span class="channel-label">Standort am Kottbusser Tor</span>
+                <span class="channel-value" style="font-size: 1rem;">Adalbertstraße 9, 10999 Berlin</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick Order / Checkout Form -->
+          <div class="order-form-container">
+            
+            <!-- Type Switch: Delivery vs Pickup -->
+            <div class="form-toggle-row">
+              <button type="button" class="form-toggle-btn is-active" data-mode="delivery">
+                Express-Lieferung
+              </button>
+              <button type="button" class="form-toggle-btn" data-mode="pickup">
+                Selbstabholung
+              </button>
+            </div>
+
+            <!-- In-Page Confirmation Card (shown on submit) -->
+            <div class="order-confirmation-card" id="order-confirmation-card" aria-live="polite">
+              <div class="confirmation-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="confirmation-title">BESTELLUNG ERHALTEN!</h3>
+              <div class="confirmation-code" id="confirmation-code">Bestell-ID: #DS-8392</div>
+              <p class="confirmation-desc" id="confirmation-desc">
+                Vielen Dank! Dein Döner wird jetzt frisch zubereitet und in Kürze ausgeliefert.
+              </p>
+              <div class="confirmation-actions">
+                <a id="btn-telegram-confirm" href="https://t.me/rovatt" target="_blank" rel="noopener" class="btn btn-primary">
+                  Per Telegram bestätigen
+                </a>
+                <a href="tel:+498886661234" class="btn btn-outline">
+                  Anrufen (+49 888 6661234)
+                </a>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form id="quick-order-form" class="form-grid">
+              
+              <div class="form-field">
+                <label for="order-name" class="form-label">Dein Name *</label>
+                <input type="text" id="order-name" class="form-input" placeholder="z.B. Alex Becker" required>
+              </div>
+
+              <div class="form-field">
+                <label for="order-phone" class="form-label">Telefonnummer *</label>
+                <input type="tel" id="order-phone" class="form-input" placeholder="+49 888 6661234" required>
+              </div>
+
+              <div class="form-field delivery-only-field">
+                <label for="order-district-select" class="form-label">Bezirk / Lieferzone</label>
+                <select id="order-district-select" class="form-select">
+                  <option value="kreuzberg">Kreuzberg (15–25 Min)</option>
+                  <option value="neukoelln">Neukölln Nord (20–30 Min)</option>
+                  <option value="friedrichshain">Friedrichshain (25–35 Min)</option>
+                  <option value="mitte">Berlin-Mitte (25–40 Min)</option>
+                  <option value="treptow">Alt-Treptow (20–35 Min)</option>
+                  <option value="schoeneberg">Schöneberg Nord (30–45 Min)</option>
+                </select>
+              </div>
+
+              <div class="form-field delivery-only-field">
+                <label for="order-address" class="form-label">Straße & Hausnummer *</label>
+                <input type="text" id="order-address" class="form-input" placeholder="z.B. Oranienstraße 185">
+              </div>
+
+              <div class="form-field full-span">
+                <label for="order-notes" class="form-label">Besondere Wünsche / Notiz an die Küche</label>
+                <textarea id="order-notes" class="form-textarea" placeholder="z.B. Bitte extra viel scharfe Sauce, Zitrone nicht vergessen..."></textarea>
+              </div>
+
+              <div class="form-field full-span" style="margin-top: 8px;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; min-height: 50px; font-size: 1rem;">
+                  Bestellung jetzt absenden
+                </button>
+                <p style="font-size: 0.75rem; color: var(--warm-muted); text-align: center; margin-top: 10px;">
+                  Bezahlung bar bei Übergabe oder kontaktlos via Karte & PayPal.
+                </p>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       SLIDE-OVER ORDER DRAWER / WARENKORB
+       ======================================================================== -->
+  <div id="order-drawer-overlay" class="order-drawer-overlay" role="dialog" aria-modal="true" aria-label="Warenkorb">
+    <div class="order-drawer">
+      
+      <div class="drawer-header">
+        <h3 class="drawer-title">DEIN WARENKORB</h3>
+        <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Warenkorb schließen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer-body" id="cart-items-list">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-total-row">
+          <span class="drawer-total-label">Gesamtsumme:</span>
+          <span class="drawer-total-val" id="drawer-total-val">8,50 €</span>
+        </div>
+        <button type="button" id="btn-drawer-checkout" class="btn btn-primary" style="width: 100%; min-height: 48px;">
+          Zur Kasse / Jetzt bestellen
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       LEGAL MODALS (Impressum & Datenschutz)
+       ======================================================================== -->
+  <div id="impressum-modal" class="legal-modal" role="dialog" aria-modal="true" aria-label="Impressum">
+    <div class="legal-modal-box">
+      <button id="close-impressum-btn" class="legal-modal-close" aria-label="Schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <h3 class="text-display" style="font-size: 1.5rem; color: var(--sun-yellow); margin-bottom: 16px;">IMPRESSUM</h3>
+      <p style="margin-bottom: 12px;"><strong>Döner der Sonne Berlin</strong> (Fiktiver Gastronomiebetrieb)</p>
+      <p style="margin-bottom: 12px;">Adalbertstraße 9<br>10999 Berlin-Kreuzberg</p>
+      <p style="margin-bottom: 12px;">Telefon: +49 888 6661234<br>E-Mail: 12234456789@gmail.com<br>Telegram: @rovatt</p>
+      <p style="margin-bottom: 12px;">Vertreten durch: Renat</p>
+      <p style="font-size: 0.8125rem; color: var(--warm-muted); margin-top: 20px;">
+        Hinweis: Dies ist ein fiktives Webdesign-Projekt zu Demonstrations- und Portfoliozwecken.
+      </p>
+    </div>
+  </div>
+
+  <div id="datenschutz-modal" class="legal-modal" role="dialog" aria-modal="true" aria-label="Datenschutzerklärung">
+    <div class="legal-modal-box">
+      <button id="close-datenschutz-btn" class="legal-modal-close" aria-label="Schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <h3 class="text-display" style="font-size: 1.5rem; color: var(--sun-yellow); margin-bottom: 16px;">DATENSCHUTZ</h3>
+      <p style="margin-bottom: 12px;">Wir nehmen den Schutz deiner Daten ernst. Auf dieser Demoseite werden keine persönlichen Daten an externe Server übertragen oder gespeichert.</p>
+      <p style="margin-bottom: 12px;">Eingegebene Bestelldaten verbleiben lokal in deinem Browser und dienen ausschließlich der Präsentation der Benutzeroberfläche.</p>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <div class="footer-col">
+          <div class="logo-title" style="font-size: 1.15rem; margin-bottom: 12px;">
+            DÖNER DER <span style="color: var(--sun-yellow);">SONNE</span>
+          </div>
+          <p>
+            Kreuzbergs authentischer Döner am Kottbusser Tor. 100% reines Scheibenfleisch, frisch gebackenes Fladenbrot und Berliner Nachtkultur.
+          </p>
+          <p style="color: var(--sun-yellow); font-weight: 600;">
+            Adalbertstraße 9, 10999 Berlin-Kreuzberg
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="nav-link" style="padding: 0;">1. Montage-Hero</a></li>
+            <li><a href="#builder" class="nav-link" style="padding: 0;">2. Döner-Baukasten</a></li>
+            <li><a href="#menu" class="nav-link" style="padding: 0;">3. Speisekarte</a></li>
+            <li><a href="#spiess" class="nav-link" style="padding: 0;">4. Der Spieß</a></li>
+            <li><a href="#delivery" class="nav-link" style="padding: 0;">5. Liefergebiet Berlin</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Kontakt & Support</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+498886661234">Telefon: +49 888 6661234</a></li>
+            <li><a href="https://t.me/rovatt" target="_blank" rel="noopener">Telegram: @rovatt</a></li>
+            <li><a href="mailto:12234456789@gmail.com">E-Mail: 12234456789@gmail.com</a></li>
+            <li><a href="#hours">Geöffnet bis 03:00 / 06:00 Uhr</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Rechtliches</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="open-impressum-btn">Impressum</a></li>
+            <li><a href="#" id="open-datenschutz-btn">Datenschutzerklärung</a></li>
+            <li><span style="color: var(--warm-muted);">Allergene & Inhaltsstoffe</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          Fiktives Demo-Projekt. Gestaltung: Renat.
+        </div>
+        <div style="font-size: 0.8125rem;">
+          Döner der Sonne · Kreuzberg 36 · Alle Angaben fiktiv
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

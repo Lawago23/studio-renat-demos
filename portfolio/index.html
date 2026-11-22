@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Renat · Webdesign &amp; Digitale Menüs für Gastronomie in Berlin</title>
+  <meta name="description"
+    content="Websites, die verkaufen. Spezialisiert auf handgemachte Webauftritte, digitale Speisekarten und Reservierungssysteme für Restaurants, Cafés und lokale Betriebe in Berlin.">
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Three.js (local build) -->
+  <script src="js/three.min.js"></script>
+</head>
+
+<body class="theme-navy">
+
+  <!-- Custom Cursor Elements (Desktop only) -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing"></div>
+
+  <!-- Ambient Background Canvas / Gradient Mesh -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+  </div>
+
+  <!-- Top Slim Disclaimer Bar -->
+  <div class="top-disclaimer-bar" id="disclaimerBar">
+    <div class="container disclaimer-inner">
+      <span class="disclaimer-text">Demo-Projekt von Renat · Alle Angaben auf dieser Seite sind fiktiv.</span>
+      <button class="disclaimer-close" id="disclaimerClose" aria-label="Hinweisleiste schließen">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo magnetic" aria-label="Studio Renat Startseite">
+        <span class="brand-text">Studio<span class="brand-accent">Renat</span></span>
+        <span class="brand-badge">Berlin</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Hauptnavigation">
+        <a href="#projekte" class="nav-link">Arbeiten</a>
+        <a href="#ablauf" class="nav-link">Ablauf</a>
+        <a href="#leistungen" class="nav-link">Leistungen</a>
+        <a href="#preise" class="nav-link">Preise</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="counter-chip" title="10 fertige Showcase-Projekte in Berlin">
+          <span class="live-dot"></span>
+          <span class="counter-number">10</span> Projekte in Berlin
+        </div>
+        <a href="#kontakt" class="btn btn-sm btn-primary magnetic">
+          <span>Projekt anfragen</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav">
+        <a href="#projekte" class="mobile-nav-link">Arbeiten (10)</a>
+        <a href="#ablauf" class="mobile-nav-link">Ablauf</a>
+        <a href="#leistungen" class="mobile-nav-link">Leistungen</a>
+        <a href="#preise" class="mobile-nav-link">Preise</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+        <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <a href="tel:+498886661234" class="mobile-contact-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          +49 888 6661234
+        </a>
+        <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="mobile-contact-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+          Telegram @rovatt
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION WITH 3D THREE.JS FLOATING CARDS -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Hero Content (Left Column: Badge, Headline, Lead & CTAs) -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="hero-kicker">
+              <span class="status-pulse"></span>
+              Studio Renat · Spezialist für Gastronomie &amp; Kiezbetriebe
+            </span>
+          </div>
+
+          <h1 class="hero-headline text-split-words" id="heroTitle">
+            <span class="hero-title-main">
+              <span class="word">Websites,</span>
+              <span class="word">die</span>
+              <span class="word text-accent">verkaufen.</span>
+            </span>
+            <span class="hero-title-sub">
+              <span class="word">Für</span>
+              <span class="word">Restaurants,</span>
+              <span class="word">Cafés</span>
+              <span class="word">und</span>
+              <span class="word">Läden.</span>
+            </span>
+          </h1>
+
+          <p class="hero-lead">
+            Maßgeschneiderte Webauftritte, interaktive Menüs und direkte Reservierungssysteme für die Berliner
+            Gastronomie. Keine Baukasten-Vorlagen, keine Drittanbieter-Provisionen. Sondern digitales Handwerk, das Tische
+            füllt.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projekte" class="btn btn-lg btn-primary magnetic">
+              <span>10 Arbeiten entdecken</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#kontakt" class="btn btn-lg btn-secondary magnetic">
+              <span>Erstentwurf in 48 h anfragen</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: 3D Canvas / Scene Container -->
+        <div class="hero-visual">
+          <div class="hero-3d-wrapper" id="hero3dWrapper">
+            <canvas id="heroCanvas" class="hero-canvas"></canvas>
+            <div class="hero-hint">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v8m-4-4h8"></path>
+              </svg>
+              <span>3D-Raum mit Maus bewegen · Karten anklickbar</span>
+            </div>
+          </div>
+
+          <!-- CSS 3D Card Fan Fallback (visible if WebGL is unavailable) -->
+          <div class="hero-fallback-fan" id="heroFallbackFan">
+            <div class="fallback-card fcard-1"><img src="img/doener-card.jpg" alt="Döner der Sonne Preview" width="320"
+                height="200"></div>
+            <div class="fallback-card fcard-2"><img src="img/pizza-card.jpg" alt="Pizzeria Pugliese Preview" width="320"
+                height="200"></div>
+            <div class="fallback-card fcard-3"><img src="img/aurum-card.jpg" alt="AURUM Coffee Preview" width="320"
+                height="200"></div>
+            <div class="fallback-card fcard-4"><img src="img/nami-card.jpg" alt="NAMI Sushi Preview" width="320"
+                height="200"></div>
+            <div class="fallback-card fcard-5"><img src="img/kiku-card.jpg" alt="KIKU Nudelbar Preview" width="320"
+                height="200"></div>
+          </div>
+        </div>
+
+        <!-- Trust Metrics Strip (Row 2 on Desktop, below text on mobile) -->
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-val">10</span>
+            <span class="metric-lbl">Live-Showcases in Berlin</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric-item">
+            <span class="metric-val">48 h</span>
+            <span class="metric-lbl">Bis zum ersten Klick-Entwurf</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric-item">
+            <span class="metric-val">0 €</span>
+            <span class="metric-lbl">Provision an Plattformen</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric-item">
+            <span class="metric-val">&lt; 0,8 s</span>
+            <span class="metric-lbl">Ladezeit auf Smartphones</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK / 10 CASE CARDS -->
+    <section class="section section-work" id="projekte">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">SELECTED WORK</span>
+          <h2 class="section-title">Zehn Konzepte. Zehn Berliner Kiez-Geschichten.</h2>
+          <p class="section-desc">
+            Jede Website ist ein Unikat mit eigenem Farbcode, individueller Interaktion und maßgeschneidertem
+            Verkaufskonzept. Klicken Sie auf „Live ansehen“, um jede Demo vollständig im Browser zu erleben.
+          </p>
+
+          <!-- Filter Tabs -->
+          <div class="filter-bar" role="tablist" aria-label="Projekte filtern">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+              Alle Arbeiten <span class="filter-count">10</span>
+            </button>
+            <button class="filter-btn" data-filter="gastro" role="tab" aria-selected="false">
+              Gastronomie <span class="filter-count">6</span>
+            </button>
+            <button class="filter-btn" data-filter="cafe" role="tab" aria-selected="false">
+              Café &amp; Backstube <span class="filter-count">2</span>
+            </button>
+            <button class="filter-btn" data-filter="beauty" role="tab" aria-selected="false">
+              Beauty &amp; Barbershop <span class="filter-count">2</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cases Grid -->
+        <div class="cases-container" id="casesContainer">
+
+          <!-- 1. DÖNER DER SONNE -->
+          <article class="case-card reveal-wipe" data-category="gastro" id="case-doener">
+            <div class="case-mockup-col">
+              <!-- Desktop Frame -->
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>doener-der-sonne.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/doener-desktop.jpg" alt="Döner der Sonne Desktop Website Ansicht" width="960"
+                    height="600" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <!-- Mobile Phone Mockup -->
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/doener-mobile.jpg" alt="Döner der Sonne Smartphone Menü Ansicht" width="450"
+                    height="800" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag gastro">Gastronomie</span>
+                <span class="case-district">Berlin-Kreuzberg · Kottbusser Tor</span>
+              </div>
+              <h3 class="case-title">Döner der Sonne</h3>
+              <p class="case-tagline">Premium Spieß &amp; Streetfood mit interaktivem Schicht-Erlebnis.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Interaktiver Döner-Baukasten:</strong> Gäste stellen Brot, Fleisch, Saucen &amp; Extras
+                    mit Live-Preis zusammen.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Schicht-für-Schicht Scroll-Hero:</strong> Visuelle Montage mit Dampfpartikeln und
+                    handgemachter Marinaden-Story.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Late-Night Ampel &amp; Kiez-Lieferkarte:</strong> Live-Statusanzeige und direkte
+                    Abhol-Bestellung via Telegram/Telefon.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">Döner-Konfigurator</span>
+                <span class="chip">Live-Status Ampel</span>
+                <span class="chip">Interaktive Kiezkarte</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../doener/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. PIZZERIA PUGLIESE -->
+          <article class="case-card case-card-reverse reveal-wipe" data-category="gastro" id="case-pizza">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>pizzeria-pugliese.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/pizza-desktop.jpg" alt="Pizzeria Pugliese Desktop Ansicht" width="960" height="600"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/pizza-mobile.jpg" alt="Pizzeria Pugliese Smartphone Ansicht" width="450" height="800"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag gastro">Gastronomie</span>
+                <span class="case-district">Berlin-Neukölln · Weserstraße</span>
+              </div>
+              <h3 class="case-title">Pizzeria Pugliese – Forno a Legna</h3>
+              <p class="case-tagline">485 Grad. 90 Sekunden. Neapolitanische Holzofen-Kultur.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>3D-Holzofen mit Flackereffekt:</strong> Three.js Kuppelofen mit dynamischem Feuerlicht
+                    und Teig-Fortschrittsstrang.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Interaktive Italien-Regionalkarte:</strong> Klick auf Provinzen zeigt die regionalen
+                    Spezialitäten und Herkunft der Zutaten.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Provisionsfreie Tischreservierung:</strong> Gäste wählen Datum, Uhrzeit und Personenzahl
+                    ohne OpenTable-Gebühren.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">3D-Holzofen (WebGL)</span>
+                <span class="chip">Italien-SVG-Karte</span>
+                <span class="chip">Tischreservierung</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../pizza/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. AURUM KAFFEERÖSTEREI -->
+          <article class="case-card reveal-wipe" data-category="cafe" id="case-aurum">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>aurum-coffee.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/aurum-desktop.jpg" alt="AURUM Kaffeerösterei Desktop Ansicht" width="960" height="600"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/aurum-mobile.jpg" alt="AURUM Smartphone Bohnen Shop Ansicht" width="450" height="800"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag cafe">Café &amp; Rösterei</span>
+                <span class="case-district">Berlin-Mitte · Torstraße</span>
+              </div>
+              <h3 class="case-title">AURUM – Kaffeerösterei &amp; Café</h3>
+              <p class="case-tagline">Geröstet in Mitte. Specialty Coffee &amp; Cupping-Workshops.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Interaktives Kaffeearoma-Rad:</strong> Klickbare Geschmacksnoten (fruchtig, schokoladig,
+                    blumig) filtern passende Bohnen.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Integrierter Bohnen-Shop mit Mahlgrad-Wahl:</strong> Ganze Bohne, Espresso, Filter oder
+                    French Press mit Slide-In Warenkorb.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Workshop-Buchungssystem:</strong> Cupping- und Barista-Termine online auswählen und
+                    Plätze sichern.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">Aroma-Rad (SVG)</span>
+                <span class="chip">Bohnen-Shop Mini-Cart</span>
+                <span class="chip">Workshop-Buchung</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../aurum/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. NAMI SUSHI & IZAKAYA -->
+          <article class="case-card case-card-reverse reveal-wipe" data-category="gastro" id="case-nami">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>nami-berlin.de</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/nami-desktop.jpg" alt="NAMI Sushi & Izakaya Desktop Ansicht" width="960" height="600"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/nami-mobile.jpg" alt="NAMI Sushi Smartphone Menü Ansicht" width="450" height="800"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag gastro">Gastronomie</span>
+                <span class="case-district">Berlin-Schöneberg · Winterfeldtstraße</span>
+              </div>
+              <h3 class="case-title">NAMI – Sushi &amp; Izakaya</h3>
+              <p class="case-tagline">Traditionelle Omakase-Kunst trifft auf modernen QR-Menü-Workflow.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Omakase-Tresen mit 8-Plätze-Sitzplan:</strong> Klickbarer Tresenplan zur genauen Wahl
+                    des Lieblingsplatzes am Sushi-Master.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Mobile-First QR-Speisekarte mit Bottom Sheet:</strong> Blitzschnelle
+                    Allergen-Kennzeichnung und zweisprachige DE/EN-Umschaltung.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Japanische Ästhetik mit Tusche-Shader:</strong> Minimalistische Typografie mit Shippori
+                    Mincho und Reispapier-Textur.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">Tresen-Sitzplatzwahl</span>
+                <span class="chip">DE / EN Umschalter</span>
+                <span class="chip">QR-Code Speisekarte</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../nami/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. KIKU NUDELBAR -->
+          <article class="case-card reveal-wipe" data-category="gastro" id="case-kiku">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>kiku-ramen.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/kiku-desktop.jpg" alt="KIKU Nudelbar Desktop Ansicht" width="960" height="600"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/kiku-mobile.jpg" alt="KIKU Ramen Smartphone Ansicht" width="450" height="800"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag gastro">Gastronomie</span>
+                <span class="case-district">Berlin-Prenzlauer Berg · Kastanienallee</span>
+              </div>
+              <h3 class="case-title">KIKU Nudelbar</h3>
+              <p class="case-tagline">Handgemachte Ramen, 12-Stunden-Brühe und verspieltes Design.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Interaktiver Bowl-Builder:</strong> Gäste wählen Brühe (Tonkotsu, Miso, Shoyu, Vegan),
+                    Nudeln und Toppings mit Live-Grafik.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>3D-Ramen-Schüssel mit Stäbchen:</strong> Dreidimensionales Modell reagiert auf
+                    Cursor-Bewegung und Touch-Gesten.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Digitale Mittags-Stempelkarte:</strong> Gamifizierte Treuestempel-Animation zur
+                    Steigerung der Stammgast-Besuche.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">3D-Ramen Modell</span>
+                <span class="chip">Bowl-Konfigurator</span>
+                <span class="chip">Digitale Stempelkarte</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../kiku/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. EMOSH'S LATE-NIGHT -->
+          <article class="case-card case-card-reverse reveal-wipe" data-category="gastro" id="case-emoshs">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>emoshs-latenight.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/emoshs-desktop.jpg" alt="Emosh's Late Night Pizza & Döner Ansicht" width="960"
+                    height="600" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/emoshs-mobile.jpg" alt="Emosh's Smartphone Neon Menü Ansicht" width="450" height="800"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag gastro">Gastronomie</span>
+                <span class="case-district">Berlin-Friedrichshain · Warschauer Straße</span>
+              </div>
+              <h3 class="case-title">Emosh's – Late-Night Food</h3>
+              <p class="case-tagline">Pizza, Döner &amp; Streetfood bis 5 Uhr morgens für Berlins Nachtleben.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Dark Neon Club-Ästhetik:</strong> Flackernde SVG-Neonschrift und Bokeh-Lichteffekt der
+                    Warschauer Brücke.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>3D-Pizzakarton mit Scroll-Öffnung:</strong> Three.js Box rotiert und klappt sich beim
+                    Scrollen auf.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Interaktive Abriss-Kombi-Tickets:</strong> Perforierte Gutschein-Deals mit
+                    Abreiß-Animation und Direktbestellung.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">3D-Pizzakarton</span>
+                <span class="chip">Neon-Glow Interface</span>
+                <span class="chip">Bis-5-Uhr Timer</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../emoshs/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. EINFACH STARCK -->
+          <article class="case-card reveal-wipe" data-category="gastro" id="case-imbiss">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>einfach-starck.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/imbiss-desktop.jpg" alt="einfach starck Imbiss Desktop Ansicht" width="960" height="600"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/imbiss-mobile.jpg" alt="einfach starck Smartphone Speisekarte Ansicht" width="450"
+                    height="800" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag gastro">Gastronomie</span>
+                <span class="case-district">Berlin-Wedding · Müllerstraße</span>
+              </div>
+              <h3 class="case-title">einfach starck – der Imbiss</h3>
+              <p class="case-tagline">Kult-Currywurst, Schnitzel &amp; Mittagstisch im Magazin-Layout.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Editorial Zeitungslayout:</strong> Prägnante Cover-Headline, Zeitungskolumnen und
+                    kinetische Typografie-Bänder.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Dynamischer Wochen-Mittagstisch:</strong> Erkennt automatisch den heutigen Wochentag
+                    (Mo–Fr) und hebt das Tagesgericht hervor.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Firmen-Catering Anfrageformular:</strong> Schnelle Vorbestellungen für Berliner
+                    Agenturen und Büro-Teams im Kiez.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">Editorial Magazin</span>
+                <span class="chip">Auto-Mittagstisch</span>
+                <span class="chip">Office-Catering</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../imbiss/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. BÄCKEREI EIFEL -->
+          <article class="case-card case-card-reverse reveal-wipe" data-category="cafe" id="case-baeckerei">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>baeckerei-eifel.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/baeckerei-desktop.jpg" alt="Bäckerei Eifel Desktop Ansicht" width="960" height="600"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/baeckerei-mobile.jpg" alt="Bäckerei Eifel Smartphone Sortiment Ansicht" width="450"
+                    height="800" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag cafe">Café &amp; Backstube</span>
+                <span class="case-district">Berlin-Prenzlauer Berg · Kollwitzkiez</span>
+              </div>
+              <h3 class="case-title">Bäckerei Eifel – Backstube &amp; Café</h3>
+              <p class="case-tagline">Traditionelles Sauerteig-Handwerk &amp; Kiez-Café seit Generationen.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Digitales Brotsortiment mit Backtagen:</strong> Vollkorn, Roggen &amp; Baguette mit
+                    genauen Allergen- und Getreide-Filtern.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Frühstücks-Tischreservierung:</strong> Gemütliche Café-Plätze für das Wochenende direkt
+                    online reservieren.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Druckfertige Theken-QR-Codes:</strong> Gäste scannen den Aufsteller und sehen
+                    Zutatenlisten ohne Warteschlange.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">Sauerteig-Handwerk</span>
+                <span class="chip">Allergen-Transparenz</span>
+                <span class="chip">Theken-QR-Code</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../baeckerei/index.html" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. STUDIO MAYEN BARBERSHOP -->
+          <article class="case-card reveal-wipe" data-category="beauty" id="case-barber">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>studio-mayen.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/barber-desktop.jpg" alt="Studio Mayen Barbershop Desktop Ansicht" width="960"
+                    height="600" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/barber-mobile.jpg" alt="Studio Mayen Smartphone Buchung Ansicht" width="450"
+                    height="800" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag beauty">Beauty &amp; Grooming</span>
+                <span class="case-district">Berlin-Neukölln · Sonnenallee</span>
+              </div>
+              <h3 class="case-title">Studio Mayen – Barbershop</h3>
+              <p class="case-tagline">Sitzt. Jedes Mal. Klassische Rasur, Fades &amp; Bartpflege.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Interaktiver Vorher-Nachher-Schieberegler:</strong> Touch-Slider demonstriert
+                    Präzisionsschnitte und Fades im Direktvergleich.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>3D-Barberpole Signatur:</strong> Rotierende animierte Barberpole-Säule im Hero mit
+                    Vintage-Glow.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Schlanker 4-Schritte-Terminablauf:</strong> Service wählen → Barbier aussuchen →
+                    Wunschtag → Freier Slot mit Bestätigung.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">Vorher/Nachher-Slider</span>
+                <span class="chip">3D-Barberpole</span>
+                <span class="chip">4-Schritte-Terminkalender</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../barber/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. STUDIO VELA NAILS & BEAUTY -->
+          <article class="case-card case-card-reverse reveal-wipe" data-category="beauty" id="case-vela">
+            <div class="case-mockup-col">
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="traffic-lights">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>studio-vela.berlin</span>
+                  </div>
+                </div>
+                <div class="browser-body">
+                  <img src="img/vela-desktop.jpg" alt="Studio Vela Nails & Beauty Desktop Ansicht" width="960"
+                    height="600" loading="lazy" class="mockup-img">
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="img/vela-mobile.jpg" alt="Studio Vela Smartphone Galerie Ansicht" width="450" height="800"
+                    loading="lazy" class="mockup-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info-col">
+              <div class="case-meta">
+                <span class="case-tag beauty">Beauty &amp; Ästhetik</span>
+                <span class="case-district">Berlin-Mitte · Linienstraße</span>
+              </div>
+              <h3 class="case-title">Studio Vela – Nails &amp; Beauty</h3>
+              <p class="case-tagline">Signature Maniküre, Chrome Nails &amp; High-End Nageldesign.</p>
+
+              <ul class="case-bullets">
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Interaktiver Behandlungs-Preisrechner:</strong> Live-Berechnung von Basispflege,
+                    Nagellänge und individuellen Nail-Art-Extras.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>3D-Nagellackflasche mit Farbwechsel:</strong> Dreidimensionales Three.js Glasfläschchen
+                    wechselt Nagellackfarbe per Klick.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Filterbare Design-Galerie:</strong> Kategorien für Chrome, French, Nude &amp; Nail-Art
+                    mit direkter Behandlungsbuchung.</span>
+                </li>
+              </ul>
+
+              <div class="case-chips">
+                <span class="chip">3D-Lackflasche (WebGL)</span>
+                <span class="chip">Live-Preisrechner</span>
+                <span class="chip">Masonry Design-Galerie</span>
+              </div>
+
+              <div class="case-cta-wrap">
+                <a href="../vela/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-case magnetic">
+                  <span>Live ansehen</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SO ARBEITE ICH (HORIZONTAL PINNED SEQUENCE DESKTOP, VERTICAL MOBILE) -->
+    <section class="section section-process" id="ablauf">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">ABLAUF</span>
+          <h2 class="section-title">In 4 Schritten von der Idee zur vollen Gaststube.</h2>
+          <p class="section-desc">
+            Keine monatelangen Agentur-Schleifen, kein Fachchinesisch. Ein klarer, verlässlicher Prozess mit Festpreis
+            und fixem Übergabetermin.
+          </p>
+        </div>
+      </div>
+
+      <!-- Process Track Wrapper -->
+      <div class="process-pinned-viewport" id="processViewport">
+        <div class="container process-sticky-container">
+          <div class="process-track" id="processTrack">
+
+            <!-- Step 1 -->
+            <div class="process-card">
+              <div class="card-step-num">01</div>
+              <div class="card-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Kiez-Gespräch &amp; Menü-Check</h3>
+              <p class="card-desc">
+                Wir trinken einen Espresso in Ihrem Laden oder sprechen 20 Minuten per Telefon. Ich verstehe Ihr
+                Angebot, Ihre Zielgruppe und was Gäste bestellen sollen.
+              </p>
+              <div class="card-deliverable">
+                <span class="deliv-label">Ergebnis:</span>
+                <span class="deliv-val">Klares Inhaltskonzept &amp; verbindlicher Festpreis</span>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-card highlight-step">
+              <div class="card-step-num">02</div>
+              <div class="card-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="card-title">Entwurf in 48 Stunden</h3>
+              <p class="card-desc">
+                Sie bekommen kein statisches PDF, sondern einen echten, klickbaren Prototyp direkt auf Ihr Smartphone.
+                Sie spüren sofort, wie Ihre Gäste die Seite erleben.
+              </p>
+              <div class="card-deliverable">
+                <span class="deliv-label">Ergebnis:</span>
+                <span class="deliv-val">Live-Prototyp mit Design, Speisekarte &amp; Typo</span>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-card">
+              <div class="card-step-num">03</div>
+              <div class="card-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Feinschliff &amp; Menü-Detail</h3>
+              <p class="card-desc">
+                Wir passen Gerichte, Preise, Allergene und Öffnungszeiten an. Fotos werden für Höchstgeschwindigkeit
+                optimiert und die Mehrsprachigkeit hinterlegt.
+              </p>
+              <div class="card-deliverable">
+                <span class="deliv-label">Ergebnis:</span>
+                <span class="deliv-val">Perfektionierte Texte, SEO-Setup &amp; Reservierung</span>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-card">
+              <div class="card-step-num">04</div>
+              <div class="card-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </div>
+              <h3 class="card-title">Go-Live &amp; QR-Code-Start</h3>
+              <p class="card-desc">
+                Ihre Domain wird verknüpft, das Google-Unternehmensprofil auf Vordermann gebracht und druckfertige
+                Vektor-QR-Codes für Tische und Aufsteller übergeben.
+              </p>
+              <div class="card-deliverable">
+                <span class="deliv-label">Ergebnis:</span>
+                <span class="deliv-val">Live-Schaltung, Druckdateien &amp; Einweisung</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BENTO GRID / WHAT A SITE INCLUDES -->
+    <section class="section section-bento" id="leistungen">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">LEISTUNGEN</span>
+          <h2 class="section-title">Alles, was eine moderne Website braucht.</h2>
+          <p class="section-desc">
+            Kein überflüssiger Schnickschnack. Jede Funktion erfüllt genau einen Zweck: Gäste überzeugen, Wartezeiten
+            verkürzen und Ihren Umsatz steigern.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+
+          <!-- Bento Item 1: Digitale Speisekarte (Large 2-col) -->
+          <div class="bento-item bento-card-large">
+            <div class="bento-content">
+              <div class="bento-tag">KERNFUNKTION</div>
+              <h3 class="bento-title">Digitale Speisekarte in Echtzeit</h3>
+              <p class="bento-desc">
+                Vergessen Sie unlesbare PDF-Dateien, in die Gäste mühsam hineinzoomen müssen. Ihre Menükarte lädt in 0,3
+                Sekunden, lässt sich nach Kategorien filtern und zeigt Allergen-Symbole auf einen Blick.
+              </p>
+              <ul class="bento-list">
+                <li>Filter nach Vegan, Scharf, Glutenfrei</li>
+                <li>Preise und Tagesgerichte in Sekunden aktualisierbar</li>
+                <li>Gestochen scharfe Speisenfotos ohne lange Ladezeiten</li>
+              </ul>
+            </div>
+            <div class="bento-visual bento-menu-mock">
+              <div class="mini-menu-card">
+                <div class="mini-menu-header">
+                  <span class="mini-chip active">Pizza</span>
+                  <span class="mini-chip">Pasta</span>
+                  <span class="mini-chip">Vino</span>
+                </div>
+                <div class="mini-dish-row">
+                  <span class="dish-name">Margherita Forno a Legna</span>
+                  <span class="dish-dots"></span>
+                  <span class="dish-price">9,50 €</span>
+                </div>
+                <div class="mini-dish-row">
+                  <span class="dish-name">Burrata Pugliese &amp; Tartufo</span>
+                  <span class="dish-dots"></span>
+                  <span class="dish-price">14,90 €</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Item 2: Mehrsprachigkeit -->
+          <div class="bento-item">
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="bento-title">Mehrsprachig (DE / EN / ...)</h3>
+            <p class="bento-desc">
+              Berlin ist international. Ein Klick schaltet die gesamte Speisekarte und alle Beschreibungen ohne Neuladen
+              der Seite um. Touristen und Expats bestellen mühelos.
+            </p>
+            <div class="bento-pill-row">
+              <span class="lang-pill active">DE</span>
+              <span class="lang-pill">EN</span>
+              <span class="lang-pill">IT / ES</span>
+            </div>
+          </div>
+
+          <!-- Bento Item 3: Reservierung & Termine -->
+          <div class="bento-item">
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="bento-title">Reservierung &amp; Termine</h3>
+            <p class="bento-desc">
+              Direktes Reservierungstool auf Ihrer eigenen Website. Keine 2 bis 3 Euro Gebühren pro reserviertem Gast an
+              Fremdplattformen. Bestätigung direkt per Mail oder SMS.
+            </p>
+            <div class="bento-highlight-badge">0 % Provision pro Gast</div>
+          </div>
+
+          <!-- Bento Item 4: Google Maps & Local SEO -->
+          <div class="bento-item">
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="bento-title">Google Local SEO &amp; Kiez-Maps</h3>
+            <p class="bento-desc">
+              Gefunden werden, wenn Gäste in Berlin nach „bester Döner Kreuzberg“ oder „Café Torstraße“ suchen. Saubere
+              Schema.org Gastronomie-Metadaten und optimiertes Google-Unternehmensprofil.
+            </p>
+          </div>
+
+          <!-- Bento Item 5: Druckfertige QR-Codes -->
+          <div class="bento-item">
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <h3 class="bento-title">Druckfertige Vektor-QR-Codes</h3>
+            <p class="bento-desc">
+              Sie erhalten hochauflösende QR-Codes als druckfertige Vektordatei (SVG/PDF). Perfekt für Tischaufsteller,
+              Schaufenster-Aufkleber, Visitenkarten und Rechnungen.
+            </p>
+          </div>
+
+          <!-- Bento Item 6: Highspeed-Hosting & SSL -->
+          <div class="bento-item">
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 class="bento-title">Highspeed Hosting &amp; DSGVO</h3>
+            <p class="bento-desc">
+              Serverstandort in Deutschland mit SSL-Verschlüsselung, 99,9 % Verfügbarkeit und voller DSGVO-Konformität
+              ohne nervige Werbebanner oder Drittanbieter-Tracker.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PACKAGES & PRICES -->
+    <section class="section section-pricing" id="preise">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">TRANSPARENTE FESTPREISE</span>
+          <h2 class="section-title">Klare Pakete. Keine versteckten Kosten.</h2>
+          <p class="section-desc">
+            Einmaliger Festpreis für Konzeption, Design und Programmierung. Keine Umsatzbeteiligung, keine
+            Knebelverträge.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Package 1: START -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="package-name">START</span>
+              <p class="package-for">Für kleine Imbisse, Kioske &amp; Pop-Up Stände</p>
+              <div class="price-box">
+                <span class="price-val">249 €</span>
+                <span class="price-note">einmaliger Festpreis</span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Moderner One-Pager (Mobile-First)</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Digitale Speisekarte mit Kategorien</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Öffnungszeiten &amp; interaktive Kiez-Anfahrt</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Druckfertiger Vektor-QR-Code</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Erster Klick-Entwurf in 48 Stunden</span>
+              </li>
+            </ul>
+
+            <div class="pricing-action">
+              <a href="#kontakt" class="btn btn-secondary w-100 magnetic" data-package="Start 249 €">
+                <span>Start wählen</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Package 2: BUSINESS (Featured) -->
+          <div class="pricing-card pricing-featured">
+            <div class="featured-ribbon">MEISTGEWÄHLT</div>
+            <div class="pricing-header">
+              <span class="package-name">BUSINESS</span>
+              <p class="package-for">Für etablierte Restaurants, Cafés &amp; Studios</p>
+              <div class="price-box">
+                <span class="price-val">449 €</span>
+                <span class="price-note">einmaliger Festpreis</span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Alles aus START plus:</strong></span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Zweisprachigkeit (DE + EN)</strong> ohne Neuladen</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Tischreservierung / Terminsystem</strong> ohne Gebühren</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Allergen- &amp; Ernährungsfilter (Vegan, Glutenfrei)</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Lokale Google SEO Optimierung &amp; Rich Snippets</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Live-Statusampel (Jetzt geöffnet / geschlossen)</span>
+              </li>
+            </ul>
+
+            <div class="pricing-action">
+              <a href="#kontakt" class="btn btn-primary w-100 magnetic" data-package="Business 449 €">
+                <span>Business anfragen</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Package 3: PREMIUM -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="package-name">PREMIUM</span>
+              <p class="package-for">Für gehobene Gastronomie &amp; Konzept-Flagships</p>
+              <div class="price-box">
+                <span class="price-val">799 €</span>
+                <span class="price-note">einmaliger Festpreis</span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Alles aus BUSINESS plus:</strong></span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Individuelles 3D / WebGL Signature-Element</strong></span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Interaktiver Konfigurator / Bestellsystem</strong></span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Mehrstufige Storytelling-Sektion &amp; Video-Hero</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Persönlicher Vor-Ort Fotocheck in Berlin</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>VIP Priority-Support &amp; WhatsApp-Direktkontakt</span>
+              </li>
+            </ul>
+
+            <div class="pricing-action">
+              <a href="#kontakt" class="btn btn-secondary w-100 magnetic" data-package="Premium 799 €">
+                <span>Premium wählen</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Optional Maintenance Addon Strip -->
+        <div class="maintenance-box">
+          <div class="maint-left">
+            <span class="maint-badge">OPTIONAL ZUBUCHBAR</span>
+            <h3 class="maint-title">Rundum-Sorglos-Pflege &amp; Hosting</h3>
+            <p class="maint-desc">
+              Highspeed-Hosting in Deutschland, SSL-Zertifikat, Domain-Verwaltung sowie unbegrenzte Menü- und
+              Preisänderungen auf einfachen Zuruf via Telegram oder E-Mail innerhalb von 24 Stunden.
+            </p>
+          </div>
+          <div class="maint-right">
+            <div class="maint-price">
+              <span class="maint-val">19 €</span>
+              <span class="maint-period">/ Monat</span>
+            </div>
+            <span class="maint-note">Monatlich kündbar · Keine Bindung</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FAQ ACCORDION -->
+    <section class="section section-faq" id="faq">
+      <div class="container container-sm">
+        <div class="section-header text-center">
+          <span class="section-badge">FRAGEN &amp; ANTWORTEN</span>
+          <h2 class="section-title">Häufig gestellte Fragen</h2>
+          <p class="section-desc">
+            Transparente Antworten rund um Ablauf, Kosten und technische Betreuung.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+
+          <!-- Q1 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Wie schnell ist meine neue Website online?</span>
+              <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg></span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Den ersten voll funktionsfähigen Klick-Entwurf sehen Sie bereits nach 48 Stunden auf Ihrem Smartphone.
+                Sobald Texte, Menü und Fotos final abgestimmt sind, steht die Seite in der Regel innerhalb von 5 bis 7
+                Werktagen komplett live im Netz.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Muss ich eigene Fotos liefern oder können Sie helfen?</span>
+              <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg></span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Gute Fotos verkaufen Gerichte. Wenn Sie bereits professionelle Fotos haben, optimiere ich diese für
+                Ladezeit und Farbbrillanz. Falls nicht, berate ich Sie bei der Motivwahl oder bringe bei Bedarf einen
+                Berliner Food-Fotografen aus meinem Netzwerk mit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Kann ich Gerichte und Preise später selbst anpassen?</span>
+              <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg></span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Ja. Sie erhalten entweder eine unkomplizierte Eingabemöglichkeit oder überlassen das im
+                19-Euro-Pflegepaket komplett mir: Schicken Sie mir einfach ein Foto der neuen Tageskarte per Telegram
+                oder WhatsApp, und ich aktualisiere die Daten binnen weniger Stunden.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Warum eine eigene Website statt nur Lieferando oder Google Maps?</span>
+              <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg></span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Plattformen verlangen 15 bis 30 Prozent Provision pro Bestellung und binden Ihre Kunden an sich, nicht
+                an Ihr Restaurant. Ihre eigene Website gehört zu 100 % Ihnen: 0 % Provision, maximale Marge und ein
+                professioneller Eindruck bei jedem Gast.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Gibt es versteckte Kosten oder ein Pflicht-Abonnement?</span>
+              <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg></span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Nein. Der vereinbarte Festpreis deckt die komplette Erstellung ab. Sie sind an kein Abonnement gebunden.
+                Auch das monatliche Pflege- und Hostingpaket für 19 Euro ist rein optional und monatlich kündbar.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Wie funktionieren die QR-Codes für Tische und Flyer?</span>
+              <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg></span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Sie erhalten vektorbasierte QR-Codes, die auch beim Druck auf großen Formaten gestochen scharf bleiben.
+                Scannt ein Gast den Code mit der Smartphone-Kamera, öffnet sich sofort ohne App-Download Ihre
+                Speisekarte.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CONTACT FORM & DIRECT CONTACTS -->
+    <section class="section section-contact" id="kontakt">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Left: Pitch & Details -->
+          <div class="contact-info-panel">
+            <span class="section-badge">KONTAKT</span>
+            <h2 class="contact-title">Lassen Sie uns Ihren Tisch füllen.</h2>
+            <p class="contact-lead">
+              Erzählen Sie mir von Ihrem Restaurant, Café oder Geschäft. Sie erhalten innerhalb von 24 Stunden eine
+              persönliche Einschätzung und ein klares Festpreis-Angebot.
+            </p>
+
+            <div class="contact-cards-list">
+              <a href="tel:+498886661234" class="c-card magnetic">
+                <div class="c-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div class="c-details">
+                  <span class="c-label">Telefon &amp; WhatsApp</span>
+                  <span class="c-val">+49 888 6661234</span>
+                </div>
+              </a>
+
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="c-card magnetic">
+                <div class="c-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </div>
+                <div class="c-details">
+                  <span class="c-label">Telegram Direktchat</span>
+                  <span class="c-val">@rovatt</span>
+                </div>
+              </a>
+
+              <a href="mailto:12234456789@gmail.com" class="c-card magnetic">
+                <div class="c-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="c-details">
+                  <span class="c-label">E-Mail Adresse</span>
+                  <span class="c-val">12234456789@gmail.com</span>
+                </div>
+              </a>
+
+              <div class="c-card c-card-static">
+                <div class="c-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="c-details">
+                  <span class="c-label">Studio Berlin</span>
+                  <span class="c-val">Torstraße 178 · 10115 Berlin-Mitte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Right: Form with in-page confirmation -->
+          <div class="contact-form-panel">
+            <div class="form-container" id="formWrapper">
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="formName" class="form-label">Ihr Name *</label>
+                    <input type="text" id="formName" name="name" class="form-input" placeholder="z. B. Marco Rossi"
+                      required>
+                    <span class="field-error" id="nameError">Bitte geben Sie Ihren Namen an.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="formBusiness" class="form-label">Betrieb / Restaurant *</label>
+                    <input type="text" id="formBusiness" name="business" class="form-input"
+                      placeholder="z. B. Trattoria da Marco" required>
+                    <span class="field-error" id="bizError">Bitte nennen Sie Ihren Betrieb.</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="formEmail" class="form-label">E-Mail-Adresse *</label>
+                    <input type="email" id="formEmail" name="email" class="form-input" placeholder="marco@beispiel.de"
+                      required>
+                    <span class="field-error" id="emailError">Bitte geben Sie eine gültige E-Mail-Adresse an.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="formPhone" class="form-label">Telefonnummer</label>
+                    <input type="tel" id="formPhone" name="phone" class="form-input" placeholder="+49 170 1234567">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="formPackage" class="form-label">Gewünschtes Paket</label>
+                  <select id="formPackage" name="package" class="form-select">
+                    <option value="business" selected>Business Paket – 449 € (Empfohlen)</option>
+                    <option value="start">Start Paket – 249 €</option>
+                    <option value="premium">Premium Paket – 799 €</option>
+                    <option value="pflege">Pflege- &amp; Hosting-Addon (19 €/Mt.)</option>
+                    <option value="beratung">Individuelle Beratung / Noch unentschieden</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="formMessage" class="form-label">Ihre Nachricht / Wünsche</label>
+                  <textarea id="formMessage" name="message" class="form-textarea" rows="4"
+                    placeholder="Erzählen Sie kurz von Ihren Speisen, Ihrem Kiez oder besonderen Ideen..."></textarea>
+                </div>
+
+                <div class="form-action">
+                  <button type="submit" class="btn btn-lg btn-primary w-100 magnetic" id="submitBtn">
+                    <span>Anfrage unverbindlich senden</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                  <p class="form-privacy-note">
+                    Garantiert keine Werbeanrufe. Ihre Angaben werden vertraulich behandelt.
+                  </p>
+                </div>
+              </form>
+
+              <!-- In-Page Confirmation State (revealed on submit) -->
+              <div class="form-success-state" id="formSuccess" aria-hidden="true">
+                <div class="success-icon-wrap">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <h3 class="success-title">Vielen Dank für Ihre Anfrage!</h3>
+                <p class="success-desc">
+                  Ihre Nachricht ist eingegangen. Renat meldet sich innerhalb von 24 Stunden persönlich bei Ihnen mit
+                  ersten Ideen und dem nächsten Schritt.
+                </p>
+                <div class="success-meta-box">
+                  <span class="meta-dot"></span>
+                  <span>Geschätzte Rückmeldung: Bis morgen, 11:00 Uhr</span>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" id="resetFormBtn">
+                  <span>Weitere Nachricht senden</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand-col">
+        <a href="#" class="footer-logo">
+          Studio<span class="brand-accent">Renat</span>
+        </a>
+        <p class="footer-tagline">
+          Maßgeschneiderte Webauftritte, digitale Menüs &amp; Reservierungssysteme für Restaurants, Cafés und lokale
+          Macher in Berlin.
+        </p>
+        <div class="footer-contacts-list">
+          <a href="tel:+498886661234">+49 888 6661234</a> ·
+          <a href="mailto:12234456789@gmail.com">12234456789@gmail.com</a> ·
+          <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer">Telegram @rovatt</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="f-col-title">Navigation</h4>
+        <ul class="f-links">
+          <li><a href="#projekte">Ausgewählte Arbeiten</a></li>
+          <li><a href="#ablauf">4-Schritte-Ablauf</a></li>
+          <li><a href="#leistungen">Leistungsübersicht</a></li>
+          <li><a href="#preise">Festpreis-Pakete</a></li>
+          <li><a href="#faq">Häufige Fragen</a></li>
+          <li><a href="#kontakt">Projekt anfragen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-projects-col">
+        <h4 class="f-col-title">10 Berliner Demos</h4>
+        <ul class="f-links-grid">
+          <li><a href="../doener/index.html" target="_blank" rel="noopener noreferrer">Döner der Sonne</a></li>
+          <li><a href="../pizza/index.html" target="_blank" rel="noopener noreferrer">Pizzeria Pugliese</a></li>
+          <li><a href="../aurum/index.html" target="_blank" rel="noopener noreferrer">AURUM Coffee</a></li>
+          <li><a href="../nami/index.html" target="_blank" rel="noopener noreferrer">NAMI Sushi</a></li>
+          <li><a href="../kiku/index.html" target="_blank" rel="noopener noreferrer">KIKU Nudelbar</a></li>
+          <li><a href="../emoshs/index.html" target="_blank" rel="noopener noreferrer">Emosh's Late-Night</a></li>
+          <li><a href="../imbiss/index.html" target="_blank" rel="noopener noreferrer">einfach starck</a></li>
+          <li><a href="../baeckerei/index.html" target="_blank" rel="noopener noreferrer">Bäckerei Eifel</a></li>
+          <li><a href="../barber/index.html" target="_blank" rel="noopener noreferrer">Studio Mayen</a></li>
+          <li><a href="../vela/index.html" target="_blank" rel="noopener noreferrer">Studio Vela</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-copyright">
+        <span>Fiktives Demo-Projekt. Gestaltung: Renat.</span>
+        <span class="f-sep">·</span>
+        <span class="f-fictional-note">Kontaktdaten in dieser Demo sind fiktiv.</span>
+      </div>
+      <div class="footer-back-to-top">
+        <a href="#hero" class="btn-scroll-top magnetic" aria-label="Nach oben scrollen">
+          <span>Nach oben</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

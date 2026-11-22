@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>KIKU Nudelbar · Handgemachte Ramen in Berlin-Prenzlauer Berg</title>
+  <meta name="description" content="KIKU Nudelbar am Kollwitzkiez: Traditionelle 12-Stunden-Brühen, handgezogene Nudeln, interaktiver Schüssel-Baukasten und kreative Toppings. Jetzt Tisch anfragen!">
+  <meta name="theme-color" content="#FFF8EE">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="KIKU Nudelbar · Handgemachte Ramen in Berlin-Prenzlauer Berg">
+  <meta property="og:description" content="Echte Ramen, 12 Stunden gekochte Brühen und handgezogene Nudeln im Prenzlauer Berg.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="img/shoyu-ramen.jpg">
+
+  <!-- Google Fonts: Fredoka + Noto Sans JP + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Demo Disclaimer Banner -->
+  <div id="demo-banner" class="demo-banner" role="banner">
+    <div class="demo-banner-content">
+      <span class="demo-pill">Demo</span>
+      <span class="demo-text">Demo-Projekt von Renat · Alle Angaben auf dieser Seite sind fiktiv.</span>
+    </div>
+    <button id="close-demo-banner" class="demo-banner-close" aria-label="Hinweisleiste schließen">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand" aria-label="KIKU Nudelbar Startseite">
+        <div class="brand-badge">
+          <svg class="chrysanthemum-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="4.5" fill="#E8452C"/>
+            <!-- 8 chrysanthemum petals -->
+            <path d="M16 2.5C17.2 2.5 18 5 18 8C18 10 17 11.5 16 11.5C15 11.5 14 10 14 8C14 5 14.8 2.5 16 2.5Z" fill="#F2B33D"/>
+            <path d="M16 29.5C17.2 29.5 18 27 18 24C18 22 17 20.5 16 20.5C15 20.5 14 22 14 24C14 27 14.8 29.5 16 29.5Z" fill="#F2B33D"/>
+            <path d="M2.5 16C2.5 14.8 5 14 8 14C10 14 11.5 15 11.5 16C11.5 17 10 18 8 18C5 18 2.5 17.2 2.5 16Z" fill="#F2B33D"/>
+            <path d="M29.5 16C29.5 14.8 27 14 24 14C22 14 20.5 15 20.5 16C20.5 17 22 18 24 18C27 18 29.5 17.2 29.5 16Z" fill="#F2B33D"/>
+            <path d="M6.5 6.5C7.3 5.6 9.3 7 11.4 9.1C12.8 10.5 13.2 12 12.5 12.7C11.8 13.4 10.3 13 8.9 11.6C6.8 9.5 5.6 7.4 6.5 6.5Z" fill="#F2B33D"/>
+            <path d="M25.5 25.5C24.7 26.4 22.7 25 20.6 22.9C19.2 21.5 18.8 20 19.5 19.3C20.2 18.6 21.7 19 23.1 20.4C25.2 22.5 26.4 24.6 25.5 25.5Z" fill="#F2B33D"/>
+            <path d="M25.5 6.5C26.4 7.4 25 9.4 22.9 11.5C21.5 12.9 20 13.3 19.3 12.6C18.6 11.9 19 10.4 20.4 9C22.5 6.9 24.6 5.6 25.5 6.5Z" fill="#F2B33D"/>
+            <path d="M6.5 25.5C5.6 24.6 7 22.6 9.1 20.5C10.5 19.1 12 18.7 12.7 19.4C13.4 20.1 13 21.6 11.6 23C9.5 25.1 7.4 26.4 6.5 25.5Z" fill="#F2B33D"/>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">KIKU</span>
+          <span class="brand-sub">Nudelbar · Berlin</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="#bau-deine-schuessel" class="nav-link">Schüssel bauen</a>
+        <a href="#speisekarte" class="nav-link">Speisekarte</a>
+        <a href="#bruehe-12h" class="nav-link">12h Brühe</a>
+        <a href="#stempelkarte" class="nav-link">Stempelkarte</a>
+        <a href="#kontakt" class="nav-link">Besuch & Zeiten</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#reservierung" class="btn btn-sm btn-yellow header-cta">Tisch anfragen</a>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="drawer-header">
+        <div class="brand-text-wrap">
+          <span class="brand-name">KIKU</span>
+          <span class="brand-sub">Prenzlauer Berg</span>
+        </div>
+        <button class="drawer-close" id="drawer-close" aria-label="Menü schließen">
+          <svg width="20" height="20" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#bau-deine-schuessel" class="mobile-link">Schüssel konfigurieren</a>
+        <a href="#speisekarte" class="mobile-link">Speisekarte</a>
+        <a href="#bruehe-12h" class="mobile-link">12h Brühen-Uhr</a>
+        <a href="#stempelkarte" class="mobile-link">Lunch-Stempelkarte</a>
+        <a href="#handwerk" class="mobile-link">Über das Handwerk</a>
+        <a href="#kontakt" class="mobile-link">Kontakt & Öffnungszeiten</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="#reservierung" class="btn btn-yellow btn-full">Tisch anfragen</a>
+        <div class="drawer-contact-mini">
+          <a href="tel:+498886661234">+49 888 6661234</a>
+          <span>Oderberger Str. 34, 10435 Berlin</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1: HERO (3D Ramen Bowl) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-pattern" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="sticker-badge-wrap">
+            <span class="sticker-tag sticker-red">Prenzlauer Berg</span>
+            <span class="sticker-tag sticker-yellow">Täglich ab 11:30 Uhr</span>
+          </div>
+          <h1 class="hero-title">
+            Echte Ramen.<br>
+            <span class="text-highlight">Handgezogene</span> Nudeln.<br>
+            12 Stunden Brühe.
+          </h1>
+          <p class="hero-lead">
+            Bei KIKU kochen wir keine Abkürzungen: Goldene Hühner-Dashi, cremige Knochenbrühen und vegane Umami-Elexiere, kombiniert mit hausgemachten Nudeln aus unserer traditionellen Kansui-Rezeptur.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#bau-deine-schuessel" class="btn btn-red btn-lg hero-cta">
+              <span>Bau deine Schüssel</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#speisekarte" class="btn btn-navy-ghost btn-lg">Speisekarte ansehen</a>
+          </div>
+
+          <!-- Quick facts ribbon -->
+          <div class="hero-badges-row">
+            <div class="badge-item">
+              <span class="badge-num">12 h</span>
+              <span class="badge-lbl">Köchelzeit Brühe</span>
+            </div>
+            <div class="badge-divider"></div>
+            <div class="badge-item">
+              <span class="badge-num">100%</span>
+              <span class="badge-lbl">Frische Nudeln</span>
+            </div>
+            <div class="badge-divider"></div>
+            <div class="badge-item">
+              <span class="badge-num">0%</span>
+              <span class="badge-lbl">Zusatzstoffe</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Three.js Container -->
+        <div class="hero-3d-wrapper" id="hero-3d-wrap">
+          <div class="canvas-card">
+            <div class="canvas-header-tag">
+              <span class="dot-live"></span>
+              <span>3D-Schüssel · Mit Maus / Finger drehen</span>
+            </div>
+
+            <!-- Three.js Canvas mount -->
+            <div id="three-ramen-mount" class="three-mount" role="img" aria-label="Interaktive 3D-Darstellung einer dampfenden Ramen-Schüssel mit Stäbchen und gehobenen Nudeln">
+              <!-- WebGL fallback visual rendered by JS if canvas fails -->
+            </div>
+
+            <div class="canvas-footer-hints">
+              <span class="hint-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 2v20M2 12h20M7 7l10 10M17 7L7 17"/>
+                </svg>
+                Aufsteigender Dampf
+              </span>
+              <span class="hint-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+                Stäbchen Lift
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: BAU DEINE SCHÜSSEL (Bowl Builder) -->
+    <section class="builder-section" id="bau-deine-schuessel">
+      <div class="container">
+        <div class="section-head text-center">
+          <div class="kicker-pill sticker-yellow">Individueller Baukasten</div>
+          <h2 class="section-title">Bau deine Schüssel</h2>
+          <p class="section-desc">
+            Wähle Brühe, Nudeln und deine persönlichen Toppings. Das Schüssel-Modell aktualisiert sich live, genau wie dein Endpreis.
+          </p>
+        </div>
+
+        <div class="builder-layout">
+          <!-- Left: Builder Controls -->
+          <div class="builder-controls-col">
+            <!-- Step 1: Broth -->
+            <div class="builder-step-card">
+              <div class="step-card-header">
+                <span class="step-badge">Schritt 1</span>
+                <h3 class="step-title">Wähle deine Brühe (Tare & Brühe)</h3>
+              </div>
+              <div class="options-grid broth-options" role="radiogroup" aria-label="Brühe auswählen">
+                <!-- Shoyu -->
+                <label class="option-card is-active" data-broth="shoyu" data-price="13.50" data-name="Tokyo Shoyu Dashi">
+                  <input type="radio" name="builder-broth" value="shoyu" checked class="sr-only">
+                  <div class="option-swatch swatch-shoyu" aria-hidden="true"></div>
+                  <div class="option-details">
+                    <div class="option-name-row">
+                      <span class="option-name">Tokyo Shoyu</span>
+                      <span class="option-price">13,50 €</span>
+                    </div>
+                    <p class="option-desc">Bernsteinfarbene Hühner-Dashi mit gereifter Marudaizu-Sojasauce & Ingwer</p>
+                  </div>
+                </label>
+
+                <!-- Tonkotsu -->
+                <label class="option-card" data-broth="tonkotsu" data-price="14.90" data-name="Hakata Tonkotsu Paitan">
+                  <input type="radio" name="builder-broth" value="tonkotsu" class="sr-only">
+                  <div class="option-swatch swatch-tonkotsu" aria-hidden="true"></div>
+                  <div class="option-details">
+                    <div class="option-name-row">
+                      <span class="option-name">Hakata Tonkotsu</span>
+                      <span class="option-price">14,90 €</span>
+                    </div>
+                    <p class="option-desc">Cremig gekochte 12-Stunden-Schweineknochenbrühe mit Mayu-Knoblauchöl</p>
+                  </div>
+                </label>
+
+                <!-- Miso -->
+                <label class="option-card" data-broth="miso" data-price="14.20" data-name="Sapporo Miso">
+                  <input type="radio" name="builder-broth" value="miso" class="sr-only">
+                  <div class="option-swatch swatch-miso" aria-hidden="true"></div>
+                  <div class="option-details">
+                    <div class="option-name-row">
+                      <span class="option-name">Sapporo Miso</span>
+                      <span class="option-price">14,20 €</span>
+                    </div>
+                    <p class="option-desc">Herzhafte geröstete rote & weiße Miso-Paste mit Sesam & Knoblauch</p>
+                  </div>
+                </label>
+
+                <!-- Vegan Kinoko -->
+                <label class="option-card" data-broth="vegan" data-price="13.90" data-name="Kiku Kinoko Vegan">
+                  <input type="radio" name="builder-broth" value="vegan" class="sr-only">
+                  <div class="option-swatch swatch-vegan" aria-hidden="true"></div>
+                  <div class="option-details">
+                    <div class="option-name-row">
+                      <span class="option-name">Kinoko Vegan</span>
+                      <span class="option-price">13,90 €</span>
+                    </div>
+                    <p class="option-desc">Intensive Pilz-Kombu-Essenz mit Röstlauchöl und weißer Sojasauce</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 2: Noodles -->
+            <div class="builder-step-card">
+              <div class="step-card-header">
+                <span class="step-badge">Schritt 2</span>
+                <h3 class="step-title">Wähle deinen Nudel-Typ</h3>
+              </div>
+              <div class="options-grid noodle-options" role="radiogroup" aria-label="Nudeln auswählen">
+                <label class="option-card is-active" data-noodle="classic" data-extra="0.00" data-name="Klassisch dünn (Katame)">
+                  <input type="radio" name="builder-noodle" value="classic" checked class="sr-only">
+                  <div class="option-details">
+                    <div class="option-name-row">
+                      <span class="option-name">Klassisch dünn</span>
+                      <span class="option-price">+0,00 €</span>
+                    </div>
+                    <p class="option-desc">Bissfester Weizenteig nach Hakata-Tradition, 60s gekocht</p>
+                  </div>
+                </label>
+
+                <label class="option-card" data-noodle="wavy" data-extra="0.50" data-name="Tokyo Wavy (Gewellt)">
+                  <input type="radio" name="builder-noodle" value="wavy" class="sr-only">
+                  <div class="option-details">
+                    <div class="option-name-row">
+                      <span class="option-name">Tokyo Wavy</span>
+                      <span class="option-price">+0,50 €</span>
+                    </div>
+                    <p class="option-desc">Leicht gewellt, transportiert besonders viel Brühe pro Bissen</p>
+                  </div>
+                </label>
+
+                <label class="option-card" data-noodle="udon" data-extra="1.00" data-name="Dicke Sanuki Udon">
+                  <input type="radio" name="builder-noodle" value="udon" class="sr-only">
+                  <div class="option-details">
+                    <div class="option-name-row">
+                      <span class="option-name">Dicke Sanuki Udon</span>
+                      <span class="option-price">+1,00 €</span>
+                    </div>
+                    <p class="option-desc">Handgerollte dicke Udon-Nudeln mit elastischem Biss</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3: Toppings -->
+            <div class="builder-step-card">
+              <div class="step-card-header">
+                <span class="step-badge">Schritt 3</span>
+                <h3 class="step-title">Toppings & Extras (mehrfach wählbar)</h3>
+              </div>
+              <div class="toppings-selection-grid">
+                <!-- Ajitsuke Tamago -->
+                <button type="button" class="topping-btn is-selected" data-topping="egg" data-price="1.80" data-name="Ajitsuke Tamago Wachsei">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Ajitsuke Tamago (Ei)</span>
+                  <span class="topping-cost">+1,80 €</span>
+                </button>
+
+                <!-- Chashu Pork -->
+                <button type="button" class="topping-btn is-selected" data-topping="chashu" data-price="2.80" data-name="Zartes Chashu Schweinefleisch">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Chashu Schweinebauch</span>
+                  <span class="topping-cost">+2,80 €</span>
+                </button>
+
+                <!-- Menma -->
+                <button type="button" class="topping-btn is-selected" data-topping="menma" data-price="1.50" data-name="Menma Bambussprossen">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Menma Bambus</span>
+                  <span class="topping-cost">+1,50 €</span>
+                </button>
+
+                <!-- Nori -->
+                <button type="button" class="topping-btn is-selected" data-topping="nori" data-price="1.00" data-name="Knusprige Nori-Algen">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Nori-Algenblatt</span>
+                  <span class="topping-cost">+1,00 €</span>
+                </button>
+
+                <!-- Pak Choi -->
+                <button type="button" class="topping-btn" data-topping="pakchoi" data-price="1.50" data-name="Frischer Baby Pak Choi">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Baby Pak Choi</span>
+                  <span class="topping-cost">+1,50 €</span>
+                </button>
+
+                <!-- Bio Tofu -->
+                <button type="button" class="topping-btn" data-topping="tofu" data-price="2.00" data-name="Gerösteter Bio-Tofu">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Gerösteter Bio-Tofu</span>
+                  <span class="topping-cost">+2,00 €</span>
+                </button>
+
+                <!-- Mais & Butter -->
+                <button type="button" class="topping-btn" data-topping="corn" data-price="1.20" data-name="Süßmais & Butterpatte">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Mais & Butterpatte</span>
+                  <span class="topping-cost">+1,20 €</span>
+                </button>
+
+                <!-- Chili Crisp -->
+                <button type="button" class="topping-btn" data-topping="chilicrisp" data-price="0.80" data-name="Hausgemachtes Chili-Crisp">
+                  <span class="topping-check" aria-hidden="true">✓</span>
+                  <span class="topping-name">Chili-Crisp (feurig)</span>
+                  <span class="topping-cost">+0,80 €</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Bowl Visualizer & Ticket -->
+          <div class="builder-preview-col">
+            <div class="live-bowl-card">
+              <div class="live-bowl-header">
+                <span class="sticker-tag sticker-red">Live-Vorschau</span>
+                <span class="live-bowl-title" id="builder-bowl-name">KIKU Tokyo Shoyu Spezial</span>
+              </div>
+
+              <!-- Interactive Visual Bowl Illustration -->
+              <div class="live-bowl-stage" id="live-bowl-stage" aria-hidden="true">
+                <svg viewBox="0 0 400 320" class="live-bowl-svg" id="bowl-svg">
+                  <defs>
+                    <!-- Broth Gradients -->
+                    <radialGradient id="grad-shoyu" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#df8931"/>
+                      <stop offset="70%" stop-color="#9a4d13"/>
+                      <stop offset="100%" stop-color="#5a2c0b"/>
+                    </radialGradient>
+                    <radialGradient id="grad-tonkotsu" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#fff8ed"/>
+                      <stop offset="65%" stop-color="#eddac2"/>
+                      <stop offset="100%" stop-color="#cbb599"/>
+                    </radialGradient>
+                    <radialGradient id="grad-miso" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#e3a033"/>
+                      <stop offset="70%" stop-color="#b66b19"/>
+                      <stop offset="100%" stop-color="#703f0b"/>
+                    </radialGradient>
+                    <radialGradient id="grad-vegan" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#c5ab5d"/>
+                      <stop offset="70%" stop-color="#807238"/>
+                      <stop offset="100%" stop-color="#46401d"/>
+                    </radialGradient>
+
+                    <!-- Bowl ceramic shadow -->
+                    <filter id="bowl-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#1D2440" flood-opacity="0.25"/>
+                    </filter>
+                  </defs>
+
+                  <!-- Steam waves -->
+                  <g class="svg-steam-group">
+                    <path class="steam-line steam-1" d="M160 90 Q150 60 165 30 T155 0" stroke="#FAF3E8" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+                    <path class="steam-line steam-2" d="M200 85 Q215 55 195 25 T210 0" stroke="#FAF3E8" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+                    <path class="steam-line steam-3" d="M240 90 Q225 60 245 30 T235 0" stroke="#FAF3E8" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+                  </g>
+
+                  <!-- Outer Bowl Ceramic Shadow & Base -->
+                  <ellipse cx="200" cy="275" rx="140" ry="24" fill="#1D2440" opacity="0.12"/>
+                  <path d="M70 140 C70 230 115 280 200 280 C285 280 330 230 330 140 Z" fill="#1D2440" filter="url(#bowl-shadow)"/>
+                  <!-- Bowl rim decorative band -->
+                  <ellipse cx="200" cy="140" rx="130" ry="38" fill="#14192d" stroke="#F2B33D" stroke-width="3"/>
+                  <ellipse cx="200" cy="140" rx="123" ry="33" fill="#242c4c"/>
+
+                  <!-- Broth Surface (Color changes dynamically) -->
+                  <ellipse id="svg-broth-surface" cx="200" cy="142" rx="116" ry="30" fill="url(#grad-shoyu)"/>
+
+                  <!-- Noodles layer -->
+                  <g id="svg-noodles-group">
+                    <path d="M110 140 Q130 155 160 145 T210 142 T260 146 T290 138" stroke="#F6D382" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <path d="M120 146 Q150 160 180 148 T230 149 T280 142" stroke="#ECC46D" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    <path d="M135 152 Q170 162 205 152 T265 150" stroke="#F6D382" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M145 138 Q180 144 215 138 T275 140" stroke="#FADFA0" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                  </g>
+
+                  <!-- Dynamic Toppings SVGs -->
+                  <!-- Nori Sheet -->
+                  <g id="svg-topping-nori" class="svg-topping">
+                    <polygon points="90,105 130,95 145,145 105,155" fill="#1b2e23" stroke="#121f18" stroke-width="1"/>
+                    <line x1="95" y1="115" x2="135" y2="105" stroke="#2a4535" stroke-width="1"/>
+                  </g>
+
+                  <!-- Chashu Pork Slices -->
+                  <g id="svg-topping-chashu" class="svg-topping">
+                    <ellipse cx="240" cy="145" rx="34" ry="20" fill="#b95843" transform="rotate(-10 240 145)" stroke="#e4b09e" stroke-width="3"/>
+                    <ellipse cx="240" cy="145" rx="22" ry="12" fill="#8f3d2c" transform="rotate(-10 240 145)"/>
+                    <ellipse cx="215" cy="155" rx="30" ry="18" fill="#c4644e" transform="rotate(5 215 155)" stroke="#e4b09e" stroke-width="2.5"/>
+                  </g>
+
+                  <!-- Ajitsuke Tamago Egg -->
+                  <g id="svg-topping-egg" class="svg-topping">
+                    <ellipse cx="160" cy="148" rx="26" ry="18" fill="#FDFBEE" stroke="#cfba89" stroke-width="2"/>
+                    <ellipse cx="162" cy="147" rx="14" ry="11" fill="#FF8400"/>
+                    <ellipse cx="160" cy="145" rx="9" ry="7" fill="#FFA726"/>
+                  </g>
+
+                  <!-- Menma Bamboo -->
+                  <g id="svg-topping-menma" class="svg-topping">
+                    <rect x="180" y="125" width="28" height="6" rx="2" fill="#d29e5a" transform="rotate(25 180 125)"/>
+                    <rect x="185" y="132" width="28" height="6" rx="2" fill="#be8a48" transform="rotate(20 185 132)"/>
+                  </g>
+
+                  <!-- Pak Choi -->
+                  <g id="svg-topping-pakchoi" class="svg-topping is-hidden">
+                    <path d="M260 135 C280 115 300 130 295 150 C290 160 265 155 260 135 Z" fill="#3E7C3E" stroke="#5EAA5E" stroke-width="2"/>
+                    <path d="M262 142 C270 135 285 140 280 152" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+                  </g>
+
+                  <!-- Bio Tofu -->
+                  <g id="svg-topping-tofu" class="svg-topping is-hidden">
+                    <rect x="125" y="135" width="24" height="20" rx="3" fill="#DDBB77" stroke="#A77A25" stroke-width="2"/>
+                    <rect x="135" y="148" width="22" height="18" rx="3" fill="#E8CD90" stroke="#A77A25" stroke-width="2"/>
+                  </g>
+
+                  <!-- Corn & Butter -->
+                  <g id="svg-topping-corn" class="svg-topping is-hidden">
+                    <circle cx="215" cy="135" r="4.5" fill="#FFC107"/>
+                    <circle cx="223" cy="133" r="4.5" fill="#FFD54F"/>
+                    <circle cx="218" cy="141" r="4" fill="#FFB300"/>
+                    <rect x="228" y="130" width="16" height="12" rx="2" fill="#FFF59D" stroke="#FFE082" stroke-width="1.5"/>
+                  </g>
+
+                  <!-- Chili Crisp -->
+                  <g id="svg-topping-chilicrisp" class="svg-topping is-hidden">
+                    <ellipse cx="195" cy="148" rx="18" ry="9" fill="#C62828" opacity="0.8"/>
+                    <circle cx="190" cy="147" r="2" fill="#FF5252"/>
+                    <circle cx="198" cy="150" r="1.8" fill="#FF5252"/>
+                    <circle cx="193" cy="151" r="1.5" fill="#D32F2F"/>
+                  </g>
+
+                  <!-- Scallions sprinkle -->
+                  <g class="svg-scallions">
+                    <circle cx="185" cy="145" r="3.5" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+                    <circle cx="198" cy="142" r="3" fill="#66BB6A" stroke="#2E7D32" stroke-width="1"/>
+                    <circle cx="178" cy="152" r="3" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+                    <circle cx="210" cy="148" r="3.5" fill="#81C784" stroke="#2E7D32" stroke-width="1"/>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Price & Order Ticket -->
+              <div class="builder-receipt">
+                <div class="receipt-row">
+                  <span class="receipt-label">Basis Brühe:</span>
+                  <span class="receipt-value" id="receipt-broth-val">Tokyo Shoyu (13,50 €)</span>
+                </div>
+                <div class="receipt-row">
+                  <span class="receipt-label">Nudel-Wahl:</span>
+                  <span class="receipt-value" id="receipt-noodle-val">Klassisch dünn (+0,00 €)</span>
+                </div>
+                <div class="receipt-row">
+                  <span class="receipt-label">Ausgewählte Toppings:</span>
+                  <span class="receipt-value" id="receipt-toppings-val">Ei, Chashu, Menma, Nori</span>
+                </div>
+                <div class="receipt-divider"></div>
+                <div class="receipt-total-row">
+                  <span class="total-label">Dein Schüsselpreis:</span>
+                  <span class="total-price" id="builder-total-price">20,60 €</span>
+                </div>
+                <button type="button" class="btn btn-red btn-full builder-order-btn" id="builder-submit-btn">
+                  <span>Diese Schüssel vormerken</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MENU (Speisekarte with big rounded cards and sticker labels) -->
+    <section class="menu-section" id="speisekarte">
+      <div class="container">
+        <div class="section-head text-center">
+          <div class="kicker-pill sticker-red">Aus unserer Küche</div>
+          <h2 class="section-title">Speisekarte & Spezialitäten</h2>
+          <p class="section-desc">
+            Von der 12h-Schweinebrühe bis zur feurigen Tantanmen: Jede Schüssel wird frisch am Tresen zusammengestellt. Alle Brühen entstehen im eigenen Haus.
+          </p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="menu-filters-bar" role="tablist" aria-label="Menü-Kategorien filtern">
+          <button class="filter-chip is-active" data-filter="all" role="tab" aria-selected="true">Alle Gerichte</button>
+          <button class="filter-chip" data-filter="ramen" role="tab" aria-selected="false">Ramen</button>
+          <button class="filter-chip" data-filter="vegan" role="tab" aria-selected="false">Vegan</button>
+          <button class="filter-chip" data-filter="sides" role="tab" aria-selected="false">Beilagen</button>
+          <button class="filter-chip" data-filter="dessert" role="tab" aria-selected="false">Dessert</button>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-grid" id="menu-grid">
+          <!-- 1. Tokyo Shoyu Ramen -->
+          <article class="menu-card" data-category="ramen">
+            <div class="card-img-wrap">
+              <img src="img/shoyu-ramen.jpg" alt="Dampfende Schale Tokyo Shoyu Ramen mit Chashu, mariniertem Ei und Nori" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-yellow">Beliebt</span>
+                <span class="sticker-tag sticker-navy">Hühner-Dashi</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Tokyo Shoyu Ramen</h3>
+                <span class="dish-price">13,50 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">東京醤油ラーメン</span>
+              <p class="dish-desc">
+                Klare, bernsteinfarbene Brühe aus Freilandhuhn und Kombu-Dashi, veredelt mit zweifach gereifter Sojasauce. Serviert mit zartem Chashu-Schweinebauch, Ajitsuke-Wachsei, Menma und Frühlingszwiebeln.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Nudeln: Dünn bissfest</span>
+                <span class="dish-feature">Schärfe: Mild</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Hakata Tonkotsu Ramen -->
+          <article class="menu-card" data-category="ramen">
+            <div class="card-img-wrap">
+              <img src="img/tonkotsu-ramen.jpg" alt="Cremige Tonkotsu Ramen Schüssel mit schwarzem Knoblauchöl und Schweinefleisch" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-red">12h Brühe</span>
+                <span class="sticker-tag sticker-yellow">Hausfavorit</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Hakata Tonkotsu Paitan</h3>
+                <span class="dish-price">14,90 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">博多豚骨白湯</span>
+              <p class="dish-desc">
+                12 Stunden auf hoher Hitze emulgierte Schweineknochenbrühe. Extrem cremig, reich an Kollagen und vollendet mit hausgemachtem schwarzem Röstknoblauchöl (Mayu), Kikurage-Pilzen und geschmortem Pork Belly.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Nudeln: Klassisch Hakata</span>
+                <span class="dish-feature">Schärfe: Kräftig pikant</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Sapporo Miso Ramen -->
+          <article class="menu-card" data-category="ramen">
+            <div class="card-img-wrap">
+              <img src="img/miso-ramen.jpg" alt="Herzhafte Miso Ramen Schale mit frischem Mais, Chashu und Hokkaido-Butter" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-yellow">Herzhaft</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Sapporo Miso Ramen</h3>
+                <span class="dish-price">14,20 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">札幌味噌ラーメン</span>
+              <p class="dish-desc">
+                Feine Komposition aus drei regionalen japanischen Miso-Sorten, im Wok mit Ingwer, Sesam und Sojasprossen angebraten. Topping mit geröstetem Mais, einem Hauch Hokkaido-Butter und geschmortem Fleisch.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Nudeln: Tokyo Wavy</span>
+                <span class="dish-feature">Schärfe: Würzig</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Vegan Tantanmen -->
+          <article class="menu-card" data-category="ramen vegan">
+            <div class="card-img-wrap">
+              <img src="img/tantanmen-vegan.jpg" alt="Feurige vegane Tantanmen Ramen mit rotem Sesam-Chiliöl und grünem Pak Choi" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-red">Scharf</span>
+                <span class="sticker-tag sticker-green">100% Vegan</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Kiku Vegan Tantanmen</h3>
+                <span class="dish-price">14,50 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">ヴィーガン坦々麺</span>
+              <p class="dish-desc">
+                Cremige Sesam-Chili-Brühe auf Basis von geröstetem weißem Sesam und Sojamilch. Gekrönt mit würzigem Soja-Mince, frischem Baby Pak Choi, Szechuanpfeffer-Note und unserem scharfen Kiku-Chiliöl.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Nudeln: Tokyo Wavy</span>
+                <span class="dish-feature">Schärfe: Sehr scharf</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Kiku Kinoko Shio Vegan -->
+          <article class="menu-card" data-category="ramen vegan">
+            <div class="card-img-wrap">
+              <img src="img/kinoko-vegan.jpg" alt="Klare vegane Pilz-Ramen Schüssel mit Shiitake, Tofu und frischem Gemüse" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-green">100% Vegan</span>
+                <span class="sticker-tag sticker-navy">Leicht & Rein</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Kiku Kinoko Shio</h3>
+                <span class="dish-price">13,90 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">キノコ塩ラーメン</span>
+              <p class="dish-desc">
+                Schimmernde, klare Brühe aus getrockneten Shiitake-Pilzen, Hokkaido-Kombu und gegrilltem Porree. Mit sautierten Shimeji-Pilzen, knusprigem Bio-Tofu, Lauchstreifen und zartem Frühlingsgemüse.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Nudeln: Dünn bissfest</span>
+                <span class="dish-feature">Schärfe: Mild aromatisch</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Gyokai Tsukemen -->
+          <article class="menu-card" data-category="ramen">
+            <div class="card-img-wrap">
+              <img src="img/tsukemen.jpg" alt="Tsukemen Tauch-Nudeln auf separater Platte mit hochkonzentrierter Dip-Brühe" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-yellow">Tauch-Ramen</span>
+                <span class="sticker-tag sticker-navy">Intensiv</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Gyokai Tsukemen</h3>
+                <span class="dish-price">15,90 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">魚介つけ麺</span>
+              <p class="dish-desc">
+                Die Nudeln werden separat kalt serviert und in eine hochkonzentrierte, heiße Reduktion aus Knochenbrühe und getrocknetem Bonito-Fisch getaucht. Ein unvergleichlich intensives Umami-Erlebnis.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Nudeln: Dicke Sanuki Udon</span>
+                <span class="dish-feature">Serviert mit Limette & Nori</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Gyoza -->
+          <article class="menu-card" data-category="sides">
+            <div class="card-img-wrap">
+              <img src="img/gyoza.jpg" alt="Knusprig gebratene Gyoza Teigtaschen mit Dip-Schale" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-yellow">6 Stück</span>
+                <span class="sticker-tag sticker-navy">Handgefaltet</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Knusprige Gyoza</h3>
+                <span class="dish-price">7,50 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">自家製焼き餃子</span>
+              <p class="dish-desc">
+                Täglich in unserer Küche frisch gefaltete Teigtaschen mit zarter Füllung aus Hackfleisch, Weißkohl, Schnittlauch und Sesamöl. Mit krossem Spitzenrand serviert, dazu Yuzu-Ponzu-Dip.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Auch vegetarisch erhältlich</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Tori Karaage -->
+          <article class="menu-card" data-category="sides">
+            <div class="card-img-wrap">
+              <img src="img/karaage.jpg" alt="Japanisch goldbraun frittiertes Hähnchen Karaage mit Limette und scharfer Mayonnaise" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-red">Kross</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Tori Karaage</h3>
+                <span class="dish-price">8,20 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">鳥の唐揚げ</span>
+              <p class="dish-desc">
+                In Sojasauce, Knoblauch und Sake mariniertes Hühnerfleisch, in leichter Kartoffelstärke knusprig ausgebacken. Serviert mit Bio-Zitronenspalte und hausgemachter Shichimi-Mayo.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Portion: 5 große Stücke</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Edamame -->
+          <article class="menu-card" data-category="sides vegan">
+            <div class="card-img-wrap">
+              <img src="img/edamame.jpg" alt="Grüne Edamame Sojabohnen mit grobem Meersalz und japanischen Gewürzen" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-green">100% Vegan</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Edamame Meersalz</h3>
+                <span class="dish-price">5,50 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">枝豆</span>
+              <p class="dish-desc">
+                Dampfgegarte junge Sojabohnen in der Schote, bestreut mit grobem Atlantik-Meersalz und einer Prise geröstetem Shichimi-Togarashi-Pfeffer. Der ideale Einstieg.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Warm serviert</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Uji Matcha Ganache -->
+          <article class="menu-card" data-category="dessert">
+            <div class="card-img-wrap">
+              <img src="img/matcha-dessert.jpg" alt="Feines grünes Uji Matcha Törtchen mit geröstetem schwarzem Sesam" width="480" height="360" loading="lazy" class="card-img">
+              <div class="card-stickers">
+                <span class="sticker-tag sticker-yellow">Dessert</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="dish-title">Uji Matcha Ganache</h3>
+                <span class="dish-price">6,80 €</span>
+              </div>
+              <span class="dish-kanji" lang="ja">宇治抹茶タルト</span>
+              <p class="dish-desc">
+                Zartschmelzende Ganache aus erstklassigem Bio-Matcha aus der Präfektur Kyoto auf knusprigem Mürbeteigboden, verfeinert mit geröstetem schwarzem Sesam und weißer Schokolade.
+              </p>
+              <div class="card-footer-info">
+                <span class="dish-feature">Vegetarisch</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 12 STUNDEN BRÜHE (Interactive Gauge & Process Clock) -->
+    <section class="broth-gauge-section" id="bruehe-12h">
+      <div class="container">
+        <div class="gauge-grid">
+          <!-- Left: Information & Process Story -->
+          <div class="gauge-story">
+            <div class="kicker-pill sticker-navy">Die Kunst des Siedens</div>
+            <h2 class="section-title">12 Stunden für einen Löffel Perfektion</h2>
+            <p class="section-desc">
+              Gute Brühe lässt sich nicht hetzen. Bei KIKU starten die Kessel jeden Morgen um 04:30 Uhr. Erst nach 12 Stunden kontinuierlicher Temperaturführung lösen sich Kollagen, Mineralien und Aromen zur samtigen Emulsion.
+            </p>
+
+            <!-- Interactive Stage Cards -->
+            <div class="broth-stages-list" id="broth-stages">
+              <button class="stage-item is-active" data-hour="2" type="button">
+                <div class="stage-time">0–2 Std.</div>
+                <div class="stage-content">
+                  <h4 class="stage-title">Röstung & Kaltwasserauszug</h4>
+                  <p class="stage-desc">Markknochen werden im Ofen geröstet und zusammen mit getrocknetem Kombu-Kelp schonend im Quellwasser angesetzt.</p>
+                </div>
+              </button>
+
+              <button class="stage-item" data-hour="6" type="button">
+                <div class="stage-time">3–6 Std.</div>
+                <div class="stage-content">
+                  <h4 class="stage-title">Die sanfte Emulsion (96°C)</h4>
+                  <p class="stage-desc">Konstantes Sieden bricht Knochenmark und Gelatine auf. Es entsteht die typisch milchige Paitan-Textur ohne Fettaugen.</p>
+                </div>
+              </button>
+
+              <button class="stage-item" data-hour="9" type="button">
+                <div class="stage-time">7–9 Std.</div>
+                <div class="stage-content">
+                  <h4 class="stage-title">Aromaten & Sake-Infusion</h4>
+                  <p class="stage-desc">Frischer Ingwer, gerösteter Negi-Lauch, Knoblauch und japanischer Kochsake neutralisieren schwere Noten und spenden Frische.</p>
+                </div>
+              </button>
+
+              <button class="stage-item" data-hour="12" type="button">
+                <div class="stage-time">10–12 Std.</div>
+                <div class="stage-content">
+                  <h4 class="stage-title">Tare-Vollendung & Klärung</h4>
+                  <p class="stage-desc">Zweifache Filtration durch feines Seihtuch. Die heiße Brühe trifft im Gastbecher auf die konzentrierte KIKU-Tare.</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Clock Gauge Animation Visualizer -->
+          <div class="gauge-visualizer-col">
+            <div class="gauge-clock-card">
+              <div class="gauge-card-header">
+                <span class="sticker-tag sticker-red">Simmer-Clock</span>
+                <span class="gauge-temp-badge" id="gauge-temp-display">96°C Temperatur</span>
+              </div>
+
+              <!-- Animated Gauge Dial (SVG) -->
+              <div class="gauge-dial-wrap">
+                <svg viewBox="0 0 300 300" class="gauge-svg" id="gauge-clock-svg">
+                  <!-- Outer dial ring -->
+                  <circle cx="150" cy="150" r="130" fill="none" stroke="#FAF3E8" stroke-width="18"/>
+                  <!-- Progress arc filled dynamically -->
+                  <circle id="gauge-progress-arc" cx="150" cy="150" r="130" fill="none" stroke="#F2B33D" stroke-width="18" stroke-dasharray="816.8" stroke-dashoffset="680" stroke-linecap="round" transform="rotate(-90 150 150)"/>
+
+                  <!-- Hour notches (1 to 12) -->
+                  <g class="gauge-hour-ticks" stroke="#1D2440" stroke-width="2.5" opacity="0.6">
+                    <line x1="150" y1="28" x2="150" y2="40"/>
+                    <line x1="211" y1="44" x2="205" y2="55"/>
+                    <line x1="256" y1="89" x2="245" y2="95"/>
+                    <line x1="272" y1="150" x2="260" y2="150"/>
+                    <line x1="256" y1="211" x2="245" y2="205"/>
+                    <line x1="211" y1="256" x2="205" y2="245"/>
+                    <line x1="150" y1="272" x2="150" y2="260"/>
+                    <line x1="89" y1="256" x2="95" y2="245"/>
+                    <line x1="44" y1="211" x2="55" y2="205"/>
+                    <line x1="28" y1="150" x2="40" y2="150"/>
+                    <line x1="44" y1="89" x2="55" y2="95"/>
+                    <line x1="89" y1="44" x2="95" y2="55"/>
+                  </g>
+
+                  <!-- Center dial display -->
+                  <circle cx="150" cy="150" r="95" fill="#FFF8EE" stroke="#1D2440" stroke-width="3"/>
+                  
+                  <!-- Dial Center Text -->
+                  <text x="150" y="135" text-anchor="middle" class="gauge-hour-num" id="gauge-current-hour">2h</text>
+                  <text x="150" y="162" text-anchor="middle" class="gauge-sub-label">Kochdauer</text>
+                  <text x="150" y="184" text-anchor="middle" class="gauge-stage-label" id="gauge-status-text">Kaltansatz</text>
+
+                  <!-- Dial hand pointer -->
+                  <g id="gauge-pointer-group" transform="rotate(60 150 150)">
+                    <line x1="150" y1="150" x2="150" y2="48" stroke="#E8452C" stroke-width="4.5" stroke-linecap="round"/>
+                    <circle cx="150" cy="150" r="8" fill="#E8452C"/>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Interactive slider controller -->
+              <div class="gauge-scrubber-row">
+                <label for="gauge-slider" class="sr-only">Brühen-Stunde einstellen (1 bis 12)</label>
+                <span class="scrub-label">1h</span>
+                <input type="range" id="gauge-slider" min="1" max="12" value="2" step="1" class="gauge-range-input">
+                <span class="scrub-label">12h</span>
+              </div>
+
+              <!-- Broth Pot Image teaser -->
+              <div class="gauge-pot-preview">
+                <img src="img/broth-pot.jpg" alt="Dampfender Brühen-Kessel in der KIKU Nudelbar Küche" width="400" height="200" loading="lazy" class="pot-img">
+                <div class="pot-caption">
+                  <span>Großküchenkessel am Prenzlauer Berg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: LUNCH STEMPELKARTE (Collect 10 Stamps Animation) -->
+    <section class="stamps-section" id="stempelkarte">
+      <div class="container">
+        <div class="section-head text-center">
+          <div class="kicker-pill sticker-yellow">Prenzlauer Berg Lunch Club</div>
+          <h2 class="section-title">KIKU Stempelkarte: 10 Schüsseln, 1 aufs Haus</h2>
+          <p class="section-desc">
+            Für Nachbarn, Studenten und Nudelsüchtige: Sammle bei jedem Schüssel-Besuch einen Stempel. Dein Fortschritt wird direkt in deinem Browser gespeichert.
+          </p>
+        </div>
+
+        <div class="stamp-card-wrapper">
+          <!-- Physical style card container -->
+          <div class="stamp-card-frame" id="stamp-card">
+            <div class="stamp-card-top">
+              <div class="card-brand">
+                <span class="stamp-card-kiku">KIKU NUDELBAR</span>
+                <span class="stamp-card-sub">Offizielle Mittags-Stempelkarte</span>
+              </div>
+              <div class="stamp-status-badge">
+                <span id="stamp-counter-text">0 von 10</span>
+                <span>Schüsseln</span>
+              </div>
+            </div>
+
+            <!-- 10 stamp slots grid -->
+            <div class="stamps-grid" id="stamps-grid" role="group" aria-label="10 Stempelfelder">
+              <!-- Slot 1 to 10 rendered semantically -->
+              <button class="stamp-slot" data-index="1" type="button" aria-label="Stempelfeld 1">
+                <span class="slot-num">1</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="2" type="button" aria-label="Stempelfeld 2">
+                <span class="slot-num">2</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="3" type="button" aria-label="Stempelfeld 3">
+                <span class="slot-num">3</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="4" type="button" aria-label="Stempelfeld 4">
+                <span class="slot-num">4</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="5" type="button" aria-label="Stempelfeld 5">
+                <span class="slot-num">5</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="6" type="button" aria-label="Stempelfeld 6">
+                <span class="slot-num">6</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="7" type="button" aria-label="Stempelfeld 7">
+                <span class="slot-num">7</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="8" type="button" aria-label="Stempelfeld 8">
+                <span class="slot-num">8</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot" data-index="9" type="button" aria-label="Stempelfeld 9">
+                <span class="slot-num">9</span>
+                <div class="stamp-seal" aria-hidden="true"></div>
+              </button>
+              <button class="stamp-slot slot-reward" data-index="10" type="button" aria-label="Stempelfeld 10: Kostenlose Schüssel">
+                <span class="slot-reward-badge">Gratis</span>
+                <span class="slot-num">10</span>
+                <div class="stamp-seal seal-gold" aria-hidden="true"></div>
+              </button>
+            </div>
+
+            <!-- Card Bottom Controls -->
+            <div class="stamp-card-bottom">
+              <div class="stamp-instructions">
+                <span>Tippe auf ein Feld oder nutze den Button, um einen Stempel hinzuzufügen.</span>
+              </div>
+              <div class="stamp-actions">
+                <button type="button" class="btn btn-red btn-sm" id="btn-add-stamp">
+                  <span>+1 Stempel stempeln</span>
+                </button>
+                <button type="button" class="btn btn-navy-ghost btn-sm" id="btn-reset-stamps">
+                  <span>Zurücksetzen</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reward Banner (Unlocked when 10 stamps are reached) -->
+          <div class="stamp-reward-alert is-hidden" id="stamp-reward-box">
+            <div class="reward-alert-inner">
+              <div class="reward-tag sticker-red">Glückwunsch!</div>
+              <h3 class="reward-title">Deine 10. Schüssel geht aufs Haus!</h3>
+              <p class="reward-text">
+                Zeige diesen Code beim nächsten Besuch an der Kasse im Prenzlauer Berg vor:
+              </p>
+              <div class="reward-code-box">
+                <span class="reward-code">KIKU-LUNCH-FREI-10</span>
+                <button type="button" class="btn btn-yellow btn-xs" id="copy-code-btn">Code kopieren</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PHILOSOPHY & ATMOSPHERE -->
+    <section class="craft-section" id="handwerk">
+      <div class="container craft-grid">
+        <div class="craft-img-col">
+          <div class="craft-img-card">
+            <img src="img/interior.jpg" alt="Atmosphäre und warmer Holztresen der KIKU Nudelbar im Prenzlauer Berg" width="600" height="450" loading="lazy" class="craft-img">
+            <div class="craft-tag sticker-yellow">Kollwitzkiez · Berlin</div>
+          </div>
+        </div>
+        <div class="craft-text-col">
+          <div class="kicker-pill sticker-red">Das KIKU-Prinzip</div>
+          <h2 class="section-title">Nudeln wie in Tokio. Leben wie in Berlin.</h2>
+          <p class="section-desc">
+            KIKU (japanisch für Chrysantheme, 菊) steht für Klarheit, Beständigkeit und lebendige Handwerkskunst. Wir glauben, dass ein schnelles Mittagessen genauso viel Hingabe verdient wie ein mehrgängiges Menü.
+          </p>
+          <div class="craft-points">
+            <div class="point-item">
+              <div class="point-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="point-info">
+                <h4>Original Kansui-Nudelteig</h4>
+                <p>Eigene Mischung aus Weizenmehl und mineralischem Kansui-Wasser für den perfekten Katame-Biss.</p>
+              </div>
+            </div>
+
+            <div class="point-item">
+              <div class="point-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="point-info">
+                <h4>Regionale Partnerschaften</h4>
+                <p>Freilandeier aus Brandenburg, Bio-Kräuter und Fleisch aus artgerechter regionaler Haltung.</p>
+              </div>
+            </div>
+
+            <div class="point-item">
+              <div class="point-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="point-info">
+                <h4>Kompromisslos vegane Alternativen</h4>
+                <p>Unsere veganen Brühen sind keine Notlösung, sondern vollwertige Umami-Giganten aus Shiitake und Röstlauch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: RESERVATION & CONTACT & HOURS -->
+    <section class="contact-section" id="kontakt">
+      <div class="container">
+        <div class="section-head text-center">
+          <div class="kicker-pill sticker-navy">Besuch & Reservierung</div>
+          <h2 class="section-title">Komm vorbei oder reserviere deinen Platz</h2>
+          <p class="section-desc">
+            Wir halten stets die Hälfte unserer Plätze für spontane Walk-ins frei. Für Gruppen oder garantierte Plätze kannst du unkompliziert anfragen.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Reservation Form (In-page confirmation, no backend) -->
+          <div class="reservation-card" id="reservierung">
+            <div class="card-header-styled">
+              <span class="sticker-tag sticker-red">Tisch anfragen</span>
+              <h3 class="form-title">Tisch im Prenzlauer Berg</h3>
+            </div>
+            
+            <form id="res-form" class="res-form" novalidate>
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label for="res-name">Dein Name *</label>
+                  <input type="text" id="res-name" name="name" required placeholder="z.B. Jonas Meyer" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="res-persons">Personen *</label>
+                  <select id="res-persons" name="persons" required class="form-select">
+                    <option value="1">1 Person (Tresenplatz)</option>
+                    <option value="2" selected>2 Personen</option>
+                    <option value="3">3 Personen</option>
+                    <option value="4">4 Personen</option>
+                    <option value="5+">5+ Personen (Gruppe)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label for="res-date">Wunschdatum *</label>
+                  <input type="date" id="res-date" name="date" required class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="res-time">Uhrzeit *</label>
+                  <select id="res-time" name="time" required class="form-select">
+                    <option value="12:00">12:00 Uhr (Lunch)</option>
+                    <option value="13:00">13:00 Uhr (Lunch)</option>
+                    <option value="18:00" selected>18:00 Uhr (Dinner)</option>
+                    <option value="19:30">19:30 Uhr (Dinner)</option>
+                    <option value="20:45">20:45 Uhr (Dinner)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label for="res-phone">Telefonnummer *</label>
+                  <input type="tel" id="res-phone" name="phone" required placeholder="+49 ..." class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="res-email">E-Mail-Adresse *</label>
+                  <input type="email" id="res-email" name="email" required placeholder="name@beispiel.de" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="res-notes">Besondere Wünsche (Allergien, Kinderstuhl, Schärfegrad)</label>
+                <textarea id="res-notes" name="notes" rows="3" placeholder="z.B. 1x vegan, bitte ruhiger Ecktisch" class="form-textarea"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-red btn-full" id="res-submit-btn">
+                <span>Reservierungsanfrage absenden</span>
+              </button>
+            </form>
+
+            <!-- In-page Form Confirmation Toast / Box -->
+            <div id="res-success-box" class="res-success-message is-hidden" role="alert">
+              <div class="success-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF8EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h4 class="success-title">Vielen Dank für deine Anfrage!</h4>
+              <p class="success-desc" id="res-success-text">
+                Wir haben deine Tischreservierung für <strong id="conf-persons">2 Personen</strong> am <strong id="conf-date">heutigen Abend</strong> erhalten. Unser Team bestätigt dir den Termin in Kürze per SMS/E-Mail.
+              </p>
+              <button type="button" class="btn btn-sm btn-navy-ghost" id="res-new-btn">Neue Anfrage stellen</button>
+            </div>
+          </div>
+
+          <!-- Contact Details & Real-Time Opening Hours -->
+          <div class="contact-details-col">
+            <!-- Opening Hours Card with Live Status Badge -->
+            <div class="info-box hours-box">
+              <div class="info-box-header">
+                <h3 class="info-box-title">Öffnungszeiten</h3>
+                <div class="live-status-pill" id="live-hours-pill">
+                  <span class="live-dot" aria-hidden="true"></span>
+                  <span id="live-hours-text">Prüfe Status...</span>
+                </div>
+              </div>
+              <ul class="hours-list">
+                <li class="hours-row">
+                  <span class="day-label">Montag – Freitag</span>
+                  <div class="time-block">
+                    <span>11:30 – 15:00 Uhr (Lunch)</span>
+                    <span>17:30 – 22:30 Uhr (Abend)</span>
+                  </div>
+                </li>
+                <li class="hours-row">
+                  <span class="day-label">Samstag & Sonntag</span>
+                  <div class="time-block">
+                    <span>12:00 – 23:00 Uhr durchgehend</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="hours-note">
+                Küche schließt jeweils 30 Minuten vor Geschäftsschluss.
+              </div>
+            </div>
+
+            <!-- Direct Contact Card -->
+            <div class="info-box direct-contact-box">
+              <h3 class="info-box-title">Adresse & Direktkontakt</h3>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <strong>KIKU Nudelbar Berlin</strong><br>
+                  Oderberger Straße 34<br>
+                  10435 Berlin-Prenzlauer Berg<br>
+                  <small class="text-muted">U2 Eberswalder Straße · Tram M10 Wolliner Str.</small>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Telefon:</strong><br>
+                  <a href="tel:+498886661234" class="contact-link">+49 888 6661234</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <strong>E-Mail:</strong><br>
+                  <a href="mailto:12234456789@gmail.com" class="contact-link">12234456789@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Telegram Direktkontakt:</strong><br>
+                  <a href="https://t.me/rovatt" target="_blank" rel="noopener noreferrer" class="contact-link">@rovatt (https://t.me/rovatt)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <div class="brand-text-wrap">
+            <span class="brand-name">KIKU</span>
+            <span class="brand-sub">Nudelbar · Prenzlauer Berg</span>
+          </div>
+          <p class="footer-tagline">
+            Echte Ramen, handgezogene Nudeln und 12-Stunden-Brühen in Berlin.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-nav-list">
+              <li><a href="#bau-deine-schuessel">Schüssel-Baukasten</a></li>
+              <li><a href="#speisekarte">Speisekarte</a></li>
+              <li><a href="#bruehe-12h">12h Brühe</a></li>
+              <li><a href="#stempelkarte">Stempelkarte</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Kontakt & Ort</h4>
+            <p class="footer-contact-text">
+              Oderberger Str. 34<br>
+              10435 Berlin<br>
+              <a href="tel:+498886661234">+49 888 6661234</a><br>
+              <a href="https://t.me/rovatt" target="_blank" rel="noopener">Telegram @rovatt</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="footer-copy">Fiktives Demo-Projekt. Gestaltung: Renat.</p>
+        <div class="footer-legal">
+          <button type="button" class="legal-btn" id="open-impressum">Impressum</button>
+          <span class="legal-sep">·</span>
+          <button type="button" class="legal-btn" id="open-datenschutz">Datenschutz</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Impressum / Datenschutz / Builder Summary -->
+  <dialog class="site-modal" id="site-modal" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Information</h3>
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Schließen">
+          <svg width="18" height="18" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Three.js from cdnjs with exact version r128 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
