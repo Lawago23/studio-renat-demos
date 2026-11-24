@@ -87,8 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorRing.style.opacity = '1';
       }
 
-      cursorDot.style.left = `${mouseX}px`;
-      cursorDot.style.top = `${mouseY}px`;
+      cursorDot.style.transform = `translate3d(${mouseX}px,${mouseY}px,0) translate(-50%,-50%)`;
     });
 
     document.addEventListener('mouseleave', () => {
@@ -102,8 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isVisible && !prefersReducedMotion) {
         ringX += (mouseX - ringX) * 0.18;
         ringY += (mouseY - ringY) * 0.18;
-        cursorRing.style.left = `${ringX}px`;
-        cursorRing.style.top = `${ringY}px`;
+        cursorRing.style.transform = `translate3d(${ringX}px,${ringY}px,0) translate(-50%,-50%)`;
       }
       requestAnimationFrame(renderCursor);
     };
@@ -202,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         antialias: true,
         powerPreference: 'high-performance'
       });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       renderer.setSize(container.clientWidth, container.clientHeight);
 
       // 2. Lights
@@ -340,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const targetId = intersects[0].object.userData.id;
           const targetEl = document.getElementById(targetId);
           if (targetEl) {
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            window.__scrollToEl && window.__scrollToEl(targetEl, true);
             targetEl.classList.add('is-revealed');
           }
         }
@@ -349,9 +347,13 @@ document.addEventListener('DOMContentLoaded', () => {
       // Animation Loop
       let clock = new THREE.Clock();
 
+      let heroVisible = true;
+      const heroEl = document.getElementById('hero');
+      if (heroEl && 'IntersectionObserver' in window) new IntersectionObserver(e => { heroVisible = e[0].isIntersecting; }, { threshold: 0 }).observe(heroEl);
       const animate = () => {
         requestAnimationFrame(animate);
         const delta = clock.getDelta();
+        if (!heroVisible || document.hidden) return;
 
         // Auto slow orbit rotation
         if (!prefersReducedMotion && !isDragging) {
@@ -473,36 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      8. PROCESS SECTION — DESKTOP PINNED HORIZONTAL SEQUENCE
      ========================================================================== */
-  const processViewport = document.getElementById('processViewport');
-  const processTrack = document.getElementById('processTrack');
-
-  const updateProcessHorizontalScroll = () => {
-    if (!processViewport || !processTrack) return;
-
-    // Only apply horizontal scroll on wide desktop screens
-    if (window.innerWidth >= 1100 && !prefersReducedMotion) {
-      const rect = processViewport.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-
-      // Calculate progress when section is in view
-      if (rect.top <= 100 && rect.bottom >= 0) {
-        const totalScrollable = rect.height - viewportHeight;
-        const currentScroll = Math.max(0, -rect.top + 100);
-        const progress = Math.min(1, Math.max(0, currentScroll / (totalScrollable || 1)));
-
-        // Translate track slightly for rich pinned horizontal feel
-        const maxShift = (processTrack.scrollWidth - processTrack.clientWidth) * 0.6;
-        processTrack.style.transform = `translateX(-${progress * maxShift}px)`;
-      } else {
-        processTrack.style.transform = 'translateX(0px)';
-      }
-    } else {
-      processTrack.style.transform = 'translateX(0px)';
-    }
-  };
-
-  window.addEventListener('scroll', updateProcessHorizontalScroll, { passive: true });
-  window.addEventListener('resize', updateProcessHorizontalScroll);
+  // (process scroll handled by smooth-scroll module below)
 
   /* ==========================================================================
      9. FAQ ACCORDION
